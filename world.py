@@ -4,8 +4,13 @@ import random
 
 
 def make_world(n_cats, n_liars):
-    world = [True] * n_cats
-    random.sample
+    world = [False] * n_cats
+    liar_indexes = random.sample(range(n_cats), n_liars)
+
+    for i in liar_indexes:
+        world[i] = True
+
+    return world
 
 
 def split_by_type(world, exclude=None):
