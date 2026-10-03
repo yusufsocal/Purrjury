@@ -1,6 +1,6 @@
 import pytest
 
-from grid import find_neighbors, get_cat
+from grid import get_cat
 from tests.helpers import all_cats, fixed_grid, random_grid
 
 
@@ -32,17 +32,3 @@ def test_get_cat_round_trip():
     grid = fixed_grid(3, 4)
     for cat in all_cats(grid):
         assert get_cat(grid, cat.index) is cat
-
-
-def test_find_neighbors_counts():
-    grid = fixed_grid(3, 3)
-    assert len(find_neighbors(grid, get_cat(grid, 0))) == 2   # corner
-    assert len(find_neighbors(grid, get_cat(grid, 1))) == 3   # edge
-    assert len(find_neighbors(grid, get_cat(grid, 4))) == 4   # middle
-
-
-def test_find_neighbors_are_the_right_cats():
-    grid = fixed_grid(3, 3)
-    # Middle cat (index 4) touches 1, 3, 5, 7 but not the diagonals
-    neighbor_indexes = sorted(cat.index for cat in find_neighbors(grid, get_cat(grid, 4)))
-    assert neighbor_indexes == [1, 3, 5, 7]

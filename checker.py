@@ -4,6 +4,7 @@ from grid import get_cat
 
 
 def find_solutions(grid):
+    """Return every world that fits all statements: honest cats say true things, liars say false things."""
     valid = []
     for world in itertools.product([False, True], repeat=len(grid)*len(grid[0])):
         flag = True

@@ -14,8 +14,8 @@ import pytest
 
 import generator
 from checker import find_solutions
-from statements import IsHonest, IsLiar
-from tests.helpers import TotalLiars, all_cats, fits
+from statements import CountLiars, SameType
+from tests.helpers import all_cats, fits
 
 
 def liar_set(world):
@@ -25,13 +25,13 @@ def liar_set(world):
 @pytest.fixture
 def with_symmetry_breaker(monkeypatch):
     """Statement types that can actually produce unique puzzles."""
-    monkeypatch.setattr(generator, "ALL_STATEMENTS", [IsLiar, IsHonest, TotalLiars])
+    monkeypatch.setattr(generator, "ALL_STATEMENTS", [CountLiars, SameType])
 
 
 @pytest.fixture
 def only_mirror_statements(monkeypatch):
-    """Only IsLiar/IsHonest: every puzzle has a mirror solution, so none are ever unique."""
-    monkeypatch.setattr(generator, "ALL_STATEMENTS", [IsLiar, IsHonest])
+    """Only SameType: every puzzle has a mirror solution, so none are ever unique."""
+    monkeypatch.setattr(generator, "ALL_STATEMENTS", [SameType])
 
 
 @pytest.mark.parametrize("rows, cols, n_liars", [(2, 2, 1), (2, 3, 2), (3, 3, 3), (3, 3, 4)])
@@ -71,7 +71,7 @@ def test_respects_max_attempts(only_mirror_statements, monkeypatch):
         return real_assign(grid, world)
 
     monkeypatch.setattr(generator, "assign_statements", counting_assign)
-    generator.generate_puzzle(2, 2, 1, max_attempts=7)
+    generator.generate_puzzle(2, 3, 2, max_attempts=7)
     assert len(calls) == 7
 
 

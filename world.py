@@ -4,6 +4,7 @@ import random
 
 
 def make_world(n_cats, n_liars):
+    """Return a world with exactly n_liars random liars."""
     world = [False] * n_cats
     liar_indexes = random.sample(range(n_cats), n_liars)
 
@@ -11,17 +12,3 @@ def make_world(n_cats, n_liars):
         world[i] = True
 
     return world
-
-
-def split_by_type(world, exclude=None):
-    """Return two lists of indexes: (liars, honest). Optionally leave one index out, e.g. the speaker."""
-    liars = []
-    honest = []
-    for index, is_liar in enumerate(world):
-        if index == exclude:
-            continue
-        if is_liar:
-            liars.append(index)
-        else:
-            honest.append(index)
-    return liars, honest

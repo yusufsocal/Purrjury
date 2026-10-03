@@ -21,8 +21,7 @@ def assign_statements(grid, world):
             raise ValueError(f"No statement type fits cat {i}")
 
 
-
-def print_puzzle(grid, world = None, width=24):
+def print_puzzle(grid, world=None, width=24):
     """Print the grid as boxes: cat name on top, its statement wrapped underneath."""
     cols = len(grid[0])
     border = "+" + ("-" * (width + 2) + "+") * cols
@@ -48,12 +47,14 @@ def print_puzzle(grid, world = None, width=24):
 
 
 def generate_puzzle(row, col, n_liars, max_attempts=1000):
+    """Keep generating puzzles until one has exactly one solution. Returns (grid, world), or None."""
+    names = load_names()
     for _ in range(max_attempts):
-        names = load_names()
         grid = make_grid(row, col, names)
-        world = make_world(row*col, n_liars)
-
+        world = make_world(row * col, n_liars)
         assign_statements(grid, world)
 
-        if len(find_solutions(grid)) == 1: return grid, world 
-    else: return None
+        if len(find_solutions(grid)) == 1:
+            return grid, world
+
+    return None

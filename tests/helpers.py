@@ -1,8 +1,6 @@
 """Shared helpers for the tests."""
-import random
-
 from cat import Cat
-from statements.base import Statement
+from statements import CountLiars
 from grid import load_names, make_grid
 
 
@@ -31,26 +29,11 @@ def fits(statement, world, grid):
     return statement.evaluate(world, grid) == (not world[statement.speaker])
 
 
-class TotalLiars(Statement):
-    """Test-only statement: "There are exactly N liars among us." Breaks the mirror symmetry."""
+def is_liar(speaker, target):
+    """Hand-made statement: '<target> is a liar'."""
+    return CountLiars(speaker, [target], "", "exactly", 1)
 
-    def __init__(self, speaker, count):
-        super().__init__(speaker)
-        self.count = count
 
-    def evaluate(self, world, grid):
-        return sum(world) == self.count
-
-    def set_text(self, grid):
-        self.text = f"There are exactly {self.count} liars among us."
-
-    @classmethod
-    def random(cls, speaker, grid, world):
-        real = sum(world)
-        if world[speaker]:
-            count = random.choice([n for n in range(len(world) + 1) if n != real])
-        else:
-            count = real
-        statement = cls(speaker, count)
-        statement.set_text(grid)
-        return statement
+def is_honest(speaker, target):
+    """Hand-made statement: '<target> is honest'."""
+    return CountLiars(speaker, [target], "", "exactly", 0)

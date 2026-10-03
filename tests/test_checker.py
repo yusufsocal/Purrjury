@@ -9,10 +9,9 @@ These tests are skipped until checker.py exists.
 import pytest
 
 from generator import assign_statements
-from statements import IsHonest, IsLiar
 from statements.base import Statement
 from world import make_world
-from tests.helpers import all_cats, fixed_grid, random_grid
+from tests.helpers import all_cats, fixed_grid, is_honest, is_liar, random_grid
 
 checker = pytest.importorskip("checker")
 
@@ -51,10 +50,10 @@ def build_symmetric_puzzle():
     D: "C is honest"     (true,  D honest)
     """
     grid = fixed_grid(2, 2)
-    give(grid, 0, IsLiar(0, 1))
-    give(grid, 1, IsLiar(1, 2))
-    give(grid, 2, IsHonest(2, 0))
-    give(grid, 3, IsHonest(3, 2))
+    give(grid, 0, is_liar(0, 1))
+    give(grid, 1, is_liar(1, 2))
+    give(grid, 2, is_honest(2, 0))
+    give(grid, 3, is_honest(3, 2))
     return grid
 
 
@@ -63,7 +62,7 @@ def test_returns_a_list():
 
 
 def test_symmetric_puzzle_has_exactly_two_solutions():
-    """With only IsLiar/IsHonest, flipping every cat also works, so there are two answers:
+    """With only 'X is a liar' / 'X is honest', flipping every cat also works, so there are two answers:
     only B lies, or everyone except B lies."""
     assert solutions_as_sets(build_symmetric_puzzle()) == {frozenset({1}), frozenset({0, 2, 3})}
 
@@ -80,16 +79,16 @@ def test_contradiction_gives_no_solution():
     """A says "B is a liar", B says "A is honest". If A is honest, B lies, so A is a liar. Contradiction.
     The same happens if A lies. No world works."""
     grid = fixed_grid(1, 2)
-    give(grid, 0, IsLiar(0, 1))
-    give(grid, 1, IsHonest(1, 0))
+    give(grid, 0, is_liar(0, 1))
+    give(grid, 1, is_honest(1, 0))
     assert solutions_as_sets(grid) == set()
 
 
 def test_cat_without_statement_is_skipped():
     """C says nothing, so nothing pins down C itself: both of its types stay possible."""
     grid = fixed_grid(1, 3)
-    give(grid, 0, IsLiar(0, 1))
-    give(grid, 1, IsLiar(1, 0))
+    give(grid, 0, is_liar(0, 1))
+    give(grid, 1, is_liar(1, 0))
     # cat 2 (C) has no statement
     solutions = solutions_as_sets(grid)
     assert frozenset({1}) in solutions and frozenset({1, 2}) in solutions
