@@ -1,15 +1,20 @@
+from generator import assign_statements, generate_puzzle, print_puzzle
 from grid import load_names, make_grid
+from world import make_world
 
 
 def main():
-    names_by_letter = load_names()
-    cat_grid = make_grid(3, 2, names_by_letter)
+    result = generate_puzzle(3, 3, 3)
 
-    # Print each row's size and the cats in it
-    for cat_row in cat_grid:
-        print(len(cat_row))
-        for cat in cat_row:
-            print(cat.name, cat.index)
+    if result is None:
+        print("No unique puzzle found, printing a non-unique one instead:")
+        grid = make_grid(3, 3, load_names())
+        world = make_world(9, 3)
+        assign_statements(grid, world)
+    else:
+        grid, world = result
+
+    print_puzzle(grid, world)
 
 
 if __name__ == "__main__":

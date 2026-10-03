@@ -1,7 +1,10 @@
 import random
+import textwrap
 
-from grid import get_cat
+from checker import find_solutions
+from grid import get_cat, load_names, make_grid
 from statements import ALL_STATEMENTS
+from world import make_world
 
 
 def assign_statements(grid, world):
@@ -16,3 +19,39 @@ def assign_statements(grid, world):
         else:
             # Only runs if the loop finished without a break: nothing fit this cat
             raise ValueError(f"No statement type fits cat {i}")
+
+
+
+def print_puzzle(grid, world = None, width=24):
+    """Print the grid as boxes: cat name on top, its statement wrapped underneath."""
+    cols = len(grid[0])
+    border = "+" + ("-" * (width + 2) + "+") * cols
+
+    print(border)
+    for row in grid:
+        # Each cell is a list of lines: the name, then the wrapped statement
+        cells = []
+        for cat in row:
+            text = cat.statement.to_text() if cat.statement else "..."
+            name = cat.name.upper()
+            if world is not None:
+                name += " (liar)" if world[cat.index] else " (honest)"
+            cells.append([name] + textwrap.wrap(text, width))
+
+        height = max(len(cell) for cell in cells)
+        for line in range(height):
+            parts = [cell[line] if line < len(cell) else "" for cell in cells]
+            print("| " + " | ".join(part.ljust(width) for part in parts) + " |")
+        print(border)
+
+
+def generate_puzzle(row, col, n_liars, max_attempts=1000):
+    for _ in range(max_attempts):
+        names = load_names()
+        grid = make_grid(row, col, names)
+        world = make_world(row*col, n_liars)
+
+        assign_statements(grid, world)
+
+        if len(find_solutions(grid)) == 1: return grid, world 
+    else: return None
