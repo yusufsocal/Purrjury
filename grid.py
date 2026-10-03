@@ -1,6 +1,8 @@
 import random
 
 from cat import Cat
+from colors import COLORS
+
 
 
 def load_names(path="cat_names.txt"):
@@ -11,6 +13,27 @@ def load_names(path="cat_names.txt"):
             letter, names = line.strip().split(": ")
             names_by_letter[letter] = names.split(", ")
     return names_by_letter
+
+
+def decide_colors(n_cats):
+    cats_left = n_cats
+    sizes = []
+
+    while cats_left > 0:
+        allowed = [s for s in (2,3,4) if s <= cats_left and cats_left -s != 1]
+        size = random.choice(allowed)
+        sizes.append(size)
+        cats_left -= size
+
+    common = COLORS[:max(8, len(sizes))]
+    chosen = random.sample(common, len(sizes))
+
+    colors = []
+    for color, size in zip(chosen, sizes):
+        colors += [color] * size
+
+    random.shuffle(colors)
+    return colors
 
 
 def make_grid(row, col, names_by_letter):
@@ -31,11 +54,13 @@ def make_grid(row, col, names_by_letter):
     grid = []
     index = 0
 
+    colors = decide_colors(row*col)
+
     # Fill the grid row by row, taking names from the front of the list
     for i in range(row):
         grid.append([])
         for j in range(col):
-            grid[i].append(Cat(names.pop(0), i, j, index))
+            grid[i].append(Cat(names.pop(0), i, j, index, colors.pop(0)))
             index += 1
 
     return grid

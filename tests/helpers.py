@@ -13,7 +13,7 @@ def fixed_grid(rows, cols):
     for r in range(rows):
         grid.append([])
         for c in range(cols):
-            grid[r].append(Cat(chr(ord("A") + index), r, c, index))
+            grid[r].append(Cat(chr(ord("A") + index), r, c, index, None))
             index += 1
     return grid
 

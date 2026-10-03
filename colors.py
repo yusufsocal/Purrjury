@@ -1,0 +1,16 @@
+COLORS = [
+    "ginger",
+    "black",
+    "white",
+    "grey",
+    "tabby",
+    "calico",
+    "tuxedo",
+    "siamese",
+    "tortoiseshell",
+    "cream",
+    "brown",
+    "spotted",
+    "smoky",
+    "golden",
+]
