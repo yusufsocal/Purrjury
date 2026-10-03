@@ -63,3 +63,19 @@ def test_text_mentions_target_name():
 def test_to_text_before_set_text_raises():
     with pytest.raises(ValueError):
         IsLiar(0, 1).to_text()
+
+
+@pytest.mark.parametrize("statement_type", [IsLiar, IsHonest])
+def test_targets_are_real_indexes_spread_over_the_grid(statement_type):
+    """Targets must be cat indexes (ints, not True/False), and over many runs every cat gets targeted."""
+    seen = set()
+    for _ in range(300):
+        grid = random_grid(3, 3)
+        world = make_world(9, 3)
+        for speaker in range(9):
+            statement = statement_type.random(speaker, grid, world)
+            if statement is not None:
+                assert type(statement.target) is int, f"target should be an index, got {statement.target!r}"
+                assert 0 <= statement.target < 9
+                seen.add(statement.target)
+    assert seen == set(range(9)), f"only these cats were ever targeted: {sorted(seen)}"

@@ -2,6 +2,7 @@
 import random
 
 from cat import Cat
+from statements.base import Statement
 from grid import load_names, make_grid
 
 
@@ -28,3 +29,28 @@ def all_cats(grid):
 def fits(statement, world, grid):
     """A statement fits its speaker if it is true for an honest cat and false for a liar."""
     return statement.evaluate(world, grid) == (not world[statement.speaker])
+
+
+class TotalLiars(Statement):
+    """Test-only statement: "There are exactly N liars among us." Breaks the mirror symmetry."""
+
+    def __init__(self, speaker, count):
+        super().__init__(speaker)
+        self.count = count
+
+    def evaluate(self, world, grid):
+        return sum(world) == self.count
+
+    def set_text(self, grid):
+        self.text = f"There are exactly {self.count} liars among us."
+
+    @classmethod
+    def random(cls, speaker, grid, world):
+        real = sum(world)
+        if world[speaker]:
+            count = random.choice([n for n in range(len(world) + 1) if n != real])
+        else:
+            count = real
+        statement = cls(speaker, count)
+        statement.set_text(grid)
+        return statement
