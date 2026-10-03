@@ -1,7 +1,8 @@
 import random
 
 from statements.base import Statement
-from grid import get_cat, split_by_type
+from grid import get_cat
+from world import split_by_type
 
 HONEST_TEXTS = [
     "{name} is pawsitively honest.",
@@ -10,10 +11,11 @@ HONEST_TEXTS = [
     "{name} is honest, fur real.",
 ]
 
+
 class IsHonest(Statement):
     def __init__(self, speaker, target):
         super().__init__(speaker)
-        self.target = target
+        self.target = target   # index of the cat this statement is about
 
     def evaluate(self, world, grid):
         return not world[self.target]
@@ -21,14 +23,11 @@ class IsHonest(Statement):
     def set_text(self, grid):
         self.text = random.choice(HONEST_TEXTS).format(name=get_cat(grid, self.target).name)
 
-    def to_text(self):
-        return self.text
-
     @classmethod
     def random(cls, speaker, grid, world):
         liars, honests = split_by_type(world, exclude=speaker)
 
-        # Honest speaker must say something true: pick a real truther.
+        # Honest speaker must say something true: pick an honest cat.
         # Lying speaker must say something false: pick a liar.
         options = liars if world[speaker] else honests
         if not options:

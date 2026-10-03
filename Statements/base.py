@@ -6,6 +6,7 @@ class Statement(ABC):
 
     def __init__(self, speaker):
         self.speaker = speaker   # index of the cat saying this
+        self.text = None         # the sentence, filled in by set_text
 
     @abstractmethod
     def evaluate(self, world, grid):
@@ -17,12 +18,19 @@ class Statement(ABC):
 
     @abstractmethod
     def set_text(self, grid):
-        """Set the sentence the player sees, e.g. "Dusty is a liar"."""
+        """Pick and store the sentence the player sees, e.g. "Dusty is a liar"."""
 
     def to_text(self):
-        """Return the text set in set_text"""
+        """Return the sentence stored by set_text. Same for every statement type, so it lives here."""
+        if self.text is None:
+            raise ValueError("set_text(grid) must be called before to_text()")
+        return self.text
 
     @classmethod
     @abstractmethod
     def random(cls, speaker, grid, world):
-        """Create a random statement of this type for the given speaker."""
+        """Create a random statement of this type that fits the speaker, or None if impossible.
+
+        Honest speaker: the statement must be true in world.
+        Lying speaker: the statement must be false in world.
+        """

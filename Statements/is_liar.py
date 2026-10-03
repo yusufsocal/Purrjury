@@ -1,7 +1,8 @@
 import random
 
-from Statements.base import Statement
-from grid import get_cat, split_by_type
+from statements.base import Statement
+from grid import get_cat
+from world import split_by_type
 
 LIAR_TEXTS = [
     "{name} is lying through their whiskers.",
@@ -10,19 +11,17 @@ LIAR_TEXTS = [
     "I'm not kitten you, {name} is a liar.",
 ]
 
+
 class IsLiar(Statement):
     def __init__(self, speaker, target):
         super().__init__(speaker)
-        self.target = target
+        self.target = target   # index of the cat this statement is about
 
     def evaluate(self, world, grid):
         return world[self.target]
 
     def set_text(self, grid):
         self.text = random.choice(LIAR_TEXTS).format(name=get_cat(grid, self.target).name)
-
-    def to_text(self):
-        return self.text
 
     @classmethod
     def random(cls, speaker, grid, world):
