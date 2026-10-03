@@ -18,7 +18,7 @@ def make_grid(row, col, names_by_letter):
     skips_allowed = 26 - row * col   # how many letters we can skip and still have enough names
     names = []
 
-    # Walk through the letters A to Z, sometimes skipping one
+    # Walk through the letters A to Z, sometimes skipping one (20% of the time)
     for letter in names_by_letter:
         if random.random() < 0.2 and skips_allowed != 0:
             skips_allowed -= 1
