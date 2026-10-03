@@ -11,11 +11,10 @@ HONEST_TEXTS = [
     "{name} is honest, fur real.",
 ]
 
-
 class IsHonest(Statement):
     def __init__(self, speaker, target):
         super().__init__(speaker)
-        self.target = target   # index of the cat this statement is about
+        self.target = target
 
     def evaluate(self, world, grid):
         return not world[self.target]
@@ -25,15 +24,14 @@ class IsHonest(Statement):
 
     @classmethod
     def random(cls, speaker, grid, world):
-        liars, honests = split_by_type(world, exclude=speaker)
+        should_be_true = not world[speaker]
 
-        # Honest speaker must say something true: pick an honest cat.
-        # Lying speaker must say something false: pick a liar.
-        options = liars if world[speaker] else honests
-        if not options:
+        candidates = [c for c in range(len(world)) if c != speaker]
+        valid = [c for c in candidates if cls(speaker, c).evaluate(world, grid) == should_be_true]
+        if not valid:
             return None
 
-        target = random.choice(options)
+        target = random.choice(valid)
         statement = cls(speaker, target)
         statement.set_text(grid)
         return statement
