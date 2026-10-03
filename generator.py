@@ -34,8 +34,10 @@ def print_puzzle(grid, world = None, width=24):
         for cat in row:
             text = cat.statement.to_text() if cat.statement else "..."
             name = cat.name.upper()
+            color = cat.color.upper()
             if world is not None:
                 name += " (liar)" if world[cat.index] else " (honest)"
+            name += " " + color
             cells.append([name] + textwrap.wrap(text, width))
 
         height = max(len(cell) for cell in cells)
