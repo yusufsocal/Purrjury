@@ -29,8 +29,8 @@ def with_symmetry_breaker(monkeypatch):
 
 
 @pytest.fixture
-def only_mirror_statements(monkeypatch):
-    """Only SameType: every puzzle has a mirror solution, so none are ever unique."""
+def only_same_type(monkeypatch):
+    """Only SameType: "everyone honest" always fits too, so no puzzle with liars is ever unique."""
     monkeypatch.setattr(generator, "ALL_STATEMENTS", [SameType])
 
 
@@ -57,11 +57,11 @@ def test_returns_a_unique_puzzle(with_symmetry_breaker, rows, cols, n_liars):
         assert liar_set(solutions[0]) == liar_set(world)
 
 
-def test_returns_none_when_no_unique_puzzle_exists(only_mirror_statements):
+def test_returns_none_when_no_unique_puzzle_exists(only_same_type):
     assert generator.generate_puzzle(2, 3, 2, max_attempts=30) is None
 
 
-def test_respects_max_attempts(only_mirror_statements, monkeypatch):
+def test_respects_max_attempts(only_same_type, monkeypatch):
     """With max_attempts=7 and no possible unique puzzle, it should try exactly 7 times."""
     calls = []
     real_assign = generator.assign_statements
