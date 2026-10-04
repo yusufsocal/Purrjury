@@ -2,7 +2,7 @@ import pytest
 
 from statements import ALL_STATEMENTS, CountLiars, PairStatement
 from statements.count_liars import AREA_WEIGHTS
-from statements.pair import ORDERED, RELATIONS, TEXTS
+from statements.pair import ORDERED, RELATION_WEIGHTS, RELATIONS, TEXTS
 from world import make_world
 from tests.helpers import fits, fixed_grid, is_liar, random_grid
 
@@ -55,6 +55,7 @@ def test_pair_relation_truth_table(relation, expected):
 def test_every_relation_is_tested_and_has_texts():
     assert set(PAIR_TRUTH_TABLES) == set(RELATIONS)
     assert set(TEXTS) == set(RELATIONS)
+    assert set(RELATION_WEIGHTS) == set(RELATIONS)
     assert ORDERED <= set(RELATIONS)
     for others, me in TEXTS.values():
         assert others and me

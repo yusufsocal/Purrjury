@@ -3,6 +3,7 @@ import random
 
 from statements.base import Statement
 from grid import get_cat
+from utils import weighted_order
 import texts
 
 
@@ -20,6 +21,18 @@ RELATIONS = {
 }
 
 ORDERED = {"if_a_honest_then_b", "a_honest_b_liar"}
+
+# How often each relation is picked, relative to each other
+RELATION_WEIGHTS = {
+    "same": 1,
+    "different": 1,
+    "at_least_one_liar": 1,
+    "at_least_one_honest": 1,
+    "both_liars": 1,
+    "both_honest": 1,
+    "if_a_honest_then_b": 1,
+    "a_honest_b_liar": 1,
+}
 
 # Each relation's texts: (texts about two other cats, texts where the speaker is a)
 TEXTS = {
@@ -60,25 +73,22 @@ class PairStatement(Statement):
     @classmethod
     def random(cls, speaker, grid, world):
         should_be_true = not world[speaker]
-
-
         others = [c for c in range(len(world)) if c != speaker]
-        candidates = []
-        for relation in RELATIONS:
+
+        # Try the relations in weighted random order, and use the first one that has a fitting pair
+        for relation in weighted_order(RELATION_WEIGHTS):
             if relation in ORDERED:
-                pairs = itertools.permutations(others, 2) # (Felix, Bagel) and (Bagel, Felix)
+                pairs = list(itertools.permutations(others, 2))   # (Felix, Bagel) and (Bagel, Felix)
             else:
-                pairs = itertools.combinations(others, 2) # only (Felix, Bagel)
-            for a, b in pairs:
-                candidates.append((a, b, relation))
+                pairs = list(itertools.combinations(others, 2))   # only (Felix, Bagel)
+            pairs += [(speaker, b) for b in others]               # "Felix and I ..." pairs
 
-            for b in others: # "Felix and I ..." pairs
-                candidates.append((speaker, b, relation))
+            valid = [(a, b) for a, b in pairs
+                     if cls(speaker, a, b, relation).evaluate(world, grid) == should_be_true]
+            if valid:
+                a, b = random.choice(valid)
+                statement = cls(speaker, a, b, relation)
+                statement.set_text(grid)
+                return statement
 
-        valid = [(a, b, r) for a, b, r in candidates if cls(speaker, a, b, r).evaluate(world, grid) == should_be_true]
-        if not valid: return None
-
-        a, b, r = random.choice(valid)
-        statement = cls(speaker, a, b, r)
-        statement.set_text(grid)
-        return statement
+        return None   # no relation fits (shouldn't happen, opposite relations always cover each other)

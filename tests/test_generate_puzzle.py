@@ -32,7 +32,7 @@ def with_symmetry_breaker(monkeypatch):
 @pytest.fixture
 def only_same_type(monkeypatch):
     """Only "same type" pair statements: "everyone honest" always fits too, so no puzzle with liars is ever unique."""
-    monkeypatch.setattr(pair, "RELATIONS", {"same": pair.RELATIONS["same"]})
+    monkeypatch.setattr(pair, "RELATION_WEIGHTS", {"same": 1})
     monkeypatch.setattr(generator, "ALL_STATEMENTS", [PairStatement])
 
 
