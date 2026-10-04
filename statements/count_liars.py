@@ -6,6 +6,9 @@ from texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_
                    EXACTLY_N_TEXTS, AT_LEAST_ONE_TEXTS, AT_LEAST_N_TEXTS)
 import areas
 
+# How often each kind of area is picked, relative to each other
+AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "single": 1}
+
 
 class CountLiars(Statement):
     """'<condition> of <area> are liars', e.g. 'Exactly 2 of my neighbors are liars'."""
@@ -47,51 +50,74 @@ class CountLiars(Statement):
 
     @staticmethod
     def candidate_areas(grid, speaker):
-        """All areas this speaker could talk about, as (indexes, text) pairs."""
+        """All areas this speaker could talk about, grouped by category.
+
+        Returns a dict like {"mine": [(indexes, text), ...], "single": [...], ...}.
+        Categories with no usable areas are left out.
+        """
         me = get_cat(grid, speaker)
         cats = [cat for row in grid for cat in row]
 
-        candidates = [
-            (areas.neighbors(grid, me), "my neighbors"),
-            (areas.row(grid, me.row), "the cats in my row"),
-            (areas.column(grid, me.column), "the cats in my column"),
-            (areas.left_of(grid, me), "the cats to my left"),
-            (areas.right_of(grid, me), "the cats to my right"),
-            (areas.above(grid, me), "the cats above me"),
-            (areas.below(grid, me), "the cats below me"),
-            (areas.corners(grid), "the corner cats"),
-            (areas.edges(grid), "the cats on the edges"),
-            (areas.middle(grid), "the cats in the middle"),
-            (areas.everyone(grid), "us"),
-        ]
+        candidates = {
+            # Areas seen from the speaker
+            "mine": [
+                (areas.neighbors(grid, me), "my neighbors"),
+                (areas.row(grid, me.row), "the cats in my row"),
+                (areas.column(grid, me.column), "the cats in my column"),
+                (areas.left_of(grid, me), "the cats to my left"),
+                (areas.right_of(grid, me), "the cats to my right"),
+                (areas.above(grid, me), "the cats above me"),
+                (areas.below(grid, me), "the cats below me"),
+            ],
+            # Fixed parts of the grid
+            "grid": [
+                (areas.corners(grid), "the corner cats"),
+                (areas.edges(grid), "the cats on the edges"),
+                (areas.middle(grid), "the cats in the middle"),
+                (areas.everyone(grid), "us"),
+            ],
+            # Other rows and columns (shown to players as 1, 2, 3 instead of 0, 1, 2)
+            "line": [],
+            # Every color that appears in this grid
+            "color": [],
+            # Every other single cat
+            "single": [],
+        }
 
-        # Other rows and columns (shown to players as 1, 2, 3 instead of 0, 1, 2)
         for r in range(len(grid)):
             if r != me.row:
-                candidates.append((areas.row(grid, r), f"the cats in row {r + 1}"))
+                candidates["line"].append((areas.row(grid, r), f"the cats in row {r + 1}"))
         for c in range(len(grid[0])):
             if c != me.column:
-                candidates.append((areas.column(grid, c), f"the cats in column {c + 1}"))
+                candidates["line"].append((areas.column(grid, c), f"the cats in column {c + 1}"))
 
-        # Every color that appears in this grid
         for color in sorted({cat.color for cat in cats}):
-            candidates.append((areas.with_color(grid, color), f"the {color} cats"))
+            candidates["color"].append((areas.with_color(grid, color), f"the {color} cats"))
 
-        # Every other single cat
         for cat in cats:
             if cat.index != speaker:
-                candidates.append(([cat.index], cat.name))
+                candidates["single"].append(([cat.index], cat.name))
 
         # Empty areas can't say anything useful, and an area that is only the speaker
         # would be "I am honest/a liar" (e.g. "the cats in the middle" on a 3x3)
-        return [(area, text) for area, text in candidates if area and area != [speaker]]
+        result = {}
+        for category, options in candidates.items():
+            usable = [(area, text) for area, text in options if area and area != [speaker]]
+            if usable:
+                result[category] = usable
+        return result
 
     @classmethod
     def random(cls, speaker, grid, world):
         should_be_true = not world[speaker]
 
+        # Pick a category by weight first, then an area inside it, so a category
+        # with many areas (like single cats) doesn't win just by being big
         candidates = cls.candidate_areas(grid, speaker)
-        area, text = random.choice(candidates)
+        categories = list(candidates)
+        category = random.choices(categories, weights=[AREA_WEIGHTS[c] for c in categories])[0]
+        area, text = random.choice(candidates[category])
+
         count = sum(world[i] for i in area)   # the real number of liars in the area
         size = len(area)
 

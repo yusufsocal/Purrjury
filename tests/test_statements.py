@@ -1,6 +1,7 @@
 import pytest
 
 from statements import ALL_STATEMENTS, CountLiars, PairStatement
+from statements.count_liars import AREA_WEIGHTS
 from statements.pair import ORDERED, RELATIONS, TEXTS
 from world import make_world
 from tests.helpers import fits, fixed_grid, is_liar, random_grid
@@ -125,6 +126,20 @@ def test_count_liars_n_in_range():
             assert 0 <= s.n <= len(s.area)
             if s.mode == "at_least":
                 assert s.n >= 1
+
+
+@pytest.mark.parametrize("rows, cols", [(2, 2), (3, 3), (4, 5)])
+def test_candidate_areas_are_grouped_by_weighted_categories(rows, cols):
+    """Every category has a weight, and no category is returned empty."""
+    for _ in range(20):
+        grid = random_grid(rows, cols)
+        for speaker in range(rows * cols):
+            candidates = CountLiars.candidate_areas(grid, speaker)
+            assert set(candidates) <= set(AREA_WEIGHTS)
+            for category, options in candidates.items():
+                assert options, f"empty category {category}"
+                for area, text in options:
+                    assert area and area != [speaker]
 
 
 def test_count_liars_never_talks_only_about_itself():
