@@ -1,6 +1,7 @@
 import pytest
 
-from grid import get_cat
+from colors import COLORS
+from grid import get_cat, load_names
 from tests.helpers import all_cats, fixed_grid, random_grid
 
 
@@ -32,3 +33,10 @@ def test_get_cat_round_trip():
     grid = fixed_grid(3, 4)
     for cat in all_cats(grid):
         assert get_cat(grid, cat.index) is cat
+
+
+def test_no_cat_name_is_a_color():
+    """A cat called Ginger next to "the ginger cats" would be confusing."""
+    names = [name.lower() for options in load_names().values() for name in options]
+    clashes = set(names) & set(COLORS)
+    assert not clashes, f"names that are also colors: {clashes}"

@@ -4,7 +4,7 @@ C: Coco, Clover, Cricket
 D: Dusty, Doodle, Dumpling
 E: Echo, Ember, Espresso
 F: Fig, Fudge, Felix
-G: Ginger, Gizmo, Gnocchi
+G: Goose, Gizmo, Gnocchi
 H: Hazel, Honey, Hobbes
 I: Iggy, Inky, Indigo
 J: Juniper, Jasper, Jellybean
