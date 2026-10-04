@@ -20,7 +20,10 @@ def decide_colors(n_cats):
     sizes = []
 
     while cats_left > 0:
-        allowed = [s for s in (2,3,4) if s <= cats_left and cats_left -s != 1]
+        # A group can't leave exactly 1 cat over, and can't be the whole grid
+        # (grids under 4 cats are too small for two groups, so they get one color)
+        allowed = [s for s in (2,3,4) if s <= cats_left and cats_left -s != 1
+                   and (s < n_cats or n_cats < 4)]
         size = random.choice(allowed)
         sizes.append(size)
         cats_left -= size

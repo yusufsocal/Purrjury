@@ -57,3 +57,9 @@ def test_make_grid_gives_every_cat_a_valid_color(rows, cols):
             assert cat.color in COLORS
         for color, count in Counter(cat.color for cat in cats).items():
             assert 2 <= count <= 4, f"{color} appears {count} times"
+
+
+@pytest.mark.parametrize("n_cats", range(4, 26))
+def test_never_one_color_for_the_whole_grid(n_cats):
+    for _ in range(100):
+        assert len(set(decide_colors(n_cats))) >= 2

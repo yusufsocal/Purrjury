@@ -9,6 +9,9 @@ import areas
 # How often each kind of area is picked, relative to each other
 AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "single": 1}
 
+# Chance that an area bigger than one cat uses "at least" instead of "exactly"
+AT_LEAST_CHANCE = 0.3
+
 
 class CountLiars(Statement):
     """'<condition> of <area> are liars', e.g. 'Exactly 2 of my neighbors are liars'."""
@@ -98,11 +101,15 @@ class CountLiars(Statement):
             if cat.index != speaker:
                 candidates["single"].append(([cat.index], cat.name))
 
-        # Empty areas can't say anything useful, and an area that is only the speaker
-        # would be "I am honest/a liar" (e.g. "the cats in the middle" on a 3x3)
+        # Leave out areas that would sound odd:
+        # - empty areas can't say anything useful
+        # - an area that is only the speaker would be "I am honest/a liar" (e.g. "the cats in the middle" on a 3x3)
+        # - an area that covers every cat should just be called "us" (e.g. "the corner cats" on a 2x2)
+        n_cats = len(cats)
         result = {}
         for category, options in candidates.items():
-            usable = [(area, text) for area, text in options if area and area != [speaker]]
+            usable = [(area, text) for area, text in options
+                      if area and area != [speaker] and (len(area) < n_cats or text == "us")]
             if usable:
                 result[category] = usable
         return result
@@ -121,8 +128,8 @@ class CountLiars(Statement):
         count = sum(world[i] for i in area)   # the real number of liars in the area
         size = len(area)
 
-        # Single cats always use "exactly"; bigger areas use "at least" 30% of the time
-        mode = "exactly" if size == 1 or random.random() < 0.7 else "at_least"
+        # Single cats always use "exactly"; bigger areas sometimes use "at least"
+        mode = "at_least" if size > 1 and random.random() < AT_LEAST_CHANCE else "exactly"
 
         if mode == "at_least":
             # True:  "at least n" for any n from 1 up to the real count

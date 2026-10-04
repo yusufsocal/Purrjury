@@ -143,6 +143,18 @@ def test_candidate_areas_are_grouped_by_weighted_categories(rows, cols):
                     assert area and area != [speaker]
 
 
+@pytest.mark.parametrize("rows, cols", [(2, 2), (2, 3), (3, 3)])
+def test_only_us_covers_every_cat(rows, cols):
+    """'The corner cats' on a 2x2, or a color every cat has, should not be used: that's just 'us'."""
+    for _ in range(50):
+        grid = random_grid(rows, cols)
+        for speaker in range(rows * cols):
+            for options in CountLiars.candidate_areas(grid, speaker).values():
+                for area, text in options:
+                    if len(area) == rows * cols:
+                        assert text == "us", f"{text} covers every cat"
+
+
 def test_count_liars_never_talks_only_about_itself():
     for _ in range(200):
         grid = random_grid(3, 3)
