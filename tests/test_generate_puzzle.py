@@ -14,7 +14,8 @@ import pytest
 
 import generator
 from checker import find_solutions
-from statements import CountLiars, SameType
+from statements import CountLiars, PairStatement
+import statements.pair as pair
 from tests.helpers import all_cats, fits
 
 
@@ -25,13 +26,14 @@ def liar_set(world):
 @pytest.fixture
 def with_symmetry_breaker(monkeypatch):
     """Statement types that can actually produce unique puzzles."""
-    monkeypatch.setattr(generator, "ALL_STATEMENTS", [CountLiars, SameType])
+    monkeypatch.setattr(generator, "ALL_STATEMENTS", [CountLiars, PairStatement])
 
 
 @pytest.fixture
 def only_same_type(monkeypatch):
-    """Only SameType: "everyone honest" always fits too, so no puzzle with liars is ever unique."""
-    monkeypatch.setattr(generator, "ALL_STATEMENTS", [SameType])
+    """Only "same type" pair statements: "everyone honest" always fits too, so no puzzle with liars is ever unique."""
+    monkeypatch.setattr(pair, "RELATIONS", {"same": pair.RELATIONS["same"]})
+    monkeypatch.setattr(generator, "ALL_STATEMENTS", [PairStatement])
 
 
 @pytest.mark.parametrize("rows, cols, n_liars", [(2, 2, 1), (2, 3, 2), (3, 3, 3), (3, 3, 4)])

@@ -89,14 +89,113 @@ AT_LEAST_N_TEXTS = [
 ]
 
 
-# --- Two cats compared (SameType) ---
+# --- Two cats (PairStatement) ---
+# {a} and {b} are cat names. The _ME_ lists are used when the speaker is a: only {b}, the speaker is "I"/"me".
 
-SAME_TYPE_TEXTS = [
-    "{name1} and {name2} are both honest, or both liars.",
-    "Meow. {name1} and {name2} are the same: both honest, or both liars.",
-    "{name1} and {name2} are from the same litter: both honest, or both liars.",
-    "*purrs* {name1} and {name2} are both truth-tellers or both fibbers.",
-    "If {name1} is lying, so is {name2}. If {name1} is honest, so is {name2}.",
-    "{name1} and {name2} are on the same side, honest or not.",
-    "Whatever {name1} is, {name2} is too.",
+PAIR_SAME_TEXTS = [
+    "{a} and {b} are both honest, or both liars.",
+    "Meow. {a} and {b} are the same: both honest, or both liars.",
+    "{a} and {b} are from the same litter: both honest, or both liars.",
+    "*purrs* {a} and {b} are both truth-tellers or both fibbers.",
+    "If {a} is lying, so is {b}. If {a} is honest, so is {b}.",
+    "{a} and {b} are on the same side, honest or not.",
+    "Whatever {a} is, {b} is too.",
+]
+
+PAIR_SAME_ME_TEXTS = [
+    "{b} and I are both honest, or both liars.",
+    "Meow. {b} and I are the same: both honest, or both liars.",
+    "{b} and I are from the same litter: both honest, or both liars.",
+    "Whatever I am, {b} is too.",
+]
+
+PAIR_DIFFERENT_TEXTS = [
+    "Exactly one of {a} and {b} is a liar.",
+    "{a} and {b} are opposites: one is honest, the other is a liar.",
+    "*swishes tail* One of {a} and {b} is honest, the other is a liar.",
+    "Hiss. {a} and {b} are not the same: exactly one of them is a liar.",
+]
+
+PAIR_DIFFERENT_ME_TEXTS = [
+    "Exactly one of {b} and me is a liar.",
+    "{b} and I are opposites: one is honest, the other is a liar.",
+    "Mrrp. Whatever I am, {b} is the opposite.",
+]
+
+PAIR_AT_LEAST_ONE_LIAR_TEXTS = [
+    "At least one of {a} and {b} is a liar.",
+    "{a} and {b} are not both honest.",
+    "Mrrp. {a} and {b} can't both be trusted.",
+    "*narrows eyes* At least one of {a} and {b} is a liar.",
+]
+
+PAIR_AT_LEAST_ONE_LIAR_ME_TEXTS = [
+    "At least one of {b} and me is a liar.",
+    "{b} and I are not both honest.",
+    "Meow. {b} and I can't both be trusted.",
+]
+
+PAIR_AT_LEAST_ONE_HONEST_TEXTS = [
+    "At least one of {a} and {b} is honest.",
+    "{a} and {b} are not both liars.",
+    "Purr. You can trust at least one of {a} and {b}.",
+    "*kneads paws* At least one of {a} and {b} is honest.",
+]
+
+PAIR_AT_LEAST_ONE_HONEST_ME_TEXTS = [
+    "At least one of {b} and me is honest.",
+    "{b} and I are not both liars.",
+    "Purr. You can trust at least one of {b} and me.",
+]
+
+PAIR_BOTH_LIARS_TEXTS = [
+    "{a} and {b} are both liars.",
+    "Hiss! {a} and {b} are liars, both of them.",
+    "Don't trust {a} or {b}. Both are liars.",
+    "*arches back* {a} and {b} are both liars.",
+]
+
+PAIR_BOTH_LIARS_ME_TEXTS = [
+    "{b} and I are both liars.",
+    "Meow. {b} and I are liars, both of us.",
+    "Don't trust {b} or me. We are both liars.",
+]
+
+PAIR_BOTH_HONEST_TEXTS = [
+    "{a} and {b} are both honest.",
+    "Purr. You can trust {a} and {b}, both of them.",
+    "{a} and {b} are both honest, fur real.",
+    "*slow blinks* {a} and {b} are both honest.",
+]
+
+PAIR_BOTH_HONEST_ME_TEXTS = [
+    "{b} and I are both honest.",
+    "Purr. {b} and I are honest, both of us.",
+    "You can trust {b} and me. We are both honest.",
+]
+
+PAIR_IF_A_HONEST_THEN_B_TEXTS = [
+    "If {a} is honest, then {b} is honest too.",
+    "Mrrp. If {a} tells the truth, so does {b}.",
+    "Either {a} is a liar, or {b} is honest.",
+    "{b} can only be a liar if {a} is a liar too.",
+]
+
+PAIR_IF_A_HONEST_THEN_B_ME_TEXTS = [
+    "If I'm honest, then {b} is honest too.",
+    "Meow. If I tell the truth, so does {b}.",
+    "Either I'm a liar, or {b} is honest.",
+]
+
+PAIR_A_HONEST_B_LIAR_TEXTS = [
+    "{a} is honest, but {b} is a liar.",
+    "Trust {a}, not {b}. {a} is honest and {b} is a liar.",
+    "*flicks tail* {a} is honest. {b} is a liar.",
+    "Purr for {a}, hiss for {b}: {a} is honest, {b} is a liar.",
+]
+
+PAIR_A_HONEST_B_LIAR_ME_TEXTS = [
+    "I'm honest, but {b} is a liar.",
+    "Trust me, not {b}. I'm honest and {b} is a liar.",
+    "Hiss. Unlike me, {b} is a liar.",
 ]
