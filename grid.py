@@ -8,7 +8,7 @@ def load_names(path="cat_names.txt"):
     """Load names into {"A": ["Ash", "Apricot", "Angus"], "B": [...], ...}."""
     names_by_letter = {}
     with open(path) as f:
-        for line in f:
+        for line in f:   # each line looks like "A: Ash, Apricot, Angus"
             letter, names = line.strip().split(": ")
             names_by_letter[letter] = names.split(", ")
     return names_by_letter
@@ -19,6 +19,7 @@ def decide_colors(n_cats):
     cats_left = n_cats
     sizes = []
 
+    # split the cats into color groups of 2 to 4 until every cat is in a group
     while cats_left > 0:
         # A group can't leave exactly 1 cat over, and can't be the whole grid
         # (grids under 4 cats are too small for two groups, so they get one color)
@@ -28,10 +29,12 @@ def decide_colors(n_cats):
         sizes.append(size)
         cats_left -= size
 
+    # one color per group, from the first 8 colors (more if there are lots of groups)
     common = COLORS[:max(8, len(sizes))]
     chosen = random.sample(common, len(sizes))
 
     colors = []
+    # turn the groups into one list, e.g. ["black", "black", "white", "white", "white"]
     for color, size in zip(chosen, sizes):
         colors += [color] * size
 

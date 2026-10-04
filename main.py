@@ -15,6 +15,8 @@ def parse_size(text):
 
 
 def main():
+    """Read the arguments, make a puzzle and print it."""
+    # only the size is required, the rest are optional flags
     parser = argparse.ArgumentParser(
         description=(
             "Generate a Purrjury puzzle: a grid of cats where some always lie.\n"
@@ -46,15 +48,17 @@ def main():
         help="generate a specific puzzle again; every run prints its seed "
              "(default: random)",
     )
+    # no arguments at all, just show the help
     if len(sys.argv) == 1:
         parser.print_help()
         return
     args = parser.parse_args()
 
+    # use the given values, or the defaults
     rows, cols = args.size
     liars = args.liars if args.liars is not None else max(1, rows * cols // 3)
     seed = args.seed if args.seed is not None else random.randrange(1_000_000)
-    random.seed(seed)
+    random.seed(seed)   # same seed = same puzzle
 
     result = generate_puzzle(rows, cols, liars)
     if result is None:

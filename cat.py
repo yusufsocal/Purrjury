@@ -1,4 +1,6 @@
 class Cat:
+    """One cat in the grid: its name, where it sits, its color and what it says."""
+
     def __init__(self, name, row, column, index, color):
         self.name = name        # display name, e.g. "Biscuit"
         self.row = row          # row in the grid (starts at 0)

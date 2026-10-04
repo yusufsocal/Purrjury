@@ -10,6 +10,7 @@ def weighted_order(weights):
     """
     remaining = dict(weights)
     order = []
+    # pick one key at a time by weight, then remove it so it can't come again
     while remaining:
         keys = list(remaining)
         pick = random.choices(keys, weights=[remaining[k] for k in keys])[0]

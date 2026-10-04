@@ -60,9 +60,17 @@ class PairStatement(Statement):
         self.relation = relation    # a key in RELATIONS
 
     def evaluate(self, world, grid):
+        """Check the relation on the two cats."""
         return RELATIONS[self.relation](world[self.a], world[self.b])
 
+    def key(self):
+        """Same relation on the same two cats means the same claim. Order only matters for ordered relations."""
+        if self.relation in ORDERED:
+            return ("pair", self.relation, self.a, self.b)
+        return ("pair", self.relation, frozenset((self.a, self.b)))   # order doesn't matter
+
     def set_text(self, grid):
+        """Pick a sentence for the relation, the "me" version when the speaker is a."""
         options = TEXTS[self.relation][self.a == self.speaker] # second bracket is 0 if false, 1 if true
 
         self.text = random.choice(options).format(
@@ -72,6 +80,7 @@ class PairStatement(Statement):
 
     @classmethod
     def random(cls, speaker, grid, world):
+        """Pick a relation by weight, then a pair of cats that makes it true for an honest cat and false for a liar."""
         should_be_true = not world[speaker]
         others = [c for c in range(len(world)) if c != speaker]
 

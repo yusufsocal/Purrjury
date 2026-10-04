@@ -33,6 +33,9 @@ class AtLeastOneLiar(Statement):
     def evaluate(self, world, grid):
         return any(world)
 
+    def key(self):
+        return ("at_least_one_liar_among_us",)
+
     def set_text(self, grid):
         self.text = "There is at least one liar among us."
 

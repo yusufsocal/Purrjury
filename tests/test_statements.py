@@ -200,3 +200,19 @@ def test_single_cat_text_uses_the_name():
 def test_to_text_before_set_text_raises():
     with pytest.raises(ValueError):
         is_liar(0, 1).to_text()
+
+
+# --- key() ---
+
+def test_count_key_ignores_text_and_order():
+    assert CountLiars(0, [1, 2], "my row", "exactly", 1).key() == CountLiars(5, [2, 1], "row 2", "exactly", 1).key()
+    assert CountLiars(0, [1, 2], "", "exactly", 1).key() != CountLiars(0, [1, 2], "", "at_least", 1).key()
+    assert CountLiars(0, [1, 2], "", "exactly", 1).key() != CountLiars(0, [1, 2], "", "exactly", 2).key()
+
+
+def test_pair_key_order_only_matters_for_ordered_relations():
+    assert PairStatement(0, 1, 2, "same").key() == PairStatement(3, 2, 1, "same").key()
+    assert PairStatement(0, 1, 2, "if_a_honest_then_b").key() != PairStatement(0, 2, 1, "if_a_honest_then_b").key()
+    assert PairStatement(0, 1, 2, "same").key() != PairStatement(0, 1, 2, "different").key()
+    # "Whatever I am, B is too" said by A is the same claim as "A and B are the same" said by someone else
+    assert PairStatement(1, 1, 2, "same").key() == PairStatement(0, 1, 2, "same").key()

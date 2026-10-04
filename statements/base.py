@@ -20,6 +20,14 @@ class Statement(ABC):
     def set_text(self, grid):
         """Pick and store the sentence the player sees, e.g. "Dusty is a liar"."""
 
+    @abstractmethod
+    def key(self):
+        """Return a hashable value that is the same for two statements that claim the same thing.
+
+        Used to stop two cats from saying the same thing in one puzzle, even when the
+        texts differ ("the cats in my row" and "the cats in row 2" can be the same cats).
+        """
+
     def to_text(self):
         """Return the sentence stored by set_text. Same for every statement type, so it lives here."""
         if self.text is None:

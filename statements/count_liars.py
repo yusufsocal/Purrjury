@@ -24,12 +24,18 @@ class CountLiars(Statement):
         self.n = n
 
     def evaluate(self, world, grid):
+        """True if the number of liars in the area matches the claim."""
         count = sum(world[i] for i in self.area) # number of liars in the area
         if self.mode == "exactly":
             return count == self.n
         return count >= self.n # at_least
 
+    def key(self):
+        """Same cats (in any order), same mode and same n means the same claim."""
+        return ("count", frozenset(self.area), self.mode, self.n)
+
     def set_text(self, grid):
+        """Pick a sentence that fits the size of the area and the number."""
         size = len(self.area)
 
         # One cat: use its name with the liar/honest texts
@@ -87,6 +93,7 @@ class CountLiars(Statement):
             "single": [],
         }
 
+        # other rows and columns
         for r in range(len(grid)):
             if r != me.row:
                 candidates["line"].append((areas.row(grid, r), f"the cats in row {r + 1}"))
@@ -94,9 +101,11 @@ class CountLiars(Statement):
             if c != me.column:
                 candidates["line"].append((areas.column(grid, c), f"the cats in column {c + 1}"))
 
+        # one area per color in the grid
         for color in sorted({cat.color for cat in cats}):
             candidates["color"].append((areas.with_color(grid, color), f"the {color} cats"))
 
+        # one area per cat, except the speaker
         for cat in cats:
             if cat.index != speaker:
                 candidates["single"].append(([cat.index], cat.name))
@@ -116,6 +125,7 @@ class CountLiars(Statement):
 
     @classmethod
     def random(cls, speaker, grid, world):
+        """Pick an area and a number so the statement is true for an honest cat and false for a liar."""
         should_be_true = not world[speaker]
 
         # Pick a category by weight first, then an area inside it, so a category

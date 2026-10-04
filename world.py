@@ -8,6 +8,7 @@ def make_world(n_cats, n_liars):
     world = [False] * n_cats
     liar_indexes = random.sample(range(n_cats), n_liars)
 
+    # turn the chosen cats into liars
     for i in liar_indexes:
         world[i] = True
 
