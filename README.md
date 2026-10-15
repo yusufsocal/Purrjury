@@ -44,6 +44,17 @@ python main.py 3x3 -s 42        # the same puzzle every time
 python main.py 3x3 -s 42 -a     # that puzzle with the answers shown
 ```
 
+## Web version (prototype)
+
+A simple page to play the puzzles in the browser.
+
+```
+python export.py            # 10 puzzles each of 3x3 and 4x4
+python export.py 3x3 -n 20  # 20 puzzles of 3x3
+```
+
+Then open `web/index.html` in your browser. Tap a cat to mark it honest, then liar, then unknown. Check tells you how many marks are wrong, Reveal shows the answer.
+
 ## Tests
 
 ```
