@@ -72,7 +72,6 @@ function render() {
       else if (talksAbout && talkedBy) card.classList.add("talks-both");
       else if (talksAbout) card.classList.add("talks-about");
       else if (talkedBy) card.classList.add("talked-by");
-      else card.classList.add("faded");
     }
 
     const top = document.createElement("div");

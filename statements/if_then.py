@@ -12,6 +12,8 @@ class IfThen(Statement):
     """If one cat is honest (or a liar), a whole area is honest (or liars).
 
     e.g. 'If Felix is honest, then all of the cats in my row are liars'.
+    The player sees it as "Either Felix is a liar, or all of the cats in my row are liars (or both)",
+    which means the same thing but is easier to read.
     The cat in the "if" part is never the speaker, "If I'm honest, ..." would give
     away too much.
     """
@@ -39,10 +41,13 @@ class IfThen(Statement):
         return ("if_then", self.cat, self.cat_liar, frozenset(self.area), self.area_liar)
 
     def set_text(self, grid):
-        """Pick a sentence and fill in the cat, the area and the types."""
+        """Pick a sentence and fill in the cat, the area and the types.
+
+        The texts say the opposite of the "if" part: "if Felix is honest" becomes "either Felix is a liar".
+        """
         self.text = random.choice(texts.IF_THEN_TEXTS).format(
             name=get_cat(grid, self.cat).name,
-            cond="a liar" if self.cat_liar else "honest",
+            opposite="honest" if self.cat_liar else "a liar",
             area=self.area_text,
             then="liars" if self.area_liar else "honest",
         )

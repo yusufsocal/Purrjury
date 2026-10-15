@@ -5,7 +5,7 @@
     {h}     the number of honest cats (size of the area minus n)
     {a} {b}            the two cats in a pair statement
     {quoted} {target}  the quoted cat and the cat the quote is about
-    {cond} {then}      the types in an IfThen statement
+    {opposite} {then}  the types in an IfThen statement
     {quote}            what a hidden cat supposedly said
 Every sentence keeps the logic words plain (liar / honest / exactly / at least),
 the cat talk is only decoration around them.
@@ -316,13 +316,15 @@ MIXED_TEXTS = [
 
 
 # --- If a cat is something, a whole area is something (IfThen) ---
-# {name} is the cat, {cond} is "honest" or "a liar", {area} is the area text, {then} is "honest" or "liars".
+# "If A, then B" is written as "Either not A, or B (or both)", it's the same thing but easier to read.
+# {name} is the cat, {opposite} is the opposite of the "if" part ("honest" or "a liar"),
+# {area} is the area text, {then} is "honest" or "liars".
 
 IF_THEN_TEXTS = [
-    "If {name} is {cond}, then all of {area} are {then}.",
-    "Mrrp. If {name} is {cond}, all of {area} are {then}.",
-    "*thinks hard* I know this much: if {name} is {cond}, all of {area} are {then}.",
-    "Mark my whiskers: if {name} is {cond}, then all of {area} are {then}.",
+    "Either {name} is {opposite}, or all of {area} are {then} (or both).",
+    "Mrrp. Either {name} is {opposite}, or all of {area} are {then}. Maybe both.",
+    "*thinks hard* Either {name} is {opposite}, or all of {area} are {then}, or both.",
+    "Mark my whiskers: either {name} is {opposite}, or all of {area} are {then}. Maybe both.",
 ]
 
 

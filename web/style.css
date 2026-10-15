@@ -96,16 +96,28 @@ button:hover { border-color: var(--muted); }
 
 /* connections (double click, right click or long-press a cat) */
 :root { --about: #2f6fdb; --by: #e08a1e; --both: #8b4fd1; }
-.card.focus { outline: 4px solid var(--ink); outline-offset: 2px; }
-.card.talks-about { outline: 4px solid var(--about); outline-offset: 2px; }
-.card.talked-by { outline: 4px solid var(--by); outline-offset: 2px; }
-.card.talks-both { outline: 4px dashed var(--both); outline-offset: 2px; }
-.card.faded { opacity: 0.45; }
+/* only the names change color, so the rest of the page stays calm */
+.card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
+.card.talks-about .name { color: var(--about); }
+.card.talked-by .name { color: var(--by); }
+.card.talks-both .name { color: var(--both); }
+/* the highlighted names pop up for a moment so you notice them */
+.card.focus .name, .card.talks-about .name, .card.talked-by .name, .card.talks-both .name {
+  display: inline-block;
+  transform-origin: left center;
+  animation: pop 0.45s ease-in-out;
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.35); }
+  75% { transform: scale(1.35); }   /* hold for a moment, then snap back quickly */
+  100% { transform: scale(1); }
+}
 #legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
-.tag { font-size: 0.85rem; font-weight: 600; padding: 2px 8px; border-radius: 6px; border: 2px solid; }
-.tag-about { color: var(--about); border-color: var(--about); }
-.tag-by { color: var(--by); border-color: var(--by); }
-.tag-both { color: var(--both); border-color: var(--both); border-style: dashed; }
+.tag { font-size: 0.8rem; font-weight: 600; }
+.tag-about { color: var(--about); }
+.tag-by { color: var(--by); }
+.tag-both { color: var(--both); }
 
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }

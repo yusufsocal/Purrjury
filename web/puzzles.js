@@ -58,7 +58,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 1,
     "column": 1,
-    "text": "Mrrp. If Luna is a liar, all of Hazel, Luna and me are honest.",
+    "text": "Mrrp. Either Luna is honest, or all of Hazel, Luna and me are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -140,7 +140,7 @@ const PUZZLES = [
     "color": "black",
     "row": 0,
     "column": 0,
-    "text": "Mrrp. If Loki is a liar, all of the cats below me are liars.",
+    "text": "Mrrp. Either Loki is honest, or all of the cats below me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -207,7 +207,7 @@ const PUZZLES = [
     "color": "white",
     "row": 1,
     "column": 2,
-    "text": "Mrrp. If Ash is a liar, all of the cats on the edges are honest.",
+    "text": "Mrrp. Either Ash is honest, or all of the cats on the edges are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -292,7 +292,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 0,
     "column": 1,
-    "text": "Mrrp. If Iggy is honest, all of the cats below me are liars.",
+    "text": "Mrrp. Either Iggy is a liar, or all of the cats below me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -334,7 +334,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 1,
     "column": 1,
-    "text": "If Coco is honest, then all of my neighbors are honest.",
+    "text": "Either Coco is a liar, or all of my neighbors are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -375,7 +375,7 @@ const PUZZLES = [
     "color": "black",
     "row": 2,
     "column": 1,
-    "text": "Mrrp. If Bagel is a liar, all of Bagel, Coco and me are liars.",
+    "text": "Mrrp. Either Bagel is honest, or all of Bagel, Coco and me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -589,7 +589,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 1,
     "column": 0,
-    "text": "Mrrp. If Hazel is honest, all of the cats in row 1 are honest.",
+    "text": "Mrrp. Either Hazel is a liar, or all of the cats in row 1 are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -714,7 +714,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 0,
     "column": 2,
-    "text": "If Hazel is honest, then all of the cats to my left are liars.",
+    "text": "Either Hazel is a liar, or all of the cats to my left are liars (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -778,7 +778,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 2,
     "column": 1,
-    "text": "Mark my whiskers: if Clover is a liar, then all of Bean, Dusty and me are liars.",
+    "text": "Mark my whiskers: either Clover is honest, or all of Bean, Dusty and me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -916,7 +916,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 2,
     "column": 1,
-    "text": "*thinks hard* I know this much: if Angus is a liar, all of my neighbors are honest.",
+    "text": "*thinks hard* Either Angus is honest, or all of my neighbors are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1053,7 +1053,7 @@ const PUZZLES = [
     "color": "black",
     "row": 2,
     "column": 1,
-    "text": "Mark my whiskers: if Doodle is a liar, then all of us are honest.",
+    "text": "Mark my whiskers: either Doodle is honest, or all of us are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1129,7 +1129,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 0,
     "column": 2,
-    "text": "Mark my whiskers: if Gizmo is honest, then all of the siamese cats are liars.",
+    "text": "Mark my whiskers: either Gizmo is a liar, or all of the siamese cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1381,7 +1381,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 0,
     "column": 1,
-    "text": "Mark my whiskers: if Quincy is honest, then all of the white cats are liars.",
+    "text": "Mark my whiskers: either Quincy is a liar, or all of the white cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1435,7 +1435,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 1,
     "column": 1,
-    "text": "Mark my whiskers: if Dumpling is a liar, then all of the tuxedo cats are liars.",
+    "text": "Mark my whiskers: either Dumpling is honest, or all of the tuxedo cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1488,7 +1488,7 @@ const PUZZLES = [
     "color": "black",
     "row": 2,
     "column": 1,
-    "text": "*thinks hard* I know this much: if Juniper is a liar, all of the siamese cats are liars.",
+    "text": "*thinks hard* Either Juniper is honest, or all of the siamese cats are liars, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1532,7 +1532,7 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Mrrp. If Clover is honest, all of the cats on the edges are liars.",
+    "secret": "Mrrp. Either Clover is a liar, or all of the cats on the edges are liars. Maybe both.",
     "mentions": []
    },
    {
@@ -1553,7 +1553,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 3,
     "column": 2,
-    "text": "Mrrp. What Oreo meant was: \"Mrrp. If Clover is honest, all of the cats on the edges are liars.\"",
+    "text": "Mrrp. What Oreo meant was: \"Mrrp. Either Clover is a liar, or all of the cats on the edges are liars. Maybe both.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1730,7 +1730,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 2,
     "column": 1,
-    "text": "*thinks hard* I know this much: if Rusty is honest, all of the cats in my row are honest.",
+    "text": "*thinks hard* Either Rusty is a liar, or all of the cats in my row are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1786,7 +1786,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 3,
     "column": 1,
-    "text": "Mark my whiskers: if Sushi is a liar, then all of the cats on the edges are honest.",
+    "text": "Mark my whiskers: either Sushi is honest, or all of the cats on the edges are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2015,7 +2015,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 2,
     "column": 3,
-    "text": "Mark my whiskers: if Angus is honest, then all of the cats in row 2 are liars.",
+    "text": "Mark my whiskers: either Angus is a liar, or all of the cats in row 2 are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2031,7 +2031,7 @@ const PUZZLES = [
     "color": "black",
     "row": 3,
     "column": 0,
-    "text": "If Noodle is a liar, then all of the tabby cats are liars.",
+    "text": "Either Noodle is honest, or all of the tabby cats are liars (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2120,7 +2120,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 0,
     "column": 1,
-    "text": "Mark my whiskers: if Luna is honest, then all of the cats in my column are liars.",
+    "text": "Mark my whiskers: either Luna is a liar, or all of the cats in my column are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2232,7 +2232,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 1,
-    "text": "Mark my whiskers: if Doodle is honest, then all of Hobbes, Sushi and me are honest.",
+    "text": "Mark my whiskers: either Doodle is a liar, or all of Hobbes, Sushi and me are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2350,7 +2350,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 0,
     "column": 0,
-    "text": "*thinks hard* I know this much: if Mango is honest, all of the ginger cats are honest.",
+    "text": "*thinks hard* Either Mango is a liar, or all of the ginger cats are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2446,7 +2446,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 1,
     "column": 3,
-    "text": "If Ember is honest, then all of Coco, Quincy and me are honest.",
+    "text": "Either Ember is a liar, or all of Coco, Quincy and me are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2470,7 +2470,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 2,
     "column": 1,
-    "text": "Mark my whiskers: if Ember is a liar, then all of Quincy, Rusty and me are liars.",
+    "text": "Mark my whiskers: either Ember is honest, or all of Quincy, Rusty and me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2498,7 +2498,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 2,
     "column": 3,
-    "text": "Mark my whiskers: if Ash is honest, then all of the tabby cats are liars.",
+    "text": "Mark my whiskers: either Ash is a liar, or all of the tabby cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2513,7 +2513,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 3,
     "column": 0,
-    "text": "Mrrp. If Paprika is a liar, all of the cats in row 2 are honest.",
+    "text": "Mrrp. Either Paprika is honest, or all of the cats in row 2 are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2529,7 +2529,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 3,
     "column": 1,
-    "text": "*thinks hard* I know this much: if Quincy is a liar, all of Ember, Nugget and me are honest.",
+    "text": "*thinks hard* Either Quincy is honest, or all of Ember, Nugget and me are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2556,7 +2556,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 3,
     "column": 3,
-    "text": "Mrrp. If Ash is a liar, all of the cats in column 3 are liars.",
+    "text": "Mrrp. Either Ash is honest, or all of the cats in column 3 are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2706,7 +2706,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 2,
     "column": 0,
-    "text": "I speak Waffles. Translated, they said: \"*thinks hard* I know this much: if Iggy is honest, all of the cats in my row are honest.\"",
+    "text": "I speak Waffles. Translated, they said: \"*thinks hard* Either Iggy is a liar, or all of the cats in my row are honest, or both.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2736,7 +2736,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 2,
-    "text": "Mark my whiskers: if Angus is a liar, then all of the cats in row 4 are liars.",
+    "text": "Mark my whiskers: either Angus is honest, or all of the cats in row 4 are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2778,7 +2778,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 3,
     "column": 1,
-    "text": "Mark my whiskers: if Jasper is a liar, then all of us are liars.",
+    "text": "Mark my whiskers: either Jasper is honest, or all of us are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2804,7 +2804,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 3,
     "column": 2,
-    "text": "If Honey is a liar, then all of the cats in column 2 are honest.",
+    "text": "Either Honey is honest, or all of the cats in column 2 are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2822,7 +2822,7 @@ const PUZZLES = [
     "column": 3,
     "text": "*incomprehensible meowing*",
     "hidden": true,
-    "secret": "*thinks hard* I know this much: if Iggy is honest, all of the cats in my row are honest.",
+    "secret": "*thinks hard* Either Iggy is a liar, or all of the cats in my row are honest, or both.",
     "mentions": []
    }
   ],
@@ -2855,7 +2855,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 0,
     "column": 0,
-    "text": "Mark my whiskers: if Jasper is honest, then all of the cats to my right are honest.",
+    "text": "Mark my whiskers: either Jasper is a liar, or all of the cats to my right are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2978,7 +2978,7 @@ const PUZZLES = [
     "color": "ginger",
     "row": 2,
     "column": 1,
-    "text": "Mrrp. If Paprika is a liar, all of the cats in the middle are liars.",
+    "text": "Mrrp. Either Paprika is honest, or all of the cats in the middle are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3372,7 +3372,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 0,
     "column": 3,
-    "text": "Mark my whiskers: if Ash is honest, then all of the grey cats are honest.",
+    "text": "Mark my whiskers: either Ash is a liar, or all of the grey cats are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3385,7 +3385,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 1,
     "column": 0,
-    "text": "If Tater is a liar, then all of us are honest.",
+    "text": "Either Tater is honest, or all of us are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3491,7 +3491,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 2,
     "column": 3,
-    "text": "*thinks hard* I know this much: if Bean is a liar, all of the cats in row 1 are liars.",
+    "text": "*thinks hard* Either Bean is honest, or all of the cats in row 1 are liars, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3598,7 +3598,7 @@ const PUZZLES = [
     "color": "black",
     "row": 0,
     "column": 1,
-    "text": "Mrrp. If Sushi is a liar, all of the cats in my row are liars.",
+    "text": "Mrrp. Either Sushi is honest, or all of the cats in my row are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3613,7 +3613,7 @@ const PUZZLES = [
     "color": "tuxedo",
     "row": 0,
     "column": 2,
-    "text": "If Jasper is a liar, then all of the calico cats are honest.",
+    "text": "Either Jasper is honest, or all of the calico cats are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3629,7 +3629,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 0,
     "column": 3,
-    "text": "Mrrp. If Mochi is a liar, all of Honey, Iggy and me are honest.",
+    "text": "Mrrp. Either Mochi is honest, or all of Honey, Iggy and me are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3682,7 +3682,7 @@ const PUZZLES = [
     "color": "tabby",
     "row": 1,
     "column": 3,
-    "text": "Mrrp. If Tater is honest, all of Honey, Kiwi and me are liars.",
+    "text": "Mrrp. Either Tater is a liar, or all of Honey, Kiwi and me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3712,7 +3712,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 1,
-    "text": "Mrrp. If Iggy is honest, all of the grey cats are honest.",
+    "text": "Mrrp. Either Iggy is a liar, or all of the grey cats are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3765,7 +3765,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 3,
     "column": 1,
-    "text": "Mark my whiskers: if Gizmo is honest, then all of the corner cats are liars.",
+    "text": "Mark my whiskers: either Gizmo is a liar, or all of the corner cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
