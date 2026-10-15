@@ -47,6 +47,10 @@ class Only(Statement):
         # target has the type, everyone else in the area has the other type
         return all(world[i] == (self.is_liar if i == self.target else not self.is_liar) for i in self.area)
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set(self.area + [self.target]) - {self.speaker})
+
     def key(self):
         """Same cats (in any order), same target and same type means the same claim."""
         return ("only", frozenset(self.area), self.target, self.is_liar)

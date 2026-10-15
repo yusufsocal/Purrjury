@@ -30,6 +30,10 @@ class IfThen(Statement):
         then_part = all(world[i] == self.area_liar for i in self.area)
         return (not if_part) or then_part
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set(self.area + [self.cat]) - {self.speaker})
+
     def key(self):
         """Same cat, same types and same area (in any order) means the same claim."""
         return ("if_then", self.cat, self.cat_liar, frozenset(self.area), self.area_liar)

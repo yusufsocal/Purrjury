@@ -298,3 +298,28 @@ def test_add_hidden_cats(rows, cols, monkeypatch):
             assert cats[i].gibberish
         # the real world is still a solution for the player
         assert tuple(world) in [tuple(w) for w in find_solutions(grid)]
+
+
+# --- mentions() ---
+
+def test_mentions_never_include_the_speaker():
+    assert CountLiars(0, [0, 1, 2], "", "exactly", 1).mentions() == [1, 2]
+    assert Quote(0, 0, 3, True).mentions() == [3]
+    assert Quote(0, 1, 0, True).mentions() == [1]
+    assert Only(2, [1, 2], "", 1, True).mentions() == [1]
+    assert AllSame(0, [0, 4], "", True).mentions() == [4]
+    assert IfThen(0, 5, True, [0, 1], "", False).mentions() == [1, 5]
+    assert Hearsay(0, 1, is_liar(1, 3)).mentions() == [1, 3]
+
+
+@pytest.mark.parametrize("statement_type", ALL_STATEMENTS)
+def test_random_statements_mention_real_cats(statement_type):
+    for _ in range(30):
+        grid = random_grid(3, 3)
+        world = make_world(9, 3)
+        for speaker in range(9):
+            s = statement_type.random(speaker, grid, world)
+            if s is not None:
+                m = s.mentions()
+                assert speaker not in m
+                assert all(0 <= i < 9 for i in m)

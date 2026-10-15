@@ -20,6 +20,10 @@ class AllSame(Statement):
         types = {world[i] for i in self.area}   # {True}, {False} or {True, False}
         return (len(types) == 1) == self.same
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set(self.area) - {self.speaker})
+
     def key(self):
         """Same cats (in any order) and same claim means the same statement."""
         return ("all_same", frozenset(self.area), self.same)

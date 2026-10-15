@@ -54,6 +54,10 @@ class Quote(Statement):
         quoted_is_honest = not world[self.quoted]
         return quote_is_true == quoted_is_honest
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set([self.quoted, self.target]) - {self.speaker})
+
     def key(self):
         """Same quoted cat, same target and same claim means the same statement."""
         return ("quote", self.quoted, self.target, self.says_liar)

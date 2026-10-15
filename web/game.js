@@ -32,11 +32,17 @@ const states = PUZZLES.map(p => ({
 }));
 
 let current = 0;
+let highlight = null;        // index of the cat whose connections are shown, or null
+let highlightTimer = null;   // clears the highlight after a few seconds
+let pressTimer = null;       // for long-press on phones
+let longPressed = false;     // true right after a long-press, so the tap after it doesn't change the mark
+const HIGHLIGHT_SECONDS = 6;
 
 const grid = document.getElementById("grid");
 const info = document.getElementById("info");
 const message = document.getElementById("message");
 const timer = document.getElementById("timer");
+const legend = document.getElementById("legend");
 
 
 function puzzle() { return PUZZLES[current]; }
@@ -57,6 +63,17 @@ function render() {
     card.className = "card " + s.marks[i];
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
+
+    // connections: the chosen cat, the cats it talks about, and the cats that talk about it
+    if (highlight !== null) {
+      const talksAbout = p.cats[highlight].mentions.includes(i);
+      const talkedBy = cat.mentions.includes(highlight);
+      if (i === highlight) card.classList.add("focus");
+      else if (talksAbout && talkedBy) card.classList.add("talks-both");
+      else if (talksAbout) card.classList.add("talks-about");
+      else if (talkedBy) card.classList.add("talked-by");
+      else card.classList.add("faded");
+    }
 
     const top = document.createElement("div");
     top.className = "top";
@@ -103,7 +120,27 @@ function render() {
       secret.textContent = "Really said: " + cat.secret;
       card.append(secret);
     }
-    card.addEventListener("click", () => cycleMark(i));
+    // tap: change the mark. double click, right click or long-press: show connections
+    card.addEventListener("click", event => {
+      if (longPressed) { longPressed = false; return; }
+      if (event.detail === 2) {
+        undoMark(i);   // the first click of the double click already changed the mark
+        showConnections(i);
+      } else if (highlight !== null) {
+        clearConnections();
+      } else {
+        cycleMark(i);
+      }
+    });
+    card.addEventListener("contextmenu", event => {
+      event.preventDefault();   // no browser menu
+      showConnections(i);
+    });
+    card.addEventListener("touchstart", () => {
+      pressTimer = setTimeout(() => { longPressed = true; showConnections(i); }, 500);
+    }, { passive: true });
+    card.addEventListener("touchend", () => clearTimeout(pressTimer));
+    card.addEventListener("touchmove", () => clearTimeout(pressTimer));
     grid.append(card);
   });
 
@@ -117,6 +154,46 @@ function cycleMark(i) {
   const next = (MARKS.indexOf(s.marks[i]) + 1) % MARKS.length;
   s.marks[i] = MARKS[next];
   message.textContent = "";
+  render();
+}
+
+
+// go one mark back (honest -> unknown, liar -> honest, unknown -> liar)
+function undoMark(i) {
+  const s = state();
+  if (s.solved || s.revealed) return;
+  const previous = (MARKS.indexOf(s.marks[i]) + MARKS.length - 1) % MARKS.length;
+  s.marks[i] = MARKS[previous];
+}
+
+
+function showConnections(i) {
+  const cat = puzzle().cats[i];
+  highlight = i;
+  legend.innerHTML = "";
+  const parts = [
+    ["about", `cats ${cat.name} talks about`],
+    ["by", `cats that talk about ${cat.name}`],
+    ["both", "both"],
+  ];
+  // small colored labels so you know what each color means
+  parts.forEach(([kind, label]) => {
+    const tag = document.createElement("span");
+    tag.className = "tag tag-" + kind;
+    tag.textContent = label;
+    legend.append(tag);
+  });
+  clearTimeout(highlightTimer);
+  highlightTimer = setTimeout(clearConnections, HIGHLIGHT_SECONDS * 1000);
+  render();
+}
+
+
+function clearConnections() {
+  if (highlight === null) return;
+  highlight = null;
+  legend.innerHTML = "";
+  clearTimeout(highlightTimer);
   render();
 }
 
@@ -167,6 +244,8 @@ function reveal() {
 
 
 function go(step) {
+  highlight = null;
+  legend.innerHTML = "";
   current = (current + step + PUZZLES.length) % PUZZLES.length;
   message.textContent = "";
   render();
@@ -197,6 +276,7 @@ document.getElementById("reveal").addEventListener("click", reveal);
 document.addEventListener("keydown", event => {
   if (event.key === "ArrowLeft") go(-1);
   if (event.key === "ArrowRight") go(1);
+  if (event.key === "Escape") clearConnections();
 });
 
 render();

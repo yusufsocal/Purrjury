@@ -94,6 +94,19 @@ button:hover { border-color: var(--muted); }
   line-height: 1.4;
 }
 
+/* connections (double click, right click or long-press a cat) */
+:root { --about: #2f6fdb; --by: #e08a1e; --both: #8b4fd1; }
+.card.focus { outline: 4px solid var(--ink); outline-offset: 2px; }
+.card.talks-about { outline: 4px solid var(--about); outline-offset: 2px; }
+.card.talked-by { outline: 4px solid var(--by); outline-offset: 2px; }
+.card.talks-both { outline: 4px dashed var(--both); outline-offset: 2px; }
+.card.faded { opacity: 0.45; }
+#legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
+.tag { font-size: 0.85rem; font-weight: 600; padding: 2px 8px; border-radius: 6px; border: 2px solid; }
+.tag-about { color: var(--about); border-color: var(--about); }
+.tag-by { color: var(--by); border-color: var(--by); }
+.tag-both { color: var(--both); border-color: var(--both); border-style: dashed; }
+
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }
 

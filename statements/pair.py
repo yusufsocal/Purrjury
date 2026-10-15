@@ -63,6 +63,10 @@ class PairStatement(Statement):
         """Check the relation on the two cats."""
         return RELATIONS[self.relation](world[self.a], world[self.b])
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set([self.a, self.b]) - {self.speaker})
+
     def key(self):
         """Same relation on the same two cats means the same claim. Order only matters for ordered relations."""
         if self.relation in ORDERED:

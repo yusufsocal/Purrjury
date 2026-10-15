@@ -28,6 +28,13 @@ class Statement(ABC):
         texts differ ("the cats in my row" and "the cats in row 2" can be the same cats).
         """
 
+    @abstractmethod
+    def mentions(self):
+        """Return the indexes of the other cats this statement talks about (never the speaker).
+
+        Used by the web version to show which cats are connected.
+        """
+
     def fits(self, world, grid):
         """True if this statement fits its speaker in world: true for an honest cat, false for a liar.
 

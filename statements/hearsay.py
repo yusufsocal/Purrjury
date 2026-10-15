@@ -34,6 +34,10 @@ class Hearsay(Statement):
         speaker_is_liar = world[self.speaker]
         return speaker_is_liar or self.quote.evaluate(world, grid) == (not world[self.about])
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set([self.about] + self.quote.mentions()) - {self.speaker})
+
     def key(self):
         """Same hidden cat and same quote means the same claim."""
         return ("hearsay", self.about, self.quote.key())

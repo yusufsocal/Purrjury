@@ -17,6 +17,9 @@ def test_export_writes_playable_puzzles(tmp_path):
             assert cat["name"] and cat["color"] and cat["text"]
             assert cat["hidden"] in (True, False)
             assert (cat["secret"] is not None) == cat["hidden"]
+            assert all(0 <= i < n for i in cat["mentions"])
+            if cat["hidden"]:
+                assert cat["mentions"] == []
 
     # the file is a JavaScript line that sets PUZZLES to the same data
     content = path.read_text(encoding="utf-8")

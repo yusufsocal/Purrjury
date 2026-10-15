@@ -36,6 +36,9 @@ class AtLeastOneLiar(Statement):
     def key(self):
         return ("at_least_one_liar_among_us",)
 
+    def mentions(self):
+        return []
+
     def set_text(self, grid):
         self.text = "There is at least one liar among us."
 

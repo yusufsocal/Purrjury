@@ -33,6 +33,10 @@ class CountLiars(Statement):
             return count == self.n
         return count >= self.n # at_least
 
+    def mentions(self):
+        """The other cats this statement talks about."""
+        return sorted(set(self.area) - {self.speaker})
+
     def key(self):
         """Same cats (in any order), same mode and same n means the same claim."""
         return ("count", frozenset(self.area), self.mode, self.n)

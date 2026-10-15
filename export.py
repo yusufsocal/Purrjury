@@ -23,6 +23,8 @@ def puzzle_to_dict(grid, world, seed):
                 "text": cat.gibberish if cat.hidden else cat.statement.to_text(),
                 "hidden": cat.hidden,
                 "secret": cat.statement.to_text() if cat.hidden else None,   # shown after Reveal
+                # the other cats this cat talks about. Hidden cats show none, that would give away their statement
+                "mentions": [] if cat.hidden else cat.statement.mentions(),
             })
     return {
         "rows": len(grid),

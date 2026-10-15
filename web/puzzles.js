@@ -12,7 +12,11 @@ const PUZZLES = [
     "column": 0,
     "text": "*leans in* Hazel whispered to me: \"Mrrp! None of Biscuit, Goose and me are liars, I'd bet my nine lives on it.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     3
+    ]
    },
    {
     "name": "Fig",
@@ -21,7 +25,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Hazel would say they're a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3
+    ]
    },
    {
     "name": "Goose",
@@ -30,7 +37,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. Whatever one of the ginger cats is, the rest are too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     6
+    ]
    },
    {
     "name": "Hazel",
@@ -39,7 +50,8 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
-    "secret": "Mrrp! None of Biscuit, Goose and me are liars, I'd bet my nine lives on it."
+    "secret": "Mrrp! None of Biscuit, Goose and me are liars, I'd bet my nine lives on it.",
+    "mentions": []
    },
    {
     "name": "Jellybean",
@@ -48,7 +60,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Luna is a liar, all of Hazel, Luna and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     6
+    ]
    },
    {
     "name": "Kismet",
@@ -57,7 +73,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Not one of the cats in my row can be trusted. Meow.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     4
+    ]
    },
    {
     "name": "Luna",
@@ -66,7 +86,11 @@ const PUZZLES = [
     "column": 0,
     "text": "All of the cats in my column are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3
+    ]
    },
    {
     "name": "Mango",
@@ -75,7 +99,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Fig always tells the truth, no kitten.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1
+    ]
    },
    {
     "name": "Noodle",
@@ -84,7 +111,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*arches back* Fig and Kismet are both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ]
    }
   ],
   "liars": [
@@ -111,7 +142,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. If Loki is a liar, all of the cats below me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     6,
+     8
+    ]
    },
    {
     "name": "Bagel",
@@ -120,7 +156,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Everyone among the cats in my row is a liar, except Ash, who is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2
+    ]
    },
    {
     "name": "Clover",
@@ -129,7 +169,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Meow. Among my neighbors, only Felix is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ]
    },
    {
     "name": "Dusty",
@@ -138,7 +182,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Everyone among my neighbors is honest, except Ember, who is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     6
+    ]
    },
    {
     "name": "Ember",
@@ -147,7 +196,11 @@ const PUZZLES = [
     "column": 1,
     "text": "I heard Loki say: \"If you asked me, I'd say Dusty is honest.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     8
+    ]
    },
    {
     "name": "Felix",
@@ -156,7 +209,16 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. If Ash is a liar, all of the cats on the edges are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     6,
+     7,
+     8
+    ]
    },
    {
     "name": "Gizmo",
@@ -165,7 +227,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Ash and Clover are both honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2
+    ]
    },
    {
     "name": "Kismet",
@@ -174,7 +240,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Hiss. Among the cats in my column, I'm the only liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     4
+    ]
    },
    {
     "name": "Loki",
@@ -183,7 +253,8 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
-    "secret": "Mrrp. Dusty would call Kismet a liar."
+    "secret": "Mrrp. Dusty would call Kismet a liar.",
+    "mentions": []
    }
   ],
   "liars": [
@@ -210,7 +281,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Purr. You can trust at least one of Kettle and Mochi.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     8
+    ]
    },
    {
     "name": "Coco",
@@ -219,7 +294,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Iggy is honest, all of the cats below me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     7
+    ]
    },
    {
     "name": "Dumpling",
@@ -228,7 +307,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Among the cats in row 2, there are both honest cats and liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     4,
+     5
+    ]
    },
    {
     "name": "Hazel",
@@ -237,7 +321,13 @@ const PUZZLES = [
     "column": 0,
     "text": "Among the corner cats, there are both honest cats and liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     6,
+     8
+    ]
    },
    {
     "name": "Iggy",
@@ -246,7 +336,13 @@ const PUZZLES = [
     "column": 1,
     "text": "If Coco is honest, then all of my neighbors are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     5,
+     7
+    ]
    },
    {
     "name": "Jasper",
@@ -255,7 +351,11 @@ const PUZZLES = [
     "column": 2,
     "text": "There's a mix among Coco, Luna and me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     7
+    ]
    },
    {
     "name": "Kettle",
@@ -264,7 +364,11 @@ const PUZZLES = [
     "column": 0,
     "text": "All but one of the cats to my right are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     8
+    ]
    },
    {
     "name": "Luna",
@@ -273,7 +377,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Bagel is a liar, all of Bagel, Coco and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1
+    ]
    },
    {
     "name": "Mochi",
@@ -282,7 +390,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Coco and Jasper are from the same litter: both honest, or both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ]
    }
   ],
   "liars": [
@@ -309,7 +421,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. Among the cats in column 3, only Doodle is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     5,
+     8
+    ]
    },
    {
     "name": "Coco",
@@ -318,7 +435,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. Ember and Inky can't both be trusted.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     6
+    ]
    },
    {
     "name": "Doodle",
@@ -327,7 +448,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Ember would say I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3
+    ]
    },
    {
     "name": "Ember",
@@ -336,7 +460,11 @@ const PUZZLES = [
     "column": 0,
     "text": "None of the ginger cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     6
+    ]
    },
    {
     "name": "Felix",
@@ -345,7 +473,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Purr. If you asked me, I'd say Luna is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8
+    ]
    },
    {
     "name": "Goose",
@@ -354,7 +485,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Purr. If you asked me, I'd say Apricot is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0
+    ]
    },
    {
     "name": "Inky",
@@ -363,7 +497,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Not a single liar among the cats above me. Purr.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3
+    ]
    },
    {
     "name": "Jasper",
@@ -372,7 +510,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Coco and Goose are from the same litter: both honest, or both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ]
    },
    {
     "name": "Luna",
@@ -381,7 +523,10 @@ const PUZZLES = [
     "column": 2,
     "text": "*slow blinks* If you asked me about Ember, I'd say honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3
+    ]
    }
   ],
   "liars": [
@@ -408,7 +553,12 @@ const PUZZLES = [
     "column": 0,
     "text": "*points a paw at Felix* The only liar among the corner cats.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     8
+    ]
    },
    {
     "name": "Echo",
@@ -417,7 +567,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Hiss. Not all of the cats in row 3 are the same: there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8
+    ]
    },
    {
     "name": "Felix",
@@ -426,7 +581,8 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Echo can only be a liar if Clover is a liar too."
+    "secret": "Echo can only be a liar if Clover is a liar too.",
+    "mentions": []
    },
    {
     "name": "Goose",
@@ -435,7 +591,13 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. If Hazel is honest, all of the cats in row 1 are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     4
+    ]
    },
    {
     "name": "Hazel",
@@ -444,7 +606,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Hiss. Not all of the cats in my column are the same: there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     7
+    ]
    },
    {
     "name": "Indigo",
@@ -453,7 +619,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrow. Exactly one of my neighbors is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     4,
+     8
+    ]
    },
    {
     "name": "Jasper",
@@ -462,7 +633,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Don't trust Echo or Goose. Both are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     3
+    ]
    },
    {
     "name": "Luna",
@@ -471,7 +646,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Felix told me: \"Echo can only be a liar if Clover is a liar too.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2
+    ]
    },
    {
     "name": "Marble",
@@ -480,7 +660,10 @@ const PUZZLES = [
     "column": 2,
     "text": "All of the ginger cats are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0
+    ]
    }
   ],
   "liars": [
@@ -507,7 +690,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Hiss! Ember and Felix are liars, both of them.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     5
+    ]
    },
    {
     "name": "Bean",
@@ -516,7 +703,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Apricot and Felix are both honest, fur real.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     5
+    ]
    },
    {
     "name": "Clover",
@@ -525,7 +716,12 @@ const PUZZLES = [
     "column": 2,
     "text": "If Hazel is honest, then all of the cats to my left are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     6
+    ]
    },
    {
     "name": "Dusty",
@@ -534,7 +730,11 @@ const PUZZLES = [
     "column": 0,
     "text": "I'm the only honest cat among Apricot, Bean and me.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1
+    ]
    },
    {
     "name": "Ember",
@@ -543,7 +743,10 @@ const PUZZLES = [
     "column": 1,
     "text": "*flattens ears* Jasper would tell you I'm a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8
+    ]
    },
    {
     "name": "Felix",
@@ -552,7 +755,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*arches back* Bean and Jasper are both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     8
+    ]
    },
    {
     "name": "Hazel",
@@ -561,7 +768,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Clover would say they're honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2
+    ]
    },
    {
     "name": "Indigo",
@@ -570,7 +780,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Clover is a liar, then all of Bean, Dusty and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2,
+     3
+    ]
    },
    {
     "name": "Jasper",
@@ -579,7 +794,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Hiss. Not all of the cats in row 2 are the same: there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     4,
+     5
+    ]
    }
   ],
   "liars": [
@@ -606,7 +826,11 @@ const PUZZLES = [
     "column": 0,
     "text": "I'm the only honest cat among the cats in my row.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2
+    ]
    },
    {
     "name": "Bagel",
@@ -615,7 +839,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Purr. You can trust Coco and Gnocchi, both of them.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     5
+    ]
    },
    {
     "name": "Coco",
@@ -624,7 +852,11 @@ const PUZZLES = [
     "column": 2,
     "text": "If Juniper is honest, then Gnocchi is honest too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8
+    ]
    },
    {
     "name": "Dusty",
@@ -633,7 +865,10 @@ const PUZZLES = [
     "column": 0,
     "text": "*yawns* Inky would tell you they're honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7
+    ]
    },
    {
     "name": "Felix",
@@ -642,7 +877,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Bagel is the only liar among the tuxedo cats.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     7,
+     8
+    ]
    },
    {
     "name": "Gnocchi",
@@ -651,7 +892,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Bagel and Coco are not both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2
+    ]
    },
    {
     "name": "Hobbes",
@@ -660,7 +905,11 @@ const PUZZLES = [
     "column": 0,
     "text": "No mixing among the cats above me: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3
+    ]
    },
    {
     "name": "Inky",
@@ -669,7 +918,13 @@ const PUZZLES = [
     "column": 1,
     "text": "*thinks hard* I know this much: if Angus is a liar, all of my neighbors are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     6,
+     8
+    ]
    },
    {
     "name": "Juniper",
@@ -678,7 +933,10 @@ const PUZZLES = [
     "column": 2,
     "text": "*rubs against your leg* Inky would say I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7
+    ]
    }
   ],
   "liars": [
@@ -705,7 +963,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Trust me, not Espresso. I'm honest and Espresso is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4
+    ]
    },
    {
     "name": "Biscuit",
@@ -714,7 +975,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Everyone among the cats in row 3 is a liar, except Iggy, who is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8
+    ]
    },
    {
     "name": "Clover",
@@ -723,7 +989,11 @@ const PUZZLES = [
     "column": 2,
     "text": "If you asked Jasper, they'd say Doodle is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     8
+    ]
    },
    {
     "name": "Doodle",
@@ -732,7 +1002,10 @@ const PUZZLES = [
     "column": 0,
     "text": "If you asked me, I'd say Iggy is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7
+    ]
    },
    {
     "name": "Espresso",
@@ -741,7 +1014,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Meow. Among the ginger cats, only Felix is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     8
+    ]
    },
    {
     "name": "Felix",
@@ -750,7 +1028,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. Among my neighbors, only Jasper is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     4,
+     8
+    ]
    },
    {
     "name": "Goose",
@@ -759,7 +1042,11 @@ const PUZZLES = [
     "column": 0,
     "text": "No mixing among the cats in my column: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3
+    ]
    },
    {
     "name": "Iggy",
@@ -768,7 +1055,17 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Doodle is a liar, then all of us are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8
+    ]
    },
    {
     "name": "Jasper",
@@ -777,7 +1074,10 @@ const PUZZLES = [
     "column": 2,
     "text": "*slow blinks* If you asked me about Felix, I'd say honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5
+    ]
    }
   ],
   "liars": [
@@ -804,7 +1104,12 @@ const PUZZLES = [
     "column": 0,
     "text": "*leans in* Echo whispered to me: \"If you asked Bagel, they'd say Kismet is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     4,
+     8
+    ]
    },
    {
     "name": "Bagel",
@@ -813,7 +1118,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Meow. All of the cats below me are liars, every last one.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     7
+    ]
    },
    {
     "name": "Cricket",
@@ -822,7 +1131,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Mark my whiskers: if Gizmo is honest, then all of the siamese cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     6
+    ]
    },
    {
     "name": "Dusty",
@@ -831,7 +1145,11 @@ const PUZZLES = [
     "column": 0,
     "text": "At least one of Bagel, Felix and me is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ]
    },
    {
     "name": "Echo",
@@ -840,7 +1158,8 @@ const PUZZLES = [
     "column": 1,
     "text": "*chirps at a bird outside*",
     "hidden": true,
-    "secret": "If you asked Bagel, they'd say Kismet is a liar."
+    "secret": "If you asked Bagel, they'd say Kismet is a liar.",
+    "mentions": []
    },
    {
     "name": "Felix",
@@ -849,7 +1168,11 @@ const PUZZLES = [
     "column": 2,
     "text": "There's a mix among Bagel, Kismet and me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     8
+    ]
    },
    {
     "name": "Gizmo",
@@ -858,7 +1181,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Hiss. Not all of the cats in my row are the same: there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     8
+    ]
    },
    {
     "name": "Hazel",
@@ -867,7 +1194,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Bagel and I are not both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1
+    ]
    },
    {
     "name": "Kismet",
@@ -876,7 +1206,10 @@ const PUZZLES = [
     "column": 2,
     "text": "*yawns* Cricket would tell you they're honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2
+    ]
    }
   ],
   "liars": [
@@ -903,7 +1236,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. Whatever one of Honey, Nugget and me is, the rest are too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     8
+    ]
    },
    {
     "name": "Clover",
@@ -912,7 +1249,11 @@ const PUZZLES = [
     "column": 1,
     "text": "There's a mix among Echo, Honey and me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     4
+    ]
    },
    {
     "name": "Dumpling",
@@ -921,7 +1262,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. If Nugget tells the truth, so does Jasper.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8
+    ]
    },
    {
     "name": "Echo",
@@ -930,7 +1275,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Honey is lying like a lion.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4
+    ]
    },
    {
     "name": "Honey",
@@ -939,7 +1287,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Loki always tells the truth, no kitten.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7
+    ]
    },
    {
     "name": "Jasper",
@@ -948,7 +1299,12 @@ const PUZZLES = [
     "column": 2,
     "text": "*nods at Loki* The only honest cat among the cats in row 3.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8
+    ]
    },
    {
     "name": "Kismet",
@@ -957,7 +1313,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Apricot can only be a liar if Honey is a liar too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4
+    ]
    },
    {
     "name": "Loki",
@@ -966,7 +1326,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Every single one of Clover, Kismet and me can be trusted. Mrrp.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     6
+    ]
    },
    {
     "name": "Nugget",
@@ -975,7 +1339,11 @@ const PUZZLES = [
     "column": 2,
     "text": "None of the cats in my row are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7
+    ]
    }
   ],
   "liars": [
@@ -1002,7 +1370,11 @@ const PUZZLES = [
     "column": 0,
     "text": "There's a mix among the black cats: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9
+    ]
    },
    {
     "name": "Bean",
@@ -1011,7 +1383,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Quincy is honest, then all of the white cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     7,
+     13,
+     15
+    ]
    },
    {
     "name": "Clover",
@@ -1020,7 +1398,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Either Tater is a liar, or Honey is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     15
+    ]
    },
    {
     "name": "Dumpling",
@@ -1029,7 +1411,11 @@ const PUZZLES = [
     "column": 3,
     "text": "If you asked Clover, they'd say Quincy is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     13
+    ]
    },
    {
     "name": "Echo",
@@ -1038,7 +1424,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Meow. Mochi and Sprout are the same: both honest, or both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     14
+    ]
    },
    {
     "name": "Honey",
@@ -1047,7 +1437,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Dumpling is a liar, then all of the tuxedo cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     4
+    ]
    },
    {
     "name": "Indigo",
@@ -1056,7 +1451,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Echo is honest, but Quincy is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     13
+    ]
    },
    {
     "name": "Juniper",
@@ -1065,7 +1464,11 @@ const PUZZLES = [
     "column": 3,
     "text": "No mixing among the siamese cats: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     12
+    ]
    },
    {
     "name": "Kettle",
@@ -1074,7 +1477,11 @@ const PUZZLES = [
     "column": 0,
     "text": "There's a mix among the cats above me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4
+    ]
    },
    {
     "name": "Luna",
@@ -1083,7 +1490,12 @@ const PUZZLES = [
     "column": 1,
     "text": "*thinks hard* I know this much: if Juniper is a liar, all of the siamese cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     10,
+     12
+    ]
    },
    {
     "name": "Mochi",
@@ -1092,7 +1504,12 @@ const PUZZLES = [
     "column": 2,
     "text": "Only one bad kitty: exactly one of the ginger cats is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     14
+    ]
    },
    {
     "name": "Nugget",
@@ -1101,7 +1518,12 @@ const PUZZLES = [
     "column": 3,
     "text": "Purr... at least one of the cats in my row is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     10
+    ]
    },
    {
     "name": "Oreo",
@@ -1110,7 +1532,8 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Mrrp. If Clover is honest, all of the cats on the edges are liars."
+    "secret": "Mrrp. If Clover is honest, all of the cats on the edges are liars.",
+    "mentions": []
    },
    {
     "name": "Quincy",
@@ -1119,7 +1542,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Echo and Honey are from the same litter: both honest, or both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     5
+    ]
    },
    {
     "name": "Sprout",
@@ -1128,7 +1555,20 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. What Oreo meant was: \"Mrrp. If Clover is honest, all of the cats on the edges are liars.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     15
+    ]
    },
    {
     "name": "Tater",
@@ -1137,7 +1577,10 @@ const PUZZLES = [
     "column": 3,
     "text": "Ask me, and I'd tell you Sprout is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     14
+    ]
    }
   ],
   "liars": [
@@ -1171,7 +1614,10 @@ const PUZZLES = [
     "column": 0,
     "text": "If you asked me, I'd say Rusty is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     14
+    ]
    },
    {
     "name": "Biscuit",
@@ -1180,7 +1626,8 @@ const PUZZLES = [
     "column": 1,
     "text": "*incomprehensible meowing*",
     "hidden": true,
-    "secret": "Whatever Marble is, Olive is too."
+    "secret": "Whatever Marble is, Olive is too.",
+    "mentions": []
    },
    {
     "name": "Clover",
@@ -1189,7 +1636,13 @@ const PUZZLES = [
     "column": 2,
     "text": "Meow meow. Exactly 2 of the tuxedo cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8,
+     12
+    ]
    },
    {
     "name": "Doodle",
@@ -1198,7 +1651,12 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp! None of the cats below me are liars, I'd bet my nine lives on it.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     11,
+     15
+    ]
    },
    {
     "name": "Espresso",
@@ -1207,7 +1665,11 @@ const PUZZLES = [
     "column": 0,
     "text": "No mixing among Apricot, Gnocchi and me: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     6
+    ]
    },
    {
     "name": "Felix",
@@ -1216,7 +1678,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Gnocchi is the only honest cat among the cats in column 3.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     10,
+     14
+    ]
    },
    {
     "name": "Gnocchi",
@@ -1225,7 +1693,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Everyone among Apricot, Biscuit and me is honest, except Apricot, who is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1
+    ]
    },
    {
     "name": "Kismet",
@@ -1234,7 +1706,11 @@ const PUZZLES = [
     "column": 3,
     "text": "No mixing among the cats below me: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11,
+     15
+    ]
    },
    {
     "name": "Lentil",
@@ -1243,7 +1719,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Not all of the cats above me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4
+    ]
    },
    {
     "name": "Marble",
@@ -1252,7 +1732,13 @@ const PUZZLES = [
     "column": 1,
     "text": "*thinks hard* I know this much: if Rusty is honest, all of the cats in my row are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     10,
+     11,
+     14
+    ]
    },
    {
     "name": "Noodle",
@@ -1261,7 +1747,12 @@ const PUZZLES = [
     "column": 2,
     "text": "*purrs* All of the cats in my column are from the same litter: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     14
+    ]
    },
    {
     "name": "Olive",
@@ -1270,7 +1761,11 @@ const PUZZLES = [
     "column": 3,
     "text": "*whispers* Espresso would tell you Pickles is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     12
+    ]
    },
    {
     "name": "Pickles",
@@ -1279,7 +1774,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Not all of the cats in my column are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     8
+    ]
    },
    {
     "name": "Queenie",
@@ -1288,7 +1788,20 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Sushi is a liar, then all of the cats on the edges are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     7,
+     8,
+     11,
+     12,
+     14,
+     15
+    ]
    },
    {
     "name": "Rusty",
@@ -1297,7 +1810,12 @@ const PUZZLES = [
     "column": 2,
     "text": "No mixing among my neighbors: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     13,
+     15
+    ]
    },
    {
     "name": "Sushi",
@@ -1306,7 +1824,12 @@ const PUZZLES = [
     "column": 3,
     "text": "I heard Biscuit say: \"Whatever Marble is, Olive is too.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     9,
+     11
+    ]
    }
   ],
   "liars": [
@@ -1340,7 +1863,12 @@ const PUZZLES = [
     "column": 0,
     "text": "At least 2 of the cats to my right are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2,
+     3
+    ]
    },
    {
     "name": "Bean",
@@ -1349,7 +1877,20 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrrow! At least 11 of the cats on the edges are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     3,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Coco",
@@ -1358,7 +1899,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*tilts head* Espresso would say Quill is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     12
+    ]
    },
    {
     "name": "Espresso",
@@ -1367,7 +1912,11 @@ const PUZZLES = [
     "column": 3,
     "text": "All but one of Angus, Lentil and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     7
+    ]
    },
    {
     "name": "Felix",
@@ -1376,7 +1925,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. Among the cats in my column, only Angus is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     8,
+     12
+    ]
    },
    {
     "name": "Iggy",
@@ -1385,7 +1939,12 @@ const PUZZLES = [
     "column": 1,
     "text": "I'm the only liar among the cats in my column.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     9,
+     13
+    ]
    },
    {
     "name": "Jellybean",
@@ -1394,7 +1953,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*swishes tail* One of Sushi and Tater is honest, the other is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     14,
+     15
+    ]
    },
    {
     "name": "Lentil",
@@ -1403,7 +1966,12 @@ const PUZZLES = [
     "column": 3,
     "text": "Meow meow. Exactly 2 of the cats in my row are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     6
+    ]
    },
    {
     "name": "Mochi",
@@ -1412,7 +1980,11 @@ const PUZZLES = [
     "column": 0,
     "text": "At least 2 of Angus, Bean and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1
+    ]
    },
    {
     "name": "Noodle",
@@ -1421,7 +1993,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Purr. Mochi would tell you I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8
+    ]
    },
    {
     "name": "Otis",
@@ -1430,7 +2005,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Meow. Coco would claim to be honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2
+    ]
    },
    {
     "name": "Pepper",
@@ -1439,7 +2017,14 @@ const PUZZLES = [
     "column": 3,
     "text": "Mark my whiskers: if Angus is honest, then all of the cats in row 2 are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     5,
+     6,
+     7
+    ]
    },
    {
     "name": "Quill",
@@ -1448,7 +2033,12 @@ const PUZZLES = [
     "column": 0,
     "text": "If Noodle is a liar, then all of the tabby cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     8,
+     9
+    ]
    },
    {
     "name": "Ravioli",
@@ -1457,7 +2047,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrow. Noodle would claim to be a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     9
+    ]
    },
    {
     "name": "Sushi",
@@ -1466,7 +2059,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. Among the cats to my left, only Ravioli is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     12,
+     13
+    ]
    },
    {
     "name": "Tater",
@@ -1475,7 +2072,11 @@ const PUZZLES = [
     "column": 3,
     "text": "Otis would say Lentil is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     10
+    ]
    }
   ],
   "liars": [
@@ -1509,7 +2110,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Meow. Nugget would claim to be honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10
+    ]
    },
    {
     "name": "Doodle",
@@ -1518,7 +2122,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Luna is honest, then all of the cats in my column are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8,
+     9,
+     13
+    ]
    },
    {
     "name": "Ember",
@@ -1527,7 +2137,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Meow. Among the grey cats, only Rusty is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     14
+    ]
    },
    {
     "name": "Fudge",
@@ -1536,7 +2150,13 @@ const PUZZLES = [
     "column": 3,
     "text": "I heard Sushi say: \"At least one of the cats in my row is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Gnocchi",
@@ -1545,7 +2165,13 @@ const PUZZLES = [
     "column": 0,
     "text": "*arches back* At least 2 of the cats in column 3 are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     10,
+     14
+    ]
    },
    {
     "name": "Hobbes",
@@ -1554,7 +2180,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Purr. You can trust Nugget and Queenie, both of them.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     13
+    ]
    },
    {
     "name": "Indigo",
@@ -1563,7 +2193,13 @@ const PUZZLES = [
     "column": 2,
     "text": "Everyone among the cats in row 1 is honest, except Fudge, who is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3
+    ]
    },
    {
     "name": "Kismet",
@@ -1572,7 +2208,11 @@ const PUZZLES = [
     "column": 3,
     "text": "*swishes tail* Among the grey cats, there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     14
+    ]
    },
    {
     "name": "Luna",
@@ -1581,7 +2221,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. Whatever one of the black cats is, the rest are too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     12,
+     13
+    ]
    },
    {
     "name": "Mango",
@@ -1590,7 +2234,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Doodle is honest, then all of Hobbes, Sushi and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5,
+     15
+    ]
    },
    {
     "name": "Nugget",
@@ -1599,7 +2248,13 @@ const PUZZLES = [
     "column": 2,
     "text": "*points a paw at Otis* The only liar among my neighbors.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     9,
+     11,
+     14
+    ]
    },
    {
     "name": "Otis",
@@ -1608,7 +2263,12 @@ const PUZZLES = [
     "column": 3,
     "text": "No mixing among the cats in my row: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     10
+    ]
    },
    {
     "name": "Paprika",
@@ -1617,7 +2277,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Ember would say I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2
+    ]
    },
    {
     "name": "Queenie",
@@ -1626,7 +2289,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Hiss! Gnocchi and Paprika are liars, both of them.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     12
+    ]
    },
    {
     "name": "Rusty",
@@ -1635,7 +2302,13 @@ const PUZZLES = [
     "column": 2,
     "text": "Among the corner cats, there are both honest cats and liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     12,
+     15
+    ]
    },
    {
     "name": "Sushi",
@@ -1644,7 +2317,8 @@ const PUZZLES = [
     "column": 3,
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
-    "secret": "Gnocchi and I are opposites: one is honest, the other is a liar."
+    "secret": "Gnocchi and I are opposites: one is honest, the other is a liar.",
+    "mentions": []
    }
   ],
   "liars": [
@@ -1678,7 +2352,13 @@ const PUZZLES = [
     "column": 0,
     "text": "*thinks hard* I know this much: if Mango is honest, all of the ginger cats are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     10,
+     14
+    ]
    },
    {
     "name": "Bagel",
@@ -1687,7 +2367,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. Exactly 2 of the cats in my column can be trusted, the rest are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     9,
+     13
+    ]
    },
    {
     "name": "Coco",
@@ -1696,7 +2381,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Purr. If you asked me, I'd say Dusty is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3
+    ]
    },
    {
     "name": "Dusty",
@@ -1705,7 +2393,13 @@ const PUZZLES = [
     "column": 3,
     "text": "*points a paw at Jellybean* The only liar among the tabby cats.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8,
+     11,
+     13
+    ]
    },
    {
     "name": "Ember",
@@ -1714,7 +2408,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. What Jellybean meant was: \"I'm not kitten you, Goose is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     8
+    ]
    },
    {
     "name": "Fig",
@@ -1723,7 +2421,11 @@ const PUZZLES = [
     "column": 1,
     "text": "No mixing among Mango, Paprika and me: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     13
+    ]
    },
    {
     "name": "Goose",
@@ -1732,7 +2434,12 @@ const PUZZLES = [
     "column": 2,
     "text": "All of the cats in my column are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     10,
+     14
+    ]
    },
    {
     "name": "Indigo",
@@ -1741,7 +2448,12 @@ const PUZZLES = [
     "column": 3,
     "text": "If Ember is honest, then all of Coco, Quincy and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     4,
+     14
+    ]
    },
    {
     "name": "Jellybean",
@@ -1750,7 +2462,8 @@ const PUZZLES = [
     "column": 0,
     "text": "*incomprehensible meowing*",
     "hidden": true,
-    "secret": "I'm not kitten you, Goose is a liar."
+    "secret": "I'm not kitten you, Goose is a liar.",
+    "mentions": []
    },
    {
     "name": "Lentil",
@@ -1759,7 +2472,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Ember is a liar, then all of Quincy, Rusty and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     14,
+     15
+    ]
    },
    {
     "name": "Mango",
@@ -1768,7 +2486,12 @@ const PUZZLES = [
     "column": 2,
     "text": "*twitches tail* Exactly one of the cats in my row is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     11
+    ]
    },
    {
     "name": "Nugget",
@@ -1777,7 +2500,13 @@ const PUZZLES = [
     "column": 3,
     "text": "Mark my whiskers: if Ash is honest, then all of the tabby cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     5,
+     8,
+     13
+    ]
    },
    {
     "name": "Olive",
@@ -1786,7 +2515,14 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. If Paprika is a liar, all of the cats in row 2 are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     6,
+     7,
+     13
+    ]
    },
    {
     "name": "Paprika",
@@ -1795,7 +2531,12 @@ const PUZZLES = [
     "column": 1,
     "text": "*thinks hard* I know this much: if Quincy is a liar, all of Ember, Nugget and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     11,
+     14
+    ]
    },
    {
     "name": "Quincy",
@@ -1804,7 +2545,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Hiss. Bagel and Paprika are not the same: exactly one of them is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     13
+    ]
    },
    {
     "name": "Rusty",
@@ -1813,7 +2558,14 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp. If Ash is a liar, all of the cats in column 3 are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     6,
+     10,
+     14
+    ]
    }
   ],
   "liars": [
@@ -1847,7 +2599,10 @@ const PUZZLES = [
     "column": 0,
     "text": "If you asked me, I'd say Paprika is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10
+    ]
    },
    {
     "name": "Clover",
@@ -1856,7 +2611,11 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. Loki would call Sushi a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     13
+    ]
    },
    {
     "name": "Dumpling",
@@ -1865,7 +2624,13 @@ const PUZZLES = [
     "column": 2,
     "text": "Exactly one of the cats in column 1 is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     8,
+     12
+    ]
    },
    {
     "name": "Fig",
@@ -1874,7 +2639,13 @@ const PUZZLES = [
     "column": 3,
     "text": "At most 2 of the cats in row 3 can be trusted.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     10,
+     11
+    ]
    },
    {
     "name": "Honey",
@@ -1883,7 +2654,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Not all of the cats in my column are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     8,
+     12
+    ]
    },
    {
     "name": "Iggy",
@@ -1892,7 +2668,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Hiss. Fig would call me a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3
+    ]
    },
    {
     "name": "Jasper",
@@ -1901,7 +2680,13 @@ const PUZZLES = [
     "column": 2,
     "text": "Purr. All of the cats in row 3 can be trusted, except exactly one.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     10,
+     11
+    ]
    },
    {
     "name": "Loki",
@@ -1910,7 +2695,11 @@ const PUZZLES = [
     "column": 3,
     "text": "All of Mochi, Waffles and me are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     15
+    ]
    },
    {
     "name": "Mochi",
@@ -1919,7 +2708,14 @@ const PUZZLES = [
     "column": 0,
     "text": "I speak Waffles. Translated, they said: \"*thinks hard* I know this much: if Iggy is honest, all of the cats in my row are honest.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Olive",
@@ -1928,7 +2724,12 @@ const PUZZLES = [
     "column": 1,
     "text": "All of the tuxedo cats are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2,
+     13
+    ]
    },
    {
     "name": "Paprika",
@@ -1937,7 +2738,14 @@ const PUZZLES = [
     "column": 2,
     "text": "Mark my whiskers: if Angus is a liar, then all of the cats in row 4 are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Quill",
@@ -1946,7 +2754,11 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp. Tater and Waffles can't both be trusted.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     14,
+     15
+    ]
    },
    {
     "name": "Rusty",
@@ -1955,7 +2767,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Fig and Honey are from the same litter: both honest, or both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     4
+    ]
    },
    {
     "name": "Sushi",
@@ -1964,7 +2780,24 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Jasper is a liar, then all of us are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     14,
+     15
+    ]
    },
    {
     "name": "Tater",
@@ -1973,7 +2806,14 @@ const PUZZLES = [
     "column": 2,
     "text": "If Honey is a liar, then all of the cats in column 2 are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     4,
+     5,
+     9,
+     13
+    ]
    },
    {
     "name": "Waffles",
@@ -1982,7 +2822,8 @@ const PUZZLES = [
     "column": 3,
     "text": "*incomprehensible meowing*",
     "hidden": true,
-    "secret": "*thinks hard* I know this much: if Iggy is honest, all of the cats in my row are honest."
+    "secret": "*thinks hard* I know this much: if Iggy is honest, all of the cats in my row are honest.",
+    "mentions": []
    }
   ],
   "liars": [
@@ -2016,7 +2857,13 @@ const PUZZLES = [
     "column": 0,
     "text": "Mark my whiskers: if Jasper is honest, then all of the cats to my right are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     2,
+     3,
+     6
+    ]
    },
    {
     "name": "Doodle",
@@ -2025,7 +2872,13 @@ const PUZZLES = [
     "column": 1,
     "text": "*purrs* All of the cats in row 4 are from the same litter: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Echo",
@@ -2034,7 +2887,11 @@ const PUZZLES = [
     "column": 2,
     "text": "At least one of Felix and Lentil is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     8
+    ]
    },
    {
     "name": "Felix",
@@ -2043,7 +2900,13 @@ const PUZZLES = [
     "column": 3,
     "text": "Among the cats in the middle, there are both honest cats and liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     9,
+     10
+    ]
    },
    {
     "name": "Goose",
@@ -2052,7 +2915,11 @@ const PUZZLES = [
     "column": 0,
     "text": "All of Kismet, Mango and me are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     9
+    ]
    },
    {
     "name": "Indigo",
@@ -2061,7 +2928,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. What Otis meant was: \"Mrrp! None of the cats in column 2 are liars, I'd bet my nine lives on it.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     9,
+     11,
+     13
+    ]
    },
    {
     "name": "Jasper",
@@ -2070,7 +2943,11 @@ const PUZZLES = [
     "column": 2,
     "text": "I'm the only honest cat among Echo, Felix and me.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     3
+    ]
    },
    {
     "name": "Kismet",
@@ -2079,7 +2956,10 @@ const PUZZLES = [
     "column": 3,
     "text": "You can trust Otis. That's a purr-fact.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11
+    ]
    },
    {
     "name": "Lentil",
@@ -2088,7 +2968,10 @@ const PUZZLES = [
     "column": 0,
     "text": "If you asked Bean, they'd say I'm a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0
+    ]
    },
    {
     "name": "Mango",
@@ -2097,7 +2980,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Paprika is a liar, all of the cats in the middle are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     10,
+     12
+    ]
    },
    {
     "name": "Nimbus",
@@ -2106,7 +2995,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Otis would say I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11
+    ]
    },
    {
     "name": "Otis",
@@ -2115,7 +3007,8 @@ const PUZZLES = [
     "column": 3,
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
-    "secret": "Mrrp! None of the cats in column 2 are liars, I'd bet my nine lives on it."
+    "secret": "Mrrp! None of the cats in column 2 are liars, I'd bet my nine lives on it.",
+    "mentions": []
    },
    {
     "name": "Paprika",
@@ -2124,7 +3017,11 @@ const PUZZLES = [
     "column": 0,
     "text": "If Goose is honest, then Echo is honest too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     4
+    ]
    },
    {
     "name": "Quill",
@@ -2133,7 +3030,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. Whatever one of the cats above me is, the rest are too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     5,
+     9
+    ]
    },
    {
     "name": "Rusty",
@@ -2142,7 +3044,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*whispers* Lentil would tell you Mango is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     9
+    ]
    },
    {
     "name": "Sushi",
@@ -2151,7 +3057,12 @@ const PUZZLES = [
     "column": 3,
     "text": "*swishes tail* Among the cats in my column, there's at least one liar and at least one honest cat.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     7,
+     11
+    ]
    }
   ],
   "liars": [
@@ -2185,7 +3096,11 @@ const PUZZLES = [
     "column": 0,
     "text": "*sniffs around* None of the ginger cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     10
+    ]
    },
    {
     "name": "Clover",
@@ -2194,7 +3109,11 @@ const PUZZLES = [
     "column": 1,
     "text": "There's a mix among Dumpling, Kismet and me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     8
+    ]
    },
    {
     "name": "Dumpling",
@@ -2203,7 +3122,12 @@ const PUZZLES = [
     "column": 2,
     "text": "There's a mix among the cats below me: some honest, some liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     10,
+     14
+    ]
    },
    {
     "name": "Espresso",
@@ -2212,7 +3136,11 @@ const PUZZLES = [
     "column": 3,
     "text": "*flicks ears* Exactly 2 of Gizmo, Loki and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     9
+    ]
    },
    {
     "name": "Fig",
@@ -2221,7 +3149,10 @@ const PUZZLES = [
     "column": 0,
     "text": "At least one of Loki and me is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     9
+    ]
    },
    {
     "name": "Gizmo",
@@ -2230,7 +3161,12 @@ const PUZZLES = [
     "column": 1,
     "text": "I'm the only honest cat among the cats in my column.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     9,
+     13
+    ]
    },
    {
     "name": "Indigo",
@@ -2239,7 +3175,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*kneads paws* At least one of Gizmo and Kismet is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8
+    ]
    },
    {
     "name": "Jellybean",
@@ -2248,7 +3188,13 @@ const PUZZLES = [
     "column": 3,
     "text": "I counted with my paws: exactly 2 of the cats in the middle are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     9,
+     10
+    ]
    },
    {
     "name": "Kismet",
@@ -2257,7 +3203,13 @@ const PUZZLES = [
     "column": 0,
     "text": "At least one of the cats in column 3 is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     10,
+     14
+    ]
    },
    {
     "name": "Loki",
@@ -2266,7 +3218,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. Whatever one of my neighbors is, the rest are too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     8,
+     10,
+     13
+    ]
    },
    {
     "name": "Marble",
@@ -2275,7 +3233,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Purr. Among Olive, Queenie and me, I'm the only one who's honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11,
+     12
+    ]
    },
    {
     "name": "Olive",
@@ -2284,7 +3246,13 @@ const PUZZLES = [
     "column": 3,
     "text": "Meow. No more than 2 of the cats in column 1 can be trusted.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     8,
+     12
+    ]
    },
    {
     "name": "Queenie",
@@ -2293,7 +3261,10 @@ const PUZZLES = [
     "column": 0,
     "text": "Purr. Fig would tell you I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4
+    ]
    },
    {
     "name": "Rusty",
@@ -2302,7 +3273,8 @@ const PUZZLES = [
     "column": 1,
     "text": "*incomprehensible meowing*",
     "hidden": true,
-    "secret": "Exactly one of Angus, Gizmo and me is a liar."
+    "secret": "Exactly one of Angus, Gizmo and me is a liar.",
+    "mentions": []
    },
    {
     "name": "Sprout",
@@ -2311,7 +3283,12 @@ const PUZZLES = [
     "column": 2,
     "text": "*purrs* All of my neighbors are from the same litter: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     10,
+     13,
+     15
+    ]
    },
    {
     "name": "Tater",
@@ -2320,7 +3297,12 @@ const PUZZLES = [
     "column": 3,
     "text": "I heard Rusty say: \"Exactly one of Angus, Gizmo and me is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     5,
+     13
+    ]
    }
   ],
   "liars": [
@@ -2354,7 +3336,11 @@ const PUZZLES = [
     "column": 0,
     "text": "At least one of Marble and Rusty is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     13
+    ]
    },
    {
     "name": "Bean",
@@ -2363,7 +3349,10 @@ const PUZZLES = [
     "column": 1,
     "text": "Rusty would say I'm a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     13
+    ]
    },
    {
     "name": "Coco",
@@ -2372,7 +3361,11 @@ const PUZZLES = [
     "column": 2,
     "text": "Hazel would say Iggy is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6
+    ]
    },
    {
     "name": "Dumpling",
@@ -2381,7 +3374,11 @@ const PUZZLES = [
     "column": 3,
     "text": "Mark my whiskers: if Ash is honest, then all of the grey cats are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     13
+    ]
    },
    {
     "name": "Gnocchi",
@@ -2390,7 +3387,24 @@ const PUZZLES = [
     "column": 0,
     "text": "If Tater is a liar, then all of us are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
    },
    {
     "name": "Hazel",
@@ -2399,7 +3413,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Everyone among my neighbors is honest, except Nugget, who is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     1,
+     4,
+     6,
+     9
+    ]
    },
    {
     "name": "Iggy",
@@ -2408,7 +3428,14 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp. What Lentil meant was: \"Everyone among the corner cats is honest, except Ash, who is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     7,
+     12,
+     15
+    ]
    },
    {
     "name": "Lentil",
@@ -2417,7 +3444,8 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
-    "secret": "Everyone among the corner cats is honest, except Ash, who is a liar."
+    "secret": "Everyone among the corner cats is honest, except Ash, who is a liar.",
+    "mentions": []
    },
    {
     "name": "Marble",
@@ -2426,7 +3454,13 @@ const PUZZLES = [
     "column": 0,
     "text": "Mrrp. Exactly 1 of the cats in the middle can be trusted, the rest are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     9,
+     10
+    ]
    },
    {
     "name": "Nugget",
@@ -2435,7 +3469,12 @@ const PUZZLES = [
     "column": 1,
     "text": "I'm the only liar among the cats in my row.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     8,
+     10,
+     11
+    ]
    },
    {
     "name": "Otis",
@@ -2444,7 +3483,8 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
-    "secret": "Purr... at least one of Coco, Saffron and me is a liar."
+    "secret": "Purr... at least one of Coco, Saffron and me is a liar.",
+    "mentions": []
    },
    {
     "name": "Paprika",
@@ -2453,7 +3493,13 @@ const PUZZLES = [
     "column": 3,
     "text": "*thinks hard* I know this much: if Bean is a liar, all of the cats in row 1 are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3
+    ]
    },
    {
     "name": "Quincy",
@@ -2462,7 +3508,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Among the cats in my column, there are both honest cats and liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     8
+    ]
    },
    {
     "name": "Rusty",
@@ -2471,7 +3522,12 @@ const PUZZLES = [
     "column": 1,
     "text": "All of the cats in my row are the same: all honest, or all liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     12,
+     14,
+     15
+    ]
    },
    {
     "name": "Saffron",
@@ -2480,7 +3536,10 @@ const PUZZLES = [
     "column": 2,
     "text": "Purr. Hazel would tell you I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5
+    ]
    },
    {
     "name": "Tater",
@@ -2489,7 +3548,12 @@ const PUZZLES = [
     "column": 3,
     "text": "*leans in* Otis whispered to me: \"Purr... at least one of Coco, Saffron and me is a liar.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     10,
+     14
+    ]
    }
   ],
   "liars": [
@@ -2523,7 +3587,11 @@ const PUZZLES = [
     "column": 0,
     "text": "*arches back* Nugget and Quincy are both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11,
+     13
+    ]
    },
    {
     "name": "Bean",
@@ -2532,7 +3600,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Sushi is a liar, all of the cats in my row are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     3,
+     14
+    ]
    },
    {
     "name": "Doodle",
@@ -2541,7 +3615,14 @@ const PUZZLES = [
     "column": 2,
     "text": "If Jasper is a liar, then all of the calico cats are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     3,
+     6,
+     8,
+     13,
+     15
+    ]
    },
    {
     "name": "Echo",
@@ -2550,7 +3631,12 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp. If Mochi is a liar, all of Honey, Iggy and me are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     10
+    ]
    },
    {
     "name": "Felix",
@@ -2559,7 +3645,12 @@ const PUZZLES = [
     "column": 0,
     "text": "Everyone among the cats in my column is a liar, except Jasper, who is honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     8,
+     12
+    ]
    },
    {
     "name": "Gizmo",
@@ -2568,7 +3659,13 @@ const PUZZLES = [
     "column": 1,
     "text": "Everyone among the corner cats is honest, except Paprika, who is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     12,
+     15
+    ]
    },
    {
     "name": "Honey",
@@ -2577,7 +3674,8 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Hiss. Not all of my neighbors are the same: there's at least one liar and at least one honest cat."
+    "secret": "Hiss. Not all of my neighbors are the same: there's at least one liar and at least one honest cat.",
+    "mentions": []
    },
    {
     "name": "Iggy",
@@ -2586,7 +3684,12 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp. If Tater is honest, all of Honey, Kiwi and me are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     6,
+     9,
+     15
+    ]
    },
    {
     "name": "Jasper",
@@ -2595,7 +3698,14 @@ const PUZZLES = [
     "column": 0,
     "text": "I heard Honey say: \"Hiss. Not all of my neighbors are the same: there's at least one liar and at least one honest cat.\"",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     2,
+     5,
+     6,
+     7,
+     10
+    ]
    },
    {
     "name": "Kiwi",
@@ -2604,7 +3714,12 @@ const PUZZLES = [
     "column": 1,
     "text": "Mrrp. If Iggy is honest, all of the grey cats are honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     8,
+     10
+    ]
    },
    {
     "name": "Mochi",
@@ -2613,7 +3728,11 @@ const PUZZLES = [
     "column": 2,
     "text": "*arches back* Felix and Quincy are both liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     13
+    ]
    },
    {
     "name": "Nugget",
@@ -2622,7 +3741,11 @@ const PUZZLES = [
     "column": 3,
     "text": "If Jasper is honest, then Iggy is honest too.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     7,
+     8
+    ]
    },
    {
     "name": "Paprika",
@@ -2631,7 +3754,11 @@ const PUZZLES = [
     "column": 0,
     "text": "Felix and Honey are both honest, fur real.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     4,
+     6
+    ]
    },
    {
     "name": "Quincy",
@@ -2640,7 +3767,14 @@ const PUZZLES = [
     "column": 1,
     "text": "Mark my whiskers: if Gizmo is honest, then all of the corner cats are liars.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     5,
+     12,
+     15
+    ]
    },
    {
     "name": "Sushi",
@@ -2649,7 +3783,10 @@ const PUZZLES = [
     "column": 2,
     "text": "*rubs against your leg* Gizmo would say I'm honest.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     5
+    ]
    },
    {
     "name": "Tater",
@@ -2658,7 +3795,11 @@ const PUZZLES = [
     "column": 3,
     "text": "Mrrp. Among my neighbors, only Nugget is a liar.",
     "hidden": false,
-    "secret": null
+    "secret": null,
+    "mentions": [
+     11,
+     14
+    ]
    }
   ],
   "liars": [
