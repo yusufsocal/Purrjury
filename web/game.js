@@ -33,6 +33,8 @@ const states = PUZZLES.map(p => ({
 
 let current = 0;
 let highlight = null;        // index of the cat whose connections are shown, or null
+let highlightMode = "by";    // "by": cats that talk about it, "about": cats it talks about
+let lastRightClick = { index: null, time: 0 };   // to notice a double right click
 let highlightTimer = null;   // clears the highlight after a few seconds
 let pressTimer = null;       // for long-press on phones
 let longPressed = false;     // true right after a long-press, so the tap after it doesn't change the mark
@@ -64,10 +66,11 @@ function render() {
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
 
-    // connections: the chosen cat, and the cats that talk about it
+    // connections: the chosen cat, and either the cats that talk about it or the cats it talks about
     if (highlight !== null) {
       if (i === highlight) card.classList.add("focus");
-      else if (cat.mentions.includes(highlight)) card.classList.add("talked-by");
+      else if (highlightMode === "by" && cat.mentions.includes(highlight)) card.classList.add("talked-by");
+      else if (highlightMode === "about" && p.cats[highlight].mentions.includes(i)) card.classList.add("talks-about");
     }
 
     const top = document.createElement("div");
@@ -127,9 +130,13 @@ function render() {
         cycleMark(i);
       }
     });
+    // right click: cats that talk about it. double right click: cats it talks about
     card.addEventListener("contextmenu", event => {
       event.preventDefault();   // no browser menu
-      showConnections(i);
+      const now = Date.now();
+      const isDouble = lastRightClick.index === i && now - lastRightClick.time < 400;
+      lastRightClick = { index: i, time: now };
+      showConnections(i, isDouble ? "about" : "by");
     });
     card.addEventListener("touchstart", () => {
       pressTimer = setTimeout(() => { longPressed = true; showConnections(i); }, 500);
@@ -162,14 +169,15 @@ function undoMark(i) {
 }
 
 
-function showConnections(i) {
+function showConnections(i, mode = "by") {
   const cat = puzzle().cats[i];
   highlight = i;
+  highlightMode = mode;
   // small colored label so you know what the color means
   legend.innerHTML = "";
   const tag = document.createElement("span");
-  tag.className = "tag tag-by";
-  tag.textContent = `cats that talk about ${cat.name}`;
+  tag.className = "tag tag-" + mode;
+  tag.textContent = mode === "by" ? `cats that talk about ${cat.name}` : `cats ${cat.name} talks about`;
   legend.append(tag);
   clearTimeout(highlightTimer);
   highlightTimer = setTimeout(clearConnections, HIGHLIGHT_SECONDS * 1000);

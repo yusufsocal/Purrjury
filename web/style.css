@@ -95,12 +95,13 @@ button:hover { border-color: var(--muted); }
 }
 
 /* connections (double click, right click or long-press a cat) */
-:root { --by: #e08a1e; }
+:root { --by: #e08a1e; --about: #2f6fdb; }
 /* only the names change color, so the rest of the page stays calm */
 .card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
 .card.talked-by .name { color: var(--by); }
+.card.talks-about .name { color: var(--about); }
 /* the highlighted names pop up for a moment so you notice them */
-.card.focus .name, .card.talked-by .name {
+.card.focus .name, .card.talked-by .name, .card.talks-about .name {
   display: inline-block;
   transform-origin: left center;
   animation: pop 0.45s ease-in-out;
@@ -114,6 +115,7 @@ button:hover { border-color: var(--muted); }
 #legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
 .tag { font-size: 0.8rem; font-weight: 600; }
 .tag-by { color: var(--by); }
+.tag-about { color: var(--about); }
 
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }
