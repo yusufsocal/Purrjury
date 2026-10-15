@@ -95,14 +95,12 @@ button:hover { border-color: var(--muted); }
 }
 
 /* connections (double click, right click or long-press a cat) */
-:root { --about: #2f6fdb; --by: #e08a1e; --both: #8b4fd1; }
+:root { --by: #e08a1e; }
 /* only the names change color, so the rest of the page stays calm */
 .card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
-.card.talks-about .name { color: var(--about); }
 .card.talked-by .name { color: var(--by); }
-.card.talks-both .name { color: var(--both); }
 /* the highlighted names pop up for a moment so you notice them */
-.card.focus .name, .card.talks-about .name, .card.talked-by .name, .card.talks-both .name {
+.card.focus .name, .card.talked-by .name {
   display: inline-block;
   transform-origin: left center;
   animation: pop 0.45s ease-in-out;
@@ -115,9 +113,7 @@ button:hover { border-color: var(--muted); }
 }
 #legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
 .tag { font-size: 0.8rem; font-weight: 600; }
-.tag-about { color: var(--about); }
 .tag-by { color: var(--by); }
-.tag-both { color: var(--both); }
 
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }

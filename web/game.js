@@ -64,14 +64,10 @@ function render() {
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
 
-    // connections: the chosen cat, the cats it talks about, and the cats that talk about it
+    // connections: the chosen cat, and the cats that talk about it
     if (highlight !== null) {
-      const talksAbout = p.cats[highlight].mentions.includes(i);
-      const talkedBy = cat.mentions.includes(highlight);
       if (i === highlight) card.classList.add("focus");
-      else if (talksAbout && talkedBy) card.classList.add("talks-both");
-      else if (talksAbout) card.classList.add("talks-about");
-      else if (talkedBy) card.classList.add("talked-by");
+      else if (cat.mentions.includes(highlight)) card.classList.add("talked-by");
     }
 
     const top = document.createElement("div");
@@ -169,19 +165,12 @@ function undoMark(i) {
 function showConnections(i) {
   const cat = puzzle().cats[i];
   highlight = i;
+  // small colored label so you know what the color means
   legend.innerHTML = "";
-  const parts = [
-    ["about", `cats ${cat.name} talks about`],
-    ["by", `cats that talk about ${cat.name}`],
-    ["both", "both"],
-  ];
-  // small colored labels so you know what each color means
-  parts.forEach(([kind, label]) => {
-    const tag = document.createElement("span");
-    tag.className = "tag tag-" + kind;
-    tag.textContent = label;
-    legend.append(tag);
-  });
+  const tag = document.createElement("span");
+  tag.className = "tag tag-by";
+  tag.textContent = `cats that talk about ${cat.name}`;
+  legend.append(tag);
   clearTimeout(highlightTimer);
   highlightTimer = setTimeout(clearConnections, HIGHLIGHT_SECONDS * 1000);
   render();
