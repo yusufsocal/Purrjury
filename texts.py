@@ -5,6 +5,8 @@
     {h}     the number of honest cats (size of the area minus n)
     {a} {b}            the two cats in a pair statement
     {quoted} {target}  the quoted cat and the cat the quote is about
+    {cond} {then}      the types in an IfThen statement
+    {quote}            what a hidden cat supposedly said
 Every sentence keeps the logic words plain (liar / honest / exactly / at least),
 the cat talk is only decoration around them.
 """
@@ -310,4 +312,36 @@ MIXED_TEXTS = [
     "Hiss. Not all of {area} are the same: there's at least one liar and at least one honest cat.",
     "*swishes tail* Among {area}, there's at least one liar and at least one honest cat.",
     "There's a mix among {area}: some honest, some liars.",
+]
+
+
+# --- If a cat is something, a whole area is something (IfThen) ---
+# {name} is the cat, {cond} is "honest" or "a liar", {area} is the area text, {then} is "honest" or "liars".
+
+IF_THEN_TEXTS = [
+    "If {name} is {cond}, then all of {area} are {then}.",
+    "Mrrp. If {name} is {cond}, all of {area} are {then}.",
+    "*thinks hard* I know this much: if {name} is {cond}, all of {area} are {then}.",
+    "Mark my whiskers: if {name} is {cond}, then all of {area} are {then}.",
+]
+
+
+# --- Hidden cats and what other cats heard them say (Hearsay) ---
+# A hidden cat only meows, its real statement is only known through another cat.
+# {name} is the hidden cat, {quote} is the statement it supposedly said, in its own words.
+
+GIBBERISH_TEXTS = [
+    "Mrrrow mrrp mew.",
+    "Mrrp? Mew mew mrrrow!",
+    "*incomprehensible meowing*",
+    "Nyaa... mrrp. Mew.",
+    "*chirps at a bird outside*",
+]
+
+HEARSAY_TEXTS = [
+    'I heard {name} say: "{quote}"',
+    '{name} told me: "{quote}"',
+    '*leans in* {name} whispered to me: "{quote}"',
+    'I speak {name}. Translated, they said: "{quote}"',
+    'Mrrp. What {name} meant was: "{quote}"',
 ]

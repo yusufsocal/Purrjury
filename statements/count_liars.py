@@ -7,7 +7,10 @@ from texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_
 import areas
 
 # How often each kind of area is picked, relative to each other
-AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "single": 1}
+AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "trio": 2, "single": 1}
+
+# How many random "Felix, Bagel and me" areas each speaker gets to pick from
+TRIOS_PER_SPEAKER = 3
 
 # Chance that an area bigger than one cat uses "at least" instead of "exactly"
 AT_LEAST_CHANCE = 0.3
@@ -89,6 +92,8 @@ class CountLiars(Statement):
             "line": [],
             # Every color that appears in this grid
             "color": [],
+            # The speaker and two other cats, e.g. "Felix, Bagel and me"
+            "trio": [],
             # Every other single cat
             "single": [],
         }
@@ -104,6 +109,12 @@ class CountLiars(Statement):
         # one area per color in the grid
         for color in sorted({cat.color for cat in cats}):
             candidates["color"].append((areas.with_color(grid, color), f"the {color} cats"))
+
+        # a few random groups of the speaker and two other cats, names in grid order
+        others = [cat for cat in cats if cat.index != speaker]
+        for _ in range(TRIOS_PER_SPEAKER if len(others) >= 2 else 0):
+            a, b = sorted(random.sample(others, 2), key=lambda cat: cat.index)
+            candidates["trio"].append((sorted([speaker, a.index, b.index]), f"{a.name}, {b.name} and me"))
 
         # one area per cat, except the speaker
         for cat in cats:
