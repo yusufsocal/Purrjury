@@ -3,6 +3,8 @@
     {area}  the area text, e.g. "my neighbors", "the tabby cats", "us"
     {n}     the number of liars
     {h}     the number of honest cats (size of the area minus n)
+    {a} {b}            the two cats in a pair statement
+    {quoted} {target}  the quoted cat and the cat the quote is about
 Every sentence keeps the logic words plain (liar / honest / exactly / at least),
 the cat talk is only decoration around them.
 """
@@ -198,4 +200,114 @@ PAIR_A_HONEST_B_LIAR_ME_TEXTS = [
     "I'm honest, but {b} is a liar.",
     "Trust me, not {b}. I'm honest and {b} is a liar.",
     "Hiss. Unlike me, {b} is a liar.",
+]
+
+
+# --- Quotes (Quote) ---
+# {quoted} is the cat being quoted, {target} is the cat the quote is about.
+# "self": the speaker quotes itself. "about_me": the quote is about the speaker.
+# "about_themselves": the quoted cat talks about itself. "others": three different cats.
+
+QUOTE_SELF_LIAR_TEXTS = [
+    "If you asked me, I'd say {target} is a liar.",
+    "Mrrp. If you asked me, I'd say {target} is a liar.",
+    "Ask me, and I'd tell you {target} is a liar.",
+    "*licks paw* If you asked me about {target}, I'd say liar.",
+]
+
+QUOTE_SELF_HONEST_TEXTS = [
+    "If you asked me, I'd say {target} is honest.",
+    "Purr. If you asked me, I'd say {target} is honest.",
+    "Ask me, and I'd tell you {target} is honest.",
+    "*slow blinks* If you asked me about {target}, I'd say honest.",
+]
+
+QUOTE_ABOUT_ME_LIAR_TEXTS = [
+    "{quoted} would say I'm a liar.",
+    "Hiss. {quoted} would call me a liar.",
+    "If you asked {quoted}, they'd say I'm a liar.",
+    "*flattens ears* {quoted} would tell you I'm a liar.",
+]
+
+QUOTE_ABOUT_ME_HONEST_TEXTS = [
+    "{quoted} would say I'm honest.",
+    "Purr. {quoted} would tell you I'm honest.",
+    "If you asked {quoted}, they'd say I'm honest.",
+    "*rubs against your leg* {quoted} would say I'm honest.",
+]
+
+QUOTE_ABOUT_THEMSELVES_LIAR_TEXTS = [
+    "{quoted} would say they're a liar.",
+    "If you asked {quoted}, they'd call themselves a liar.",
+    "Mrow. {quoted} would claim to be a liar.",
+    "*snickers* {quoted} would tell you they're a liar.",
+]
+
+QUOTE_ABOUT_THEMSELVES_HONEST_TEXTS = [
+    "{quoted} would say they're honest.",
+    "If you asked {quoted}, they'd say they're honest.",
+    "Meow. {quoted} would claim to be honest.",
+    "*yawns* {quoted} would tell you they're honest.",
+]
+
+QUOTE_OTHERS_LIAR_TEXTS = [
+    "{quoted} would say {target} is a liar.",
+    "If you asked {quoted}, they'd say {target} is a liar.",
+    "Mrrp. {quoted} would call {target} a liar.",
+    "*whispers* {quoted} would tell you {target} is a liar.",
+]
+
+QUOTE_OTHERS_HONEST_TEXTS = [
+    "{quoted} would say {target} is honest.",
+    "If you asked {quoted}, they'd say {target} is honest.",
+    "Purr. {quoted} would tell you {target} is honest.",
+    "*tilts head* {quoted} would say {target} is honest.",
+]
+
+
+# --- The only one in an area (Only) ---
+# {name} is the cat, {area} is the area text. The _ME_ lists are used when the speaker is that cat.
+
+ONLY_ME_LIAR_TEXTS = [
+    "I'm the only liar among {area}.",
+    "Hiss. Among {area}, I'm the only liar.",
+    "*grins* I'm the only liar among {area}. Everyone else is honest.",
+]
+
+ONLY_ME_HONEST_TEXTS = [
+    "I'm the only honest cat among {area}.",
+    "Purr. Among {area}, I'm the only one who's honest.",
+    "*sighs* I'm the only honest cat among {area}. The rest are liars.",
+]
+
+ONLY_LIAR_TEXTS = [
+    "{name} is the only liar among {area}.",
+    "Mrrp. Among {area}, only {name} is a liar.",
+    "*points a paw at {name}* The only liar among {area}.",
+    "Everyone among {area} is honest, except {name}, who is a liar.",
+]
+
+ONLY_HONEST_TEXTS = [
+    "{name} is the only honest cat among {area}.",
+    "Meow. Among {area}, only {name} is honest.",
+    "*nods at {name}* The only honest cat among {area}.",
+    "Everyone among {area} is a liar, except {name}, who is honest.",
+]
+
+
+# --- Whole area the same type or not (AllSame) ---
+# {area} is the area text.
+
+ALL_SAME_TEXTS = [
+    "All of {area} are the same: all honest, or all liars.",
+    "*purrs* All of {area} are from the same litter: all honest, or all liars.",
+    "Mrrp. Whatever one of {area} is, the rest are too.",
+    "No mixing among {area}: all honest, or all liars.",
+]
+
+MIXED_TEXTS = [
+    "Among {area}, there are both honest cats and liars.",
+    "Hiss. Not all of {area} are the same: there's at least one liar and at least one honest cat.",
+    "*swishes tail* Among {area}, there's at least one liar and at least one honest cat.",
+    "There's a mix among {area}: some honest, some liars.",
 ]
