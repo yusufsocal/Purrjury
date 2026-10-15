@@ -28,6 +28,13 @@ class Statement(ABC):
         texts differ ("the cats in my row" and "the cats in row 2" can be the same cats).
         """
 
+    def fits(self, world, grid):
+        """True if this statement fits its speaker in world: true for an honest cat, false for a liar.
+
+        This is what the checker uses. Most statements don't need to change it.
+        """
+        return self.evaluate(world, grid) == (not world[self.speaker])
+
     def to_text(self):
         """Return the sentence stored by set_text. Same for every statement type, so it lives here."""
         if self.text is None:

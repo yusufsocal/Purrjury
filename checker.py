@@ -11,8 +11,10 @@ def find_solutions(grid):
         flag = True
         # check every cat's statement, stop at the first one that doesn't fit
         for i in range(len(world)):
-            if get_cat(grid, i).statement is not None:
-                if get_cat(grid, i).statement.evaluate(world, grid) == (not world[i]):
+            cat = get_cat(grid, i)
+            # hidden cats only meow, so the player can't use what they really said
+            if cat.statement is not None and not cat.hidden:
+                if cat.statement.fits(world, grid):
                     continue
                 else: 
                     flag = False

@@ -8,3 +8,5 @@ class Cat:
         self.index = index      # position in a flat list, used as world[index]
         self.color = color      # cat's color
         self.statement = None   # what this cat says, set later by the generator
+        self.hidden = False     # True if this cat only meows, its statement is only known through another cat
+        self.gibberish = None   # what a hidden cat shows instead of its statement, e.g. "Mrrp? Mew mew!"

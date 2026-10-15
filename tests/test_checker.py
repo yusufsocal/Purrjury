@@ -119,3 +119,15 @@ def test_real_world_is_always_a_solution(rows, cols, n_liars):
 def test_finds_all_worlds_when_nobody_speaks():
     grid = fixed_grid(1, 3)
     assert len(checker.find_solutions(grid)) == 2 ** 3
+
+
+def test_hidden_cats_are_skipped():
+    """A hidden cat's real statement can't be read, so the checker ignores it."""
+    grid = fixed_grid(1, 2)
+    give(grid, 0, is_liar(0, 1))   # A: "B is a liar"
+    give(grid, 1, is_liar(1, 0))   # B: "A is a liar"
+    before = len(checker.find_solutions(grid))
+    grid[0][1].hidden = True
+    after = len(checker.find_solutions(grid))
+    assert after >= before
+    assert after == 2   # only A's statement counts now: A honest & B liar, or A liar & B honest
