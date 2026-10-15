@@ -1,4 +1,5 @@
 # --- Whole grid ---
+# --- Orhan was here ---
 
 def everyone(grid):
     """Every cat in the grid."""
