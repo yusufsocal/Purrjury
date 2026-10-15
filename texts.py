@@ -178,17 +178,19 @@ PAIR_BOTH_HONEST_ME_TEXTS = [
     "You can trust {b} and me. We are both honest.",
 ]
 
+# "If a is honest, then b is honest" is written as "Either a is a liar, or b is honest (or both)",
+# same thing, but much easier to work with when the speaker turns out to be a liar
 PAIR_IF_A_HONEST_THEN_B_TEXTS = [
-    "If {a} is honest, then {b} is honest too.",
-    "Mrrp. If {a} tells the truth, so does {b}.",
-    "Either {a} is a liar, or {b} is honest.",
-    "{b} can only be a liar if {a} is a liar too.",
+    "Either {a} is a liar, or {b} is honest (or both).",
+    "Mrrp. Either {a} is a liar, or {b} is honest. Maybe both.",
+    "*twitches whiskers* Either {a} is a liar, or {b} is honest, or both.",
+    "Either {a} is a liar, or {b} is honest. Could be both.",
 ]
 
 PAIR_IF_A_HONEST_THEN_B_ME_TEXTS = [
-    "If I'm honest, then {b} is honest too.",
-    "Meow. If I tell the truth, so does {b}.",
-    "Either I'm a liar, or {b} is honest.",
+    "Either I'm a liar, or {b} is honest (or both).",
+    "Meow. Either I'm a liar, or {b} is honest. Maybe both.",
+    "*tilts head* Either I'm a liar, or {b} is honest, or both.",
 ]
 
 PAIR_A_HONEST_B_LIAR_TEXTS = [

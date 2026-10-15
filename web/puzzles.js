@@ -581,7 +581,7 @@ const PUZZLES = [
     "column": 2,
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Echo can only be a liar if Clover is a liar too.",
+    "secret": "Either Clover is a liar, or Echo is honest. Could be both.",
     "mentions": []
    },
    {
@@ -644,7 +644,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 2,
     "column": 1,
-    "text": "Felix told me: \"Echo can only be a liar if Clover is a liar too.\"",
+    "text": "Felix told me: \"Either Clover is a liar, or Echo is honest. Could be both.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -850,7 +850,7 @@ const PUZZLES = [
     "color": "calico",
     "row": 0,
     "column": 2,
-    "text": "If Juniper is honest, then Gnocchi is honest too.",
+    "text": "Either Juniper is a liar, or Gnocchi is honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1260,7 +1260,7 @@ const PUZZLES = [
     "color": "black",
     "row": 0,
     "column": 2,
-    "text": "Mrrp. If Nugget tells the truth, so does Jasper.",
+    "text": "Mrrp. Either Nugget is a liar, or Jasper is honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1311,7 +1311,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 0,
-    "text": "Apricot can only be a liar if Honey is a liar too.",
+    "text": "Either Honey is a liar, or Apricot is honest. Could be both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1396,7 +1396,7 @@ const PUZZLES = [
     "color": "white",
     "row": 0,
     "column": 2,
-    "text": "Either Tater is a liar, or Honey is honest.",
+    "text": "*twitches whiskers* Either Tater is a liar, or Honey is honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3015,7 +3015,7 @@ const PUZZLES = [
     "color": "black",
     "row": 3,
     "column": 0,
-    "text": "If Goose is honest, then Echo is honest too.",
+    "text": "Either Goose is a liar, or Echo is honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3739,7 +3739,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 3,
-    "text": "If Jasper is honest, then Iggy is honest too.",
+    "text": "Either Jasper is a liar, or Iggy is honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
