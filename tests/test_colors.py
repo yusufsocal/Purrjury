@@ -11,14 +11,14 @@ from collections import Counter
 
 import pytest
 
-import grid as grid_module
+from purrjury.board import grid as grid_module
 from tests.helpers import all_cats, random_grid
 
 if not hasattr(grid_module, "decide_colors"):
     pytest.skip("decide_colors not written yet", allow_module_level=True)
 
-from colors import COLORS
-from grid import decide_colors
+from purrjury.board.colors import COLORS
+from purrjury.board.grid import decide_colors
 
 
 @pytest.mark.parametrize("n_cats", range(2, 26))

@@ -1,6 +1,6 @@
 import itertools
 
-from grid import get_cat
+from purrjury.board.grid import get_cat
 
 
 def find_solutions(grid):

@@ -1,10 +1,10 @@
 import random
 
-from statements.base import Statement
-from grid import get_cat
-from texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_TEXTS,
+from purrjury.statements.base import Statement
+from purrjury.board.grid import get_cat
+from purrjury.texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_TEXTS,
                    EXACTLY_N_TEXTS, AT_LEAST_ONE_TEXTS, AT_LEAST_N_TEXTS)
-import areas
+from purrjury.board import areas
 
 # How often each kind of area is picked, relative to each other
 AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "trio": 2, "single": 1}

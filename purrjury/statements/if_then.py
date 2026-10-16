@@ -1,11 +1,11 @@
 import random
 
-from statements.base import Statement
-from statements.count_liars import AREA_WEIGHTS
-from statements.only import big_areas
-from grid import get_cat
-from utils import weighted_order
-import texts
+from purrjury.statements.base import Statement
+from purrjury.statements.count_liars import AREA_WEIGHTS
+from purrjury.statements.only import big_areas
+from purrjury.board.grid import get_cat
+from purrjury.utils import weighted_order
+from purrjury import texts
 
 
 class IfThen(Statement):

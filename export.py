@@ -7,7 +7,7 @@ import argparse
 import json
 import random
 
-from generator import generate_puzzle
+from purrjury.engine.generator import generate_puzzle
 
 
 def puzzle_to_dict(grid, world, seed):

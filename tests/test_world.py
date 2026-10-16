@@ -1,4 +1,4 @@
-from world import make_world
+from purrjury.board.world import make_world
 
 
 def test_make_world_has_right_length_and_liar_count():

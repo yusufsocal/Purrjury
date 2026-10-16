@@ -1,7 +1,7 @@
 """Shared helpers for the tests."""
-from cat import Cat
-from statements import CountLiars
-from grid import load_names, make_grid
+from purrjury.board.cat import Cat
+from purrjury.statements import CountLiars
+from purrjury.board.grid import load_names, make_grid
 
 
 def fixed_grid(rows, cols):

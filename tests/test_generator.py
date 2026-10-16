@@ -1,7 +1,7 @@
 import pytest
 
-from generator import assign_statements
-from world import make_world
+from purrjury.engine.generator import assign_statements
+from purrjury.board.world import make_world
 from tests.helpers import all_cats, fits, random_grid
 
 

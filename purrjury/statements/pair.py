@@ -1,10 +1,10 @@
 import itertools
 import random
 
-from statements.base import Statement
-from grid import get_cat
-from utils import weighted_order
-import texts
+from purrjury.statements.base import Statement
+from purrjury.board.grid import get_cat
+from purrjury.utils import weighted_order
+from purrjury import texts
 
 
 # Each relation takes two bools (a_liar, b_liar) and returns True if the statement holds.

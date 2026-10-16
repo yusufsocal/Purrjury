@@ -1,9 +1,9 @@
 import random
 
-from statements.base import Statement
-from statements.count_liars import AREA_WEIGHTS
-from statements.only import big_areas
-import texts
+from purrjury.statements.base import Statement
+from purrjury.statements.count_liars import AREA_WEIGHTS
+from purrjury.statements.only import big_areas
+from purrjury import texts
 
 
 class AllSame(Statement):

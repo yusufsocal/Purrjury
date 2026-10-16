@@ -12,10 +12,10 @@ no matter what you add to ALL_STATEMENTS later.
 """
 import pytest
 
-import generator
-from checker import find_solutions
-from statements import CountLiars, PairStatement
-import statements.pair as pair
+from purrjury.engine import generator
+from purrjury.engine.checker import find_solutions
+from purrjury.statements import CountLiars, PairStatement
+from purrjury.statements import pair
 from tests.helpers import all_cats, fits
 
 

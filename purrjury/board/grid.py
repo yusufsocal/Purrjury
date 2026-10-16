@@ -1,10 +1,15 @@
 import random
+from pathlib import Path
 
-from cat import Cat
-from colors import COLORS
+from purrjury.board.cat import Cat
+from purrjury.board.colors import COLORS
 
 
-def load_names(path="cat_names.txt"):
+# found next to the code, so it works no matter which folder you run from
+NAMES_PATH = Path(__file__).parent.parent / "data" / "cat_names.txt"
+
+
+def load_names(path=NAMES_PATH):
     """Load names into {"A": ["Ash", "Apricot", "Angus"], "B": [...], ...}."""
     names_by_letter = {}
     with open(path) as f:

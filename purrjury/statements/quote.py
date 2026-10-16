@@ -1,9 +1,9 @@
 import random
 
-from statements.base import Statement
-from grid import get_cat
-from utils import weighted_order
-import texts
+from purrjury.statements.base import Statement
+from purrjury.board.grid import get_cat
+from purrjury.utils import weighted_order
+from purrjury import texts
 
 
 # How often each kind of quote is picked, relative to each other

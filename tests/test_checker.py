@@ -3,17 +3,14 @@
 Expected API:
     find_solutions(grid) -> list of worlds (each a list or tuple of booleans, True = liar)
     that are consistent with every cat's statement. Cats whose statement is None are skipped.
-
-These tests are skipped until checker.py exists.
 """
 import pytest
 
-from generator import assign_statements
-from statements.base import Statement
-from world import make_world
+from purrjury.engine import checker
+from purrjury.engine.generator import assign_statements
+from purrjury.statements.base import Statement
+from purrjury.board.world import make_world
 from tests.helpers import all_cats, fixed_grid, is_honest, is_liar, random_grid
-
-checker = pytest.importorskip("checker")
 
 
 def solutions_as_sets(grid):

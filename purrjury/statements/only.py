@@ -1,10 +1,10 @@
 import random
 
-from statements.base import Statement
-from statements.count_liars import AREA_WEIGHTS, CountLiars
-from grid import get_cat
-from utils import weighted_order
-import texts
+from purrjury.statements.base import Statement
+from purrjury.statements.count_liars import AREA_WEIGHTS, CountLiars
+from purrjury.board.grid import get_cat
+from purrjury.utils import weighted_order
+from purrjury import texts
 
 
 # How often the speaker talks about itself vs another cat, relative to each other

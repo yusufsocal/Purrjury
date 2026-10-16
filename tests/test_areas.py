@@ -6,9 +6,9 @@
 """
 import pytest
 
-import areas
-from cat import Cat
-from grid import get_cat
+from purrjury.board import areas
+from purrjury.board.cat import Cat
+from purrjury.board.grid import get_cat
 from tests.helpers import fixed_grid
 
 G = fixed_grid(3, 3)

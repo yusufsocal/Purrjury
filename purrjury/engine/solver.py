@@ -5,7 +5,7 @@ If no step works anymore before every cat is found, the puzzle isn't fun to solv
 """
 import itertools
 
-from grid import get_cat
+from purrjury.board.grid import get_cat
 
 
 # groups of clues about more unknown cats than this are skipped, nobody can juggle that many

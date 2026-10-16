@@ -1,6 +1,6 @@
 from collections import Counter
 
-from utils import weighted_order
+from purrjury.utils import weighted_order
 
 
 def test_every_key_once():

@@ -1,8 +1,8 @@
 import random
 
-from statements.base import Statement
-from grid import get_cat
-import texts
+from purrjury.statements.base import Statement
+from purrjury.board.grid import get_cat
+from purrjury import texts
 
 
 class Hearsay(Statement):

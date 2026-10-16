@@ -1,9 +1,9 @@
 import pytest
 
-from statements import ALL_STATEMENTS, CountLiars, PairStatement
-from statements.count_liars import AREA_WEIGHTS
-from statements.pair import ORDERED, RELATION_WEIGHTS, RELATIONS, TEXTS
-from world import make_world
+from purrjury.statements import ALL_STATEMENTS, CountLiars, PairStatement
+from purrjury.statements.count_liars import AREA_WEIGHTS
+from purrjury.statements.pair import ORDERED, RELATION_WEIGHTS, RELATIONS, TEXTS
+from purrjury.board.world import make_world
 from tests.helpers import fits, fixed_grid, is_liar, random_grid
 
 
@@ -224,7 +224,7 @@ def test_no_negative_wordings():
     The "no kitten" / "not kitten you" puns are allowed, they're decoration, not the claim.
     """
     import re
-    import texts
+    from purrjury import texts
     negative = re.compile(r"\b(not|no|none|never|neither|nor|without|unlike)\b|n't|\bat most\b", re.I)
     puns = re.compile(r"no kitten|not kitten you", re.I)
     for name in dir(texts):

@@ -3,10 +3,10 @@ import itertools
 
 import pytest
 
-import generator
-from checker import find_solutions
-from statements import ALL_STATEMENTS, AllSame, CountLiars, Hearsay, IfThen, Only, Quote
-from world import make_world
+from purrjury.engine import generator
+from purrjury.engine.checker import find_solutions
+from purrjury.statements import ALL_STATEMENTS, AllSame, CountLiars, Hearsay, IfThen, Only, Quote
+from purrjury.board.world import make_world
 from tests.helpers import all_cats, fits, fixed_grid, is_liar, random_grid
 
 

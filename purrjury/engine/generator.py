@@ -1,11 +1,11 @@
 import random
 import textwrap
 
-from checker import find_solutions
-from grid import get_cat, load_names, make_grid
-from statements import ALL_STATEMENTS, Hearsay
-import texts
-from world import make_world
+from purrjury.engine.checker import find_solutions
+from purrjury.board.grid import get_cat, load_names, make_grid
+from purrjury.statements import ALL_STATEMENTS, Hearsay
+from purrjury import texts
+from purrjury.board.world import make_world
 
 # Chance for each possible hidden cat to actually be hidden (see max_hidden)
 HIDDEN_CHANCE = 0.75

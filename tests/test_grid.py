@@ -1,7 +1,7 @@
 import pytest
 
-from colors import COLORS
-from grid import get_cat, load_names
+from purrjury.board.colors import COLORS
+from purrjury.board.grid import get_cat, load_names
 from tests.helpers import all_cats, fixed_grid, random_grid
 
 

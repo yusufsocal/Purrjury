@@ -2,7 +2,7 @@ import argparse
 import random
 import sys
 
-from generator import generate_puzzle, print_puzzle
+from purrjury.engine.generator import generate_puzzle, print_puzzle
 
 
 def parse_size(text):
