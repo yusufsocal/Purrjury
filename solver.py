@@ -57,7 +57,7 @@ def solve(grid):
 
     Returns a list of steps, each one like (level, speakers, found):
         level:    1 or 2, how many clues the step needed
-        speakers: names of the cats whose clues were used
+        speakers: indexes of the cats whose clues were used
         found:    dict {cat index: True/False} of the cats found in this step
     Returns None if it gets stuck before every cat is found.
     """
@@ -78,7 +78,7 @@ def solve(grid):
             for group in itertools.combinations(clues, level):
                 found = forced_cats(list(group), known, grid)
                 if found:
-                    speakers = [get_cat(grid, s.speaker).name for s in group]
+                    speakers = [s.speaker for s in group]
                     step = (level, speakers, found)
                     break
             if step:
