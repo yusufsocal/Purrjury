@@ -216,3 +216,19 @@ def test_pair_key_order_only_matters_for_ordered_relations():
     assert PairStatement(0, 1, 2, "same").key() != PairStatement(0, 1, 2, "different").key()
     # "Whatever I am, B is too" said by A is the same claim as "A and B are the same" said by someone else
     assert PairStatement(1, 1, 2, "same").key() == PairStatement(0, 1, 2, "same").key()
+
+
+def test_no_negative_wordings():
+    """A lie of "X is not ..." makes the player un-negate twice, so texts only use positive wordings.
+
+    The "no kitten" / "not kitten you" puns are allowed, they're decoration, not the claim.
+    """
+    import re
+    import texts
+    negative = re.compile(r"\b(not|no|none|never|neither|nor|without|unlike)\b|n't|\bat most\b", re.I)
+    puns = re.compile(r"no kitten|not kitten you", re.I)
+    for name in dir(texts):
+        value = getattr(texts, name)
+        if name.isupper() and isinstance(value, list):
+            for text in value:
+                assert not negative.search(puns.sub("", text)), f"{name}: {text}"

@@ -9,16 +9,18 @@
     {quote}            what a hidden cat supposedly said
 Every sentence keeps the logic words plain (liar / honest / exactly / at least),
 the cat talk is only decoration around them.
+No negative wordings (not, none, can't, at most, ...): when a liar says one, the player
+would have to un-negate twice.
 """
 
 # --- One specific cat (area of size 1) ---
 
 LIAR_TEXTS = [
     "{name} is lying through their whiskers.",
-    "Don't trust {name}. That cat's a fur-aud.",
+    "{name} is a liar. That cat's a fur-aud.",
     "{name} is lying like a lion.",
     "I'm not kitten you, {name} is a liar.",
-    "Hiss. Don't believe a word {name} says, that cat is not honest.",
+    "Hiss. {name} is a liar through and through.",
 ]
 
 HONEST_TEXTS = [
@@ -26,7 +28,7 @@ HONEST_TEXTS = [
     "You can trust {name}. That's a purr-fact.",
     "{name} always tells the truth, no kitten.",
     "{name} is honest, fur real.",
-    "{name} is no liar. Purr.",
+    "{name} is as honest as they come. Purr.",
 ]
 
 
@@ -34,10 +36,10 @@ HONEST_TEXTS = [
 
 # exactly 0
 NONE_TEXTS = [
-    "None of {area} are liars.",
-    "Mrrp! None of {area} are liars, I'd bet my nine lives on it.",
-    "Not a single liar among {area}. Purr.",
-    "*sniffs around* None of {area} are liars.",
+    "All of {area} are honest.",
+    "Mrrp! All of {area} are honest, I'd bet my nine lives on it.",
+    "Every one of {area} is honest. Purr.",
+    "*sniffs around* All of {area} are honest.",
     "All of {area} are honest. Purrfectly so.",
     "Every single one of {area} can be trusted. Mrrp.",
 ]
@@ -46,10 +48,10 @@ NONE_TEXTS = [
 ALL_TEXTS = [
     "All of {area} are liars.",
     "Hiss! Every single one of {area} is a liar.",
-    "All of {area} are liars. Not one honest whisker in the bunch.",
+    "All of {area} are liars. Every whisker in the bunch is crooked.",
     "Meow. All of {area} are liars, every last one.",
-    "None of {area} are honest. Hiss!",
-    "Not one of {area} can be trusted. Meow.",
+    "Every one of {area} is a liar. Hiss!",
+    "Each and every one of {area} is a liar. Meow.",
 ]
 
 # exactly 1 (but not all)
@@ -78,8 +80,8 @@ AT_LEAST_ONE_TEXTS = [
     "Purr... at least one of {area} is a liar.",
     "I smell a rat. At least one of {area} is a liar.",
     "*narrows eyes* At least one of {area} is a liar.",
-    "Not all of {area} are honest.",
-    "Hiss. Not every one of {area} can be trusted.",
+    "There's at least one liar among {area}.",
+    "Hiss. There's a liar among {area}, maybe more.",
 ]
 
 # at least n, with n of 2 or more (but not all)
@@ -88,8 +90,8 @@ AT_LEAST_N_TEXTS = [
     "Mrrrow! At least {n} of {area} are liars.",
     "At least {n} of {area} are liars. Fur real.",
     "*arches back* At least {n} of {area} are liars.",
-    "At most {h} of {area} can be trusted.",
-    "Meow. No more than {h} of {area} can be trusted.",
+    "There are at least {n} liars among {area}.",
+    "Meow. {n} or more of {area} are liars.",
 ]
 
 
@@ -102,7 +104,7 @@ PAIR_SAME_TEXTS = [
     "{a} and {b} are from the same litter: both honest, or both liars.",
     "*purrs* {a} and {b} are both truth-tellers or both fibbers.",
     "If {a} is lying, so is {b}. If {a} is honest, so is {b}.",
-    "{a} and {b} are on the same side, honest or not.",
+    "{a} and {b} are on the same side: both honest, or both liars.",
     "Whatever {a} is, {b} is too.",
 ]
 
@@ -117,7 +119,7 @@ PAIR_DIFFERENT_TEXTS = [
     "Exactly one of {a} and {b} is a liar.",
     "{a} and {b} are opposites: one is honest, the other is a liar.",
     "*swishes tail* One of {a} and {b} is honest, the other is a liar.",
-    "Hiss. {a} and {b} are not the same: exactly one of them is a liar.",
+    "Hiss. {a} and {b} are opposites: exactly one of them is a liar.",
 ]
 
 PAIR_DIFFERENT_ME_TEXTS = [
@@ -128,41 +130,41 @@ PAIR_DIFFERENT_ME_TEXTS = [
 
 PAIR_AT_LEAST_ONE_LIAR_TEXTS = [
     "At least one of {a} and {b} is a liar.",
-    "{a} and {b} are not both honest.",
-    "Mrrp. {a} and {b} can't both be trusted.",
+    "Hiss. One of {a} and {b} is a liar, maybe both.",
+    "Mrrp. At least one of {a} and {b} is a liar. Maybe both.",
     "*narrows eyes* At least one of {a} and {b} is a liar.",
 ]
 
 PAIR_AT_LEAST_ONE_LIAR_ME_TEXTS = [
     "At least one of {b} and me is a liar.",
-    "{b} and I are not both honest.",
-    "Meow. {b} and I can't both be trusted.",
+    "Hiss. One of {b} and me is a liar, maybe both.",
+    "Meow. At least one of {b} and me is a liar. Maybe both.",
 ]
 
 PAIR_AT_LEAST_ONE_HONEST_TEXTS = [
     "At least one of {a} and {b} is honest.",
-    "{a} and {b} are not both liars.",
+    "Mrrp. One of {a} and {b} is honest, maybe both.",
     "Purr. You can trust at least one of {a} and {b}.",
     "*kneads paws* At least one of {a} and {b} is honest.",
 ]
 
 PAIR_AT_LEAST_ONE_HONEST_ME_TEXTS = [
     "At least one of {b} and me is honest.",
-    "{b} and I are not both liars.",
+    "Mrrp. One of {b} and me is honest, maybe both.",
     "Purr. You can trust at least one of {b} and me.",
 ]
 
 PAIR_BOTH_LIARS_TEXTS = [
     "{a} and {b} are both liars.",
     "Hiss! {a} and {b} are liars, both of them.",
-    "Don't trust {a} or {b}. Both are liars.",
+    "{a} and {b}? Liars, the pair of them.",
     "*arches back* {a} and {b} are both liars.",
 ]
 
 PAIR_BOTH_LIARS_ME_TEXTS = [
     "{b} and I are both liars.",
     "Meow. {b} and I are liars, both of us.",
-    "Don't trust {b} or me. We are both liars.",
+    "{b} and I? Liars, both of us.",
 ]
 
 PAIR_BOTH_HONEST_TEXTS = [
@@ -195,22 +197,22 @@ PAIR_IF_A_HONEST_THEN_B_ME_TEXTS = [
 
 PAIR_A_HONEST_B_LIAR_TEXTS = [
     "{a} is honest, but {b} is a liar.",
-    "Trust {a}, not {b}. {a} is honest and {b} is a liar.",
+    "Trust {a} over {b}: {a} is honest and {b} is a liar.",
     "*flicks tail* {a} is honest. {b} is a liar.",
     "Purr for {a}, hiss for {b}: {a} is honest, {b} is a liar.",
 ]
 
 PAIR_A_HONEST_B_LIAR_ME_TEXTS = [
     "I'm honest, but {b} is a liar.",
-    "Trust me, not {b}. I'm honest and {b} is a liar.",
-    "Hiss. Unlike me, {b} is a liar.",
+    "Trust me over {b}: I'm honest and {b} is a liar.",
+    "Hiss. I'm honest, {b} is the liar here.",
 ]
 
 
 # --- Quotes (Quote) ---
 # {quoted} is the cat being quoted, {target} is the cat the quote is about.
 # "self": the speaker quotes itself. "about_me": the quote is about the speaker.
-# "about_themselves": the quoted cat talks about itself. "others": three different cats.
+# "about_themselves": the quoted cat talks about itself.
 
 QUOTE_SELF_LIAR_TEXTS = [
     "If you asked me, I'd say {target} is a liar.",
@@ -254,20 +256,6 @@ QUOTE_ABOUT_THEMSELVES_HONEST_TEXTS = [
     "*yawns* {quoted} would tell you they're honest.",
 ]
 
-QUOTE_OTHERS_LIAR_TEXTS = [
-    "{quoted} would say {target} is a liar.",
-    "If you asked {quoted}, they'd say {target} is a liar.",
-    "Mrrp. {quoted} would call {target} a liar.",
-    "*whispers* {quoted} would tell you {target} is a liar.",
-]
-
-QUOTE_OTHERS_HONEST_TEXTS = [
-    "{quoted} would say {target} is honest.",
-    "If you asked {quoted}, they'd say {target} is honest.",
-    "Purr. {quoted} would tell you {target} is honest.",
-    "*tilts head* {quoted} would say {target} is honest.",
-]
-
 
 # --- The only one in an area (Only) ---
 # {name} is the cat, {area} is the area text. The _ME_ lists are used when the speaker is that cat.
@@ -306,12 +294,12 @@ ALL_SAME_TEXTS = [
     "All of {area} are the same: all honest, or all liars.",
     "*purrs* All of {area} are from the same litter: all honest, or all liars.",
     "Mrrp. Whatever one of {area} is, the rest are too.",
-    "No mixing among {area}: all honest, or all liars.",
+    "Same story for all of {area}: all honest, or all liars.",
 ]
 
 MIXED_TEXTS = [
     "Among {area}, there are both honest cats and liars.",
-    "Hiss. Not all of {area} are the same: there's at least one liar and at least one honest cat.",
+    "Hiss. Among {area} you'll find both: at least one liar and at least one honest cat.",
     "*swishes tail* Among {area}, there's at least one liar and at least one honest cat.",
     "There's a mix among {area}: some honest, some liars.",
 ]

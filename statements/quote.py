@@ -10,23 +10,23 @@ import texts
 #   self:             "If you asked me, I'd say Felix is a liar."   (always reveals Felix)
 #   about_me:         "Felix would say I'm a liar."                 (always reveals Felix)
 #   about_themselves: "Felix would say they're a liar."             (always reveals the speaker)
-#   others:           "Felix would say Bagel is a liar."            (Felix and Bagel are different types)
-FLAVOR_WEIGHTS = {"self": 2, "about_me": 2, "about_themselves": 1, "others": 2}
+# Quotes about three different cats ("Felix would say Bagel is a liar") were dropped: they mean the same
+# as the pair clues "Felix and Bagel are opposites / the same type", just much harder to read.
+FLAVOR_WEIGHTS = {"self": 2, "about_me": 2, "about_themselves": 1}
 
 # Each flavor's texts: (texts where the quote says "liar", texts where it says "honest")
 TEXTS = {
     "self":             (texts.QUOTE_SELF_LIAR_TEXTS, texts.QUOTE_SELF_HONEST_TEXTS),
     "about_me":         (texts.QUOTE_ABOUT_ME_LIAR_TEXTS, texts.QUOTE_ABOUT_ME_HONEST_TEXTS),
     "about_themselves": (texts.QUOTE_ABOUT_THEMSELVES_LIAR_TEXTS, texts.QUOTE_ABOUT_THEMSELVES_HONEST_TEXTS),
-    "others":           (texts.QUOTE_OTHERS_LIAR_TEXTS, texts.QUOTE_OTHERS_HONEST_TEXTS),
 }
 
 
 class Quote(Statement):
     """What a cat would say about a cat, e.g. 'Felix would say Bagel is a liar'.
 
-    The quoted cat can be the speaker itself, and the cat the quote is about can be
-    the speaker or the quoted cat. That gives the four flavors in FLAVOR_WEIGHTS.
+    The quoted cat can be the speaker itself, or the quote can be about the speaker or
+    about the quoted cat itself. That gives the three flavors in FLAVOR_WEIGHTS.
     """
 
     def __init__(self, speaker, quoted, target, says_liar):
@@ -83,10 +83,8 @@ class Quote(Statement):
                 pairs = [(speaker, t) for t in others]
             elif flavor == "about_me":
                 pairs = [(q, speaker) for q in others]
-            elif flavor == "about_themselves":
+            else:   # about_themselves
                 pairs = [(q, q) for q in others]
-            else:
-                pairs = [(q, t) for q in others for t in others if q != t]
 
             # every (quoted, target) pair can say "liar" or "honest"
             options = [(q, t, says_liar) for q, t in pairs for says_liar in (True, False)]

@@ -7,113 +7,124 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Biscuit",
-    "color": "ginger",
+    "color": "black",
     "row": 0,
     "column": 0,
-    "text": "*leans in* Hazel whispered to me: \"Mrrp! None of Biscuit, Goose and me are liars, I'd bet my nine lives on it.\"",
+    "text": "*slow blinks* If you asked me about Kettle, I'd say honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
-     3
+     8
+    ]
+   },
+   {
+    "name": "Cricket",
+    "color": "grey",
+    "row": 0,
+    "column": 1,
+    "text": "*incomprehensible meowing*",
+    "hidden": true,
+    "secret": "Mrrp. Whatever one of the cats on the edges is, the rest are too.",
+    "mentions": []
+   },
+   {
+    "name": "Dumpling",
+    "color": "ginger",
+    "row": 0,
+    "column": 2,
+    "text": "Mrrp. Either Biscuit is a liar, or all of the corner cats are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     6,
+     8
+    ]
+   },
+   {
+    "name": "Espresso",
+    "color": "black",
+    "row": 1,
+    "column": 0,
+    "text": "Mrrp. Among the cats in row 3, only Jellybean is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8
     ]
    },
    {
     "name": "Fig",
-    "color": "grey",
-    "row": 0,
+    "color": "tuxedo",
+    "row": 1,
     "column": 1,
-    "text": "Hazel would say they're a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3
-    ]
-   },
-   {
-    "name": "Goose",
-    "color": "ginger",
-    "row": 0,
-    "column": 2,
-    "text": "Mrrp. Whatever one of the ginger cats is, the rest are too.",
+    "text": "Mrrp. Among the corner cats, only Dumpling is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     6
+     2,
+     6,
+     8
     ]
    },
    {
-    "name": "Hazel",
-    "color": "grey",
-    "row": 1,
-    "column": 0,
-    "text": "Mrrp? Mew mew mrrrow!",
-    "hidden": true,
-    "secret": "Mrrp! None of Biscuit, Goose and me are liars, I'd bet my nine lives on it.",
-    "mentions": []
-   },
-   {
-    "name": "Jellybean",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 1,
-    "text": "Mrrp. Either Luna is honest, or all of Hazel, Luna and me are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     6
-    ]
-   },
-   {
-    "name": "Kismet",
+    "name": "Gnocchi",
     "color": "tuxedo",
     "row": 1,
     "column": 2,
-    "text": "Not one of the cats in my row can be trusted. Meow.",
+    "text": "I heard Cricket say: \"Mrrp. Whatever one of the cats on the edges is, the rest are too.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Honey",
+    "color": "grey",
+    "row": 2,
+    "column": 0,
+    "text": "Mrrp. Whatever one of the cats in row 2 is, the rest are too.",
     "hidden": false,
     "secret": null,
     "mentions": [
      3,
+     4,
+     5
+    ]
+   },
+   {
+    "name": "Jellybean",
+    "color": "ginger",
+    "row": 2,
+    "column": 1,
+    "text": "If you asked me, I'd say Fig is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
      4
     ]
    },
    {
-    "name": "Luna",
-    "color": "ginger",
-    "row": 2,
-    "column": 0,
-    "text": "All of the cats in my column are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3
-    ]
-   },
-   {
-    "name": "Mango",
-    "color": "grey",
-    "row": 2,
-    "column": 1,
-    "text": "Fig always tells the truth, no kitten.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1
-    ]
-   },
-   {
-    "name": "Noodle",
-    "color": "grey",
+    "name": "Kettle",
+    "color": "tuxedo",
     "row": 2,
     "column": 2,
-    "text": "*arches back* Fig and Kismet are both liars.",
+    "text": "Either Fig is honest, or all of the cats in my column are liars (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
+     2,
+     4,
      5
     ]
    }
@@ -121,10 +132,10 @@ const PUZZLES = [
   "liars": [
    false,
    true,
-   false,
-   false,
-   false,
    true,
+   false,
+   false,
+   false,
    false,
    true,
    false
@@ -136,109 +147,91 @@ const PUZZLES = [
   "seed": 2027,
   "cats": [
    {
-    "name": "Ash",
-    "color": "black",
+    "name": "Apricot",
+    "color": "grey",
     "row": 0,
     "column": 0,
-    "text": "Mrrp. Either Loki is honest, or all of the cats below me are liars. Maybe both.",
+    "text": "Mrrp. What Gizmo meant was: \"*purrs* All of the corner cats are from the same litter: all honest, or all liars.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
-     3,
+     2,
+     4,
      6,
      8
     ]
    },
    {
     "name": "Bagel",
-    "color": "black",
+    "color": "ginger",
     "row": 0,
     "column": 1,
-    "text": "Everyone among the cats in my row is a liar, except Ash, who is honest.",
+    "text": "There's a mix among the cats in my column: some honest, some liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     2
+     4,
+     7
     ]
    },
    {
     "name": "Clover",
-    "color": "white",
+    "color": "grey",
     "row": 0,
     "column": 2,
-    "text": "Meow. Among my neighbors, only Felix is honest.",
+    "text": "Felix is the only honest cat among the cats in row 2.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
+     3,
+     4,
      5
     ]
    },
    {
-    "name": "Dusty",
-    "color": "calico",
+    "name": "Felix",
+    "color": "ginger",
     "row": 1,
     "column": 0,
-    "text": "Everyone among my neighbors is honest, except Ember, who is a liar.",
+    "text": "*points a paw at Iggy* The only liar among the corner cats.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     4,
-     6
-    ]
-   },
-   {
-    "name": "Ember",
-    "color": "black",
-    "row": 1,
-    "column": 1,
-    "text": "I heard Loki say: \"If you asked me, I'd say Dusty is honest.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     8
-    ]
-   },
-   {
-    "name": "Felix",
-    "color": "white",
-    "row": 1,
-    "column": 2,
-    "text": "Mrrp. Either Ash is honest, or all of the cats on the edges are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
      2,
-     3,
      6,
-     7,
      8
     ]
    },
    {
     "name": "Gizmo",
-    "color": "calico",
-    "row": 2,
-    "column": 0,
-    "text": "Ash and Clover are both honest.",
+    "color": "tabby",
+    "row": 1,
+    "column": 1,
+    "text": "*incomprehensible meowing*",
+    "hidden": true,
+    "secret": "*purrs* All of the corner cats are from the same litter: all honest, or all liars.",
+    "mentions": []
+   },
+   {
+    "name": "Hobbes",
+    "color": "black",
+    "row": 1,
+    "column": 2,
+    "text": "All of the cats to my left are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     2
+     3,
+     4
     ]
    },
    {
-    "name": "Kismet",
-    "color": "calico",
+    "name": "Iggy",
+    "color": "ginger",
     "row": 2,
-    "column": 1,
-    "text": "Hiss. Among the cats in my column, I'm the only liar.",
+    "column": 0,
+    "text": "*twitches whiskers* Either Bagel is a liar, or Gizmo is honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -247,25 +240,41 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Loki",
-    "color": "white",
+    "name": "Juniper",
+    "color": "tabby",
+    "row": 2,
+    "column": 1,
+    "text": "Everyone among the cats in column 1 is honest, except Iggy, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     6
+    ]
+   },
+   {
+    "name": "Kettle",
+    "color": "black",
     "row": 2,
     "column": 2,
-    "text": "Mrrp? Mew mew mrrrow!",
-    "hidden": true,
-    "secret": "Mrrp. Dusty would call Kismet a liar.",
-    "mentions": []
+    "text": "Juniper would say I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7
+    ]
    }
   ],
   "liars": [
    false,
-   true,
    false,
-   false,
-   true,
    false,
    false,
    true,
+   true,
+   true,
+   false,
    false
   ]
  },
@@ -275,107 +284,37 @@ const PUZZLES = [
   "seed": 2028,
   "cats": [
    {
-    "name": "Bagel",
-    "color": "tabby",
+    "name": "Apricot",
+    "color": "white",
     "row": 0,
     "column": 0,
-    "text": "Purr. You can trust at least one of Kettle and Mochi.",
+    "text": "Mrrp. Either Echo is honest, or all of Bagel, Echo and me are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     4
+    ]
+   },
+   {
+    "name": "Bagel",
+    "color": "black",
+    "row": 0,
+    "column": 1,
+    "text": "*thinks hard* Either Goose is honest, or all of the grey cats are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      6,
-     8
+     7
     ]
    },
    {
     "name": "Coco",
-    "color": "tabby",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Either Iggy is a liar, or all of the cats below me are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     7
-    ]
-   },
-   {
-    "name": "Dumpling",
-    "color": "grey",
+    "color": "calico",
     "row": 0,
     "column": 2,
-    "text": "Among the cats in row 2, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     4,
-     5
-    ]
-   },
-   {
-    "name": "Hazel",
-    "color": "grey",
-    "row": 1,
-    "column": 0,
-    "text": "Among the corner cats, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     6,
-     8
-    ]
-   },
-   {
-    "name": "Iggy",
-    "color": "tabby",
-    "row": 1,
-    "column": 1,
-    "text": "Either Coco is a liar, or all of my neighbors are honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     3,
-     5,
-     7
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "black",
-    "row": 1,
-    "column": 2,
-    "text": "There's a mix among Coco, Luna and me: some honest, some liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     7
-    ]
-   },
-   {
-    "name": "Kettle",
-    "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "All but one of the cats to my right are honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     8
-    ]
-   },
-   {
-    "name": "Luna",
-    "color": "black",
-    "row": 2,
-    "column": 1,
-    "text": "Mrrp. Either Bagel is honest, or all of Bagel, Coco and me are liars. Maybe both.",
+    "text": "Hiss. Among the cats to my left you'll find both: at least one liar and at least one honest cat.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -384,28 +323,95 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Mochi",
+    "name": "Dumpling",
+    "color": "calico",
+    "row": 1,
+    "column": 0,
+    "text": "Everyone among the grey cats is a liar, except Goose, who is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     7
+    ]
+   },
+   {
+    "name": "Echo",
     "color": "black",
+    "row": 1,
+    "column": 1,
+    "text": "Either Inky is honest, or all of the cats in my row are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     5,
+     8
+    ]
+   },
+   {
+    "name": "Felix",
+    "color": "calico",
+    "row": 1,
+    "column": 2,
+    "text": "Whatever Honey is, Inky is too.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Goose",
+    "color": "grey",
+    "row": 2,
+    "column": 0,
+    "text": "*thinks hard* Either Apricot is honest, or all of the cats in my row are honest, or both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Honey",
+    "color": "grey",
+    "row": 2,
+    "column": 1,
+    "text": "Echo is lying through their whiskers.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "white",
     "row": 2,
     "column": 2,
-    "text": "Coco and Jasper are from the same litter: both honest, or both liars.",
+    "text": "Either Bagel is a liar, or all of Coco, Dumpling and me are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
-     5
+     2,
+     3
     ]
    }
   ],
   "liars": [
    false,
+   false,
    true,
+   false,
+   false,
+   false,
+   false,
    true,
-   false,
-   false,
-   false,
-   false,
-   false,
    true
   ]
  },
@@ -416,10 +422,10 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Apricot",
-    "color": "tuxedo",
+    "color": "siamese",
     "row": 0,
     "column": 0,
-    "text": "Mrrp. Among the cats in column 3, only Doodle is a liar.",
+    "text": "Everyone among the cats in column 3 is a liar, except Kiwi, who is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -429,306 +435,24 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Coco",
-    "color": "tabby",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Ember and Inky can't both be trusted.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     6
-    ]
-   },
-   {
-    "name": "Doodle",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 2,
-    "text": "Ember would say I'm honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3
-    ]
-   },
-   {
-    "name": "Ember",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 0,
-    "text": "None of the ginger cats are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     6
-    ]
-   },
-   {
-    "name": "Felix",
-    "color": "ginger",
-    "row": 1,
-    "column": 1,
-    "text": "Purr. If you asked me, I'd say Luna is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8
-    ]
-   },
-   {
-    "name": "Goose",
-    "color": "tabby",
-    "row": 1,
-    "column": 2,
-    "text": "Purr. If you asked me, I'd say Apricot is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0
-    ]
-   },
-   {
-    "name": "Inky",
-    "color": "ginger",
-    "row": 2,
-    "column": 0,
-    "text": "Not a single liar among the cats above me. Purr.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 1,
-    "text": "Coco and Goose are from the same litter: both honest, or both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5
-    ]
-   },
-   {
-    "name": "Luna",
-    "color": "tabby",
-    "row": 2,
-    "column": 2,
-    "text": "*slow blinks* If you asked me about Ember, I'd say honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3
-    ]
-   }
-  ],
-  "liars": [
-   false,
-   true,
-   true,
-   false,
-   false,
-   false,
-   false,
-   true,
-   false
-  ]
- },
- {
-  "rows": 3,
-  "cols": 3,
-  "seed": 2030,
-  "cats": [
-   {
     "name": "Clover",
-    "color": "ginger",
-    "row": 0,
-    "column": 0,
-    "text": "*points a paw at Felix* The only liar among the corner cats.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     6,
-     8
-    ]
-   },
-   {
-    "name": "Echo",
-    "color": "grey",
+    "color": "white",
     "row": 0,
     "column": 1,
-    "text": "Hiss. Not all of the cats in row 3 are the same: there's at least one liar and at least one honest cat.",
+    "text": "Meow meow. Exactly 2 of Honey, Iggy and me are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     6,
-     7,
-     8
-    ]
-   },
-   {
-    "name": "Felix",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 2,
-    "text": "Mrrrow mrrp mew.",
-    "hidden": true,
-    "secret": "Either Clover is a liar, or Echo is honest. Could be both.",
-    "mentions": []
-   },
-   {
-    "name": "Goose",
-    "color": "calico",
-    "row": 1,
-    "column": 0,
-    "text": "Mrrp. Either Hazel is a liar, or all of the cats in row 1 are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
-     2,
-     4
-    ]
-   },
-   {
-    "name": "Hazel",
-    "color": "calico",
-    "row": 1,
-    "column": 1,
-    "text": "Hiss. Not all of the cats in my column are the same: there's at least one liar and at least one honest cat.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     7
-    ]
-   },
-   {
-    "name": "Indigo",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 2,
-    "text": "Mrow. Exactly one of my neighbors is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     4,
-     8
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "grey",
-    "row": 2,
-    "column": 0,
-    "text": "Don't trust Echo or Goose. Both are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     3
-    ]
-   },
-   {
-    "name": "Luna",
-    "color": "grey",
-    "row": 2,
-    "column": 1,
-    "text": "Felix told me: \"Either Clover is a liar, or Echo is honest. Could be both.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
-     2
-    ]
-   },
-   {
-    "name": "Marble",
-    "color": "ginger",
-    "row": 2,
-    "column": 2,
-    "text": "All of the ginger cats are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0
-    ]
-   }
-  ],
-  "liars": [
-   false,
-   true,
-   true,
-   true,
-   false,
-   false,
-   false,
-   false,
-   false
-  ]
- },
- {
-  "rows": 3,
-  "cols": 3,
-  "seed": 2031,
-  "cats": [
-   {
-    "name": "Apricot",
-    "color": "ginger",
-    "row": 0,
-    "column": 0,
-    "text": "Hiss! Ember and Felix are liars, both of them.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5
-    ]
-   },
-   {
-    "name": "Bean",
-    "color": "tabby",
-    "row": 0,
-    "column": 1,
-    "text": "Apricot and Felix are both honest, fur real.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     5
-    ]
-   },
-   {
-    "name": "Clover",
-    "color": "ginger",
-    "row": 0,
-    "column": 2,
-    "text": "Either Hazel is a liar, or all of the cats to my left are liars (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
+     5,
      6
     ]
    },
    {
     "name": "Dusty",
-    "color": "calico",
-    "row": 1,
-    "column": 0,
-    "text": "I'm the only honest cat among Apricot, Bean and me.",
+    "color": "grey",
+    "row": 0,
+    "column": 2,
+    "text": "Meow. All of the cats to my left are liars, every last one.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -738,67 +462,84 @@ const PUZZLES = [
    },
    {
     "name": "Ember",
-    "color": "ginger",
+    "color": "siamese",
     "row": 1,
-    "column": 1,
-    "text": "*flattens ears* Jasper would tell you I'm a liar.",
+    "column": 0,
+    "text": "Mrrp. Either Kiwi is a liar, or all of the cats in my column are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     0,
+     6,
      8
     ]
    },
    {
-    "name": "Felix",
-    "color": "tabby",
+    "name": "Gizmo",
+    "color": "grey",
     "row": 1,
-    "column": 2,
-    "text": "*arches back* Bean and Jasper are both liars.",
+    "column": 1,
+    "text": "Among the cats in my column, there are both honest cats and liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
-     8
+     7
     ]
    },
    {
-    "name": "Hazel",
-    "color": "tabby",
-    "row": 2,
-    "column": 0,
-    "text": "Clover would say they're honest.",
+    "name": "Honey",
+    "color": "grey",
+    "row": 1,
+    "column": 2,
+    "text": "Meow. Ember and Juniper are the same: both honest, or both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2
+     3,
+     7
     ]
    },
    {
-    "name": "Indigo",
-    "color": "calico",
+    "name": "Iggy",
+    "color": "grey",
     "row": 2,
-    "column": 1,
-    "text": "Mark my whiskers: either Clover is honest, or all of Bean, Dusty and me are liars. Maybe both.",
+    "column": 0,
+    "text": "Mrrp. Either Clover is a liar, or all of the grey cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
      2,
-     3
+     4,
+     5
     ]
    },
    {
-    "name": "Jasper",
-    "color": "ginger",
+    "name": "Juniper",
+    "color": "white",
     "row": 2,
-    "column": 2,
-    "text": "Hiss. Not all of the cats in row 2 are the same: there's at least one liar and at least one honest cat.",
+    "column": 1,
+    "text": "Clover is the only liar among the cats in my column.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     1,
+     4
+    ]
+   },
+   {
+    "name": "Kiwi",
+    "color": "siamese",
+    "row": 2,
+    "column": 2,
+    "text": "Either Iggy is a liar, or all of the cats in column 1 are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
      3,
-     4,
-     5
+     6
     ]
    }
   ],
@@ -817,53 +558,26 @@ const PUZZLES = [
  {
   "rows": 3,
   "cols": 3,
-  "seed": 2032,
+  "seed": 2030,
   "cats": [
    {
-    "name": "Angus",
-    "color": "white",
-    "row": 0,
-    "column": 0,
-    "text": "I'm the only honest cat among the cats in my row.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2
-    ]
-   },
-   {
-    "name": "Bagel",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 1,
-    "text": "Purr. You can trust Coco and Gnocchi, both of them.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     5
-    ]
-   },
-   {
-    "name": "Coco",
+    "name": "Ash",
     "color": "calico",
     "row": 0,
-    "column": 2,
-    "text": "Either Juniper is a liar, or Gnocchi is honest (or both).",
+    "column": 0,
+    "text": "*rubs against your leg* Jellybean would say I'm honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     5,
      8
     ]
    },
    {
-    "name": "Dusty",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 0,
-    "text": "*yawns* Inky would tell you they're honest.",
+    "name": "Coco",
+    "color": "tabby",
+    "row": 0,
+    "column": 1,
+    "text": "*licks paw* If you asked me about Indigo, I'd say liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -871,81 +585,246 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Felix",
+    "name": "Dumpling",
     "color": "white",
-    "row": 1,
-    "column": 1,
-    "text": "Bagel is the only liar among the tuxedo cats.",
+    "row": 0,
+    "column": 2,
+    "text": "Meow. Among the cats to my left, only Ash is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     0,
+     1
+    ]
+   },
+   {
+    "name": "Espresso",
+    "color": "tabby",
+    "row": 1,
+    "column": 0,
+    "text": "*purrs* All of Fig, Jellybean and me are from the same litter: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     8
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "tabby",
+    "row": 1,
+    "column": 1,
+    "text": "Meow meow. Exactly 3 of the cats on the edges are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
      1,
+     2,
      3,
+     5,
+     6,
      7,
      8
     ]
    },
    {
     "name": "Gnocchi",
-    "color": "calico",
+    "color": "white",
     "row": 1,
     "column": 2,
-    "text": "Bagel and Coco are not both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2
-    ]
-   },
-   {
-    "name": "Hobbes",
-    "color": "white",
-    "row": 2,
-    "column": 0,
-    "text": "No mixing among the cats above me: all honest, or all liars.",
+    "text": "*thinks hard* Either Hazel is a liar, or all of Ash, Dumpling and me are liars, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
+     2,
+     6
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 0,
+    "text": "Mrrp. Either Fig is a liar, or Indigo is honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     7
+    ]
+   },
+   {
+    "name": "Indigo",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 1,
+    "text": "Espresso would say they're a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
      3
     ]
    },
    {
-    "name": "Inky",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 1,
-    "text": "*thinks hard* Either Angus is honest, or all of my neighbors are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     6,
-     8
-    ]
-   },
-   {
-    "name": "Juniper",
-    "color": "tuxedo",
+    "name": "Jellybean",
+    "color": "calico",
     "row": 2,
     "column": 2,
-    "text": "*rubs against your leg* Inky would say I'm honest.",
+    "text": "*purrs* All of the cats in my column are from the same litter: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     7
+     2,
+     5
     ]
    }
   ],
   "liars": [
    false,
    true,
-   true,
+   false,
+   false,
    false,
    false,
    true,
+   true,
+   false
+  ]
+ },
+ {
+  "rows": 3,
+  "cols": 3,
+  "seed": 2031,
+  "cats": [
+   {
+    "name": "Apricot",
+    "color": "black",
+    "row": 0,
+    "column": 0,
+    "text": "*sniffs around* All of Honey, Juniper and me are honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     6
+    ]
+   },
+   {
+    "name": "Coco",
+    "color": "black",
+    "row": 0,
+    "column": 1,
+    "text": "*rubs against your leg* Indigo would say I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5
+    ]
+   },
+   {
+    "name": "Dumpling",
+    "color": "black",
+    "row": 0,
+    "column": 2,
+    "text": "Hiss! Every single one of Juniper, Loki and me is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     8
+    ]
+   },
+   {
+    "name": "Fudge",
+    "color": "grey",
+    "row": 1,
+    "column": 0,
+    "text": "Every single one of the cats in row 3 can be trusted. Mrrp.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Honey",
+    "color": "grey",
+    "row": 1,
+    "column": 1,
+    "text": "*purrs* Apricot and Juniper are both truth-tellers or both fibbers.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     6
+    ]
+   },
+   {
+    "name": "Indigo",
+    "color": "grey",
+    "row": 1,
+    "column": 2,
+    "text": "Honey is the only liar among the cats to my left.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     4
+    ]
+   },
+   {
+    "name": "Juniper",
+    "color": "grey",
+    "row": 2,
+    "column": 0,
+    "text": "Mark my whiskers: either Apricot is honest, or all of the tuxedo cats are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Kiwi",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 1,
+    "text": "You can trust Coco and me. We are both honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1
+    ]
+   },
+   {
+    "name": "Loki",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 2,
+    "text": "*thinks hard* Either Indigo is honest, or all of the cats in my row are liars, or both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     7
+    ]
+   }
+  ],
+  "liars": [
+   true,
+   false,
+   true,
+   false,
+   true,
+   false,
    false,
    false,
    false
@@ -954,129 +833,259 @@ const PUZZLES = [
  {
   "rows": 3,
   "cols": 3,
-  "seed": 2033,
+  "seed": 2032,
   "cats": [
    {
     "name": "Angus",
-    "color": "calico",
+    "color": "ginger",
     "row": 0,
     "column": 0,
-    "text": "Trust me, not Espresso. I'm honest and Espresso is a liar.",
+    "text": "Cricket is the only liar among the cats to my right.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4
+     1,
+     2
     ]
    },
    {
-    "name": "Biscuit",
-    "color": "black",
+    "name": "Cricket",
+    "color": "ginger",
     "row": 0,
     "column": 1,
-    "text": "Everyone among the cats in row 3 is a liar, except Iggy, who is honest.",
+    "text": "I'm not kitten you, Angus is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     6,
-     7,
-     8
-    ]
-   },
-   {
-    "name": "Clover",
-    "color": "calico",
-    "row": 0,
-    "column": 2,
-    "text": "If you asked Jasper, they'd say Doodle is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     8
+     0
     ]
    },
    {
     "name": "Doodle",
-    "color": "black",
-    "row": 1,
-    "column": 0,
-    "text": "If you asked me, I'd say Iggy is honest.",
+    "color": "ginger",
+    "row": 0,
+    "column": 2,
+    "text": "If you asked Cricket, they'd say I'm a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     7
+     1
     ]
    },
    {
     "name": "Espresso",
-    "color": "calico",
+    "color": "black",
     "row": 1,
-    "column": 1,
-    "text": "Meow. Among the ginger cats, only Felix is honest.",
+    "column": 0,
+    "text": "Honey would say they're a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     5,
-     6,
-     8
+     6
     ]
    },
    {
-    "name": "Felix",
-    "color": "ginger",
+    "name": "Fudge",
+    "color": "black",
     "row": 1,
-    "column": 2,
-    "text": "Mrrp. Among my neighbors, only Jasper is a liar.",
+    "column": 1,
+    "text": "Mrrp. Either Cricket is a liar, or all of my neighbors are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
-     4,
-     8
+     1,
+     3,
+     5,
+     7
     ]
    },
    {
     "name": "Goose",
-    "color": "ginger",
-    "row": 2,
-    "column": 0,
-    "text": "No mixing among the cats in my column: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3
-    ]
-   },
-   {
-    "name": "Iggy",
     "color": "black",
-    "row": 2,
-    "column": 1,
-    "text": "Mark my whiskers: either Doodle is honest, or all of us are honest. Maybe both.",
+    "row": 1,
+    "column": 2,
+    "text": "Mark my whiskers: either Jellybean is a liar, or all of the cats in row 1 are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
      1,
      2,
-     3,
-     4,
-     5,
-     6,
      8
     ]
    },
    {
-    "name": "Jasper",
+    "name": "Honey",
     "color": "ginger",
     "row": 2,
+    "column": 0,
+    "text": "There's a mix among the cats to my right: some honest, some liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Indigo",
+    "color": "siamese",
+    "row": 2,
+    "column": 1,
+    "text": "Either Espresso is a liar, or all of the cats in my column are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     4
+    ]
+   },
+   {
+    "name": "Jellybean",
+    "color": "siamese",
+    "row": 2,
     "column": 2,
-    "text": "*slow blinks* If you asked me about Felix, I'd say honest.",
+    "text": "Everyone among the cats above me is honest, except Doodle, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     5
+    ]
+   }
+  ],
+  "liars": [
+   false,
+   true,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   true
+  ]
+ },
+ {
+  "rows": 3,
+  "cols": 3,
+  "seed": 2033,
+  "cats": [
+   {
+    "name": "Apricot",
+    "color": "calico",
+    "row": 0,
+    "column": 0,
+    "text": "Purr. Goose would tell you I'm honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
      5
+    ]
+   },
+   {
+    "name": "Bean",
+    "color": "calico",
+    "row": 0,
+    "column": 1,
+    "text": "Coco and Indigo are both honest, fur real.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     7
+    ]
+   },
+   {
+    "name": "Coco",
+    "color": "black",
+    "row": 0,
+    "column": 2,
+    "text": "Mrrp. If you asked me, I'd say Apricot is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0
+    ]
+   },
+   {
+    "name": "Dumpling",
+    "color": "black",
+    "row": 1,
+    "column": 0,
+    "text": "Meow. Coco and I are liars, both of us.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "black",
+    "row": 1,
+    "column": 1,
+    "text": "Mark my whiskers: either Apricot is a liar, or all of Indigo, Jellybean and me are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Goose",
+    "color": "black",
+    "row": 1,
+    "column": 2,
+    "text": "Apricot and Jellybean are both honest, or both liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     8
+    ]
+   },
+   {
+    "name": "Honey",
+    "color": "calico",
+    "row": 2,
+    "column": 0,
+    "text": "Everyone among my neighbors is honest, except Dumpling, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     7
+    ]
+   },
+   {
+    "name": "Indigo",
+    "color": "white",
+    "row": 2,
+    "column": 1,
+    "text": "*swishes tail* One of Coco and Dumpling is honest, the other is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     3
+    ]
+   },
+   {
+    "name": "Jellybean",
+    "color": "white",
+    "row": 2,
+    "column": 2,
+    "text": "Mark my whiskers: either Coco is a liar, or all of the cats in my row are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     7
     ]
    }
   ],
@@ -1084,10 +1093,10 @@ const PUZZLES = [
    true,
    false,
    false,
-   false,
-   false,
-   false,
    true,
+   false,
+   false,
+   false,
    false,
    true
   ]
@@ -1099,87 +1108,35 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Angus",
-    "color": "siamese",
+    "color": "tabby",
     "row": 0,
     "column": 0,
-    "text": "*leans in* Echo whispered to me: \"If you asked Bagel, they'd say Kismet is a liar.\"",
+    "text": "Cricket would say I'm honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     4,
-     8
+     2
     ]
    },
    {
-    "name": "Bagel",
-    "color": "siamese",
+    "name": "Bean",
+    "color": "grey",
     "row": 0,
     "column": 1,
-    "text": "Meow. All of the cats below me are liars, every last one.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     7
-    ]
-   },
-   {
-    "name": "Cricket",
-    "color": "siamese",
-    "row": 0,
-    "column": 2,
-    "text": "Mark my whiskers: either Gizmo is a liar, or all of the siamese cats are liars. Maybe both.",
+    "text": "Angus and Doodle are on the same side: both honest, or both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     1,
-     6
+     3
     ]
    },
    {
-    "name": "Dusty",
-    "color": "black",
-    "row": 1,
-    "column": 0,
-    "text": "At least one of Bagel, Felix and me is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5
-    ]
-   },
-   {
-    "name": "Echo",
-    "color": "calico",
-    "row": 1,
-    "column": 1,
-    "text": "*chirps at a bird outside*",
-    "hidden": true,
-    "secret": "If you asked Bagel, they'd say Kismet is a liar.",
-    "mentions": []
-   },
-   {
-    "name": "Felix",
-    "color": "black",
-    "row": 1,
+    "name": "Cricket",
+    "color": "grey",
+    "row": 0,
     "column": 2,
-    "text": "There's a mix among Bagel, Kismet and me: some honest, some liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     8
-    ]
-   },
-   {
-    "name": "Gizmo",
-    "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "Hiss. Not all of the cats in my row are the same: there's at least one liar and at least one honest cat.",
+    "text": "I speak Inky. Translated, they said: \"*slow blinks* If you asked me about Hazel, I'd say honest.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1188,39 +1145,98 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Hazel",
-    "color": "calico",
-    "row": 2,
-    "column": 1,
-    "text": "Bagel and I are not both liars.",
+    "name": "Doodle",
+    "color": "grey",
+    "row": 1,
+    "column": 0,
+    "text": "Hiss. Among the cats in my row, I'm the only liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1
+     4,
+     5
     ]
    },
    {
-    "name": "Kismet",
-    "color": "calico",
-    "row": 2,
-    "column": 2,
-    "text": "*yawns* Cricket would tell you they're honest.",
+    "name": "Echo",
+    "color": "white",
+    "row": 1,
+    "column": 1,
+    "text": "Meow. All of the corner cats are liars, every last one.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2
+     0,
+     2,
+     6,
+     8
     ]
+   },
+   {
+    "name": "Fudge",
+    "color": "tabby",
+    "row": 1,
+    "column": 2,
+    "text": "Mark my whiskers: either Echo is honest, or all of the corner cats are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     4,
+     6,
+     8
+    ]
+   },
+   {
+    "name": "Gizmo",
+    "color": "tabby",
+    "row": 2,
+    "column": 0,
+    "text": "Either Echo is a liar, or all of the cats in column 2 are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     4,
+     7
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "white",
+    "row": 2,
+    "column": 1,
+    "text": "*purrs* All of the corner cats are from the same litter: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     6,
+     8
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "grey",
+    "row": 2,
+    "column": 2,
+    "text": "Mrrrow mrrp mew.",
+    "hidden": true,
+    "secret": "*slow blinks* If you asked me about Hazel, I'd say honest.",
+    "mentions": []
    }
   ],
   "liars": [
    false,
    true,
+   false,
+   true,
    true,
    false,
    false,
    false,
-   false,
-   true,
    false
   ]
  },
@@ -1230,119 +1246,129 @@ const PUZZLES = [
   "seed": 2035,
   "cats": [
    {
-    "name": "Apricot",
-    "color": "grey",
+    "name": "Angus",
+    "color": "tuxedo",
     "row": 0,
     "column": 0,
-    "text": "Mrrp. Whatever one of Honey, Nugget and me is, the rest are too.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     8
-    ]
-   },
-   {
-    "name": "Clover",
-    "color": "white",
-    "row": 0,
-    "column": 1,
-    "text": "There's a mix among Echo, Honey and me: some honest, some liars.",
+    "text": "Exactly one of the cats in my column is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
      3,
-     4
+     6
     ]
    },
    {
-    "name": "Dumpling",
-    "color": "black",
+    "name": "Bagel",
+    "color": "tuxedo",
     "row": 0,
-    "column": 2,
-    "text": "Mrrp. Either Nugget is a liar, or Jasper is honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     8
-    ]
-   },
-   {
-    "name": "Echo",
-    "color": "black",
-    "row": 1,
-    "column": 0,
-    "text": "Honey is lying like a lion.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4
-    ]
-   },
-   {
-    "name": "Honey",
-    "color": "grey",
-    "row": 1,
     "column": 1,
-    "text": "Loki always tells the truth, no kitten.",
+    "text": "Among the cats on the edges, there are both honest cats and liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     7
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "black",
-    "row": 1,
-    "column": 2,
-    "text": "*nods at Loki* The only honest cat among the cats in row 3.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
+     0,
+     2,
+     3,
+     5,
      6,
      7,
      8
     ]
    },
    {
-    "name": "Kismet",
+    "name": "Cricket",
     "color": "white",
-    "row": 2,
-    "column": 0,
-    "text": "Either Honey is a liar, or Apricot is honest. Could be both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4
-    ]
-   },
-   {
-    "name": "Loki",
-    "color": "black",
-    "row": 2,
-    "column": 1,
-    "text": "Every single one of Clover, Kismet and me can be trusted. Mrrp.",
+    "row": 0,
+    "column": 2,
+    "text": "Hiss. One of Bagel and Echo is a liar, maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
-     6
+     4
     ]
    },
    {
-    "name": "Nugget",
+    "name": "Doodle",
     "color": "white",
-    "row": 2,
+    "row": 1,
+    "column": 0,
+    "text": "If you asked Echo, they'd say I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4
+    ]
+   },
+   {
+    "name": "Echo",
+    "color": "white",
+    "row": 1,
+    "column": 1,
+    "text": "*points a paw at Fig* The only liar among my neighbors.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     5,
+     7
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "siamese",
+    "row": 1,
     "column": 2,
-    "text": "None of the cats in my row are liars.",
+    "text": "Hiss. Among the cats on the edges, I'm the only liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "name": "Gizmo",
+    "color": "siamese",
+    "row": 2,
+    "column": 0,
+    "text": "Purr. If you asked me, I'd say Angus is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0
+    ]
+   },
+   {
+    "name": "Hobbes",
+    "color": "siamese",
+    "row": 2,
+    "column": 1,
+    "text": "There's at least one liar among the cats in my row.",
     "hidden": false,
     "secret": null,
     "mentions": [
      6,
-     7
+     8
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "white",
+    "row": 2,
+    "column": 2,
+    "text": "Meow. Doodle would claim to be honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3
     ]
    }
   ],
@@ -1350,10 +1376,10 @@ const PUZZLES = [
    false,
    false,
    true,
-   true,
+   false,
    false,
    true,
-   false,
+   true,
    false,
    false
   ]
@@ -1365,239 +1391,248 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Ash",
-    "color": "tuxedo",
+    "color": "black",
     "row": 0,
     "column": 0,
-    "text": "There's a mix among the black cats: some honest, some liars.",
+    "text": "Purr... at least one of the white cats is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
-     9
-    ]
-   },
-   {
-    "name": "Bean",
-    "color": "ginger",
-    "row": 0,
-    "column": 1,
-    "text": "Mark my whiskers: either Quincy is a liar, or all of the white cats are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     7,
-     13,
+     9,
+     12,
      15
     ]
    },
    {
-    "name": "Clover",
-    "color": "white",
+    "name": "Bagel",
+    "color": "calico",
     "row": 0,
-    "column": 2,
-    "text": "*twitches whiskers* Either Tater is a liar, or Honey is honest, or both.",
+    "column": 1,
+    "text": "Ask me, and I'd tell you Juniper is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     9
+    ]
+   },
+   {
+    "name": "Clover",
+    "color": "tabby",
+    "row": 0,
+    "column": 2,
+    "text": "Meow meow. Exactly 5 of us are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     3,
+     4,
      5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
      15
     ]
    },
    {
     "name": "Dumpling",
-    "color": "ginger",
+    "color": "tabby",
     "row": 0,
     "column": 3,
-    "text": "If you asked Clover, they'd say Quincy is a liar.",
+    "text": "Every one of my neighbors is honest. Purr.",
     "hidden": false,
     "secret": null,
     "mentions": [
      2,
-     13
+     7
     ]
    },
    {
-    "name": "Echo",
-    "color": "tuxedo",
+    "name": "Espresso",
+    "color": "siamese",
     "row": 1,
     "column": 0,
-    "text": "Meow. Mochi and Sprout are the same: both honest, or both liars.",
+    "text": "Meow. All of the cats below me are liars, every last one.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     10,
-     14
+     8,
+     12
     ]
    },
    {
-    "name": "Honey",
-    "color": "tuxedo",
+    "name": "Fig",
+    "color": "grey",
     "row": 1,
     "column": 1,
-    "text": "Mark my whiskers: either Dumpling is honest, or all of the tuxedo cats are liars. Maybe both.",
+    "text": "*slow blinks* If you asked me about Kiwi, I'd say honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     3,
-     4
+     10
+    ]
+   },
+   {
+    "name": "Goose",
+    "color": "grey",
+    "row": 1,
+    "column": 2,
+    "text": "Mark my whiskers: either Luna is honest, or all of the white cats are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     9,
+     11,
+     12,
+     15
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "siamese",
+    "row": 1,
+    "column": 3,
+    "text": "Mrow. Exactly one of the grey cats is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     6
     ]
    },
    {
     "name": "Indigo",
-    "color": "grey",
-    "row": 1,
-    "column": 2,
-    "text": "Echo is honest, but Quincy is a liar.",
+    "color": "tabby",
+    "row": 2,
+    "column": 0,
+    "text": "Fig and Goose are both honest, or both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4,
-     13
+     5,
+     6
     ]
    },
    {
     "name": "Juniper",
     "color": "white",
-    "row": 1,
-    "column": 3,
-    "text": "No mixing among the siamese cats: all honest, or all liars.",
+    "row": 2,
+    "column": 1,
+    "text": "Everyone among the cats in row 2 is honest, except Goose, who is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     10,
-     12
+     4,
+     5,
+     6,
+     7
     ]
    },
    {
-    "name": "Kettle",
-    "color": "black",
+    "name": "Kiwi",
+    "color": "calico",
     "row": 2,
-    "column": 0,
-    "text": "There's a mix among the cats above me: some honest, some liars.",
+    "column": 2,
+    "text": "At least one of the cats in the middle is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     4
+     5,
+     6,
+     9
     ]
    },
    {
     "name": "Luna",
     "color": "black",
     "row": 2,
-    "column": 1,
-    "text": "*thinks hard* Either Juniper is honest, or all of the siamese cats are liars, or both.",
+    "column": 3,
+    "text": "Either Dumpling is a liar, or all of the corner cats are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
-     7,
-     10,
-     12
+     0,
+     3,
+     12,
+     15
     ]
    },
    {
-    "name": "Mochi",
-    "color": "siamese",
-    "row": 2,
-    "column": 2,
-    "text": "Only one bad kitty: exactly one of the ginger cats is a liar.",
+    "name": "Mango",
+    "color": "white",
+    "row": 3,
+    "column": 0,
+    "text": "Same story for all of the cats in column 2: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
-     3,
-     14
+     5,
+     9,
+     13
     ]
    },
    {
-    "name": "Nugget",
-    "color": "grey",
-    "row": 2,
-    "column": 3,
-    "text": "Purr... at least one of the cats in my row is a liar.",
+    "name": "Nimbus",
+    "color": "siamese",
+    "row": 3,
+    "column": 1,
+    "text": "*thinks hard* Either Goose is a liar, or all of Goose, Kiwi and me are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
-     9,
+     6,
      10
     ]
    },
    {
     "name": "Oreo",
-    "color": "siamese",
-    "row": 3,
-    "column": 0,
-    "text": "Mrrrow mrrp mew.",
-    "hidden": true,
-    "secret": "Mrrp. Either Clover is a liar, or all of the cats on the edges are liars. Maybe both.",
-    "mentions": []
-   },
-   {
-    "name": "Quincy",
-    "color": "grey",
-    "row": 3,
-    "column": 1,
-    "text": "Echo and Honey are from the same litter: both honest, or both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5
-    ]
-   },
-   {
-    "name": "Sprout",
-    "color": "ginger",
+    "color": "tabby",
     "row": 3,
     "column": 2,
-    "text": "Mrrp. What Oreo meant was: \"Mrrp. Either Clover is a liar, or all of the cats on the edges are liars. Maybe both.\"",
+    "text": "Mrrp. If you asked me, I'd say Luna is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     7,
-     8,
-     11,
-     12,
-     13,
-     15
+     11
     ]
    },
    {
-    "name": "Tater",
+    "name": "Pepper",
     "color": "white",
     "row": 3,
     "column": 3,
-    "text": "Ask me, and I'd tell you Sprout is honest.",
+    "text": "Purr. Among Bagel, Mango and me, I'm the only one who's honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     14
+     1,
+     12
     ]
    }
   ],
   "liars": [
    false,
-   false,
-   true,
-   true,
-   false,
-   true,
-   false,
-   false,
    true,
    false,
    false,
    false,
    false,
    true,
+   false,
+   true,
+   false,
+   false,
+   true,
+   true,
+   false,
    false,
    false
   ]
@@ -1608,116 +1643,81 @@ const PUZZLES = [
   "seed": 2037,
   "cats": [
    {
-    "name": "Apricot",
-    "color": "grey",
+    "name": "Ash",
+    "color": "white",
     "row": 0,
     "column": 0,
-    "text": "If you asked me, I'd say Rusty is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     14
-    ]
-   },
-   {
-    "name": "Biscuit",
-    "color": "tabby",
-    "row": 0,
-    "column": 1,
-    "text": "*incomprehensible meowing*",
+    "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
-    "secret": "Whatever Marble is, Olive is too.",
+    "secret": "If you asked me, I'd say Echo is honest.",
     "mentions": []
    },
    {
-    "name": "Clover",
+    "name": "Biscuit",
     "color": "grey",
     "row": 0,
+    "column": 1,
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "Mark my whiskers: either Iggy is honest, or all of Dumpling, Echo and me are honest. Maybe both.",
+    "mentions": []
+   },
+   {
+    "name": "Cricket",
+    "color": "tuxedo",
+    "row": 0,
     "column": 2,
-    "text": "Meow meow. Exactly 2 of the tuxedo cats are liars.",
+    "text": "Everyone among the cats in row 3 is honest, except Mango, who is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     6,
-     7,
      8,
-     12
+     9,
+     10,
+     11
     ]
    },
    {
-    "name": "Doodle",
-    "color": "ginger",
+    "name": "Dumpling",
+    "color": "tabby",
     "row": 0,
     "column": 3,
-    "text": "Mrrp! None of the cats below me are liars, I'd bet my nine lives on it.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     11,
-     15
-    ]
-   },
-   {
-    "name": "Espresso",
-    "color": "ginger",
-    "row": 1,
-    "column": 0,
-    "text": "No mixing among Apricot, Gnocchi and me: all honest, or all liars.",
+    "text": "Exactly 9 of the cats on the edges can be trusted.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     6
+     1,
+     2,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
     ]
    },
    {
-    "name": "Felix",
-    "color": "ginger",
+    "name": "Echo",
+    "color": "grey",
+    "row": 1,
+    "column": 0,
+    "text": "Goose and Honey are both liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     7
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "tabby",
     "row": 1,
     "column": 1,
-    "text": "Gnocchi is the only honest cat among the cats in column 3.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     6,
-     10,
-     14
-    ]
-   },
-   {
-    "name": "Gnocchi",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 2,
-    "text": "Everyone among Apricot, Biscuit and me is honest, except Apricot, who is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1
-    ]
-   },
-   {
-    "name": "Kismet",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 3,
-    "text": "No mixing among the cats below me: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     11,
-     15
-    ]
-   },
-   {
-    "name": "Lentil",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 0,
-    "text": "Not all of the cats above me are honest.",
+    "text": "Ash told me: \"If you asked me, I'd say Echo is honest.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1726,67 +1726,24 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Marble",
-    "color": "siamese",
-    "row": 2,
-    "column": 1,
-    "text": "*thinks hard* Either Rusty is a liar, or all of the cats in my row are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8,
-     10,
-     11,
-     14
-    ]
-   },
-   {
-    "name": "Noodle",
-    "color": "grey",
-    "row": 2,
+    "name": "Goose",
+    "color": "black",
+    "row": 1,
     "column": 2,
-    "text": "*purrs* All of the cats in my column are from the same litter: all honest, or all liars.",
+    "text": "Udon and Velvet? Liars, the pair of them.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
-     6,
-     14
+     14,
+     15
     ]
    },
    {
-    "name": "Olive",
-    "color": "siamese",
-    "row": 2,
-    "column": 3,
-    "text": "*whispers* Espresso would tell you Pickles is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     12
-    ]
-   },
-   {
-    "name": "Pickles",
-    "color": "tuxedo",
-    "row": 3,
-    "column": 0,
-    "text": "Not all of the cats in my column are honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     8
-    ]
-   },
-   {
-    "name": "Queenie",
+    "name": "Honey",
     "color": "tabby",
-    "row": 3,
-    "column": 1,
-    "text": "Mark my whiskers: either Sushi is honest, or all of the cats on the edges are honest. Maybe both.",
+    "row": 1,
+    "column": 3,
+    "text": "*leans in* Biscuit whispered to me: \"Iggy is the only honest cat among the cats on the edges.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1795,57 +1752,137 @@ const PUZZLES = [
      2,
      3,
      4,
-     7,
      8,
      11,
      12,
+     13,
      14,
      15
     ]
    },
    {
-    "name": "Rusty",
-    "color": "tabby",
-    "row": 3,
-    "column": 2,
-    "text": "No mixing among my neighbors: all honest, or all liars.",
+    "name": "Iggy",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 0,
+    "text": "Either Honey is a liar, or all of the cats to my right are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
+     7,
+     9,
      10,
-     13,
+     11
+    ]
+   },
+   {
+    "name": "Luna",
+    "color": "white",
+    "row": 2,
+    "column": 1,
+    "text": "Hiss. Quincy would call me a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12
+    ]
+   },
+   {
+    "name": "Mango",
+    "color": "black",
+    "row": 2,
+    "column": 2,
+    "text": "Ask me, and I'd tell you Goose is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6
+    ]
+   },
+   {
+    "name": "Otis",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 3,
+    "text": "Everyone among the black cats is a liar, except Tofu, who is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     10,
+     13
+    ]
+   },
+   {
+    "name": "Quincy",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 0,
+    "text": "Tofu is the only honest cat among Fig, Tofu and me.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     13
+    ]
+   },
+   {
+    "name": "Tofu",
+    "color": "black",
+    "row": 3,
+    "column": 1,
+    "text": "Velvet is the only honest cat among the cats to my right.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     14,
      15
     ]
    },
    {
-    "name": "Sushi",
-    "color": "ginger",
+    "name": "Udon",
+    "color": "tabby",
     "row": 3,
-    "column": 3,
-    "text": "I heard Biscuit say: \"Whatever Marble is, Olive is too.\"",
+    "column": 2,
+    "text": "Mrrp. Whatever one of the cats in row 2 is, the rest are too.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     9,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "name": "Velvet",
+    "color": "grey",
+    "row": 3,
+    "column": 3,
+    "text": "Mrrp. Among the cats in my column, only Honey is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     7,
      11
     ]
    }
   ],
   "liars": [
-   true,
    false,
-   true,
-   false,
-   true,
    false,
    false,
    false,
    false,
    false,
    true,
+   true,
    false,
    false,
+   true,
+   false,
+   true,
    false,
    true,
    false
@@ -1857,34 +1894,142 @@ const PUZZLES = [
   "seed": 2038,
   "cats": [
    {
-    "name": "Angus",
-    "color": "calico",
+    "name": "Cricket",
+    "color": "siamese",
     "row": 0,
     "column": 0,
-    "text": "At least 2 of the cats to my right are liars.",
+    "text": "Meow. Rolo and I are liars, both of us.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     2,
-     3
+     14
     ]
    },
    {
-    "name": "Bean",
-    "color": "calico",
+    "name": "Dusty",
+    "color": "ginger",
     "row": 0,
     "column": 1,
-    "text": "Mrrrow! At least 11 of the cats on the edges are liars.",
+    "text": "*points a paw at Cricket* The only liar among the cats in my row.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
      2,
+     3
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "white",
+    "row": 0,
+    "column": 2,
+    "text": "If you asked Hazel, they'd say they're honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4
+    ]
+   },
+   {
+    "name": "Gnocchi",
+    "color": "black",
+    "row": 0,
+    "column": 3,
+    "text": "Meow meow. Exactly 2 of the cats in my column are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7,
+     11,
+     15
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "calico",
+    "row": 1,
+    "column": 0,
+    "text": "Mrrp. Either Cricket is a liar, or all of the cats in column 2 are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     5,
+     9,
+     13
+    ]
+   },
+   {
+    "name": "Iggy",
+    "color": "white",
+    "row": 1,
+    "column": 1,
+    "text": "Mrrp. If you asked me, I'd say Olive is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     11
+    ]
+   },
+   {
+    "name": "Jasper",
+    "color": "ginger",
+    "row": 1,
+    "column": 2,
+    "text": "Kismet told me: \"*swishes tail* One of Fig and Truffle is honest, the other is a liar.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     7,
+     15
+    ]
+   },
+   {
+    "name": "Kismet",
+    "color": "siamese",
+    "row": 1,
+    "column": 3,
+    "text": "Mrrrow mrrp mew.",
+    "hidden": true,
+    "secret": "*swishes tail* One of Fig and Truffle is honest, the other is a liar.",
+    "mentions": []
+   },
+   {
+    "name": "Loki",
+    "color": "black",
+    "row": 2,
+    "column": 0,
+    "text": "All of the cats in my column are the same: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     12
+    ]
+   },
+   {
+    "name": "Mochi",
+    "color": "tabby",
+    "row": 2,
+    "column": 1,
+    "text": "*flicks ears* Exactly 5 of us are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
      3,
      4,
+     5,
+     6,
      7,
      8,
+     10,
      11,
      12,
      13,
@@ -1893,171 +2038,67 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Coco",
-    "color": "grey",
-    "row": 0,
+    "name": "Nugget",
+    "color": "ginger",
+    "row": 2,
     "column": 2,
-    "text": "*tilts head* Espresso would say Quill is honest.",
+    "text": "Pepper is the only liar among the tabby cats.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     9,
+     12
+    ]
+   },
+   {
+    "name": "Olive",
+    "color": "calico",
+    "row": 2,
+    "column": 3,
+    "text": "Mrrp. Either Gnocchi is a liar, or all of the cats to my left are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      3,
-     12
-    ]
-   },
-   {
-    "name": "Espresso",
-    "color": "black",
-    "row": 0,
-    "column": 3,
-    "text": "All but one of Angus, Lentil and me are honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     7
-    ]
-   },
-   {
-    "name": "Felix",
-    "color": "tabby",
-    "row": 1,
-    "column": 0,
-    "text": "Mrrp. Among the cats in my column, only Angus is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
      8,
-     12
-    ]
-   },
-   {
-    "name": "Iggy",
-    "color": "ginger",
-    "row": 1,
-    "column": 1,
-    "text": "I'm the only liar among the cats in my column.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
      9,
-     13
-    ]
-   },
-   {
-    "name": "Jellybean",
-    "color": "black",
-    "row": 1,
-    "column": 2,
-    "text": "*swishes tail* One of Sushi and Tater is honest, the other is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Lentil",
-    "color": "ginger",
-    "row": 1,
-    "column": 3,
-    "text": "Meow meow. Exactly 2 of the cats in my row are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5,
-     6
-    ]
-   },
-   {
-    "name": "Mochi",
-    "color": "tabby",
-    "row": 2,
-    "column": 0,
-    "text": "At least 2 of Angus, Bean and me are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1
-    ]
-   },
-   {
-    "name": "Noodle",
-    "color": "tabby",
-    "row": 2,
-    "column": 1,
-    "text": "Purr. Mochi would tell you I'm honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8
-    ]
-   },
-   {
-    "name": "Otis",
-    "color": "grey",
-    "row": 2,
-    "column": 2,
-    "text": "Meow. Coco would claim to be honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2
+     10
     ]
    },
    {
     "name": "Pepper",
-    "color": "ginger",
-    "row": 2,
-    "column": 3,
-    "text": "Mark my whiskers: either Angus is a liar, or all of the cats in row 2 are liars. Maybe both.",
+    "color": "tabby",
+    "row": 3,
+    "column": 0,
+    "text": "Purr. If you asked me, I'd say Quill is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     4,
-     5,
-     6,
-     7
+     13
     ]
    },
    {
     "name": "Quill",
-    "color": "black",
-    "row": 3,
-    "column": 0,
-    "text": "Either Noodle is honest, or all of the tabby cats are liars (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     8,
-     9
-    ]
-   },
-   {
-    "name": "Ravioli",
     "color": "calico",
     "row": 3,
     "column": 1,
-    "text": "Mrow. Noodle would claim to be a liar.",
+    "text": "Mark my whiskers: either Rolo is honest, or all of the cats in row 3 are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     9
+     8,
+     9,
+     10,
+     11,
+     14
     ]
    },
    {
-    "name": "Sushi",
-    "color": "calico",
+    "name": "Rolo",
+    "color": "black",
     "row": 3,
     "column": 2,
-    "text": "Mrrp. Among the cats to my left, only Ravioli is a liar.",
+    "text": "Pepper is the only liar among the cats to my left.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2066,27 +2107,23 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Tater",
-    "color": "black",
+    "name": "Truffle",
+    "color": "ginger",
     "row": 3,
     "column": 3,
-    "text": "Otis would say Lentil is honest.",
+    "text": "Meow. Among the cats in column 1, only Hazel is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     7,
-     10
+     0,
+     4,
+     8,
+     12
     ]
    }
   ],
   "liars": [
    true,
-   true,
-   false,
-   false,
-   false,
-   true,
-   true,
    false,
    false,
    false,
@@ -2094,6 +2131,12 @@ const PUZZLES = [
    false,
    false,
    true,
+   true,
+   false,
+   false,
+   true,
+   true,
+   false,
    false,
    false
   ]
@@ -2104,54 +2147,158 @@ const PUZZLES = [
   "seed": 2039,
   "cats": [
    {
-    "name": "Cricket",
-    "color": "siamese",
+    "name": "Biscuit",
+    "color": "calico",
     "row": 0,
     "column": 0,
-    "text": "Meow. Nugget would claim to be honest.",
+    "text": "Mrrp. Whatever one of the cats in column 3 is, the rest are too.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     10
-    ]
-   },
-   {
-    "name": "Doodle",
-    "color": "siamese",
-    "row": 0,
-    "column": 1,
-    "text": "Mark my whiskers: either Luna is a liar, or all of the cats in my column are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     8,
-     9,
-     13
-    ]
-   },
-   {
-    "name": "Ember",
-    "color": "siamese",
-    "row": 0,
-    "column": 2,
-    "text": "Meow. Among the grey cats, only Rusty is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
+     2,
+     6,
+     10,
      14
     ]
    },
    {
-    "name": "Fudge",
-    "color": "ginger",
+    "name": "Cricket",
+    "color": "calico",
     "row": 0,
-    "column": 3,
-    "text": "I heard Sushi say: \"At least one of the cats in my row is a liar.\"",
+    "column": 1,
+    "text": "Mark my whiskers: either Noodle is a liar, or all of Biscuit, Oreo and me are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     0,
+     11,
+     12
+    ]
+   },
+   {
+    "name": "Dusty",
+    "color": "siamese",
+    "row": 0,
+    "column": 2,
+    "text": "I speak Queenie. Translated, they said: \"Mrrp. Among the cats in row 2, only Fig is a liar.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     6,
+     7,
+     14
+    ]
+   },
+   {
+    "name": "Echo",
+    "color": "tabby",
+    "row": 0,
+    "column": 3,
+    "text": "If you asked Pickles, they'd call themselves a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     13
+    ]
+   },
+   {
+    "name": "Fig",
+    "color": "ginger",
+    "row": 1,
+    "column": 0,
+    "text": "*leans in* Pickles whispered to me: \"All of the ginger cats are liars. Every whisker in the bunch is crooked.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     8,
+     13
+    ]
+   },
+   {
+    "name": "Gnocchi",
+    "color": "siamese",
+    "row": 1,
+    "column": 1,
+    "text": "All of Biscuit, Pickles and me are the same: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     13
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "black",
+    "row": 1,
+    "column": 2,
+    "text": "*flattens ears* Noodle would tell you I'm a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     11
+    ]
+   },
+   {
+    "name": "Indigo",
+    "color": "tabby",
+    "row": 1,
+    "column": 3,
+    "text": "*rubs against your leg* Gnocchi would say I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5
+    ]
+   },
+   {
+    "name": "Kismet",
+    "color": "ginger",
+    "row": 2,
+    "column": 0,
+    "text": "There's a mix among the grey cats: some honest, some liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "name": "Loki",
+    "color": "grey",
+    "row": 2,
+    "column": 1,
+    "text": "If you asked me, I'd say Rolo is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Mochi",
+    "color": "grey",
+    "row": 2,
+    "column": 2,
+    "text": "There's a mix among us: some honest, some liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
      12,
      13,
      14,
@@ -2159,166 +2306,72 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Gnocchi",
+    "name": "Noodle",
     "color": "grey",
-    "row": 1,
-    "column": 0,
-    "text": "*arches back* At least 2 of the cats in column 3 are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     6,
-     10,
-     14
-    ]
-   },
-   {
-    "name": "Hobbes",
-    "color": "white",
-    "row": 1,
-    "column": 1,
-    "text": "Purr. You can trust Nugget and Queenie, both of them.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10,
-     13
-    ]
-   },
-   {
-    "name": "Indigo",
-    "color": "white",
-    "row": 1,
-    "column": 2,
-    "text": "Everyone among the cats in row 1 is honest, except Fudge, who is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
-     2,
-     3
-    ]
-   },
-   {
-    "name": "Kismet",
-    "color": "ginger",
-    "row": 1,
-    "column": 3,
-    "text": "*swishes tail* Among the grey cats, there's at least one liar and at least one honest cat.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     14
-    ]
-   },
-   {
-    "name": "Luna",
-    "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "Mrrp. Whatever one of the black cats is, the rest are too.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     12,
-     13
-    ]
-   },
-   {
-    "name": "Mango",
-    "color": "white",
-    "row": 2,
-    "column": 1,
-    "text": "Mark my whiskers: either Doodle is a liar, or all of Hobbes, Sushi and me are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5,
-     15
-    ]
-   },
-   {
-    "name": "Nugget",
-    "color": "ginger",
-    "row": 2,
-    "column": 2,
-    "text": "*points a paw at Otis* The only liar among my neighbors.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     6,
-     9,
-     11,
-     14
-    ]
-   },
-   {
-    "name": "Otis",
-    "color": "siamese",
     "row": 2,
     "column": 3,
-    "text": "No mixing among the cats in my row: all honest, or all liars.",
+    "text": "I'm the only honest cat among the grey cats.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
      9,
      10
     ]
    },
    {
-    "name": "Paprika",
-    "color": "black",
+    "name": "Oreo",
+    "color": "siamese",
     "row": 3,
     "column": 0,
-    "text": "Ember would say I'm honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2
-    ]
-   },
-   {
-    "name": "Queenie",
-    "color": "black",
-    "row": 3,
-    "column": 1,
-    "text": "Hiss! Gnocchi and Paprika are liars, both of them.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     12
-    ]
-   },
-   {
-    "name": "Rusty",
-    "color": "grey",
-    "row": 3,
-    "column": 2,
-    "text": "Among the corner cats, there are both honest cats and liars.",
+    "text": "Only one bad kitty: exactly one of the cats on the edges is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
+     1,
+     2,
      3,
-     12,
+     4,
+     7,
+     8,
+     11,
+     13,
+     14,
      15
     ]
    },
    {
-    "name": "Sushi",
-    "color": "ginger",
+    "name": "Pickles",
+    "color": "black",
     "row": 3,
-    "column": 3,
+    "column": 1,
+    "text": "Mrrp? Mew mew mrrrow!",
+    "hidden": true,
+    "secret": "If you asked me, I'd say Biscuit is honest.",
+    "mentions": []
+   },
+   {
+    "name": "Queenie",
+    "color": "tabby",
+    "row": 3,
+    "column": 2,
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
-    "secret": "Gnocchi and I are opposites: one is honest, the other is a liar.",
+    "secret": "Mrrp. Among the cats in row 2, only Fig is a liar.",
     "mentions": []
+   },
+   {
+    "name": "Rolo",
+    "color": "black",
+    "row": 3,
+    "column": 3,
+    "text": "Exactly one of Kismet and Loki is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     8,
+     9
+    ]
    }
   ],
   "liars": [
@@ -2330,8 +2383,8 @@ const PUZZLES = [
    false,
    false,
    false,
-   true,
    false,
+   true,
    false,
    true,
    true,
@@ -2346,40 +2399,104 @@ const PUZZLES = [
   "seed": 2040,
   "cats": [
    {
-    "name": "Ash",
-    "color": "calico",
+    "name": "Bagel",
+    "color": "tabby",
     "row": 0,
     "column": 0,
-    "text": "*thinks hard* Either Mango is a liar, or all of the ginger cats are honest, or both.",
+    "text": "*leans in* Tater whispered to me: \"Echo is the only liar among Echo, Otis and me.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
+     3,
+     10,
+     15
+    ]
+   },
+   {
+    "name": "Cricket",
+    "color": "siamese",
+    "row": 0,
+    "column": 1,
+    "text": "All of the white cats are honest. Purrfectly so.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     8
+    ]
+   },
+   {
+    "name": "Dumpling",
+    "color": "white",
+    "row": 0,
+    "column": 2,
+    "text": "Tater is pawsitively honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Echo",
+    "color": "grey",
+    "row": 0,
+    "column": 3,
+    "text": "Mark my whiskers: either Bagel is a liar, or all of the cats in column 3 are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
      6,
-     7,
      10,
      14
     ]
    },
    {
-    "name": "Bagel",
-    "color": "siamese",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Exactly 2 of the cats in my column can be trusted, the rest are liars.",
+    "name": "Gnocchi",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 0,
+    "text": "At least one of Jasper and me is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     5,
-     9,
-     13
+     7
     ]
    },
    {
-    "name": "Coco",
+    "name": "Hobbes",
+    "color": "tabby",
+    "row": 1,
+    "column": 1,
+    "text": "Only one bad kitty: exactly one of the cats in the middle is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     9,
+     10
+    ]
+   },
+   {
+    "name": "Iggy",
     "color": "siamese",
-    "row": 0,
+    "row": 1,
     "column": 2,
-    "text": "Purr. If you asked me, I'd say Dusty is honest.",
+    "text": "Purr. Kiwi would tell you I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     8
+    ]
+   },
+   {
+    "name": "Jasper",
+    "color": "black",
+    "row": 1,
+    "column": 3,
+    "text": "Purr. You can trust at least one of Echo and me.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2387,104 +2504,39 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Dusty",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 3,
-    "text": "*points a paw at Jellybean* The only liar among the tabby cats.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     8,
-     11,
-     13
-    ]
-   },
-   {
-    "name": "Ember",
-    "color": "calico",
-    "row": 1,
-    "column": 0,
-    "text": "Mrrp. What Jellybean meant was: \"I'm not kitten you, Goose is a liar.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     6,
-     8
-    ]
-   },
-   {
-    "name": "Fig",
-    "color": "tabby",
-    "row": 1,
-    "column": 1,
-    "text": "No mixing among Mango, Paprika and me: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10,
-     13
-    ]
-   },
-   {
-    "name": "Goose",
-    "color": "ginger",
-    "row": 1,
-    "column": 2,
-    "text": "All of the cats in my column are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     10,
-     14
-    ]
-   },
-   {
-    "name": "Indigo",
-    "color": "ginger",
-    "row": 1,
-    "column": 3,
-    "text": "Either Ember is a liar, or all of Coco, Quincy and me are honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     4,
-     14
-    ]
-   },
-   {
-    "name": "Jellybean",
-    "color": "tabby",
+    "name": "Kiwi",
+    "color": "white",
     "row": 2,
     "column": 0,
-    "text": "*incomprehensible meowing*",
-    "hidden": true,
-    "secret": "I'm not kitten you, Goose is a liar.",
-    "mentions": []
+    "text": "*sniffs around* All of the cats in column 2 are honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     5,
+     9,
+     13
+    ]
    },
    {
     "name": "Lentil",
-    "color": "siamese",
+    "color": "tabby",
     "row": 2,
     "column": 1,
-    "text": "Mark my whiskers: either Ember is honest, or all of Quincy, Rusty and me are liars. Maybe both.",
+    "text": "*sighs* I'm the only honest cat among Gnocchi, Jasper and me. The rest are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      4,
-     14,
-     15
+     7
     ]
    },
    {
-    "name": "Mango",
+    "name": "Otis",
     "color": "tuxedo",
     "row": 2,
     "column": 2,
-    "text": "*twitches tail* Exactly one of the cats in my row is a liar.",
+    "text": "Every one of the cats in my row is honest. Purr.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2494,81 +2546,77 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Nugget",
-    "color": "tabby",
+    "name": "Pepper",
+    "color": "black",
     "row": 2,
     "column": 3,
-    "text": "Mark my whiskers: either Ash is a liar, or all of the tabby cats are liars. Maybe both.",
+    "text": "Either Lentil is a liar, or all of Kiwi, Rusty and me are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     5,
      8,
+     9,
      13
-    ]
-   },
-   {
-    "name": "Olive",
-    "color": "tuxedo",
-    "row": 3,
-    "column": 0,
-    "text": "Mrrp. Either Paprika is honest, or all of the cats in row 2 are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5,
-     6,
-     7,
-     13
-    ]
-   },
-   {
-    "name": "Paprika",
-    "color": "tabby",
-    "row": 3,
-    "column": 1,
-    "text": "*thinks hard* Either Quincy is honest, or all of Ember, Nugget and me are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     11,
-     14
     ]
    },
    {
     "name": "Quincy",
-    "color": "ginger",
+    "color": "tuxedo",
     "row": 3,
-    "column": 2,
-    "text": "Hiss. Bagel and Paprika are not the same: exactly one of them is a liar.",
+    "column": 0,
+    "text": "Purr. You can trust at least one of Hobbes and Jasper.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     13
+     5,
+     7
     ]
    },
    {
     "name": "Rusty",
-    "color": "calico",
+    "color": "grey",
     "row": 3,
-    "column": 3,
-    "text": "Mrrp. Either Ash is honest, or all of the cats in column 3 are liars. Maybe both.",
+    "column": 1,
+    "text": "*twitches tail* Exactly one of Echo, Tater and me is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
+     3,
+     15
+    ]
+   },
+   {
+    "name": "Sprout",
+    "color": "tabby",
+    "row": 3,
+    "column": 2,
+    "text": "Same story for all of the cats in my column: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
      2,
      6,
-     10,
-     14
+     10
     ]
+   },
+   {
+    "name": "Tater",
+    "color": "black",
+    "row": 3,
+    "column": 3,
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "Echo is the only liar among Echo, Otis and me.",
+    "mentions": []
    }
   ],
   "liars": [
+   false,
+   false,
+   false,
+   true,
+   true,
+   false,
    true,
    true,
    false,
@@ -2576,15 +2624,9 @@ const PUZZLES = [
    false,
    false,
    false,
+   false,
    true,
-   true,
-   false,
-   false,
-   false,
-   false,
-   false,
-   false,
-   true
+   false
   ]
  },
  {
@@ -2593,254 +2635,229 @@ const PUZZLES = [
   "seed": 2041,
   "cats": [
    {
-    "name": "Angus",
-    "color": "white",
-    "row": 0,
-    "column": 0,
-    "text": "If you asked me, I'd say Paprika is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10
-    ]
-   },
-   {
-    "name": "Clover",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Loki would call Sushi a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     13
-    ]
-   },
-   {
-    "name": "Dumpling",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 2,
-    "text": "Exactly one of the cats in column 1 is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     8,
-     12
-    ]
-   },
-   {
-    "name": "Fig",
+    "name": "Biscuit",
     "color": "ginger",
     "row": 0,
-    "column": 3,
-    "text": "At most 2 of the cats in row 3 can be trusted.",
+    "column": 0,
+    "text": "Purr. If you asked me, I'd say Coco is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
-     9,
-     10,
-     11
+     1
     ]
    },
    {
-    "name": "Honey",
-    "color": "grey",
-    "row": 1,
-    "column": 0,
-    "text": "Not all of the cats in my column are honest.",
+    "name": "Coco",
+    "color": "ginger",
+    "row": 0,
+    "column": 1,
+    "text": "Mrrp. Among the cats in my row, only Dumpling is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     8,
-     12
-    ]
-   },
-   {
-    "name": "Iggy",
-    "color": "white",
-    "row": 1,
-    "column": 1,
-    "text": "Hiss. Fig would call me a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
+     2,
      3
     ]
    },
    {
-    "name": "Jasper",
-    "color": "white",
-    "row": 1,
+    "name": "Dumpling",
+    "color": "grey",
+    "row": 0,
     "column": 2,
-    "text": "Purr. All of the cats in row 3 can be trusted, except exactly one.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8,
-     9,
-     10,
-     11
-    ]
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "*flicks ears* Exactly 2 of the calico cats are liars.",
+    "mentions": []
    },
    {
-    "name": "Loki",
-    "color": "black",
-    "row": 1,
+    "name": "Echo",
+    "color": "tuxedo",
+    "row": 0,
     "column": 3,
-    "text": "All of Mochi, Waffles and me are the same: all honest, or all liars.",
+    "text": "Every single one of the cats in my column can be trusted. Mrrp.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
+     7,
+     11,
      15
     ]
    },
    {
-    "name": "Mochi",
+    "name": "Felix",
+    "color": "grey",
+    "row": 1,
+    "column": 0,
+    "text": "Trust Coco over Hazel: Coco is honest and Hazel is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     6
+    ]
+   },
+   {
+    "name": "Goose",
+    "color": "grey",
+    "row": 1,
+    "column": 1,
+    "text": "Ask me, and I'd tell you Rolo is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Hazel",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 2,
+    "text": "Every one of the ginger cats is a liar. Hiss!",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     9,
+     13
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 3,
+    "text": "I speak Pepper. Translated, they said: \"Hiss! Goose and Mango are liars, both of them.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     11,
+     13
+    ]
+   },
+   {
+    "name": "Juniper",
+    "color": "calico",
+    "row": 2,
+    "column": 0,
+    "text": "Mrow. Kismet would claim to be a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     9
+    ]
+   },
+   {
+    "name": "Kismet",
     "color": "ginger",
     "row": 2,
+    "column": 1,
+    "text": "Noodle would say I'm a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12
+    ]
+   },
+   {
+    "name": "Luna",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 2,
+    "text": "Mrow. Exactly one of my neighbors is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     9,
+     11,
+     14
+    ]
+   },
+   {
+    "name": "Mango",
+    "color": "calico",
+    "row": 2,
+    "column": 3,
+    "text": "*rubs against your leg* Kismet would say I'm honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     9
+    ]
+   },
+   {
+    "name": "Noodle",
+    "color": "white",
+    "row": 3,
     "column": 0,
-    "text": "I speak Waffles. Translated, they said: \"*thinks hard* Either Iggy is a liar, or all of the cats in my row are honest, or both.\"",
+    "text": "If Goose is lying, so is Pepper. If Goose is honest, so is Pepper.",
     "hidden": false,
     "secret": null,
     "mentions": [
      5,
-     12,
-     13,
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Olive",
-    "color": "grey",
-    "row": 2,
-    "column": 1,
-    "text": "All of the tuxedo cats are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2,
      13
     ]
    },
    {
-    "name": "Paprika",
-    "color": "white",
-    "row": 2,
-    "column": 2,
-    "text": "Mark my whiskers: either Angus is honest, or all of the cats in row 4 are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     12,
-     13,
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Quill",
-    "color": "grey",
-    "row": 2,
-    "column": 3,
-    "text": "Mrrp. Tater and Waffles can't both be trusted.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Rusty",
-    "color": "siamese",
-    "row": 3,
-    "column": 0,
-    "text": "Fig and Honey are from the same litter: both honest, or both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     4
-    ]
-   },
-   {
-    "name": "Sushi",
-    "color": "tuxedo",
+    "name": "Pepper",
+    "color": "ginger",
     "row": 3,
     "column": 1,
-    "text": "Mark my whiskers: either Jasper is honest, or all of us are liars. Maybe both.",
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "Hiss! Goose and Mango are liars, both of them.",
+    "mentions": []
+   },
+   {
+    "name": "Quincy",
+    "color": "calico",
+    "row": 3,
+    "column": 2,
+    "text": "Only one bad kitty: exactly one of the tuxedo cats is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     1,
-     2,
      3,
-     4,
-     5,
      6,
      7,
-     8,
-     9,
-     10,
-     11,
-     12,
-     14,
-     15
+     10
     ]
    },
    {
-    "name": "Tater",
-    "color": "siamese",
+    "name": "Rolo",
+    "color": "white",
     "row": 3,
-    "column": 2,
-    "text": "Either Honey is honest, or all of the cats in column 2 are honest (or both).",
+    "column": 3,
+    "text": "Mrrp. What Dumpling meant was: \"*flicks ears* Exactly 2 of the calico cats are liars.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     4,
-     5,
-     9,
-     13
+     2,
+     8,
+     11,
+     14
     ]
-   },
-   {
-    "name": "Waffles",
-    "color": "black",
-    "row": 3,
-    "column": 3,
-    "text": "*incomprehensible meowing*",
-    "hidden": true,
-    "secret": "*thinks hard* Either Iggy is a liar, or all of the cats in my row are honest, or both.",
-    "mentions": []
    }
   ],
   "liars": [
    false,
    false,
-   false,
-   true,
-   false,
-   true,
-   false,
    true,
    false,
    false,
    false,
    true,
+   false,
    true,
    false,
+   false,
+   false,
+   true,
+   true,
    false,
    false
   ]
@@ -2852,96 +2869,25 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Bean",
-    "color": "ginger",
+    "color": "calico",
     "row": 0,
     "column": 0,
-    "text": "Mark my whiskers: either Jasper is a liar, or all of the cats to my right are honest. Maybe both.",
+    "text": "Exactly 2 of the cats in row 2 can be trusted.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     2,
-     3,
-     6
-    ]
-   },
-   {
-    "name": "Doodle",
-    "color": "tabby",
-    "row": 0,
-    "column": 1,
-    "text": "*purrs* All of the cats in row 4 are from the same litter: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     12,
-     13,
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Echo",
-    "color": "tabby",
-    "row": 0,
-    "column": 2,
-    "text": "At least one of Felix and Lentil is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     8
-    ]
-   },
-   {
-    "name": "Felix",
-    "color": "black",
-    "row": 0,
-    "column": 3,
-    "text": "Among the cats in the middle, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
+     4,
      5,
      6,
-     9,
-     10
+     7
     ]
    },
    {
-    "name": "Goose",
+    "name": "Coco",
     "color": "white",
-    "row": 1,
-    "column": 0,
-    "text": "All of Kismet, Mango and me are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     9
-    ]
-   },
-   {
-    "name": "Indigo",
-    "color": "calico",
-    "row": 1,
+    "row": 0,
     "column": 1,
-    "text": "Mrrp. What Otis meant was: \"Mrrp! None of the cats in column 2 are liars, I'd bet my nine lives on it.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     9,
-     11,
-     13
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "black",
-    "row": 1,
-    "column": 2,
-    "text": "I'm the only honest cat among Echo, Felix and me.",
+    "text": "Mrrp. Either Dusty is a liar, or all of the cats to my right are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2950,133 +2896,211 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Kismet",
-    "color": "tabby",
-    "row": 1,
-    "column": 3,
-    "text": "You can trust Otis. That's a purr-fact.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     11
-    ]
-   },
-   {
-    "name": "Lentil",
-    "color": "calico",
-    "row": 2,
-    "column": 0,
-    "text": "If you asked Bean, they'd say I'm a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0
-    ]
-   },
-   {
-    "name": "Mango",
-    "color": "ginger",
-    "row": 2,
-    "column": 1,
-    "text": "Mrrp. Either Paprika is honest, or all of the cats in the middle are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     6,
-     10,
-     12
-    ]
-   },
-   {
-    "name": "Nimbus",
-    "color": "ginger",
-    "row": 2,
+    "name": "Dusty",
+    "color": "tuxedo",
+    "row": 0,
     "column": 2,
-    "text": "Otis would say I'm honest.",
+    "text": "*thinks hard* Either Queenie is a liar, or all of the corner cats are liars, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     11
+     0,
+     3,
+     12,
+     14,
+     15
     ]
    },
    {
-    "name": "Otis",
-    "color": "white",
-    "row": 2,
+    "name": "Echo",
+    "color": "siamese",
+    "row": 0,
     "column": 3,
-    "text": "Nyaa... mrrp. Mew.",
-    "hidden": true,
-    "secret": "Mrrp! None of the cats in column 2 are liars, I'd bet my nine lives on it.",
-    "mentions": []
-   },
-   {
-    "name": "Paprika",
-    "color": "black",
-    "row": 3,
-    "column": 0,
-    "text": "Either Goose is a liar, or Echo is honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     4
-    ]
-   },
-   {
-    "name": "Quill",
-    "color": "black",
-    "row": 3,
-    "column": 1,
-    "text": "Mrrp. Whatever one of the cats above me is, the rest are too.",
+    "text": "Mrrp. At least one of Coco and Jasper is a liar. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
      1,
-     5,
-     9
+     8
     ]
    },
    {
-    "name": "Rusty",
-    "color": "grey",
-    "row": 3,
-    "column": 2,
-    "text": "*whispers* Lentil would tell you Mango is a liar.",
+    "name": "Fig",
+    "color": "white",
+    "row": 1,
+    "column": 0,
+    "text": "Same story for all of Bean, Hazel and me: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     8,
-     9
+     0,
+     6
     ]
    },
    {
-    "name": "Sushi",
+    "name": "Gizmo",
+    "color": "calico",
+    "row": 1,
+    "column": 1,
+    "text": "*thinks hard* Either Queenie is honest, or all of Fig, Hazel and me are honest, or both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     6,
+     14
+    ]
+   },
+   {
+    "name": "Hazel",
     "color": "grey",
-    "row": 3,
+    "row": 1,
+    "column": 2,
+    "text": "Mrrp. What Inky meant was: \"Mrrp. Whatever one of the white cats is, the rest are too.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     4,
+     7,
+     10,
+     11
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "tuxedo",
+    "row": 1,
     "column": 3,
-    "text": "*swishes tail* Among the cats in my column, there's at least one liar and at least one honest cat.",
+    "text": "Mrrrow mrrp mew.",
+    "hidden": true,
+    "secret": "Mrrp. Whatever one of the white cats is, the rest are too.",
+    "mentions": []
+   },
+   {
+    "name": "Jasper",
+    "color": "siamese",
+    "row": 2,
+    "column": 0,
+    "text": "*points a paw at Ravioli* The only liar among the cats in column 4.",
     "hidden": false,
     "secret": null,
     "mentions": [
      3,
      7,
-     11
+     11,
+     15
+    ]
+   },
+   {
+    "name": "Luna",
+    "color": "grey",
+    "row": 2,
+    "column": 1,
+    "text": "Only one bad kitty: exactly one of the cats in column 4 is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     7,
+     11,
+     15
+    ]
+   },
+   {
+    "name": "Mango",
+    "color": "white",
+    "row": 2,
+    "column": 2,
+    "text": "Mark my whiskers: either Hazel is a liar, or all of the siamese cats are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     6,
+     8,
+     13
+    ]
+   },
+   {
+    "name": "Nugget",
+    "color": "white",
+    "row": 2,
+    "column": 3,
+    "text": "*swishes tail* Among my neighbors, there's at least one liar and at least one honest cat.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7,
+     10,
+     15
+    ]
+   },
+   {
+    "name": "Olive",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 0,
+    "text": "Bean is the only honest cat among the cats above me.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     4,
+     8
+    ]
+   },
+   {
+    "name": "Paprika",
+    "color": "siamese",
+    "row": 3,
+    "column": 1,
+    "text": "Gizmo and Olive are both honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     12
+    ]
+   },
+   {
+    "name": "Queenie",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 2,
+    "text": "Coco is honest, but Mango is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     10
+    ]
+   },
+   {
+    "name": "Ravioli",
+    "color": "calico",
+    "row": 3,
+    "column": 3,
+    "text": "Paprika is as honest as they come. Purr.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     13
     ]
    }
   ],
   "liars": [
-   true,
-   false,
-   true,
-   true,
-   true,
-   false,
    false,
    false,
    true,
    false,
+   true,
    false,
+   false,
+   true,
+   true,
+   false,
+   true,
    false,
    false,
    false,
@@ -3091,233 +3115,250 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Angus",
-    "color": "tabby",
+    "color": "calico",
     "row": 0,
     "column": 0,
-    "text": "*sniffs around* None of the ginger cats are liars.",
+    "text": "*swishes tail* Among the cats in row 4, there's at least one liar and at least one honest cat.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     3,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "name": "Bean",
+    "color": "white",
+    "row": 0,
+    "column": 1,
+    "text": "Either Kettle is a liar, or all of the cats in the middle are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     8,
+     9,
      10
     ]
    },
    {
-    "name": "Clover",
-    "color": "siamese",
+    "name": "Cricket",
+    "color": "black",
     "row": 0,
-    "column": 1,
-    "text": "There's a mix among Dumpling, Kismet and me: some honest, some liars.",
+    "column": 2,
+    "text": "Exactly 3 of the cats on the edges are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
-     8
+     0,
+     1,
+     3,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
     ]
    },
    {
     "name": "Dumpling",
-    "color": "grey",
-    "row": 0,
-    "column": 2,
-    "text": "There's a mix among the cats below me: some honest, some liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     6,
-     10,
-     14
-    ]
-   },
-   {
-    "name": "Espresso",
-    "color": "ginger",
+    "color": "black",
     "row": 0,
     "column": 3,
-    "text": "*flicks ears* Exactly 2 of Gizmo, Loki and me are liars.",
+    "text": "Same story for all of Jasper, Paprika and me: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     5,
-     9
-    ]
-   },
-   {
-    "name": "Fig",
-    "color": "siamese",
-    "row": 1,
-    "column": 0,
-    "text": "At least one of Loki and me is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     9
-    ]
-   },
-   {
-    "name": "Gizmo",
-    "color": "white",
-    "row": 1,
-    "column": 1,
-    "text": "I'm the only honest cat among the cats in my column.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     9,
+     7,
      13
     ]
    },
    {
-    "name": "Indigo",
-    "color": "black",
+    "name": "Gnocchi",
+    "color": "ginger",
     "row": 1,
-    "column": 2,
-    "text": "*kneads paws* At least one of Gizmo and Kismet is honest.",
+    "column": 0,
+    "text": "Exactly 2 of the cats in my column can be trusted.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     5,
-     8
+     0,
+     8,
+     12
     ]
    },
    {
-    "name": "Jellybean",
-    "color": "black",
+    "name": "Honey",
+    "color": "tabby",
     "row": 1,
-    "column": 3,
-    "text": "I counted with my paws: exactly 2 of the cats in the middle are liars.",
+    "column": 1,
+    "text": "Purr. You can trust at least one of Luna and me.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     9
+    ]
+   },
+   {
+    "name": "Inky",
+    "color": "grey",
+    "row": 1,
+    "column": 2,
+    "text": "All but one of my neighbors are honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
      5,
-     6,
-     9,
+     7,
      10
     ]
    },
    {
-    "name": "Kismet",
-    "color": "tabby",
+    "name": "Jasper",
+    "color": "black",
+    "row": 1,
+    "column": 3,
+    "text": "*slow blinks* If you asked me about Cricket, I'd say honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2
+    ]
+   },
+   {
+    "name": "Kettle",
+    "color": "grey",
     "row": 2,
     "column": 0,
-    "text": "At least one of the cats in column 3 is a liar.",
+    "text": "Each and every one of my neighbors is a liar. Meow.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     9,
+     12
+    ]
+   },
+   {
+    "name": "Luna",
+    "color": "calico",
+    "row": 2,
+    "column": 1,
+    "text": "If you asked Rusty, they'd call themselves a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Marble",
+    "color": "calico",
+    "row": 2,
+    "column": 2,
+    "text": "Every one of the cats in my column is honest. Purr.",
     "hidden": false,
     "secret": null,
     "mentions": [
      2,
      6,
-     10,
      14
     ]
    },
    {
-    "name": "Loki",
-    "color": "tabby",
+    "name": "Nimbus",
+    "color": "calico",
     "row": 2,
-    "column": 1,
-    "text": "Mrrp. Whatever one of my neighbors is, the rest are too.",
+    "column": 3,
+    "text": "Mrrp. Either Otis is a liar, or all of the cats in column 2 are honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     1,
      5,
-     8,
-     10,
+     9,
+     12,
      13
     ]
    },
    {
-    "name": "Marble",
-    "color": "ginger",
-    "row": 2,
-    "column": 2,
-    "text": "Purr. Among Olive, Queenie and me, I'm the only one who's honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     11,
-     12
-    ]
-   },
-   {
-    "name": "Olive",
+    "name": "Otis",
     "color": "tabby",
-    "row": 2,
-    "column": 3,
-    "text": "Meow. No more than 2 of the cats in column 1 can be trusted.",
+    "row": 3,
+    "column": 0,
+    "text": "*purrs* All of the cats above me are from the same litter: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
      4,
-     8,
-     12
+     8
+    ]
+   },
+   {
+    "name": "Paprika",
+    "color": "white",
+    "row": 3,
+    "column": 1,
+    "text": "Purr. All of the black cats can be trusted, except exactly one.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     3,
+     7,
+     14
     ]
    },
    {
     "name": "Queenie",
-    "color": "white",
+    "color": "black",
     "row": 3,
-    "column": 0,
-    "text": "Purr. Fig would tell you I'm honest.",
+    "column": 2,
+    "text": "Exactly 2 of the cats in row 3 are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4
+     8,
+     9,
+     10,
+     11
     ]
    },
    {
     "name": "Rusty",
-    "color": "grey",
-    "row": 3,
-    "column": 1,
-    "text": "*incomprehensible meowing*",
-    "hidden": true,
-    "secret": "Exactly one of Angus, Gizmo and me is a liar.",
-    "mentions": []
-   },
-   {
-    "name": "Sprout",
-    "color": "white",
-    "row": 3,
-    "column": 2,
-    "text": "*purrs* All of my neighbors are from the same litter: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10,
-     13,
-     15
-    ]
-   },
-   {
-    "name": "Tater",
-    "color": "siamese",
+    "color": "ginger",
     "row": 3,
     "column": 3,
-    "text": "I heard Rusty say: \"Exactly one of Angus, Gizmo and me is a liar.\"",
+    "text": "Either Cricket is a liar, or Queenie is honest. Could be both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     5,
-     13
+     2,
+     14
     ]
    }
   ],
   "liars": [
    false,
    false,
-   true,
-   false,
-   false,
-   true,
-   false,
-   false,
    false,
    true,
    false,
    true,
+   false,
+   false,
+   true,
+   true,
+   false,
+   false,
    true,
    false,
    false,
@@ -3331,61 +3372,210 @@ const PUZZLES = [
   "cats": [
    {
     "name": "Ash",
-    "color": "grey",
-    "row": 0,
-    "column": 0,
-    "text": "At least one of Marble and Rusty is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8,
-     13
-    ]
-   },
-   {
-    "name": "Bean",
-    "color": "white",
-    "row": 0,
-    "column": 1,
-    "text": "Rusty would say I'm a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     13
-    ]
-   },
-   {
-    "name": "Coco",
-    "color": "black",
-    "row": 0,
-    "column": 2,
-    "text": "Hazel would say Iggy is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     6
-    ]
-   },
-   {
-    "name": "Dumpling",
     "color": "tuxedo",
     "row": 0,
-    "column": 3,
-    "text": "Mark my whiskers: either Ash is a liar, or all of the grey cats are honest. Maybe both.",
+    "column": 0,
+    "text": "*sighs* I'm the only honest cat among the cats in my column. The rest are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     8,
+     12
+    ]
+   },
+   {
+    "name": "Bagel",
+    "color": "black",
+    "row": 0,
+    "column": 1,
+    "text": "Ash and Loki are both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
+     11
+    ]
+   },
+   {
+    "name": "Coco",
+    "color": "ginger",
+    "row": 0,
+    "column": 2,
+    "text": "Purr. All of the corner cats can be trusted, except exactly one.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     12,
+     15
+    ]
+   },
+   {
+    "name": "Dusty",
+    "color": "grey",
+    "row": 0,
+    "column": 3,
+    "text": "Mark my whiskers: either Ash is honest, or all of the cats in column 2 are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     5,
+     9,
      13
     ]
    },
    {
-    "name": "Gnocchi",
-    "color": "tuxedo",
+    "name": "Ember",
+    "color": "grey",
     "row": 1,
     "column": 0,
-    "text": "Either Tater is honest, or all of us are honest (or both).",
+    "text": "Mrrp. Either Jasper is honest, or all of the tabby cats are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     9,
+     11
+    ]
+   },
+   {
+    "name": "Felix",
+    "color": "black",
+    "row": 1,
+    "column": 1,
+    "text": "Mrrp. Either Otis is a liar, or Rusty is honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     13,
+     15
+    ]
+   },
+   {
+    "name": "Gizmo",
+    "color": "tabby",
+    "row": 1,
+    "column": 2,
+    "text": "Felix would say they're honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5
+    ]
+   },
+   {
+    "name": "Honey",
+    "color": "siamese",
+    "row": 1,
+    "column": 3,
+    "text": "Mrrp. Either Rusty is a liar, or all of the cats in row 4 are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "name": "Iggy",
+    "color": "ginger",
+    "row": 2,
+    "column": 0,
+    "text": "All of Bagel, Kismet and me are honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     10
+    ]
+   },
+   {
+    "name": "Jasper",
+    "color": "siamese",
+    "row": 2,
+    "column": 1,
+    "text": "*yawns* Loki would tell you they're honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     11
+    ]
+   },
+   {
+    "name": "Kismet",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 2,
+    "text": "I'm not kitten you, Loki is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     11
+    ]
+   },
+   {
+    "name": "Loki",
+    "color": "tabby",
+    "row": 2,
+    "column": 3,
+    "text": "Ask me, and I'd tell you Rusty is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Mochi",
+    "color": "siamese",
+    "row": 3,
+    "column": 0,
+    "text": "Felix and Loki are opposites: one is honest, the other is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     11
+    ]
+   },
+   {
+    "name": "Otis",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 1,
+    "text": "Trust me over Loki: I'm honest and Loki is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     11
+    ]
+   },
+   {
+    "name": "Paprika",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 2,
+    "text": "*sighs* I'm the only honest cat among the cats in my column. The rest are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     10
+    ]
+   },
+   {
+    "name": "Rusty",
+    "color": "grey",
+    "row": 3,
+    "column": 3,
+    "text": "I counted with my paws: exactly 5 of us are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3393,6 +3583,7 @@ const PUZZLES = [
      1,
      2,
      3,
+     4,
      5,
      6,
      7,
@@ -3402,156 +3593,6 @@ const PUZZLES = [
      11,
      12,
      13,
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Hazel",
-    "color": "siamese",
-    "row": 1,
-    "column": 1,
-    "text": "Everyone among my neighbors is honest, except Nugget, who is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     4,
-     6,
-     9
-    ]
-   },
-   {
-    "name": "Iggy",
-    "color": "black",
-    "row": 1,
-    "column": 2,
-    "text": "Mrrp. What Lentil meant was: \"Everyone among the corner cats is honest, except Ash, who is a liar.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3,
-     7,
-     12,
-     15
-    ]
-   },
-   {
-    "name": "Lentil",
-    "color": "white",
-    "row": 1,
-    "column": 3,
-    "text": "Mrrp? Mew mew mrrrow!",
-    "hidden": true,
-    "secret": "Everyone among the corner cats is honest, except Ash, who is a liar.",
-    "mentions": []
-   },
-   {
-    "name": "Marble",
-    "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "Mrrp. Exactly 1 of the cats in the middle can be trusted, the rest are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     6,
-     9,
-     10
-    ]
-   },
-   {
-    "name": "Nugget",
-    "color": "white",
-    "row": 2,
-    "column": 1,
-    "text": "I'm the only liar among the cats in my row.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8,
-     10,
-     11
-    ]
-   },
-   {
-    "name": "Otis",
-    "color": "ginger",
-    "row": 2,
-    "column": 2,
-    "text": "Mrrp? Mew mew mrrrow!",
-    "hidden": true,
-    "secret": "Purr... at least one of Coco, Saffron and me is a liar.",
-    "mentions": []
-   },
-   {
-    "name": "Paprika",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 3,
-    "text": "*thinks hard* Either Bean is honest, or all of the cats in row 1 are liars, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
-     2,
-     3
-    ]
-   },
-   {
-    "name": "Quincy",
-    "color": "siamese",
-    "row": 3,
-    "column": 0,
-    "text": "Among the cats in my column, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     8
-    ]
-   },
-   {
-    "name": "Rusty",
-    "color": "grey",
-    "row": 3,
-    "column": 1,
-    "text": "All of the cats in my row are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     12,
-     14,
-     15
-    ]
-   },
-   {
-    "name": "Saffron",
-    "color": "tuxedo",
-    "row": 3,
-    "column": 2,
-    "text": "Purr. Hazel would tell you I'm honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5
-    ]
-   },
-   {
-    "name": "Tater",
-    "color": "ginger",
-    "row": 3,
-    "column": 3,
-    "text": "*leans in* Otis whispered to me: \"Purr... at least one of Coco, Saffron and me is a liar.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     10,
      14
     ]
    }
@@ -3564,13 +3605,13 @@ const PUZZLES = [
    false,
    false,
    false,
-   false,
    true,
    true,
    false,
    false,
-   false,
    true,
+   false,
+   false,
    true,
    false
   ]
@@ -3581,61 +3622,70 @@ const PUZZLES = [
   "seed": 2045,
   "cats": [
    {
-    "name": "Ash",
-    "color": "black",
-    "row": 0,
-    "column": 0,
-    "text": "*arches back* Nugget and Quincy are both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     11,
-     13
-    ]
-   },
-   {
-    "name": "Bean",
-    "color": "black",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Either Sushi is honest, or all of the cats in my row are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     3,
-     14
-    ]
-   },
-   {
-    "name": "Doodle",
+    "name": "Apricot",
     "color": "tuxedo",
     "row": 0,
-    "column": 2,
-    "text": "Either Jasper is honest, or all of the calico cats are honest (or both).",
+    "column": 0,
+    "text": "Among the corner cats, there are both honest cats and liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      3,
-     6,
-     8,
-     13,
+     12,
      15
     ]
    },
    {
-    "name": "Echo",
-    "color": "calico",
+    "name": "Biscuit",
+    "color": "ginger",
     "row": 0,
-    "column": 3,
-    "text": "Mrrp. Either Mochi is honest, or all of Honey, Iggy and me are honest. Maybe both.",
+    "column": 1,
+    "text": "Purr. If you asked me, I'd say Waffles is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     15
+    ]
+   },
+   {
+    "name": "Cricket",
+    "color": "tabby",
+    "row": 0,
+    "column": 2,
+    "text": "Exactly 3 of the cats in row 4 are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "name": "Ember",
+    "color": "ginger",
+    "row": 0,
+    "column": 3,
+    "text": "Mrrp. Either Apricot is honest, or all of us are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     4,
+     5,
      6,
      7,
-     10
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
     ]
    },
    {
@@ -3643,145 +3693,35 @@ const PUZZLES = [
     "color": "tabby",
     "row": 1,
     "column": 0,
-    "text": "Everyone among the cats in my column is a liar, except Jasper, who is honest.",
+    "text": "Mrrp. Exactly 1 of the calico cats can be trusted, the rest are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     8,
-     12
-    ]
-   },
-   {
-    "name": "Gizmo",
-    "color": "black",
-    "row": 1,
-    "column": 1,
-    "text": "Everyone among the corner cats is honest, except Paprika, who is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3,
+     7,
      12,
-     15
+     13,
+     14
     ]
    },
    {
-    "name": "Honey",
-    "color": "calico",
+    "name": "Hazel",
+    "color": "siamese",
     "row": 1,
-    "column": 2,
-    "text": "Mrrrow mrrp mew.",
-    "hidden": true,
-    "secret": "Hiss. Not all of my neighbors are the same: there's at least one liar and at least one honest cat.",
-    "mentions": []
-   },
-   {
-    "name": "Iggy",
-    "color": "tabby",
-    "row": 1,
-    "column": 3,
-    "text": "Mrrp. Either Tater is a liar, or all of Honey, Kiwi and me are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     6,
-     9,
-     15
-    ]
-   },
-   {
-    "name": "Jasper",
-    "color": "grey",
-    "row": 2,
-    "column": 0,
-    "text": "I heard Honey say: \"Hiss. Not all of my neighbors are the same: there's at least one liar and at least one honest cat.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     5,
-     6,
-     7,
-     10
-    ]
-   },
-   {
-    "name": "Kiwi",
-    "color": "white",
-    "row": 2,
     "column": 1,
-    "text": "Mrrp. Either Iggy is a liar, or all of the grey cats are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     8,
-     10
-    ]
-   },
-   {
-    "name": "Mochi",
-    "color": "grey",
-    "row": 2,
-    "column": 2,
-    "text": "*arches back* Felix and Quincy are both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     13
-    ]
-   },
-   {
-    "name": "Nugget",
-    "color": "white",
-    "row": 2,
-    "column": 3,
-    "text": "Either Jasper is a liar, or Iggy is honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     7,
-     8
-    ]
-   },
-   {
-    "name": "Paprika",
-    "color": "white",
-    "row": 3,
-    "column": 0,
-    "text": "Felix and Honey are both honest, fur real.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     6
-    ]
-   },
-   {
-    "name": "Quincy",
-    "color": "calico",
-    "row": 3,
-    "column": 1,
-    "text": "Mark my whiskers: either Gizmo is a liar, or all of the corner cats are liars. Maybe both.",
+    "text": "Mrrp! All of Apricot, Queenie and me are honest, I'd bet my nine lives on it.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     3,
-     5,
-     12,
-     15
+     11
     ]
    },
    {
-    "name": "Sushi",
-    "color": "tuxedo",
-    "row": 3,
+    "name": "Inky",
+    "color": "siamese",
+    "row": 1,
     "column": 2,
-    "text": "*rubs against your leg* Gizmo would say I'm honest.",
+    "text": "Hazel would say they're honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3789,35 +3729,151 @@ const PUZZLES = [
     ]
    },
    {
-    "name": "Tater",
+    "name": "Jasper",
     "color": "calico",
-    "row": 3,
+    "row": 1,
     "column": 3,
-    "text": "Mrrp. Among my neighbors, only Nugget is a liar.",
+    "text": "Rolo is the only liar among the cats in column 1.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     11,
+     0,
+     4,
+     8,
+     12
+    ]
+   },
+   {
+    "name": "Loki",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 0,
+    "text": "Everyone among Biscuit, Marble and me is honest, except Biscuit, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     9
+    ]
+   },
+   {
+    "name": "Marble",
+    "color": "siamese",
+    "row": 2,
+    "column": 1,
+    "text": "Purr. All of the cats in the middle can be trusted, except exactly one.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     6,
+     10
+    ]
+   },
+   {
+    "name": "Pickles",
+    "color": "ginger",
+    "row": 2,
+    "column": 2,
+    "text": "Mrrp. Either Tofu is honest, or all of the cats in row 1 are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
      14
+    ]
+   },
+   {
+    "name": "Queenie",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 3,
+    "text": "Mark my whiskers: either Hazel is a liar, or all of the cats above me are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     5,
+     7
+    ]
+   },
+   {
+    "name": "Rolo",
+    "color": "calico",
+    "row": 3,
+    "column": 0,
+    "text": "You can trust Pickles and me. We are both honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     10
+    ]
+   },
+   {
+    "name": "Sprout",
+    "color": "calico",
+    "row": 3,
+    "column": 1,
+    "text": "Either Apricot is a liar, or all of the cats in my column are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     5,
+     9
+    ]
+   },
+   {
+    "name": "Tofu",
+    "color": "calico",
+    "row": 3,
+    "column": 2,
+    "text": "Everyone among the cats in row 2 is a liar, except Jasper, who is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "name": "Waffles",
+    "color": "ginger",
+    "row": 3,
+    "column": 3,
+    "text": "Everyone among the cats in row 3 is honest, except Pickles, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     8,
+     9,
+     10,
+     11
     ]
    }
   ],
   "liars": [
    false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
    false,
    false,
    false,
    true,
    false,
-   false,
-   true,
-   false,
-   false,
-   false,
    true,
    true,
    true,
-   false,
    false
   ]
  }

@@ -68,7 +68,7 @@ def test_quote_random_uses_every_flavor():
             s = Quote.random(speaker, grid, world)
             assert s is not None
             seen.add(s.flavor())
-    assert seen == {"self", "about_me", "about_themselves", "others"}
+    assert seen == {"self", "about_me", "about_themselves"}   # "others" was dropped on purpose
 
 
 def test_quote_key():
