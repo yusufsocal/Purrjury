@@ -1,6 +1,6 @@
 """Sentences for statements. Placeholders:
     {name}  a single cat's name
-    {area}  the area text, e.g. "my neighbors", "the tabby cats", "us"
+    {area}  the area text, e.g. "my neighbors", "the tabby cats", "the cats in the grid"
     {n}     the number of liars
     {h}     the number of honest cats (size of the area minus n)
     {a} {b}            the two cats in a pair statement
@@ -315,6 +315,95 @@ IF_THEN_TEXTS = [
     "Mrrp. Either {name} is {opposite}, or all of {area} are {then}. Maybe both.",
     "*thinks hard* Either {name} is {opposite}, or all of {area} are {then}, or both.",
     "Mark my whiskers: either {name} is {opposite}, or all of {area} are {then}. Maybe both.",
+]
+
+
+# --- Areas that cover every cat ---
+# The normal texts would say "exactly 5 of the cats in the grid", so these get their own wording.
+# Same placeholders as the normal lists they replace.
+
+# CountLiars
+EVERYONE_NONE_TEXTS = [
+    "Every single cat is honest.",
+    "Mrrp! All the cats are honest, I'd bet my nine lives on it.",
+    "*sniffs around* Every cat here is honest.",
+]
+
+EVERYONE_ALL_TEXTS = [
+    "Every single cat is a liar.",
+    "Hiss! All the cats are liars, every last one.",
+    "*narrows eyes* Every cat here is a liar.",
+]
+
+EVERYONE_EXACTLY_ONE_TEXTS = [
+    "There's exactly one liar in total.",
+    "Mrow. There's exactly one liar in total.",
+    "Only one bad kitty: there's exactly one liar in total.",
+    "Purr. Every cat can be trusted, except exactly one.",
+]
+
+EVERYONE_EXACTLY_N_TEXTS = [
+    "There are exactly {n} liars in total.",
+    "Meow meow. There are exactly {n} liars in total.",
+    "I counted with my paws: there are exactly {n} liars in total.",
+    "Mrrp. Exactly {h} cats can be trusted in total, the rest are liars.",
+]
+
+EVERYONE_AT_LEAST_ONE_TEXTS = [
+    "There's at least one liar in total.",
+    "I smell a rat. There's at least one liar out there.",
+    "*narrows eyes* At least one cat is a liar.",
+]
+
+EVERYONE_AT_LEAST_N_TEXTS = [
+    "There are at least {n} liars in total.",
+    "Mrrrow! There are at least {n} liars in total.",
+    "*arches back* At least {n} cats are liars, maybe more.",
+]
+
+# Only
+EVERYONE_ONLY_ME_LIAR_TEXTS = [
+    "I'm the only liar of all the cats.",
+    "Hiss. Out of all the cats, I'm the only liar.",
+    "*grins* I'm the only liar. Every other cat is honest.",
+]
+
+EVERYONE_ONLY_ME_HONEST_TEXTS = [
+    "I'm the only honest cat of them all.",
+    "Purr. Out of all the cats, I'm the only honest one.",
+    "*sighs* I'm the only honest cat. Every other cat is a liar.",
+]
+
+EVERYONE_ONLY_LIAR_TEXTS = [
+    "{name} is the only liar of all the cats.",
+    "Mrrp. Out of all the cats, only {name} is a liar.",
+    "Every cat is honest, except {name}, who is a liar.",
+]
+
+EVERYONE_ONLY_HONEST_TEXTS = [
+    "{name} is the only honest cat of them all.",
+    "Meow. Out of all the cats, only {name} is honest.",
+    "Every cat is a liar, except {name}, who is honest.",
+]
+
+# AllSame
+EVERYONE_ALL_SAME_TEXTS = [
+    "All the cats are the same: all honest, or all liars.",
+    "*purrs* We're all from the same litter: every cat is honest, or every cat is a liar.",
+    "Mrrp. Whatever one cat is, every cat is.",
+]
+
+EVERYONE_MIXED_TEXTS = [
+    "There are both honest cats and liars around.",
+    "Hiss. Out of all the cats, at least one is a liar and at least one is honest.",
+    "*swishes tail* It's a mix out there: some cats are honest, some are liars.",
+]
+
+# IfThen
+EVERYONE_IF_THEN_TEXTS = [
+    "Either {name} is {opposite}, or all the cats are {then} (or both).",
+    "Mrrp. Either {name} is {opposite}, or all the cats are {then}. Maybe both.",
+    "*thinks hard* Either {name} is {opposite}, or all the cats are {then}, or both.",
 ]
 
 

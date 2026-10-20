@@ -5,6 +5,10 @@ def everyone(grid):
     """Every cat in the grid."""
     return [cat.index for row in grid for cat in row]
 
+def is_everyone(grid, area):
+    """True if the area has every cat in it. Those get their own texts ("exactly 5 liars in total")."""
+    return len(set(area)) == len(grid) * len(grid[0])
+
 def row(grid, r):
     """Every cat in row r."""
     return [cat.index for cat in grid[r]]

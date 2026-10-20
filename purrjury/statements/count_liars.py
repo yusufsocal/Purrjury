@@ -3,7 +3,9 @@ import random
 from purrjury.statements.base import Statement
 from purrjury.board.grid import get_cat
 from purrjury.texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_TEXTS,
-                   EXACTLY_N_TEXTS, AT_LEAST_ONE_TEXTS, AT_LEAST_N_TEXTS)
+                   EXACTLY_N_TEXTS, AT_LEAST_ONE_TEXTS, AT_LEAST_N_TEXTS,
+                   EVERYONE_NONE_TEXTS, EVERYONE_ALL_TEXTS, EVERYONE_EXACTLY_ONE_TEXTS,
+                   EVERYONE_EXACTLY_N_TEXTS, EVERYONE_AT_LEAST_ONE_TEXTS, EVERYONE_AT_LEAST_N_TEXTS)
 from purrjury.board import areas
 
 # How often each kind of area is picked, relative to each other
@@ -11,6 +13,22 @@ AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "trio": 2, "single"
 
 # How many random "Felix, Bagel and me" areas each speaker gets to pick from
 TRIOS_PER_SPEAKER = 3
+
+# What an area with every cat in it is called. Players never see it: those areas get their own
+# texts ("there are exactly 5 liars in total"), since "exactly 5 of us" read as unclear
+EVERYONE_TEXT = "the cats in the grid"
+
+# Texts for each kind of count, for normal areas and for areas with every cat in them
+COUNT_TEXTS = {
+    "none": NONE_TEXTS, "all": ALL_TEXTS,
+    "exactly_one": EXACTLY_ONE_TEXTS, "exactly_n": EXACTLY_N_TEXTS,
+    "at_least_one": AT_LEAST_ONE_TEXTS, "at_least_n": AT_LEAST_N_TEXTS,
+}
+EVERYONE_COUNT_TEXTS = {
+    "none": EVERYONE_NONE_TEXTS, "all": EVERYONE_ALL_TEXTS,
+    "exactly_one": EVERYONE_EXACTLY_ONE_TEXTS, "exactly_n": EVERYONE_EXACTLY_N_TEXTS,
+    "at_least_one": EVERYONE_AT_LEAST_ONE_TEXTS, "at_least_n": EVERYONE_AT_LEAST_N_TEXTS,
+}
 
 # Chance that an area bigger than one cat uses "at least" instead of "exactly"
 AT_LEAST_CHANCE = 0.3
@@ -52,15 +70,18 @@ class CountLiars(Statement):
             self.text = random.choice(texts).format(name=name)
             return
 
-        # Pick the right list for the count
+        # Pick the right kind of count
         if self.mode == "exactly" and self.n == 0:
-            texts = NONE_TEXTS
+            kind = "none"
         elif self.n == size:
-            texts = ALL_TEXTS          # "exactly all" and "at least all" mean the same
+            kind = "all"          # "exactly all" and "at least all" mean the same
         elif self.mode == "exactly":
-            texts = EXACTLY_ONE_TEXTS if self.n == 1 else EXACTLY_N_TEXTS
+            kind = "exactly_one" if self.n == 1 else "exactly_n"
         else:
-            texts = AT_LEAST_ONE_TEXTS if self.n == 1 else AT_LEAST_N_TEXTS
+            kind = "at_least_one" if self.n == 1 else "at_least_n"
+
+        # an area with every cat gets its own wording: "there are exactly 5 liars in total"
+        texts = (EVERYONE_COUNT_TEXTS if areas.is_everyone(grid, self.area) else COUNT_TEXTS)[kind]
 
         self.text = random.choice(texts).format(area=self.area_text, n=self.n, h=size - self.n)
 
@@ -90,7 +111,7 @@ class CountLiars(Statement):
                 (areas.corners(grid), "the corner cats"),
                 (areas.edges(grid), "the cats on the edges"),
                 (areas.middle(grid), "the cats in the middle"),
-                (areas.everyone(grid), "us"),
+                (areas.everyone(grid), EVERYONE_TEXT),
             ],
             # Other rows and columns (shown to players as 1, 2, 3 instead of 0, 1, 2)
             "line": [],
@@ -128,12 +149,12 @@ class CountLiars(Statement):
         # Leave out areas that would sound odd:
         # - empty areas can't say anything useful
         # - an area that is only the speaker would be "I am honest/a liar" (e.g. "the cats in the middle" on a 3x3)
-        # - an area that covers every cat should just be called "us" (e.g. "the corner cats" on a 2x2)
+        # - an area that covers every cat should just be called EVERYONE_TEXT (e.g. "the corner cats" on a 2x2)
         n_cats = len(cats)
         result = {}
         for category, options in candidates.items():
             usable = [(area, text) for area, text in options
-                      if area and area != [speaker] and (len(area) < n_cats or text == "us")]
+                      if area and area != [speaker] and (len(area) < n_cats or text == EVERYONE_TEXT)]
             if usable:
                 result[category] = usable
         return result

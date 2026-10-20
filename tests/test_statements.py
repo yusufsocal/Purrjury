@@ -1,7 +1,7 @@
 import pytest
 
 from purrjury.statements import ALL_STATEMENTS, CountLiars, PairStatement
-from purrjury.statements.count_liars import AREA_WEIGHTS
+from purrjury.statements.count_liars import AREA_WEIGHTS, EVERYONE_TEXT
 from purrjury.statements.pair import ORDERED, RELATION_WEIGHTS, RELATIONS, TEXTS
 from purrjury.board.world import make_world
 from tests.helpers import fits, fixed_grid, is_liar, random_grid
@@ -144,15 +144,28 @@ def test_candidate_areas_are_grouped_by_weighted_categories(rows, cols):
 
 
 @pytest.mark.parametrize("rows, cols", [(2, 2), (2, 3), (3, 3)])
-def test_only_us_covers_every_cat(rows, cols):
-    """'The corner cats' on a 2x2, or a color every cat has, should not be used: that's just 'us'."""
+def test_only_everyone_text_covers_every_cat(rows, cols):
+    """'The corner cats' on a 2x2, or a color every cat has, should not be used: that's just EVERYONE_TEXT."""
     for _ in range(50):
         grid = random_grid(rows, cols)
         for speaker in range(rows * cols):
             for options in CountLiars.candidate_areas(grid, speaker).values():
                 for area, text in options:
                     if len(area) == rows * cols:
-                        assert text == "us", f"{text} covers every cat"
+                        assert text == EVERYONE_TEXT, f"{text} covers every cat"
+
+
+@pytest.mark.parametrize("rows, cols", [(2, 3), (3, 3), (4, 4)])
+def test_everyone_areas_use_their_own_texts(rows, cols):
+    """Areas with every cat get texts like "exactly 5 liars in total", never "exactly 5 of the cats in the grid"."""
+    for _ in range(30):
+        grid = random_grid(rows, cols)
+        world = make_world(rows * cols, rows * cols // 3)
+        for speaker in range(rows * cols):
+            for statement_type in ALL_STATEMENTS:
+                statement = statement_type.random(speaker, grid, world)
+                if statement is not None:
+                    assert EVERYONE_TEXT not in statement.to_text(), statement.to_text()
 
 
 def test_count_liars_never_talks_only_about_itself():
