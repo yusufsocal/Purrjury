@@ -194,17 +194,11 @@ function render() {
       secret.textContent = "Really said: " + cat.secret;
       card.append(secret);
     }
-    // tap: change the mark. double click, right click or long-press: show connections
-    card.addEventListener("click", event => {
+    // tap: change the mark (tap twice quickly for liar). right click or long-press: show connections
+    card.addEventListener("click", () => {
       if (longPressed) { longPressed = false; return; }
-      if (event.detail === 2) {
-        undoMark(i);   // the first click of the double click already changed the mark
-        showConnections(i);
-      } else if (highlight !== null) {
-        clearConnections();
-      } else {
-        cycleMark(i);
-      }
+      clearConnections();   // a tap closes the highlight and still changes the mark
+      cycleMark(i);
     });
     // right click: cats that talk about it. double right click: cats it talks about
     card.addEventListener("contextmenu", event => {
@@ -239,15 +233,6 @@ function cycleMark(i) {
   message.textContent = "";
   clearHint();   // the hint was for the old marks
   render();
-}
-
-
-// go one mark back (honest -> unknown, liar -> honest, unknown -> liar)
-function undoMark(i) {
-  const s = state();
-  if (s.solved || s.revealed) return;
-  const previous = (MARKS.indexOf(s.marks[i]) + MARKS.length - 1) % MARKS.length;
-  s.marks[i] = MARKS[previous];
 }
 
 

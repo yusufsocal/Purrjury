@@ -107,7 +107,7 @@ button:hover { border-color: var(--muted); }
   line-height: 1.4;
 }
 
-/* connections (double click, right click or long-press a cat) */
+/* connections (right click or long-press a cat) */
 :root { --by: #e08a1e; --about: #2f6fdb; }
 /* only the names change color, so the rest of the page stays calm */
 .card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
