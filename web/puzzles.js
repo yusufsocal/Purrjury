@@ -17,7 +17,15 @@ const PUZZLES = [
     "mentions": [
      3,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      8
+     ],
+     "table": "ug=="
+    }
    },
    {
     "name": "Biscuit",
@@ -31,7 +39,16 @@ const PUZZLES = [
      3,
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      3,
+      4,
+      5
+     ],
+     "table": "VpU="
+    }
    },
    {
     "name": "Coco",
@@ -45,7 +62,16 @@ const PUZZLES = [
      1,
      4,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      4,
+      7
+     ],
+     "table": "lsk="
+    }
    },
    {
     "name": "Dumpling",
@@ -59,7 +85,16 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "table": "qVU="
+    }
    },
    {
     "name": "Ember",
@@ -72,7 +107,15 @@ const PUZZLES = [
     "mentions": [
      0,
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4
+     ],
+     "table": "0A=="
+    }
    },
    {
     "name": "Fudge",
@@ -86,7 +129,16 @@ const PUZZLES = [
      0,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "table": "M80="
+    }
    },
    {
     "name": "Gnocchi",
@@ -98,7 +150,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6
+     ],
+     "table": "Dg=="
+    }
    },
    {
     "name": "Inky",
@@ -112,7 +171,16 @@ const PUZZLES = [
      0,
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4,
+      7
+     ],
+     "table": "EO8="
+    }
    },
    {
     "name": "Jasper",
@@ -130,7 +198,20 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "AAAAAAAAAAAAAAAAAAAAAP////////9///////////8="
+    }
    }
   ],
   "liars": [
@@ -162,7 +243,15 @@ const PUZZLES = [
     "mentions": [
      3,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "aQ=="
+    }
    },
    {
     "name": "Cricket",
@@ -177,7 +266,17 @@ const PUZZLES = [
      4,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      4,
+      5,
+      8
+     ],
+     "table": "WlpaVg=="
+    }
    },
    {
     "name": "Doodle",
@@ -190,7 +289,15 @@ const PUZZLES = [
     "mentions": [
      0,
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2
+     ],
+     "table": "jg=="
+    }
    },
    {
     "name": "Ember",
@@ -204,7 +311,16 @@ const PUZZLES = [
      0,
      2,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3,
+      8
+     ],
+     "table": "8fc="
+    }
    },
    {
     "name": "Fig",
@@ -223,7 +339,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "gGiX6WgW6f5oFun+FgH+/2gW6f4WAf7/FgH+/wEA//9oFun+FgH+/xYB/v8BAP//FgH+/wEA//8BAP//AAD//w=="
+    }
    },
    {
     "name": "Gnocchi",
@@ -235,7 +365,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6
+     ],
+     "table": "AQ=="
+    }
    },
    {
     "name": "Hobbes",
@@ -249,7 +386,16 @@ const PUZZLES = [
      1,
      3,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      3,
+      6,
+      7
+     ],
+     "table": "x8M="
+    }
    },
    {
     "name": "Iggy",
@@ -261,7 +407,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      7
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Jasper",
@@ -271,7 +424,8 @@ const PUZZLES = [
     "text": "*incomprehensible meowing*",
     "hidden": true,
     "secret": "All of Biscuit, Doodle and me are the same: all honest, or all liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    }
   ],
   "liars": [
@@ -304,7 +458,16 @@ const PUZZLES = [
      3,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      5,
+      6
+     ],
+     "table": "W1o="
+    }
    },
    {
     "name": "Biscuit",
@@ -318,7 +481,16 @@ const PUZZLES = [
      0,
      2,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "table": "zMk="
+    }
    },
    {
     "name": "Fig",
@@ -331,7 +503,15 @@ const PUZZLES = [
     "mentions": [
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      7,
+      8
+     ],
+     "table": "aQ=="
+    }
    },
    {
     "name": "Goose",
@@ -343,7 +523,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Jellybean",
@@ -355,7 +542,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Kettle",
@@ -369,7 +563,16 @@ const PUZZLES = [
      0,
      2,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      5,
+      8
+     ],
+     "table": "pSU="
+    }
    },
    {
     "name": "Loki",
@@ -382,7 +585,15 @@ const PUZZLES = [
     "mentions": [
      3,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6,
+      7
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Marble",
@@ -395,7 +606,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "cQ=="
+    }
    },
    {
     "name": "Nimbus",
@@ -408,7 +627,15 @@ const PUZZLES = [
     "mentions": [
      2,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      8
+     ],
+     "table": "+A=="
+    }
    }
   ],
   "liars": [
@@ -439,7 +666,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Bean",
@@ -452,7 +686,15 @@ const PUZZLES = [
     "mentions": [
      2,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      8
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Cricket",
@@ -465,7 +707,15 @@ const PUZZLES = [
     "mentions": [
      5,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      7
+     ],
+     "table": "JQ=="
+    }
    },
    {
     "name": "Dumpling",
@@ -480,7 +730,17 @@ const PUZZLES = [
      2,
      6,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3,
+      6,
+      8
+     ],
+     "table": "tPDw8A=="
+    }
    },
    {
     "name": "Fig",
@@ -499,7 +759,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "//8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AID/fw=="
+    }
    },
    {
     "name": "Goose",
@@ -509,7 +783,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "Mrrp. If you asked me, I'd say Fig is a liar.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Honey",
@@ -522,7 +797,15 @@ const PUZZLES = [
     "mentions": [
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6
+     ],
+     "table": "+g=="
+    }
    },
    {
     "name": "Iggy",
@@ -534,7 +817,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      7
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Jellybean",
@@ -547,7 +837,15 @@ const PUZZLES = [
     "mentions": [
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      7,
+      8
+     ],
+     "table": "jg=="
+    }
    }
   ],
   "liars": [
@@ -579,7 +877,15 @@ const PUZZLES = [
     "mentions": [
      3,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      5
+     ],
+     "table": "Vg=="
+    }
    },
    {
     "name": "Bean",
@@ -592,7 +898,15 @@ const PUZZLES = [
     "mentions": [
      0,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2
+     ],
+     "table": "sg=="
+    }
    },
    {
     "name": "Coco",
@@ -605,7 +919,15 @@ const PUZZLES = [
     "mentions": [
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      8
+     ],
+     "table": "ig=="
+    }
    },
    {
     "name": "Dusty",
@@ -619,7 +941,16 @@ const PUZZLES = [
      0,
      4,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      4,
+      6
+     ],
+     "table": "zGw="
+    }
    },
    {
     "name": "Ember",
@@ -638,7 +969,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "AQD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAA=="
+    }
    },
    {
     "name": "Fig",
@@ -652,7 +997,16 @@ const PUZZLES = [
      0,
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "table": "q1Q="
+    }
    },
    {
     "name": "Gizmo",
@@ -666,7 +1020,16 @@ const PUZZLES = [
      2,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      6,
+      8
+     ],
+     "table": "Hoc="
+    }
    },
    {
     "name": "Hazel",
@@ -679,7 +1042,15 @@ const PUZZLES = [
     "mentions": [
      1,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      7
+     ],
+     "table": "cA=="
+    }
    },
    {
     "name": "Inky",
@@ -692,7 +1063,15 @@ const PUZZLES = [
     "mentions": [
      1,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      6,
+      8
+     ],
+     "table": "4Q=="
+    }
    }
   ],
   "liars": [
@@ -724,7 +1103,15 @@ const PUZZLES = [
     "mentions": [
      3,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "pg=="
+    }
    },
    {
     "name": "Cricket",
@@ -737,7 +1124,15 @@ const PUZZLES = [
     "mentions": [
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      7,
+      8
+     ],
+     "table": "ZQ=="
+    }
    },
    {
     "name": "Ember",
@@ -750,7 +1145,15 @@ const PUZZLES = [
     "mentions": [
      1,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      6
+     ],
+     "table": "aQ=="
+    }
    },
    {
     "name": "Fudge",
@@ -762,7 +1165,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      0
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Hazel",
@@ -777,7 +1187,17 @@ const PUZZLES = [
      2,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      4,
+      5,
+      8
+     ],
+     "table": "WlpaHg=="
+    }
    },
    {
     "name": "Jellybean",
@@ -790,7 +1210,15 @@ const PUZZLES = [
     "mentions": [
      3,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5
+     ],
+     "table": "PA=="
+    }
    },
    {
     "name": "Kettle",
@@ -803,7 +1231,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      6
+     ],
+     "table": "9A=="
+    }
    },
    {
     "name": "Luna",
@@ -816,7 +1252,15 @@ const PUZZLES = [
     "mentions": [
      2,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      7
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Marble",
@@ -829,7 +1273,15 @@ const PUZZLES = [
     "mentions": [
      0,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      7,
+      8
+     ],
+     "table": "lg=="
+    }
    }
   ],
   "liars": [
@@ -863,7 +1315,17 @@ const PUZZLES = [
      3,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3,
+      5,
+      8
+     ],
+     "table": "WlpaVg=="
+    }
    },
    {
     "name": "Coco",
@@ -876,7 +1338,15 @@ const PUZZLES = [
     "mentions": [
      4,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "Kw=="
+    }
    },
    {
     "name": "Doodle",
@@ -890,7 +1360,16 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      7,
+      8
+     ],
+     "table": "+7o="
+    }
    },
    {
     "name": "Gizmo",
@@ -909,7 +1388,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "Af8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/w=="
+    }
    },
    {
     "name": "Inky",
@@ -923,7 +1416,16 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      6,
+      7,
+      8
+     ],
+     "table": "lqk="
+    }
    },
    {
     "name": "Kismet",
@@ -937,7 +1439,16 @@ const PUZZLES = [
      2,
      4,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      5,
+      8
+     ],
+     "table": "w0M="
+    }
    },
    {
     "name": "Luna",
@@ -949,7 +1460,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      6
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Marble",
@@ -959,7 +1477,8 @@ const PUZZLES = [
     "text": "*incomprehensible meowing*",
     "hidden": true,
     "secret": "You can trust Luna. That's a purr-fact.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Noodle",
@@ -972,7 +1491,15 @@ const PUZZLES = [
     "mentions": [
      2,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      8
+     ],
+     "table": "tA=="
+    }
    }
   ],
   "liars": [
@@ -1004,7 +1531,15 @@ const PUZZLES = [
     "mentions": [
      3,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "Kw=="
+    }
    },
    {
     "name": "Bean",
@@ -1017,7 +1552,15 @@ const PUZZLES = [
     "mentions": [
      3,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      3,
+      8
+     ],
+     "table": "qw=="
+    }
    },
    {
     "name": "Clover",
@@ -1030,7 +1573,15 @@ const PUZZLES = [
     "mentions": [
      4,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      7
+     ],
+     "table": "6g=="
+    }
    },
    {
     "name": "Gnocchi",
@@ -1044,7 +1595,16 @@ const PUZZLES = [
      2,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      5,
+      8
+     ],
+     "table": "nMw="
+    }
    },
    {
     "name": "Hazel",
@@ -1057,7 +1617,15 @@ const PUZZLES = [
     "mentions": [
      0,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      4
+     ],
+     "table": "Hg=="
+    }
    },
    {
     "name": "Indigo",
@@ -1069,7 +1637,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Jasper",
@@ -1082,7 +1657,15 @@ const PUZZLES = [
     "mentions": [
      4,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      6,
+      7
+     ],
+     "table": "Ng=="
+    }
    },
    {
     "name": "Kismet",
@@ -1096,7 +1679,16 @@ const PUZZLES = [
      0,
      1,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      7
+     ],
+     "table": "Fuk="
+    }
    },
    {
     "name": "Lentil",
@@ -1111,7 +1703,17 @@ const PUZZLES = [
      3,
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      4,
+      5,
+      8
+     ],
+     "table": "V1Woqg=="
+    }
    }
   ],
   "liars": [
@@ -1143,7 +1745,15 @@ const PUZZLES = [
     "mentions": [
      3,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      5
+     ],
+     "table": "Zw=="
+    }
    },
    {
     "name": "Clover",
@@ -1157,7 +1767,16 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "table": "vus="
+    }
    },
    {
     "name": "Doodle",
@@ -1169,7 +1788,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      7
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Espresso",
@@ -1182,7 +1808,15 @@ const PUZZLES = [
     "mentions": [
      0,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "7A=="
+    }
    },
    {
     "name": "Fudge",
@@ -1196,7 +1830,16 @@ const PUZZLES = [
      0,
      1,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "table": "Av0="
+    }
    },
    {
     "name": "Gizmo",
@@ -1215,7 +1858,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "AQAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA////fw=="
+    }
    },
    {
     "name": "Hazel",
@@ -1228,7 +1885,15 @@ const PUZZLES = [
     "mentions": [
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      8
+     ],
+     "table": "yQ=="
+    }
    },
    {
     "name": "Inky",
@@ -1242,7 +1907,16 @@ const PUZZLES = [
      4,
      6,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      6,
+      7,
+      8
+     ],
+     "table": "tPA="
+    }
    },
    {
     "name": "Juniper",
@@ -1252,7 +1926,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "*swishes tail* Among the cats to my left, there's at least one liar and at least one honest cat.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    }
   ],
   "liars": [
@@ -1283,7 +1958,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Cricket",
@@ -1297,7 +1979,16 @@ const PUZZLES = [
      0,
      2,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "table": "xsw="
+    }
    },
    {
     "name": "Dusty",
@@ -1311,7 +2002,16 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      7,
+      8
+     ],
+     "table": "qqk="
+    }
    },
    {
     "name": "Espresso",
@@ -1324,7 +2024,15 @@ const PUZZLES = [
     "mentions": [
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5
+     ],
+     "table": "1A=="
+    }
    },
    {
     "name": "Fudge",
@@ -1337,7 +2045,15 @@ const PUZZLES = [
     "mentions": [
      1,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      5
+     ],
+     "table": "nA=="
+    }
    },
    {
     "name": "Goose",
@@ -1350,7 +2066,15 @@ const PUZZLES = [
     "mentions": [
      0,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      5
+     ],
+     "table": "cQ=="
+    }
    },
    {
     "name": "Hazel",
@@ -1363,7 +2087,15 @@ const PUZZLES = [
     "mentions": [
      0,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "Hg=="
+    }
    },
    {
     "name": "Inky",
@@ -1378,7 +2110,17 @@ const PUZZLES = [
      4,
      6,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      6,
+      7,
+      8
+     ],
+     "table": "V6hVqg=="
+    }
    },
    {
     "name": "Loki",
@@ -1392,7 +2134,16 @@ const PUZZLES = [
      0,
      2,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      5,
+      8
+     ],
+     "table": "VSo="
+    }
    }
   ],
   "liars": [
@@ -1425,7 +2176,16 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "table": "mVk="
+    }
    },
    {
     "name": "Bagel",
@@ -1439,7 +2199,16 @@ const PUZZLES = [
      0,
      2,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "table": "yTM="
+    }
    },
    {
     "name": "Coco",
@@ -1449,7 +2218,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "I'm the only honest cat among the cats in my column.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Doodle",
@@ -1463,7 +2233,16 @@ const PUZZLES = [
      2,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      5,
+      8
+     ],
+     "table": "7v4="
+    }
    },
    {
     "name": "Gizmo",
@@ -1476,7 +2255,15 @@ const PUZZLES = [
     "mentions": [
      3,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Hazel",
@@ -1488,7 +2275,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5
+     ],
+     "table": "Bg=="
+    }
    },
    {
     "name": "Jasper",
@@ -1501,7 +2295,15 @@ const PUZZLES = [
     "mentions": [
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      7,
+      8
+     ],
+     "table": "1A=="
+    }
    },
    {
     "name": "Kismet",
@@ -1514,7 +2316,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "jg=="
+    }
    },
    {
     "name": "Luna",
@@ -1526,7 +2336,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      8
+     ],
+     "table": "Bg=="
+    }
    }
   ],
   "liars": [
@@ -1559,7 +2376,16 @@ const PUZZLES = [
      1,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      5,
+      6
+     ],
+     "table": "KkI="
+    }
    },
    {
     "name": "Dumpling",
@@ -1571,7 +2397,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      8
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Ember",
@@ -1584,7 +2417,15 @@ const PUZZLES = [
     "mentions": [
      1,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      5
+     ],
+     "table": "bA=="
+    }
    },
    {
     "name": "Gizmo",
@@ -1594,7 +2435,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "Hiss. One of Ash and Pepper is a liar, maybe both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Hazel",
@@ -1606,7 +2448,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      7
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Indigo",
@@ -1618,7 +2467,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5
+     ],
+     "table": "Bg=="
+    }
    },
    {
     "name": "Lentil",
@@ -1631,7 +2487,15 @@ const PUZZLES = [
     "mentions": [
      0,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      6,
+      7
+     ],
+     "table": "GQ=="
+    }
    },
    {
     "name": "Mango",
@@ -1644,7 +2508,15 @@ const PUZZLES = [
     "mentions": [
      2,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      7
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Pepper",
@@ -1657,7 +2529,15 @@ const PUZZLES = [
     "mentions": [
      0,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      8
+     ],
+     "table": "9g=="
+    }
    }
   ],
   "liars": [
@@ -1690,7 +2570,16 @@ const PUZZLES = [
      1,
      4,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4,
+      7
+     ],
+     "table": "mZk="
+    }
    },
    {
     "name": "Bagel",
@@ -1705,7 +2594,17 @@ const PUZZLES = [
      4,
      5,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      4,
+      5,
+      7
+     ],
+     "table": "6+7u7g=="
+    }
    },
    {
     "name": "Coco",
@@ -1715,7 +2614,8 @@ const PUZZLES = [
     "text": "*incomprehensible meowing*",
     "hidden": true,
     "secret": "All of the siamese cats are the same: all honest, or all liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Dusty",
@@ -1728,7 +2628,15 @@ const PUZZLES = [
     "mentions": [
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5
+     ],
+     "table": "rg=="
+    }
    },
    {
     "name": "Espresso",
@@ -1747,7 +2655,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "/v8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AgA=="
+    }
    },
    {
     "name": "Gnocchi",
@@ -1759,7 +2681,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Hobbes",
@@ -1771,7 +2700,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      8
+     ],
+     "table": "CQ=="
+    }
    },
    {
     "name": "Indigo",
@@ -1784,7 +2720,15 @@ const PUZZLES = [
     "mentions": [
      0,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      7
+     ],
+     "table": "tA=="
+    }
    },
    {
     "name": "Kiwi",
@@ -1798,7 +2742,16 @@ const PUZZLES = [
      0,
      5,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      7,
+      8
+     ],
+     "table": "V6g="
+    }
    }
   ],
   "liars": [
@@ -1836,7 +2789,21 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "mZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZGQ=="
+    }
    },
    {
     "name": "Bagel",
@@ -1849,7 +2816,15 @@ const PUZZLES = [
     "mentions": [
      2,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      4
+     ],
+     "table": "Kw=="
+    }
    },
    {
     "name": "Clover",
@@ -1863,7 +2838,16 @@ const PUZZLES = [
      0,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      5,
+      6
+     ],
+     "table": "394="
+    }
    },
    {
     "name": "Dumpling",
@@ -1876,7 +2860,15 @@ const PUZZLES = [
     "mentions": [
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6,
+      7
+     ],
+     "table": "lQ=="
+    }
    },
    {
     "name": "Espresso",
@@ -1889,7 +2881,15 @@ const PUZZLES = [
     "mentions": [
      0,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      6
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Fig",
@@ -1899,7 +2899,8 @@ const PUZZLES = [
     "text": "*chirps at a bird outside*",
     "hidden": true,
     "secret": "Mark my whiskers: either Ash is a liar, or all of Clover, Goose and me are honest. Maybe both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Goose",
@@ -1912,7 +2913,15 @@ const PUZZLES = [
     "mentions": [
      0,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "jg=="
+    }
    },
    {
     "name": "Hazel",
@@ -1926,7 +2935,16 @@ const PUZZLES = [
      2,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      7,
+      8
+     ],
+     "table": "4Xg="
+    }
    },
    {
     "name": "Indigo",
@@ -1939,7 +2957,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      8
+     ],
+     "table": "eA=="
+    }
    }
   ],
   "liars": [
@@ -1972,7 +2998,16 @@ const PUZZLES = [
      1,
      4,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4,
+      6
+     ],
+     "table": "VpU="
+    }
    },
    {
     "name": "Coco",
@@ -1984,7 +3019,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Doodle",
@@ -1994,7 +3036,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "*thinks hard* Either Luna is honest, or all of the corner cats are liars, or both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Felix",
@@ -2007,7 +3050,15 @@ const PUZZLES = [
     "mentions": [
      2,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      8
+     ],
+     "table": "Ng=="
+    }
    },
    {
     "name": "Hobbes",
@@ -2020,7 +3071,15 @@ const PUZZLES = [
     "mentions": [
      1,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      5
+     ],
+     "table": "TA=="
+    }
    },
    {
     "name": "Iggy",
@@ -2033,7 +3092,15 @@ const PUZZLES = [
     "mentions": [
      1,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      6
+     ],
+     "table": "nA=="
+    }
    },
    {
     "name": "Juniper",
@@ -2052,7 +3119,21 @@ const PUZZLES = [
      5,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "AAAAAAAAAAD//////////wAAAAAAAAAA/////////38AAAAAAAAAAP//////////AAAAAAAAAAD//////////w=="
+    }
    },
    {
     "name": "Luna",
@@ -2064,7 +3145,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      8
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Marble",
@@ -2079,7 +3167,17 @@ const PUZZLES = [
      2,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      6,
+      7,
+      8
+     ],
+     "table": "M8z//w=="
+    }
    }
   ],
   "liars": [
@@ -2112,7 +3210,16 @@ const PUZZLES = [
      11,
      12,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      11,
+      12,
+      14
+     ],
+     "table": "vus="
+    }
    },
    {
     "name": "Biscuit",
@@ -2127,7 +3234,17 @@ const PUZZLES = [
      6,
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      6,
+      9,
+      10
+     ],
+     "table": "qmpqVg=="
+    }
    },
    {
     "name": "Cricket",
@@ -2140,7 +3257,15 @@ const PUZZLES = [
     "mentions": [
      8,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      8,
+      12
+     ],
+     "table": "qQ=="
+    }
    },
    {
     "name": "Doodle",
@@ -2154,7 +3279,16 @@ const PUZZLES = [
      0,
      1,
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "table": "gX4="
+    }
    },
    {
     "name": "Ember",
@@ -2167,7 +3301,15 @@ const PUZZLES = [
     "mentions": [
      9,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      9,
+      14
+     ],
+     "table": "6g=="
+    }
    },
    {
     "name": "Goose",
@@ -2179,7 +3321,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Honey",
@@ -2193,7 +3342,16 @@ const PUZZLES = [
      2,
      10,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      10,
+      15
+     ],
+     "table": "nMw="
+    }
    },
    {
     "name": "Inky",
@@ -2219,7 +3377,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "//8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/////wAA//8AAP//AAD//wAAAAD//wAA//8AAP//AAD/////AAD//wAA//8AAP//AAAAAP//AAD//wAA//8AAP////8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA/38="
+    }
    },
    {
     "name": "Jasper",
@@ -2234,7 +3413,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "AYD+fw=="
+    }
    },
    {
     "name": "Kiwi",
@@ -2247,7 +3436,15 @@ const PUZZLES = [
     "mentions": [
      11,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      9,
+      11,
+      12
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Loki",
@@ -2260,7 +3457,15 @@ const PUZZLES = [
     "mentions": [
      3,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      10,
+      14
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Mango",
@@ -2273,7 +3478,15 @@ const PUZZLES = [
     "mentions": [
      0,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      11
+     ],
+     "table": "cQ=="
+    }
    },
    {
     "name": "Nugget",
@@ -2283,7 +3496,8 @@ const PUZZLES = [
     "text": "*chirps at a bird outside*",
     "hidden": true,
     "secret": "Exactly one of Mango and Quill is a liar.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Pickles",
@@ -2295,7 +3509,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      13
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Quill",
@@ -2307,7 +3528,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      14
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Rolo",
@@ -2321,7 +3549,16 @@ const PUZZLES = [
      12,
      13,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "Fuk="
+    }
    }
   ],
   "liars": [
@@ -2362,7 +3599,17 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "VlVVlQ=="
+    }
    },
    {
     "name": "Dumpling",
@@ -2376,7 +3623,16 @@ const PUZZLES = [
      8,
      13,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      8,
+      13,
+      14
+     ],
+     "table": "taU="
+    }
    },
    {
     "name": "Echo",
@@ -2389,7 +3645,15 @@ const PUZZLES = [
     "mentions": [
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      12,
+      15
+     ],
+     "table": "qw=="
+    }
    },
    {
     "name": "Fig",
@@ -2404,7 +3668,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "WlpaWg=="
+    }
    },
    {
     "name": "Gizmo",
@@ -2418,7 +3692,16 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "VNU="
+    }
    },
    {
     "name": "Honey",
@@ -2431,7 +3714,15 @@ const PUZZLES = [
     "mentions": [
      0,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      11
+     ],
+     "table": "TA=="
+    }
    },
    {
     "name": "Jellybean",
@@ -2446,7 +3737,17 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      6
+     ],
+     "table": "AQD+/w=="
+    }
    },
    {
     "name": "Loki",
@@ -2459,7 +3760,15 @@ const PUZZLES = [
     "mentions": [
      3,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      7,
+      15
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Mango",
@@ -2471,7 +3780,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      8
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Nugget",
@@ -2486,7 +3802,17 @@ const PUZZLES = [
      3,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      9,
+      12,
+      15
+     ],
+     "table": "4fDweA=="
+    }
    },
    {
     "name": "Oreo",
@@ -2501,7 +3827,17 @@ const PUZZLES = [
      8,
      9,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "V6pVqg=="
+    }
    },
    {
     "name": "Paprika",
@@ -2513,7 +3849,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      11,
+      13
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Queenie",
@@ -2527,7 +3870,16 @@ const PUZZLES = [
      0,
      4,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      8,
+      12
+     ],
+     "table": "foE="
+    }
    },
    {
     "name": "Truffle",
@@ -2540,7 +3892,15 @@ const PUZZLES = [
     "mentions": [
      8,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      11,
+      13
+     ],
+     "table": "mA=="
+    }
    },
    {
     "name": "Udon",
@@ -2562,7 +3922,24 @@ const PUZZLES = [
      12,
      13,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+    }
    },
    {
     "name": "Vinny",
@@ -2574,7 +3951,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      15
+     ],
+     "table": "BQ=="
+    }
    }
   ],
   "liars": [
@@ -2616,7 +4000,18 @@ const PUZZLES = [
      6,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "VVVVVaqqqmo="
+    }
    },
    {
     "name": "Biscuit",
@@ -2628,7 +4023,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      9
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Cricket",
@@ -2643,7 +4045,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "pqqqqg=="
+    }
    },
    {
     "name": "Doodle",
@@ -2655,7 +4067,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      14
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Fudge",
@@ -2670,7 +4089,17 @@ const PUZZLES = [
      8,
      9,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      8,
+      9,
+      12
+     ],
+     "table": "zTPMMw=="
+    }
    },
    {
     "name": "Goose",
@@ -2682,7 +4111,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Hazel",
@@ -2696,7 +4132,16 @@ const PUZZLES = [
      2,
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      10,
+      14
+     ],
+     "table": "zUw="
+    }
    },
    {
     "name": "Indigo",
@@ -2712,7 +4157,18 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      7,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "k5mZmZmZmZk="
+    }
    },
    {
     "name": "Jellybean",
@@ -2727,7 +4183,17 @@ const PUZZLES = [
      6,
      13,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      6,
+      8,
+      13,
+      14
+     ],
+     "table": "4fDweA=="
+    }
    },
    {
     "name": "Kiwi",
@@ -2740,7 +4206,15 @@ const PUZZLES = [
     "mentions": [
      2,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      9,
+      11
+     ],
+     "table": "3A=="
+    }
    },
    {
     "name": "Lentil",
@@ -2753,7 +4227,15 @@ const PUZZLES = [
     "mentions": [
      3,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      10
+     ],
+     "table": "eA=="
+    }
    },
    {
     "name": "Mango",
@@ -2779,7 +4261,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "gGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJfp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7///////////////////////////////////////////////////////////////////////////////////9oFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////2gWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADp/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////FgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9oFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////xYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////FgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////2gWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADp/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////FgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8WAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////FgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8="
+    }
    },
    {
     "name": "Olive",
@@ -2791,7 +4294,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      15
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Pepper",
@@ -2803,7 +4313,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      13
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Queenie",
@@ -2817,7 +4334,16 @@ const PUZZLES = [
      10,
      13,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      13,
+      14,
+      15
+     ],
+     "table": "8OE="
+    }
    },
    {
     "name": "Tofu",
@@ -2831,7 +4357,16 @@ const PUZZLES = [
      3,
      11,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      11,
+      14,
+      15
+     ],
+     "table": "V6g="
+    }
    }
   ],
   "liars": [
@@ -2870,7 +4405,15 @@ const PUZZLES = [
     "mentions": [
      1,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      12
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Biscuit",
@@ -2883,7 +4426,15 @@ const PUZZLES = [
     "mentions": [
      4,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      13
+     ],
+     "table": "pg=="
+    }
    },
    {
     "name": "Cricket",
@@ -2895,7 +4446,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      7
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Doodle",
@@ -2905,7 +4463,8 @@ const PUZZLES = [
     "text": "*chirps at a bird outside*",
     "hidden": true,
     "secret": "*thinks hard* Either Juniper is honest, or all of Hazel, Juniper and me are honest, or both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Espresso",
@@ -2921,7 +4480,18 @@ const PUZZLES = [
      5,
      9,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      3,
+      4,
+      5,
+      9,
+      13
+     ],
+     "table": "LTw8PDw8PDw="
+    }
    },
    {
     "name": "Fig",
@@ -2935,7 +4505,16 @@ const PUZZLES = [
      4,
      7,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      7,
+      15
+     ],
+     "table": "2s0="
+    }
    },
    {
     "name": "Hazel",
@@ -2947,7 +4526,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      10
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Indigo",
@@ -2961,7 +4547,16 @@ const PUZZLES = [
      4,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "IN8="
+    }
    },
    {
     "name": "Juniper",
@@ -2975,7 +4570,16 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "rqo="
+    }
    },
    {
     "name": "Kiwi",
@@ -2987,7 +4591,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      9
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Luna",
@@ -2999,7 +4610,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      13
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Mochi",
@@ -3012,7 +4630,15 @@ const PUZZLES = [
     "mentions": [
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      10,
+      11
+     ],
+     "table": "jg=="
+    }
    },
    {
     "name": "Otis",
@@ -3025,7 +4651,15 @@ const PUZZLES = [
     "mentions": [
      0,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      11,
+      12
+     ],
+     "table": "8g=="
+    }
    },
    {
     "name": "Quill",
@@ -3039,7 +4673,16 @@ const PUZZLES = [
      3,
      6,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6,
+      8,
+      13
+     ],
+     "table": "pf8="
+    }
    },
    {
     "name": "Rolo",
@@ -3052,7 +4695,15 @@ const PUZZLES = [
     "mentions": [
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      9,
+      10,
+      14
+     ],
+     "table": "8g=="
+    }
    },
    {
     "name": "Sprout",
@@ -3066,7 +4717,16 @@ const PUZZLES = [
      12,
      13,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "Af4="
+    }
    }
   ],
   "liars": [
@@ -3106,7 +4766,16 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "table": "qyo="
+    }
    },
    {
     "name": "Bean",
@@ -3121,7 +4790,17 @@ const PUZZLES = [
      6,
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      6,
+      10,
+      14
+     ],
+     "table": "VlVVlQ=="
+    }
    },
    {
     "name": "Clover",
@@ -3135,7 +4814,16 @@ const PUZZLES = [
      6,
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      10,
+      14
+     ],
+     "table": "qqY="
+    }
    },
    {
     "name": "Felix",
@@ -3147,7 +4835,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      0
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Gnocchi",
@@ -3161,7 +4856,16 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "qio="
+    }
    },
    {
     "name": "Honey",
@@ -3173,7 +4877,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      9
+     ],
+     "table": "Dg=="
+    }
    },
    {
     "name": "Jellybean",
@@ -3189,7 +4900,18 @@ const PUZZLES = [
      10,
      12,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      6,
+      10,
+      12,
+      13
+     ],
+     "table": "/v//9/Hw8Pg="
+    }
    },
    {
     "name": "Kettle",
@@ -3202,7 +4924,15 @@ const PUZZLES = [
     "mentions": [
      3,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      5,
+      7
+     ],
+     "table": "8Q=="
+    }
    },
    {
     "name": "Marble",
@@ -3216,7 +4946,16 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "quo="
+    }
    },
    {
     "name": "Nugget",
@@ -3228,7 +4967,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      9
+     ],
+     "table": "DA=="
+    }
    },
    {
     "name": "Otis",
@@ -3251,7 +4997,25 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "gGhoFmgWFgFoFhYBFgEBAH+Xl+mX6en+l+np/un+/v9oFhYBFgEBABYBAQABAAAAl+np/un+/v/p/v7//v///2gWFgEWAQEAFgEBAAEAAACX6en+6f7+/+n+/v/+////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////9oFhYBFgEBABYBAQABAAAAl+np/un+/v/p/v7//v///xYBAQABAAAAAQAAAAAAAADp/v7//v////7/////////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////2gWFgEWAQEAFgEBAAEAAACX6en+6f7+/+n+/v/+////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////8WAQEAAQAAAAEAAAAAAAAA6f7+//7////+/////////wEAAAAAAAAAAAAAAAAAAAD+////////////////////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////wEAAAAAAAAAAAAAAAAAAAD+////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////9oFhYBFgEBABYBAQABAAAAl+np/un+/v/p/v7//v///xYBAQABAAAAAQAAAAAAAADp/v7//v////7/////////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////xYBAQABAAAAAQAAAAAAAADp/v7//v////7/////////AQAAAAAAAAAAAAAAAAAAAP7///////////////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////FgEBAAEAAAABAAAAAAAAAOn+/v/+/////v////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////wEAAAAAAAAAAAAAAAAAAAD+////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8BAAAAAAAAAAAAAAAAAAAA/v///////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////w=="
+    }
    },
    {
     "name": "Rolo",
@@ -3264,7 +5028,15 @@ const PUZZLES = [
     "mentions": [
      3,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      11,
+      15
+     ],
+     "table": "PQ=="
+    }
    },
    {
     "name": "Sushi",
@@ -3277,7 +5049,15 @@ const PUZZLES = [
     "mentions": [
      4,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      9,
+      12
+     ],
+     "table": "eA=="
+    }
    },
    {
     "name": "Tofu",
@@ -3287,7 +5067,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "*swishes tail* Among the cats in my column, there's at least one liar and at least one honest cat.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Umber",
@@ -3302,7 +5083,17 @@ const PUZZLES = [
      5,
      9,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      9,
+      13,
+      14
+     ],
+     "table": "qqpVVQ=="
+    }
    },
    {
     "name": "Waffles",
@@ -3315,7 +5106,15 @@ const PUZZLES = [
     "mentions": [
      4,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      6,
+      15
+     ],
+     "table": "+A=="
+    }
    }
   ],
   "liars": [
@@ -3363,7 +5162,24 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo="
+    }
    },
    {
     "name": "Cricket",
@@ -3377,7 +5193,16 @@ const PUZZLES = [
      2,
      3,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      3,
+      6
+     ],
+     "table": "alU="
+    }
    },
    {
     "name": "Dusty",
@@ -3403,7 +5228,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PHw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PA="
+    }
    },
    {
     "name": "Espresso",
@@ -3415,7 +5261,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      10
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Fig",
@@ -3429,7 +5282,16 @@ const PUZZLES = [
      0,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      5,
+      8
+     ],
+     "table": "yWw="
+    }
    },
    {
     "name": "Goose",
@@ -3444,7 +5306,17 @@ const PUZZLES = [
      10,
      11,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      7,
+      10,
+      11,
+      12
+     ],
+     "table": "6+vruw=="
+    }
    },
    {
     "name": "Hazel",
@@ -3459,7 +5331,17 @@ const PUZZLES = [
      3,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6,
+      12,
+      15
+     ],
+     "table": "8PDh8A=="
+    }
    },
    {
     "name": "Iggy",
@@ -3469,7 +5351,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "Mark my whiskers: either Loki is honest, or all of the ginger cats are liars. Maybe both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Juniper",
@@ -3483,7 +5366,16 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "lqk="
+    }
    },
    {
     "name": "Kismet",
@@ -3497,7 +5389,16 @@ const PUZZLES = [
      5,
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      9,
+      10
+     ],
+     "table": "8XA="
+    }
    },
    {
     "name": "Loki",
@@ -3512,7 +5413,17 @@ const PUZZLES = [
      3,
      7,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      7,
+      9,
+      10
+     ],
+     "table": "AgD9/w=="
+    }
    },
    {
     "name": "Noodle",
@@ -3527,7 +5438,17 @@ const PUZZLES = [
      3,
      7,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      7,
+      11,
+      15
+     ],
+     "table": "q1WqVQ=="
+    }
    },
    {
     "name": "Olive",
@@ -3540,7 +5461,15 @@ const PUZZLES = [
     "mentions": [
      11,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      11,
+      12,
+      15
+     ],
+     "table": "3A=="
+    }
    },
    {
     "name": "Pepper",
@@ -3554,7 +5483,16 @@ const PUZZLES = [
      9,
      12,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      9,
+      12,
+      13,
+      14
+     ],
+     "table": "D/A="
+    }
    },
    {
     "name": "Rolo",
@@ -3569,7 +5507,17 @@ const PUZZLES = [
      10,
      11,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      10,
+      11,
+      12,
+      14
+     ],
+     "table": "qupVFQ=="
+    }
    },
    {
     "name": "Sushi",
@@ -3591,7 +5539,24 @@ const PUZZLES = [
      12,
      13,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAAAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8="
+    }
    }
   ],
   "liars": [
@@ -3643,7 +5608,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "q6qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU="
+    }
    },
    {
     "name": "Clover",
@@ -3656,7 +5642,15 @@ const PUZZLES = [
     "mentions": [
      7,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      7,
+      13
+     ],
+     "table": "qw=="
+    }
    },
    {
     "name": "Dusty",
@@ -3669,7 +5663,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      4
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Echo",
@@ -3691,7 +5693,24 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wAA/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A//8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AAP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP//AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AAD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD//wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wAA/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A//8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AAP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP//AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AAD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD//wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wAA/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A//8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AAP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AH8="
+    }
    },
    {
     "name": "Gizmo",
@@ -3706,7 +5725,17 @@ const PUZZLES = [
      3,
      6,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      4,
+      6,
+      14
+     ],
+     "table": "0vDw8A=="
+    }
    },
    {
     "name": "Inky",
@@ -3719,7 +5748,15 @@ const PUZZLES = [
     "mentions": [
      2,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      7
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Juniper",
@@ -3732,7 +5769,15 @@ const PUZZLES = [
     "mentions": [
      2,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      15
+     ],
+     "table": "7A=="
+    }
    },
    {
     "name": "Kettle",
@@ -3744,7 +5789,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      8
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Mochi",
@@ -3758,7 +5810,16 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "qao="
+    }
    },
    {
     "name": "Nimbus",
@@ -3772,7 +5833,16 @@ const PUZZLES = [
      5,
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      9,
+      10
+     ],
+     "table": "Do8="
+    }
    },
    {
     "name": "Otis",
@@ -3786,7 +5856,16 @@ const PUZZLES = [
      7,
      11,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      10,
+      11,
+      14
+     ],
+     "table": "zs8="
+    }
    },
    {
     "name": "Pickles",
@@ -3796,7 +5875,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "At least one of Kettle, Tofu and me is a liar.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Queenie",
@@ -3810,7 +5890,16 @@ const PUZZLES = [
      0,
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      7,
+      8,
+      12
+     ],
+     "table": "BPs="
+    }
    },
    {
     "name": "Saffron",
@@ -3823,7 +5912,15 @@ const PUZZLES = [
     "mentions": [
      4,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      9,
+      13
+     ],
+     "table": "4Q=="
+    }
    },
    {
     "name": "Tofu",
@@ -3837,7 +5934,16 @@ const PUZZLES = [
      10,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      12,
+      14,
+      15
+     ],
+     "table": "8OE="
+    }
    },
    {
     "name": "Udon",
@@ -3851,7 +5957,16 @@ const PUZZLES = [
      0,
      3,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      12,
+      15
+     ],
+     "table": "gP8="
+    }
    }
   ],
   "liars": [
@@ -3890,7 +6005,15 @@ const PUZZLES = [
     "mentions": [
      1,
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4
+     ],
+     "table": "WQ=="
+    }
    },
    {
     "name": "Bagel",
@@ -3906,7 +6029,18 @@ const PUZZLES = [
      3,
      6,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      14
+     ],
+     "table": "yczMzDMzMzM="
+    }
    },
    {
     "name": "Coco",
@@ -3921,7 +6055,17 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "qmqqqg=="
+    }
    },
    {
     "name": "Dumpling",
@@ -3933,7 +6077,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      7
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Echo",
@@ -3946,7 +6097,15 @@ const PUZZLES = [
     "mentions": [
      3,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      9
+     ],
+     "table": "3Q=="
+    }
    },
    {
     "name": "Felix",
@@ -3961,7 +6120,17 @@ const PUZZLES = [
      3,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      5,
+      12,
+      15
+     ],
+     "table": "4fDweA=="
+    }
    },
    {
     "name": "Goose",
@@ -3974,7 +6143,15 @@ const PUZZLES = [
     "mentions": [
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      9,
+      10
+     ],
+     "table": "lQ=="
+    }
    },
    {
     "name": "Honey",
@@ -3988,7 +6165,16 @@ const PUZZLES = [
      4,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "EO8="
+    }
    },
    {
     "name": "Iggy",
@@ -4002,7 +6188,16 @@ const PUZZLES = [
      4,
      9,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      8,
+      9,
+      12
+     ],
+     "table": "yWw="
+    }
    },
    {
     "name": "Jellybean",
@@ -4012,7 +6207,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "Purr. Dumpling would tell you I'm honest.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Kismet",
@@ -4035,7 +6231,25 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "AQAAAAAAAAAAAAAAAAAAAP7///////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAACA////////////////////fw=="
+    }
    },
    {
     "name": "Marble",
@@ -4057,7 +6271,24 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "/v///////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAAD/////////////////////AAAAAAAAAAAAAAAAAAAAAP////////////////////8AAAAAAAAAAAAAAAAAAAAA/////////////////////wAAAAAAAAAAAAAAAAAAAIA="
+    }
    },
    {
     "name": "Otis",
@@ -4072,7 +6303,17 @@ const PUZZLES = [
      4,
      5,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      5,
+      12,
+      13
+     ],
+     "table": "q1WqVQ=="
+    }
    },
    {
     "name": "Pickles",
@@ -4085,7 +6326,15 @@ const PUZZLES = [
     "mentions": [
      4,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      13,
+      14
+     ],
+     "table": "nA=="
+    }
    },
    {
     "name": "Queenie",
@@ -4111,7 +6360,28 @@ const PUZZLES = [
      12,
      13,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "AICAaIBoaBaAaGgWaBYWAYBoaBZoFhYBaBYWARYBAQCAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAACAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/l5fpl+np/pfp6f7p/v7/l+np/un+/v/p/v7//v///5fp6f7p/v7/6f7+//7////p/v7//v////7/////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////v/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4BoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////v/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////v/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8="
+    }
    },
    {
     "name": "Ravioli",
@@ -4126,7 +6396,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7,
+      15
+     ],
+     "table": "EADv/w=="
+    }
    }
   ],
   "liars": [
@@ -4169,7 +6449,19 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      5,
+      6,
+      9,
+      10,
+      11
+     ],
+     "table": "u7u7u7u7u/vu7u7u7u7urg=="
+    }
    },
    {
     "name": "Bagel",
@@ -4184,7 +6476,17 @@ const PUZZLES = [
      3,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      3,
+      12,
+      15
+     ],
+     "table": "zMzJzA=="
+    }
    },
    {
     "name": "Cricket",
@@ -4197,7 +6499,15 @@ const PUZZLES = [
     "mentions": [
      7,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      7,
+      9
+     ],
+     "table": "ag=="
+    }
    },
    {
     "name": "Dumpling",
@@ -4212,7 +6522,17 @@ const PUZZLES = [
      1,
      2,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      11
+     ],
+     "table": "/wCAfw=="
+    }
    },
    {
     "name": "Espresso",
@@ -4225,7 +6545,15 @@ const PUZZLES = [
     "mentions": [
      10,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      10,
+      13
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Felix",
@@ -4238,7 +6566,15 @@ const PUZZLES = [
     "mentions": [
      4,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      12
+     ],
+     "table": "Ng=="
+    }
    },
    {
     "name": "Hazel",
@@ -4253,7 +6589,17 @@ const PUZZLES = [
      5,
      7,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      6,
+      7,
+      10
+     ],
+     "table": "8OHw8A=="
+    }
    },
    {
     "name": "Jellybean",
@@ -4267,7 +6613,16 @@ const PUZZLES = [
      4,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "gX4="
+    }
    },
    {
     "name": "Kettle",
@@ -4282,7 +6637,17 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      8
+     ],
+     "table": "zMwzMw=="
+    }
    },
    {
     "name": "Loki",
@@ -4294,7 +6659,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      9,
+      14
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Mango",
@@ -4309,7 +6681,17 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "vru76w=="
+    }
    },
    {
     "name": "Nimbus",
@@ -4319,7 +6701,8 @@ const PUZZLES = [
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
     "secret": "Mrrp. Either Cricket is honest, or all of the cats in the middle are liars. Maybe both.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Oreo",
@@ -4329,7 +6712,8 @@ const PUZZLES = [
     "text": "*incomprehensible meowing*",
     "hidden": true,
     "secret": "Among the cats to my right, there are both honest cats and liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Paprika",
@@ -4344,7 +6728,17 @@ const PUZZLES = [
      6,
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      9,
+      10,
+      13
+     ],
+     "table": "EADv/w=="
+    }
    },
    {
     "name": "Quill",
@@ -4359,7 +6753,17 @@ const PUZZLES = [
      5,
      9,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      9,
+      13,
+      14
+     ],
+     "table": "EADv/w=="
+    }
    },
    {
     "name": "Rolo",
@@ -4372,7 +6776,15 @@ const PUZZLES = [
     "mentions": [
      6,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      11,
+      15
+     ],
+     "table": "8Q=="
+    }
    }
   ],
   "liars": [
@@ -4411,7 +6823,15 @@ const PUZZLES = [
     "mentions": [
      4,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      15
+     ],
+     "table": "Kw=="
+    }
    },
    {
     "name": "Bagel",
@@ -4426,7 +6846,17 @@ const PUZZLES = [
      6,
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      6,
+      9,
+      10
+     ],
+     "table": "qqmqqg=="
+    }
    },
    {
     "name": "Clover",
@@ -4441,7 +6871,17 @@ const PUZZLES = [
      7,
      11,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      3,
+      7,
+      11,
+      15
+     ],
+     "table": "qmpqlg=="
+    }
    },
    {
     "name": "Dumpling",
@@ -4454,7 +6894,15 @@ const PUZZLES = [
     "mentions": [
      7,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      7,
+      8
+     ],
+     "table": "uw=="
+    }
    },
    {
     "name": "Fig",
@@ -4468,7 +6916,16 @@ const PUZZLES = [
      0,
      8,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      8,
+      12
+     ],
+     "table": "pNo="
+    }
    },
    {
     "name": "Hazel",
@@ -4481,7 +6938,15 @@ const PUZZLES = [
     "mentions": [
      6,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      12
+     ],
+     "table": "+g=="
+    }
    },
    {
     "name": "Inky",
@@ -4496,7 +6961,17 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      6
+     ],
+     "table": "EADv/w=="
+    }
    },
    {
     "name": "Jasper",
@@ -4511,7 +6986,17 @@ const PUZZLES = [
      6,
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      7,
+      10,
+      14
+     ],
+     "table": "0vDw8A=="
+    }
    },
    {
     "name": "Kettle",
@@ -4521,7 +7006,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "*slow blinks* If you asked me about Jasper, I'd say honest.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Marble",
@@ -4535,7 +7021,16 @@ const PUZZLES = [
      5,
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      9,
+      10
+     ],
+     "table": "8XA="
+    }
    },
    {
     "name": "Nimbus",
@@ -4548,7 +7043,15 @@ const PUZZLES = [
     "mentions": [
      11,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      11,
+      15
+     ],
+     "table": "vA=="
+    }
    },
    {
     "name": "Oreo",
@@ -4561,7 +7064,15 @@ const PUZZLES = [
     "mentions": [
      3,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      10,
+      11
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Pepper",
@@ -4571,7 +7082,8 @@ const PUZZLES = [
     "text": "Mrrrow mrrp mew.",
     "hidden": true,
     "secret": "I'm the only honest cat among Hazel, Inky and me.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Quill",
@@ -4585,7 +7097,16 @@ const PUZZLES = [
      1,
      5,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      9,
+      13
+     ],
+     "table": "EO8="
+    }
    },
    {
     "name": "Ravioli",
@@ -4597,7 +7118,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      13,
+      14
+     ],
+     "table": "DQ=="
+    }
    },
    {
     "name": "Saffron",
@@ -4609,7 +7137,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      15
+     ],
+     "table": "BQ=="
+    }
    }
   ],
   "liars": [
@@ -4649,7 +7184,16 @@ const PUZZLES = [
      4,
      11,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      11,
+      15
+     ],
+     "table": "aqo="
+    }
    },
    {
     "name": "Doodle",
@@ -4675,7 +7219,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "zMzMTMxMTKTMTEykTKSk2sxMTKRMpKTaTKSk2qTa2s3MTEykTKSk2kykpNqk2trNTKSk2qTa2s2k2trN2s3NzMxMTKRMpKTaTKSk2qTa2s1MpKTapNrazaTa2s3azc3MTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMzMTEykTKSk2kykpNqk2trNTKSk2qTa2s2k2trN2s3NzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzMxMTKRMpKTaTKSk2qTa2s1MpKTapNrazaTa2s3azc3MTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMTEykTKSk2kykpNqk2trNTKSk2qTa2s2k2trN2s3NzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxMTKRMpKTaTKSk2qTa2s1MpKTapNrazaTa2s3azc3MTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTEykTKSk2kykpNqk2trNTKSk2qTa2s2k2trN2s3NzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzEykpNqk2trNpNrazdrNzcyk2trN2s3NzNrNzczNzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxMTKRMpKTaTKSk2qTa2s1MpKTapNrazaTa2s3azc3MTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxMpKTapNrazaTa2s3azc3MpNrazdrNzczazc3MzczMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMpNrazdrNzczazc3MzczMzNrNzczNzMzMzczMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTKSk2qTa2s2k2trN2s3NzKTa2s3azc3M2s3NzM3MzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyk2trN2s3NzNrNzczNzMzM2s3NzM3MzMzNzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNrNzczNzMzMzczMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzKTa2s3azc3M2s3NzM3MzMzazc3MzczMzM3MzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzazc3MzczMzM3MzMzMzMzMzczMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzczMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM2s3NzM3MzMzNzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM3MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw="
+    }
    },
    {
     "name": "Echo",
@@ -4687,7 +7252,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      0
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Felix",
@@ -4697,7 +7269,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "Same story for all of the grey cats: all honest, or all liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Honey",
@@ -4710,7 +7283,15 @@ const PUZZLES = [
     "mentions": [
      1,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      12
+     ],
+     "table": "Ng=="
+    }
    },
    {
     "name": "Jasper",
@@ -4725,7 +7306,17 @@ const PUZZLES = [
      9,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "qqpqqg=="
+    }
    },
    {
     "name": "Kiwi",
@@ -4739,7 +7330,16 @@ const PUZZLES = [
      1,
      5,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      6,
+      9
+     ],
+     "table": "9vk="
+    }
    },
    {
     "name": "Luna",
@@ -4754,7 +7354,17 @@ const PUZZLES = [
      4,
      9,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      7,
+      9,
+      14
+     ],
+     "table": "x8PDww=="
+    }
    },
    {
     "name": "Mochi",
@@ -4767,7 +7377,15 @@ const PUZZLES = [
     "mentions": [
      6,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      8,
+      11
+     ],
+     "table": "7A=="
+    }
    },
    {
     "name": "Noodle",
@@ -4777,7 +7395,8 @@ const PUZZLES = [
     "text": "*chirps at a bird outside*",
     "hidden": true,
     "secret": "There's a mix among the cats above me: some honest, some liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Pepper",
@@ -4792,7 +7411,17 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      10,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "qaqqag=="
+    }
    },
    {
     "name": "Rolo",
@@ -4806,7 +7435,16 @@ const PUZZLES = [
      7,
      10,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      10,
+      11,
+      15
+     ],
+     "table": "ePA="
+    }
    },
    {
     "name": "Sprout",
@@ -4819,7 +7457,15 @@ const PUZZLES = [
     "mentions": [
      7,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      9,
+      12
+     ],
+     "table": "+A=="
+    }
    },
    {
     "name": "Truffle",
@@ -4831,7 +7477,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      13,
+      15
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Vinny",
@@ -4845,7 +7498,16 @@ const PUZZLES = [
      3,
      5,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      5,
+      6,
+      14
+     ],
+     "table": "af8="
+    }
    },
    {
     "name": "Waldo",
@@ -4859,7 +7521,16 @@ const PUZZLES = [
      0,
      3,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      12,
+      15
+     ],
+     "table": "D3A="
+    }
    }
   ],
   "liars": [
@@ -4899,7 +7570,16 @@ const PUZZLES = [
      1,
      3,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      3,
+      10
+     ],
+     "table": "ZWY="
+    }
    },
    {
     "name": "Doodle",
@@ -4912,7 +7592,15 @@ const PUZZLES = [
     "mentions": [
      0,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      12
+     ],
+     "table": "yQ=="
+    }
    },
    {
     "name": "Echo",
@@ -4922,7 +7610,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "*purrs* Pepper and Rusty are both truth-tellers or both fibbers.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Felix",
@@ -4937,7 +7626,17 @@ const PUZZLES = [
      6,
      12,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6,
+      12,
+      15
+     ],
+     "table": "/Pzt/A=="
+    }
    },
    {
     "name": "Goose",
@@ -4950,7 +7649,15 @@ const PUZZLES = [
     "mentions": [
      1,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Honey",
@@ -4964,7 +7671,16 @@ const PUZZLES = [
      2,
      11,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      11,
+      13
+     ],
+     "table": "7d4="
+    }
    },
    {
     "name": "Indigo",
@@ -4974,7 +7690,8 @@ const PUZZLES = [
     "text": "*chirps at a bird outside*",
     "hidden": true,
     "secret": "Umber is the only liar among the corner cats.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Kettle",
@@ -4987,7 +7704,15 @@ const PUZZLES = [
     "mentions": [
      9,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      7,
+      9,
+      12
+     ],
+     "table": "ig=="
+    }
    },
    {
     "name": "Marble",
@@ -5003,7 +7728,18 @@ const PUZZLES = [
      9,
      10,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      15
+     ],
+     "table": "4fDw8A8PDw8="
+    }
    },
    {
     "name": "Noodle",
@@ -5015,7 +7751,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      9
+     ],
+     "table": "CQ=="
+    }
    },
    {
     "name": "Olive",
@@ -5030,7 +7773,17 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      10
+     ],
+     "table": "FgHp/g=="
+    }
    },
    {
     "name": "Pepper",
@@ -5056,7 +7809,28 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8="
+    }
    },
    {
     "name": "Quincy",
@@ -5070,7 +7844,16 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "vKs="
+    }
    },
    {
     "name": "Rusty",
@@ -5083,7 +7866,15 @@ const PUZZLES = [
     "mentions": [
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      13
+     ],
+     "table": "0g=="
+    }
    },
    {
     "name": "Saffron",
@@ -5096,7 +7887,15 @@ const PUZZLES = [
     "mentions": [
      1,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      7,
+      14
+     ],
+     "table": "hw=="
+    }
    },
    {
     "name": "Umber",
@@ -5108,7 +7907,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      15
+     ],
+     "table": "BQ=="
+    }
    }
   ],
   "liars": [
@@ -5146,7 +7952,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Bean",
@@ -5156,7 +7969,8 @@ const PUZZLES = [
     "text": "Mrrp? Mew mew mrrrow!",
     "hidden": true,
     "secret": "If you asked me, I'd say Kettle is honest.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Cricket",
@@ -5169,7 +7983,15 @@ const PUZZLES = [
     "mentions": [
      0,
      1
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2
+     ],
+     "table": "0g=="
+    }
    },
    {
     "name": "Dumpling",
@@ -5181,7 +8003,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      5
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Espresso",
@@ -5194,7 +8023,15 @@ const PUZZLES = [
     "mentions": [
      1,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      3,
+      4
+     ],
+     "table": "Hg=="
+    }
    },
    {
     "name": "Fig",
@@ -5207,7 +8044,15 @@ const PUZZLES = [
     "mentions": [
      1,
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      6
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Goose",
@@ -5220,7 +8065,15 @@ const PUZZLES = [
     "mentions": [
      0,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      6
+     ],
+     "table": "Hg=="
+    }
    },
    {
     "name": "Hazel",
@@ -5233,7 +8086,15 @@ const PUZZLES = [
     "mentions": [
      0,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      7,
+      14
+     ],
+     "table": "xg=="
+    }
    },
    {
     "name": "Inky",
@@ -5245,7 +8106,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      4
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      8
+     ],
+     "table": "BQ=="
+    }
    },
    {
     "name": "Juniper",
@@ -5258,7 +8126,15 @@ const PUZZLES = [
     "mentions": [
      0,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      9,
+      14
+     ],
+     "table": "Ng=="
+    }
    },
    {
     "name": "Kettle",
@@ -5271,7 +8147,15 @@ const PUZZLES = [
     "mentions": [
      3,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      5,
+      10
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Lentil",
@@ -5284,7 +8168,15 @@ const PUZZLES = [
     "mentions": [
      8,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      11,
+      12
+     ],
+     "table": "TQ=="
+    }
    },
    {
     "name": "Marble",
@@ -5297,7 +8189,15 @@ const PUZZLES = [
     "mentions": [
      8,
      13
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      12,
+      13
+     ],
+     "table": "lg=="
+    }
    },
    {
     "name": "Nimbus",
@@ -5314,7 +8214,19 @@ const PUZZLES = [
      10,
      11,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15
+     ],
+     "table": "VVVVVf////+pqqqq/////w=="
+    }
    },
    {
     "name": "Pickles",
@@ -5327,7 +8239,15 @@ const PUZZLES = [
     "mentions": [
      11,
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      11,
+      12,
+      14
+     ],
+     "table": "jg=="
+    }
    },
    {
     "name": "Ravioli",
@@ -5340,7 +8260,15 @@ const PUZZLES = [
     "mentions": [
      6,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      14,
+      15
+     ],
+     "table": "eA=="
+    }
    }
   ],
   "liars": [
@@ -5378,7 +8306,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      14
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Bean",
@@ -5394,7 +8329,18 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      9,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "7u7u7uvu7u4="
+    }
    },
    {
     "name": "Cricket",
@@ -5409,7 +8355,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "6r7r/g=="
+    }
    },
    {
     "name": "Espresso",
@@ -5422,7 +8378,15 @@ const PUZZLES = [
     "mentions": [
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      10,
+      14
+     ],
+     "table": "qQ=="
+    }
    },
    {
     "name": "Fudge",
@@ -5434,7 +8398,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      6
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      6
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Goose",
@@ -5446,7 +8417,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      14
+     ],
+     "table": "Aw=="
+    }
    },
    {
     "name": "Hobbes",
@@ -5460,7 +8438,16 @@ const PUZZLES = [
      4,
      5,
      8
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      8
+     ],
+     "table": "D3g="
+    }
    },
    {
     "name": "Iggy",
@@ -5470,7 +8457,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "Exactly 2 of the cats in my row are liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Kettle",
@@ -5483,7 +8471,15 @@ const PUZZLES = [
     "mentions": [
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      6,
+      8,
+      10
+     ],
+     "table": "3A=="
+    }
    },
    {
     "name": "Mango",
@@ -5493,7 +8489,8 @@ const PUZZLES = [
     "text": "Nyaa... mrrp. Mew.",
     "hidden": true,
     "secret": "Vanilla is the only liar among the cats in row 4.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Nimbus",
@@ -5507,7 +8504,16 @@ const PUZZLES = [
      2,
      6,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      10,
+      14
+     ],
+     "table": "8HA="
+    }
    },
    {
     "name": "Quill",
@@ -5522,7 +8528,17 @@ const PUZZLES = [
      8,
      9,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "VVWqKg=="
+    }
    },
    {
     "name": "Sushi",
@@ -5535,7 +8551,15 @@ const PUZZLES = [
     "mentions": [
      2,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      10,
+      12
+     ],
+     "table": "hw=="
+    }
    },
    {
     "name": "Tater",
@@ -5547,7 +8571,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      13
+     ],
+     "table": "Cg=="
+    }
    },
    {
     "name": "Ursa",
@@ -5569,7 +8600,24 @@ const PUZZLES = [
      12,
      13,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "gGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAACX6en+6f7+/+n+/v/+////6f7+//7////+/////////+n+/v/+/////v/////////+////////////////////6f7+//7////+//////////7////////////////////+/////////////////////////////////////////2gWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7///////////////////////////////////////////////////////////////////////////////////8="
+    }
    },
    {
     "name": "Vanilla",
@@ -5581,7 +8629,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      2
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      15
+     ],
+     "table": "DA=="
+    }
    }
   ],
   "liars": [
@@ -5621,7 +8676,16 @@ const PUZZLES = [
      1,
      2,
      3
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "table": "qqk="
+    }
    },
    {
     "name": "Biscuit",
@@ -5634,7 +8698,15 @@ const PUZZLES = [
     "mentions": [
      9,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      1,
+      9,
+      14
+     ],
+     "table": "1A=="
+    }
    },
    {
     "name": "Cricket",
@@ -5644,7 +8716,8 @@ const PUZZLES = [
     "text": "*incomprehensible meowing*",
     "hidden": true,
     "secret": "Indigo and Loki are both honest, or both liars.",
-    "mentions": []
+    "mentions": [],
+    "clue": null
    },
    {
     "name": "Doodle",
@@ -5659,7 +8732,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "table": "qmpqVg=="
+    }
    },
    {
     "name": "Espresso",
@@ -5681,7 +8764,24 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "Af//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wA="
+    }
    },
    {
     "name": "Felix",
@@ -5693,7 +8793,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      5,
+      10
+     ],
+     "table": "DA=="
+    }
    },
    {
     "name": "Gnocchi",
@@ -5706,7 +8813,15 @@ const PUZZLES = [
     "mentions": [
      4,
      5
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6
+     ],
+     "table": "eA=="
+    }
    },
    {
     "name": "Honey",
@@ -5720,7 +8835,16 @@ const PUZZLES = [
      3,
      6,
      10
-    ]
+    ],
+    "clue": {
+     "cats": [
+      3,
+      6,
+      7,
+      10
+     ],
+     "table": "x8M="
+    }
    },
    {
     "name": "Indigo",
@@ -5732,7 +8856,14 @@ const PUZZLES = [
     "secret": null,
     "mentions": [
      12
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      12
+     ],
+     "table": "CQ=="
+    }
    },
    {
     "name": "Jasper",
@@ -5746,7 +8877,16 @@ const PUZZLES = [
      8,
      10,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "table": "zIw="
+    }
    },
    {
     "name": "Kettle",
@@ -5759,7 +8899,15 @@ const PUZZLES = [
     "mentions": [
      8,
      9
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10
+     ],
+     "table": "aQ=="
+    }
    },
    {
     "name": "Loki",
@@ -5774,7 +8922,17 @@ const PUZZLES = [
      9,
      10,
      14
-    ]
+    ],
+    "clue": {
+     "cats": [
+      8,
+      9,
+      10,
+      11,
+      14
+     ],
+     "table": "/wCAfw=="
+    }
    },
    {
     "name": "Mango",
@@ -5788,7 +8946,16 @@ const PUZZLES = [
      13,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "qyo="
+    }
    },
    {
     "name": "Nimbus",
@@ -5810,7 +8977,24 @@ const PUZZLES = [
      12,
      14,
      15
-    ]
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "/v///////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA="
+    }
    },
    {
     "name": "Oreo",
@@ -5824,7 +9008,16 @@ const PUZZLES = [
      2,
      8,
      11
-    ]
+    ],
+    "clue": {
+     "cats": [
+      2,
+      8,
+      11,
+      14
+     ],
+     "table": "af8="
+    }
    },
    {
     "name": "Queenie",
@@ -5839,7 +9032,17 @@ const PUZZLES = [
      5,
      6,
      7
-    ]
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7,
+      15
+     ],
+     "table": "aBaX6Q=="
+    }
    }
   ],
   "liars": [

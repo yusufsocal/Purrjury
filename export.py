@@ -4,14 +4,34 @@ The web page can't read files on its own when you open it straight from disk,
 so the puzzles are saved as a small JavaScript file that sets PUZZLES.
 """
 import argparse
+import base64
 import json
 import random
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import levels_for, rate, solve
+from purrjury.engine.solver import involved, levels_for, rate, solve
 
 # Give up on a size after this many puzzles, in case some level is too rare to fill
 MAX_TRIES = 1000
+
+
+def clue_table(statement, grid):
+    """Everything the hint button needs to know about one clue, without knowing how clues work.
+
+    Returns {"cats": [...], "table": "..."}: the cats the clue is about (speaker included), and
+    for every honest/liar combination of those cats, whether the clue fits it. Combination k has
+    cat number j as a liar if bit j of k is set. The fits are packed 8 per byte, then base64.
+    """
+    cats = sorted(involved(statement))
+    n_cats = len(grid) * len(grid[0])
+    bits = bytearray((2 ** len(cats) + 7) // 8)
+    for k in range(2 ** len(cats)):
+        world = [False] * n_cats   # cats outside the clue don't matter
+        for j, cat in enumerate(cats):
+            world[cat] = bool(k >> j & 1)
+        if statement.fits(world, grid):
+            bits[k // 8] |= 1 << (k % 8)
+    return {"cats": cats, "table": base64.b64encode(bytes(bits)).decode()}
 
 
 def puzzle_to_dict(grid, world, seed, level):
@@ -29,6 +49,8 @@ def puzzle_to_dict(grid, world, seed, level):
                 "secret": cat.statement.to_text() if cat.hidden else None,   # shown after Reveal
                 # the other cats this cat talks about. Hidden cats show none, that would give away their statement
                 "mentions": [] if cat.hidden else cat.statement.mentions(),
+                # for the hint button. Hidden cats' clues can't be used, so they have none
+                "clue": None if cat.hidden else clue_table(cat.statement, grid),
             })
     return {
         "rows": len(grid),

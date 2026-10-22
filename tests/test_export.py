@@ -1,7 +1,11 @@
 """Tests for export.py (the puzzles for the web version)."""
+import base64
 import json
 
-from export import export
+from export import clue_table, export
+from purrjury.board.world import make_world
+from purrjury.statements import ALL_STATEMENTS
+from tests.helpers import random_grid
 
 
 def test_export_writes_playable_puzzles(tmp_path):
@@ -21,6 +25,9 @@ def test_export_writes_playable_puzzles(tmp_path):
             assert all(0 <= i < n for i in cat["mentions"])
             if cat["hidden"]:
                 assert cat["mentions"] == []
+                assert cat["clue"] is None
+            else:
+                assert cat["clue"]["cats"]
 
     # the file is a JavaScript line that sets PUZZLES to the same data
     content = path.read_text(encoding="utf-8")
@@ -32,3 +39,21 @@ def test_export_is_repeatable_with_a_seed(tmp_path):
     first = export([(3, 3)], count=1, path=str(tmp_path / "a.js"), first_seed=7)
     second = export([(3, 3)], count=1, path=str(tmp_path / "b.js"), first_seed=7)
     assert first == second
+
+
+def test_clue_table_matches_fits():
+    """Reading the table back gives the same answer as fits() for every combination of the clue's cats."""
+    for _ in range(20):
+        grid = random_grid(3, 3)
+        world = make_world(9, 3)
+        for statement_type in ALL_STATEMENTS:
+            statement = statement_type.random(0, grid, world)
+            if statement is None:
+                continue
+            clue = clue_table(statement, grid)
+            bits = base64.b64decode(clue["table"])
+            for k in range(2 ** len(clue["cats"])):
+                test_world = [False] * 9
+                for j, cat in enumerate(clue["cats"]):
+                    test_world[cat] = bool(k >> j & 1)
+                assert bool(bits[k // 8] >> (k % 8) & 1) == statement.fits(test_world, grid)
