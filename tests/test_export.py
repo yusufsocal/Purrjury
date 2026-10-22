@@ -6,9 +6,10 @@ from export import export
 
 def test_export_writes_playable_puzzles(tmp_path):
     path = tmp_path / "puzzles.js"
-    puzzles = export([(2, 2), (2, 3)], count=2, path=str(path), first_seed=1)
+    puzzles = export([(3, 3)], count=2, path=str(path), first_seed=1)
 
-    assert len(puzzles) == 4
+    # 2 puzzles for each of the 3 levels a 3x3 can get, easiest first
+    assert [p["level"] for p in puzzles] == ["easy", "easy", "medium", "medium", "hard", "hard"]
     for p in puzzles:
         n = p["rows"] * p["cols"]
         assert len(p["cats"]) == n
@@ -28,6 +29,6 @@ def test_export_writes_playable_puzzles(tmp_path):
 
 
 def test_export_is_repeatable_with_a_seed(tmp_path):
-    first = export([(2, 2)], count=2, path=str(tmp_path / "a.js"), first_seed=7)
-    second = export([(2, 2)], count=2, path=str(tmp_path / "b.js"), first_seed=7)
+    first = export([(3, 3)], count=1, path=str(tmp_path / "a.js"), first_seed=7)
+    second = export([(3, 3)], count=1, path=str(tmp_path / "b.js"), first_seed=7)
     assert first == second

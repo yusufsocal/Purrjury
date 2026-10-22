@@ -8,9 +8,13 @@ import json
 import random
 
 from purrjury.engine.generator import generate_puzzle
+from purrjury.engine.solver import levels_for, rate, solve
+
+# Give up on a size after this many puzzles, in case some level is too rare to fill
+MAX_TRIES = 1000
 
 
-def puzzle_to_dict(grid, world, seed):
+def puzzle_to_dict(grid, world, seed, level):
     """Turn a generated puzzle into plain data the web page can use."""
     cats = []
     for row in grid:
@@ -30,28 +34,45 @@ def puzzle_to_dict(grid, world, seed):
         "rows": len(grid),
         "cols": len(grid[0]),
         "seed": seed,
+        "level": level,   # "easy", "medium", "hard" or "tricky", from the solver
         "cats": cats,
         "liars": world,   # world[i] is True if cat i is a liar
     }
 
 
-def export(sizes, count, path="web/puzzles.js", first_seed=None):
-    """Generate count puzzles for every size and write them to path. Returns the puzzles."""
+def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_TRIES):
+    """Generate count puzzles for every difficulty level of every size, and write them to path.
+
+    The solver rates each puzzle. Stuck puzzles and levels that are already full are skipped.
+    Returns the puzzles, sorted by size and then from easy to hard.
+    """
     seed = first_seed if first_seed is not None else random.randrange(1_000_000)
     puzzles = []
 
-    # one batch per size, every puzzle gets its own seed so it can be made again
     for rows, cols in sizes:
         liars = max(1, rows * cols // 3)
-        made = 0
-        while made < count:
+        levels = levels_for(rows, cols)
+        wanted = {level: count for level in levels}   # how many more each level still needs
+        found = {level: [] for level in levels}
+
+        # every puzzle gets its own seed so it can be made again
+        for _ in range(max_tries):
+            if not any(wanted.values()):
+                break
             random.seed(seed)
             result = generate_puzzle(rows, cols, liars)
             if result is not None:
                 grid, world = result
-                puzzles.append(puzzle_to_dict(grid, world, seed))
-                made += 1
+                level = rate(solve(grid), rows, cols)
+                if wanted.get(level, 0) > 0:   # None (stuck) is never wanted
+                    found[level].append(puzzle_to_dict(grid, world, seed, level))
+                    wanted[level] -= 1
             seed += 1
+
+        for level in levels:
+            puzzles.extend(found[level])
+            if wanted[level]:
+                print(f"Only found {len(found[level])} {level} {rows}x{cols} puzzles, wanted {count}")
 
     with open(path, "w", encoding="utf-8") as f:
         f.write("// Made by export.py, don't edit by hand\n")
@@ -70,7 +91,7 @@ def main():
     parser = argparse.ArgumentParser(description="Export puzzles for the web version (web/puzzles.js).")
     parser.add_argument("sizes", nargs="*", type=parse_size, default=[(3, 3), (4, 4)],
                         help="grid sizes, e.g. 3x3 4x4 (default: 3x3 4x4)")
-    parser.add_argument("-n", "--count", type=int, default=10, help="puzzles per size (default: 10)")
+    parser.add_argument("-n", "--count", type=int, default=5, help="puzzles per level for every size (default: 5)")
     parser.add_argument("-s", "--seed", type=int, help="first seed (default: random)")
     args = parser.parse_args()
 

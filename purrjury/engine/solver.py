@@ -127,5 +127,10 @@ def rate(steps, rows, cols):
     else:
         base = 0   # easy: several openers
 
+    return levels_for(rows, cols)[base]
+
+
+def levels_for(rows, cols):
+    """The 3 levels a grid of this size can get: easy to hard, or medium to tricky on a big grid."""
     bump = 1 if rows * cols >= BIG_GRID else 0
-    return LEVELS[base + bump]
+    return LEVELS[bump:bump + 3]

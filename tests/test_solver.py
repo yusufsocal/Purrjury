@@ -4,7 +4,7 @@ import random
 import pytest
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import rate, solve
+from purrjury.engine.solver import levels_for, rate, solve
 
 
 def step(level, options):
@@ -47,3 +47,8 @@ def test_solver_finds_the_real_answer(size):
             assert options >= 1
             known.update(found)
         assert known == {i: world[i] for i in range(size * size)}
+
+
+def test_levels_for_shifts_up_on_big_grids():
+    assert levels_for(3, 3) == ["easy", "medium", "hard"]
+    assert levels_for(4, 4) == ["medium", "hard", "tricky"]
