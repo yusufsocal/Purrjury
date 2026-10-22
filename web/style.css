@@ -130,6 +130,11 @@ button:hover { border-color: var(--muted); }
 .tag-by { color: var(--by); }
 .tag-about { color: var(--about); }
 
+/* hint: dashed outline around the clues you can use right now */
+:root { --hint: #c98a12; }
+.card.hint { outline: 3px dashed var(--hint); outline-offset: 2px; }
+.tag-hint { color: var(--hint); }
+
 /* menu: pick a grid size, then a difficulty */
 #menu { text-align: center; margin: 24px 0; }
 #menu h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 20px 0 8px; }

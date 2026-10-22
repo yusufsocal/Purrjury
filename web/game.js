@@ -27,6 +27,7 @@ const states = PUZZLES.map(p => ({
   used: p.cats.map(() => false),
   checks: 0,
   wrongChecks: 0,
+  hints: 0,
   seconds: 0,
   solved: false,
   revealed: false,
@@ -39,6 +40,7 @@ let highlight = null;        // index of the cat whose connections are shown, or
 let highlightMode = "by";    // "by": cats that talk about it, "about": cats it talks about
 let lastRightClick = { index: null, time: 0 };   // to notice a double right click
 let highlightTimer = null;   // clears the highlight after a few seconds
+let hintCards = new Set();   // cards outlined by the last hint
 let pressTimer = null;       // for long-press on phones
 let longPressed = false;     // true right after a long-press, so the tap after it doesn't change the mark
 const HIGHLIGHT_SECONDS = 6;
@@ -64,6 +66,7 @@ function levelOf(p) { return p.level || "unrated"; }
 
 function showMenu() {
   clearConnections();
+  clearHint();
   game.hidden = true;
   menu.hidden = false;
   renderMenu();
@@ -140,6 +143,7 @@ function render() {
       else if (highlightMode === "by" && cat.mentions.includes(highlight)) card.classList.add("talked-by");
       else if (highlightMode === "about" && p.cats[highlight].mentions.includes(i)) card.classList.add("talks-about");
     }
+    if (hintCards.has(i)) card.classList.add("hint");
 
     const top = document.createElement("div");
     top.className = "top";
@@ -233,6 +237,7 @@ function cycleMark(i) {
   const next = (MARKS.indexOf(s.marks[i]) + 1) % MARKS.length;
   s.marks[i] = MARKS[next];
   message.textContent = "";
+  clearHint();   // the hint was for the old marks
   render();
 }
 
@@ -248,6 +253,7 @@ function undoMark(i) {
 
 function showConnections(i, mode = "by") {
   const cat = puzzle().cats[i];
+  clearHint();
   highlight = i;
   highlightMode = mode;
   // small colored label so you know what the color means
@@ -292,7 +298,8 @@ function check() {
     message.textContent = `All your marks are right so far. ${unknown} cat${unknown === 1 ? "" : "s"} left.`;
   } else {
     s.solved = true;
-    message.textContent = `Solved in ${formatTime(s.seconds)} with ${s.wrongChecks} mistake${s.wrongChecks === 1 ? "" : "s"}! 🐾`;
+    const hints = s.hints ? ` and ${s.hints} hint${s.hints === 1 ? "" : "s"}` : "";
+    message.textContent = `Solved in ${formatTime(s.seconds)} with ${s.wrongChecks} mistake${s.wrongChecks === 1 ? "" : "s"}${hints}! 🐾`;
   }
 }
 
@@ -302,15 +309,17 @@ function reset() {
   states[list[current]] = {
     marks: s.marks.map(() => "unknown"),
     used: s.used.map(() => false),
-    checks: 0, wrongChecks: 0, seconds: 0, solved: false, revealed: false,
+    checks: 0, wrongChecks: 0, hints: 0, seconds: 0, solved: false, revealed: false,
   };
   message.textContent = "";
+  clearHint();
   render();
 }
 
 
 function reveal() {
   state().revealed = true;
+  clearHint();
   message.textContent = "The outlines show the answer: green is honest, red is a liar.";
   render();
 }
@@ -318,10 +327,93 @@ function reveal() {
 
 function go(step) {
   highlight = null;
+  hintCards.clear();
   legend.innerHTML = "";
   current = (current + step + list.length) % list.length;
   message.textContent = "";
   render();
+}
+
+
+// --- Hints ---
+// export.py gives every clue a table: which honest/liar combinations of its cats fit the clue.
+// The hint does what solver.py does with them: try every combination of the unknown cats,
+// and a cat that comes out the same in every combination that fits is forced.
+
+const MAX_UNKNOWN = 12;   // same as in solver.py: groups about more unknown cats than this are skipped
+
+
+// does the clue fit this world? (world[i] is true if cat i is a liar)
+function clueFits(clue, world) {
+  if (!clue.bits) clue.bits = Uint8Array.from(atob(clue.table), ch => ch.charCodeAt(0));   // decode once
+  let k = 0;
+  clue.cats.forEach((cat, j) => { if (world[cat]) k |= 1 << j; });
+  return (clue.bits[k >> 3] >> (k & 7)) & 1;
+}
+
+
+// the unknown cats these clues force, given the known cats (a Map of cat index -> true if liar)
+function forcedCats(clues, known) {
+  const unknown = [...new Set(clues.flatMap(clue => clue.cats))].filter(cat => !known.has(cat));
+  if (unknown.length === 0 || unknown.length > MAX_UNKNOWN) return [];
+
+  const world = puzzle().cats.map((_, i) => known.get(i) ?? false);
+  const seen = unknown.map(() => new Set());   // the values each unknown cat had in combinations that fit
+  for (let combo = 0; combo < 1 << unknown.length; combo++) {
+    unknown.forEach((cat, j) => { world[cat] = Boolean(combo >> j & 1); });
+    if (clues.every(clue => clueFits(clue, world))) unknown.forEach((cat, j) => seen[j].add(world[cat]));
+  }
+  return unknown.filter((cat, j) => seen[j].size === 1);
+}
+
+
+// outline the clues that can find a new cat right now: single clues first, pairs if none work alone
+function hint() {
+  const p = puzzle();
+  const s = state();
+  if (s.solved || s.revealed) return;
+  clearConnections();
+
+  // only marks that are right count as known, so a wrong mark can't send the hint the wrong way
+  const known = new Map();
+  let wrong = 0;
+  s.marks.forEach((mark, i) => {
+    if (mark === "unknown") return;
+    if ((mark === "liar") === p.liars[i]) known.set(i, p.liars[i]);
+    else wrong++;
+  });
+
+  const clues = p.cats.map((cat, i) => ({ i, clue: cat.clue })).filter(c => c.clue);
+  let useful = clues.filter(c => forcedCats([c.clue], known).length > 0).map(c => c.i);
+  let label = "these clues can find a cat right now";
+
+  if (useful.length === 0) {
+    const pairs = new Set();
+    for (let a = 0; a < clues.length; a++) {
+      for (let b = a + 1; b < clues.length; b++) {
+        if (forcedCats([clues[a].clue, clues[b].clue], known).length > 0) pairs.add(clues[a].i).add(clues[b].i);
+      }
+    }
+    useful = [...pairs];
+    label = "combine two of these clues to find a cat";
+  }
+  if (wrong > 0) label += ` (${wrong} of your marks ${wrong === 1 ? "is" : "are"} wrong)`;
+
+  s.hints++;
+  hintCards = new Set(useful);
+  legend.innerHTML = "";
+  const tag = document.createElement("span");
+  tag.className = "tag tag-hint";
+  tag.textContent = useful.length ? label : "no hint found";
+  legend.append(tag);
+  render();
+}
+
+
+function clearHint() {
+  if (hintCards.size === 0) return;
+  hintCards.clear();
+  legend.innerHTML = "";
 }
 
 
@@ -347,6 +439,7 @@ document.getElementById("next").addEventListener("click", () => go(1));
 document.getElementById("check").addEventListener("click", check);
 document.getElementById("reset").addEventListener("click", reset);
 document.getElementById("reveal").addEventListener("click", reveal);
+document.getElementById("hint").addEventListener("click", hint);
 document.getElementById("menu-button").addEventListener("click", showMenu);
 document.addEventListener("keydown", event => {
   if (game.hidden) return;
