@@ -42,6 +42,13 @@ class Statement(ABC):
         """
         return self.evaluate(world, grid) == (not world[self.speaker])
 
+    def is_trick(self):
+        """True for clues that only reveal a cat if you know a logic trick, so they're kept out of easy puzzles.
+
+        Most statements aren't tricks. Override it in the ones that can be.
+        """
+        return False
+
     def to_text(self):
         """Return the sentence stored by set_text. Same for every statement type, so it lives here."""
         if self.text is None:

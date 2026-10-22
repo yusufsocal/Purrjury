@@ -22,6 +22,10 @@ RELATIONS = {
 
 ORDERED = {"if_a_honest_then_b", "a_honest_b_liar"}
 
+# "Felix and I are the same type" always means Felix is honest, and "opposites" always means Felix is a liar,
+# whatever the speaker is. Nice once you know it, a wall if you don't, so these only go in hard puzzles.
+TRICK_RELATIONS = {"same", "different"}
+
 # How often each relation is picked, relative to each other
 RELATION_WEIGHTS = {
     "same": 1,
@@ -62,6 +66,10 @@ class PairStatement(Statement):
     def evaluate(self, world, grid):
         """Check the relation on the two cats."""
         return RELATIONS[self.relation](world[self.a], world[self.b])
+
+    def is_trick(self):
+        """'Felix and I are the same type / opposites': reveals Felix, but only if you know the trick."""
+        return self.a == self.speaker and self.relation in TRICK_RELATIONS
 
     def mentions(self):
         """The other cats this statement talks about."""

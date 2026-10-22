@@ -1,11 +1,11 @@
-"""Tests for Quote, Only, AllSame, IfThen, trio areas, Hearsay and hidden cats."""
+"""Tests for Only, AllSame, IfThen, trio areas, Hearsay and hidden cats."""
 import itertools
 
 import pytest
 
 from purrjury.engine import generator
 from purrjury.engine.checker import find_solutions
-from purrjury.statements import ALL_STATEMENTS, AllSame, CountLiars, Hearsay, IfThen, Only, Quote
+from purrjury.statements import ALL_STATEMENTS, AllSame, CountLiars, Hearsay, IfThen, Only
 from purrjury.board.world import make_world
 from tests.helpers import all_cats, fits, fixed_grid, is_liar, random_grid
 
@@ -13,68 +13,6 @@ from tests.helpers import all_cats, fits, fixed_grid, is_liar, random_grid
 def fitting_worlds(statement, n_cats):
     """Every world (of n_cats cats) where the statement fits its speaker."""
     return [list(w) for w in itertools.product([False, True], repeat=n_cats) if fits(statement, list(w), None)]
-
-
-# --- Quote ---
-
-@pytest.mark.parametrize("quoted_liar", [False, True])
-@pytest.mark.parametrize("target_liar", [False, True])
-@pytest.mark.parametrize("says_liar", [False, True])
-def test_quote_evaluate(quoted_liar, target_liar, says_liar):
-    # speaker 0, quoted 1, target 2
-    world = [False, quoted_liar, target_liar]
-    quote_is_true = target_liar == says_liar
-    would_say_it = quote_is_true if not quoted_liar else not quote_is_true
-    assert Quote(0, 1, 2, says_liar).evaluate(world, None) is would_say_it
-
-
-def test_quote_flavors():
-    assert Quote(0, 0, 1, True).flavor() == "self"
-    assert Quote(0, 1, 0, True).flavor() == "about_me"
-    assert Quote(0, 1, 1, True).flavor() == "about_themselves"
-    assert Quote(0, 1, 2, True).flavor() == "others"
-
-
-@pytest.mark.parametrize("says_liar", [True, False])
-def test_self_quote_always_reveals_the_target(says_liar):
-    """'If you asked me, I'd say B is a liar': B is a liar, whoever says it."""
-    worlds = fitting_worlds(Quote(0, 0, 1, says_liar), 2)
-    assert worlds
-    assert all(w[1] == says_liar for w in worlds)
-
-
-@pytest.mark.parametrize("says_liar", [True, False])
-def test_quote_about_me_always_reveals_the_quoted_cat(says_liar):
-    """'B would say I'm a liar': B is a liar. 'B would say I'm honest': B is honest."""
-    worlds = fitting_worlds(Quote(0, 1, 0, says_liar), 2)
-    assert worlds
-    assert all(w[1] == says_liar for w in worlds)
-
-
-@pytest.mark.parametrize("says_liar", [True, False])
-def test_quote_about_themselves_always_reveals_the_speaker(says_liar):
-    """'B would say they're a liar' is never true, so only a liar can say it."""
-    worlds = fitting_worlds(Quote(0, 1, 1, says_liar), 2)
-    assert worlds
-    assert all(w[0] == says_liar for w in worlds)
-
-
-def test_quote_random_uses_every_flavor():
-    seen = set()
-    for _ in range(100):
-        grid = random_grid(3, 3)
-        world = make_world(9, 3)
-        for speaker in range(9):
-            s = Quote.random(speaker, grid, world)
-            assert s is not None
-            seen.add(s.flavor())
-    assert seen == {"self", "about_me", "about_themselves"}   # "others" was dropped on purpose
-
-
-def test_quote_key():
-    assert Quote(0, 1, 2, True).key() == Quote(5, 1, 2, True).key()
-    assert Quote(0, 1, 2, True).key() != Quote(0, 1, 2, False).key()
-    assert Quote(0, 1, 2, True).key() != Quote(0, 2, 1, True).key()
 
 
 # --- Only ---
@@ -304,8 +242,6 @@ def test_add_hidden_cats(rows, cols, monkeypatch):
 
 def test_mentions_never_include_the_speaker():
     assert CountLiars(0, [0, 1, 2], "", "exactly", 1).mentions() == [1, 2]
-    assert Quote(0, 0, 3, True).mentions() == [3]
-    assert Quote(0, 1, 0, True).mentions() == [1]
     assert Only(2, [1, 2], "", 1, True).mentions() == [1]
     assert AllSame(0, [0, 4], "", True).mentions() == [4]
     assert IfThen(0, 5, True, [0, 1], "", False).mentions() == [1, 5]

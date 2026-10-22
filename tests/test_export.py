@@ -2,7 +2,9 @@
 import base64
 import json
 
-from export import clue_table, export
+from export import TRICK_MIN_LEVEL, clue_table, export, has_trick_clue
+from purrjury.engine.generator import generate_puzzle
+from purrjury.engine.solver import LEVELS
 from purrjury.board.world import make_world
 from purrjury.statements import ALL_STATEMENTS
 from tests.helpers import random_grid
@@ -57,3 +59,14 @@ def test_clue_table_matches_fits():
                 for j, cat in enumerate(clue["cats"]):
                     test_world[cat] = bool(k >> j & 1)
                 assert bool(bits[k // 8] >> (k % 8) & 1) == statement.fits(test_world, grid)
+
+
+def test_easy_puzzles_have_no_trick_clues(tmp_path):
+    """Trick clues ("Felix and I are the same type") only show up in hard puzzles and up."""
+    import random
+    puzzles = export([(3, 3)], count=3, path=str(tmp_path / "p.js"), first_seed=3)
+    for p in puzzles:
+        if LEVELS.index(p["level"]) < LEVELS.index(TRICK_MIN_LEVEL):
+            random.seed(p["seed"])   # make the same puzzle again to look at its statements
+            grid, _world = generate_puzzle(3, 3, 3)
+            assert not has_trick_clue(grid)

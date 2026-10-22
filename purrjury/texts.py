@@ -4,7 +4,6 @@
     {n}     the number of liars
     {h}     the number of honest cats (size of the area minus n)
     {a} {b}            the two cats in a pair statement
-    {quoted} {target}  the quoted cat and the cat the quote is about
     {opposite} {then}  the types in an IfThen statement
     {quote}            what a hidden cat supposedly said
 Every sentence keeps the logic words plain (liar / honest / exactly / at least),
@@ -206,54 +205,6 @@ PAIR_A_HONEST_B_LIAR_ME_TEXTS = [
     "I'm honest, but {b} is a liar.",
     "Trust me over {b}: I'm honest and {b} is a liar.",
     "Hiss. I'm honest, {b} is the liar here.",
-]
-
-
-# --- Quotes (Quote) ---
-# {quoted} is the cat being quoted, {target} is the cat the quote is about.
-# "self": the speaker quotes itself. "about_me": the quote is about the speaker.
-# "about_themselves": the quoted cat talks about itself.
-
-QUOTE_SELF_LIAR_TEXTS = [
-    "If you asked me, I'd say {target} is a liar.",
-    "Mrrp. If you asked me, I'd say {target} is a liar.",
-    "Ask me, and I'd tell you {target} is a liar.",
-    "*licks paw* If you asked me about {target}, I'd say liar.",
-]
-
-QUOTE_SELF_HONEST_TEXTS = [
-    "If you asked me, I'd say {target} is honest.",
-    "Purr. If you asked me, I'd say {target} is honest.",
-    "Ask me, and I'd tell you {target} is honest.",
-    "*slow blinks* If you asked me about {target}, I'd say honest.",
-]
-
-QUOTE_ABOUT_ME_LIAR_TEXTS = [
-    "{quoted} would say I'm a liar.",
-    "Hiss. {quoted} would call me a liar.",
-    "If you asked {quoted}, they'd say I'm a liar.",
-    "*flattens ears* {quoted} would tell you I'm a liar.",
-]
-
-QUOTE_ABOUT_ME_HONEST_TEXTS = [
-    "{quoted} would say I'm honest.",
-    "Purr. {quoted} would tell you I'm honest.",
-    "If you asked {quoted}, they'd say I'm honest.",
-    "*rubs against your leg* {quoted} would say I'm honest.",
-]
-
-QUOTE_ABOUT_THEMSELVES_LIAR_TEXTS = [
-    "{quoted} would say they're a liar.",
-    "If you asked {quoted}, they'd call themselves a liar.",
-    "Mrow. {quoted} would claim to be a liar.",
-    "*snickers* {quoted} would tell you they're a liar.",
-]
-
-QUOTE_ABOUT_THEMSELVES_HONEST_TEXTS = [
-    "{quoted} would say they're honest.",
-    "If you asked {quoted}, they'd say they're honest.",
-    "Meow. {quoted} would claim to be honest.",
-    "*yawns* {quoted} would tell you they're honest.",
 ]
 
 

@@ -168,6 +168,14 @@ def test_everyone_areas_use_their_own_texts(rows, cols):
                     assert EVERYONE_TEXT not in statement.to_text(), statement.to_text()
 
 
+def test_pair_tricks_are_same_or_opposites_with_me():
+    assert PairStatement(0, 0, 1, "same").is_trick()
+    assert PairStatement(0, 0, 1, "different").is_trick()
+    assert not PairStatement(0, 1, 2, "same").is_trick()        # about two other cats: a normal clue
+    assert not PairStatement(0, 0, 1, "both_liars").is_trick()  # reveals the speaker, an easy opener
+    assert not CountLiars(0, [0, 1], "", "exactly", 1).is_trick()
+
+
 def test_count_liars_never_talks_only_about_itself():
     for _ in range(200):
         grid = random_grid(3, 3)

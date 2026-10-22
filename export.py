@@ -9,10 +9,18 @@ import json
 import random
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import involved, levels_for, rate, solve
+from purrjury.engine.solver import LEVELS, involved, levels_for, rate, solve
 
 # Give up on a size after this many puzzles, in case some level is too rare to fill
 MAX_TRIES = 1000
+
+# Trick clues ("Felix and I are the same type") only appear in puzzles of this level and up
+TRICK_MIN_LEVEL = "hard"
+
+
+def has_trick_clue(grid):
+    """True if a clue the player can read is a trick clue. Hidden cats' real clues can't be read, so they don't count."""
+    return any(cat.statement.is_trick() for row in grid for cat in row if not cat.hidden)
 
 
 def clue_table(statement, grid):
@@ -86,7 +94,9 @@ def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_T
             if result is not None:
                 grid, world = result
                 level = rate(solve(grid), rows, cols)
-                if wanted.get(level, 0) > 0:   # None (stuck) is never wanted
+                if level is not None and LEVELS.index(level) < LEVELS.index(TRICK_MIN_LEVEL) and has_trick_clue(grid):
+                    level = None   # a trick clue in an easy or medium puzzle: skip this one
+                if wanted.get(level, 0) > 0:   # None (stuck or skipped) is never wanted
                     found[level].append(puzzle_to_dict(grid, world, seed, level))
                     wanted[level] -= 1
             seed += 1
