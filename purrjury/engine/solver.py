@@ -11,6 +11,12 @@ from purrjury.board.grid import get_cat
 # groups of clues about more unknown cats than this are skipped, nobody can juggle that many
 MAX_UNKNOWN = 12
 
+# Difficulty levels, easiest first
+LEVELS = ["easy", "medium", "hard", "tricky"]
+
+# Grids with this many cats or more are one level harder: there are more clues to scan for each move
+BIG_GRID = 16
+
 
 def involved(statement):
     """All cats a clue is about: its speaker plus the cats it mentions."""
@@ -55,10 +61,12 @@ def forced_cats(statements, known, grid):
 def solve(grid):
     """Solve the puzzle step by step like a player.
 
-    Returns a list of steps, each one like (level, speakers, found):
+    Returns a list of steps, each one like (level, speakers, found, options):
         level:    1 or 2, how many clues the step needed
         speakers: indexes of the cats whose clues were used
         found:    dict {cat index: True/False} of the cats found in this step
+        options:  how many clues (or pairs of clues) at this level would have found a cat here.
+                  1 means the player had to find the one move that works, more means it was easier to spot
     Returns None if it gets stuck before every cat is found.
     """
     n_cats = len(grid) * len(grid[0])
@@ -75,13 +83,18 @@ def solve(grid):
 
         # easiest first: one clue on its own, then two clues together
         for level in (1, 2):
+            # every clue (or pair) at this level that finds a new cat, so we know how many options there were
+            usable = []
             for group in itertools.combinations(clues, level):
                 found = forced_cats(list(group), known, grid)
                 if found:
-                    speakers = [s.speaker for s in group]
-                    step = (level, speakers, found)
-                    break
-            if step:
+                    usable.append((group, found))
+
+            if usable:
+                # only the first one is used as the step, the others are just counted
+                group, found = usable[0]
+                speakers = [s.speaker for s in group]
+                step = (level, speakers, found, len(usable))
                 break
 
         if step is None:
@@ -91,3 +104,28 @@ def solve(grid):
         steps.append(step)
 
     return steps
+
+
+def rate(steps, rows, cols):
+    """How hard a solved puzzle is: "easy", "medium", "hard" or "tricky".
+
+    steps: what solve() returned. Returns None for a stuck puzzle (steps is None).
+
+    On a small grid:
+        easy:   only 1-clue steps, and 2 or more openers to start with
+        medium: only 1-clue steps, but just 1 opener, so the way in is harder to find
+        hard:   at least one step needs 2 clues together
+    A big grid (BIG_GRID cats or more) is one level up, so it goes medium, hard, tricky.
+    """
+    if steps is None:
+        return None   # stuck, not solvable by a person
+
+    if any(level == 2 for level, _speakers, _found, _options in steps):
+        base = 2   # hard
+    elif steps[0][3] == 1:
+        base = 1   # medium: one opener
+    else:
+        base = 0   # easy: several openers
+
+    bump = 1 if rows * cols >= BIG_GRID else 0
+    return LEVELS[base + bump]
