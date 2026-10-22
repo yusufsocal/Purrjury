@@ -19,6 +19,7 @@ const COLOR_STYLES = {
 };
 
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
+const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
 // progress for every puzzle, so you can switch back and forth without losing it
 const states = PUZZLES.map(p => ({
@@ -31,7 +32,9 @@ const states = PUZZLES.map(p => ({
   revealed: false,
 }));
 
-let current = 0;
+let list = [];               // indexes into PUZZLES of the size and level picked in the menu
+let current = 0;             // position in list
+let chosenSize = null;       // e.g. "3x3"
 let highlight = null;        // index of the cat whose connections are shown, or null
 let highlightMode = "by";    // "by": cats that talk about it, "about": cats it talks about
 let lastRightClick = { index: null, time: 0 };   // to notice a double right click
@@ -45,17 +48,82 @@ const info = document.getElementById("info");
 const message = document.getElementById("message");
 const timer = document.getElementById("timer");
 const legend = document.getElementById("legend");
+const menu = document.getElementById("menu");
+const game = document.getElementById("game");
+const sizeButtons = document.getElementById("sizes");
+const levelButtons = document.getElementById("levels");
 
 
-function puzzle() { return PUZZLES[current]; }
-function state() { return states[current]; }
+function puzzle() { return PUZZLES[list[current]]; }
+function state() { return states[list[current]]; }
+function sizeOf(p) { return `${p.rows}x${p.cols}`; }
+function levelOf(p) { return p.level || "unrated"; }
+
+
+// --- Menu ---
+
+function showMenu() {
+  clearConnections();
+  game.hidden = true;
+  menu.hidden = false;
+  renderMenu();
+}
+
+
+function renderMenu() {
+  // every size that has puzzles, in the order they appear
+  const sizes = [...new Set(PUZZLES.map(sizeOf))];
+  if (!sizes.includes(chosenSize)) chosenSize = sizes[0];
+
+  sizeButtons.innerHTML = "";
+  sizes.forEach(size => {
+    const button = document.createElement("button");
+    button.textContent = size;
+    if (size === chosenSize) button.classList.add("selected");
+    button.addEventListener("click", () => { chosenSize = size; renderMenu(); });
+    sizeButtons.append(button);
+  });
+
+  // one button per level this size has, with how many of its puzzles you've solved
+  levelButtons.innerHTML = "";
+  LEVELS.forEach(level => {
+    const indexes = PUZZLES.map((p, i) => i).filter(i => sizeOf(PUZZLES[i]) === chosenSize && levelOf(PUZZLES[i]) === level);
+    if (indexes.length === 0) return;
+    const solved = indexes.filter(i => states[i].solved).length;
+
+    const button = document.createElement("button");
+    button.className = "level level-" + level;
+    button.innerHTML = `<span class="level-name"></span><span class="level-count"></span>`;
+    button.querySelector(".level-name").textContent = level;
+    button.querySelector(".level-count").textContent = `${solved} / ${indexes.length} solved`;
+    button.addEventListener("click", () => start(indexes));
+    levelButtons.append(button);
+  });
+}
+
+
+// start playing a list of puzzles, at the first one you haven't solved yet
+function start(indexes) {
+  list = indexes;
+  const firstUnsolved = list.findIndex(i => !states[i].solved);
+  current = firstUnsolved === -1 ? 0 : firstUnsolved;
+  menu.hidden = true;
+  game.hidden = false;
+  message.textContent = "";
+  render();
+}
+
+
+// --- Game ---
 
 
 function render() {
   const p = puzzle();
   const s = state();
 
-  info.textContent = `Puzzle ${current + 1} / ${PUZZLES.length} · ${p.rows}x${p.cols} · seed ${p.seed}`;
+  const level = levelOf(p);
+  info.textContent = `${level[0].toUpperCase() + level.slice(1)} ${sizeOf(p)} · ${current + 1} / ${list.length}`;
+  info.title = `seed ${p.seed}`;   // handy when someone reports a puzzle
   grid.style.gridTemplateColumns = `repeat(${p.cols}, minmax(0, 1fr))`;
   grid.innerHTML = "";
 
@@ -231,7 +299,7 @@ function check() {
 
 function reset() {
   const s = state();
-  states[current] = {
+  states[list[current]] = {
     marks: s.marks.map(() => "unknown"),
     used: s.used.map(() => false),
     checks: 0, wrongChecks: 0, seconds: 0, solved: false, revealed: false,
@@ -251,7 +319,7 @@ function reveal() {
 function go(step) {
   highlight = null;
   legend.innerHTML = "";
-  current = (current + step + PUZZLES.length) % PUZZLES.length;
+  current = (current + step + list.length) % list.length;
   message.textContent = "";
   render();
 }
@@ -264,8 +332,9 @@ function formatTime(seconds) {
 }
 
 
-// the timer only runs while the puzzle isn't finished
+// the timer only runs while a puzzle is open and not finished
 setInterval(() => {
+  if (game.hidden) return;
   const s = state();
   if (!s.solved && !s.revealed) {
     s.seconds++;
@@ -278,10 +347,15 @@ document.getElementById("next").addEventListener("click", () => go(1));
 document.getElementById("check").addEventListener("click", check);
 document.getElementById("reset").addEventListener("click", reset);
 document.getElementById("reveal").addEventListener("click", reveal);
+document.getElementById("menu-button").addEventListener("click", showMenu);
 document.addEventListener("keydown", event => {
+  if (game.hidden) return;
   if (event.key === "ArrowLeft") go(-1);
   if (event.key === "ArrowRight") go(1);
-  if (event.key === "Escape") clearConnections();
+  if (event.key === "Escape") {
+    if (highlight !== null) clearConnections();
+    else showMenu();
+  }
 });
 
-render();
+showMenu();

@@ -130,6 +130,20 @@ button:hover { border-color: var(--muted); }
 .tag-by { color: var(--by); }
 .tag-about { color: var(--about); }
 
+/* menu: pick a grid size, then a difficulty */
+#menu { text-align: center; margin: 24px 0; }
+#menu h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 20px 0 8px; }
+.choice { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.choice button.selected { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.level { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 130px; padding: 14px 18px; }
+.level-name { font-weight: 700; font-size: 1.1rem; text-transform: capitalize; }
+.level-count { font-size: 0.8rem; color: var(--muted); }
+.level-easy .level-name { color: var(--honest); }
+.level-medium .level-name { color: #c98a12; }
+.level-hard .level-name { color: var(--liar); }
+.level-tricky .level-name { color: #7a4fc4; }
+[hidden] { display: none !important; }
+
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }
 
