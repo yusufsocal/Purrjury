@@ -1,6 +1,6 @@
 // Purrjury web prototype. PUZZLES comes from puzzles.js (made by export.py).
 
-// what each cat color looks like as a little dot
+// how each cat color is painted onto the cat picture (see --cat-shape in style.css)
 const COLOR_STYLES = {
   ginger: "#e3893d",
   black: "#262626",
@@ -76,9 +76,13 @@ function render() {
     const top = document.createElement("div");
     top.className = "top";
 
+    // the cat picture: the same cat shape for everyone, only the color changes
     const swatch = document.createElement("span");
     swatch.className = "swatch";
-    swatch.style.background = COLOR_STYLES[cat.color] || "#ccc";
+    const swatchFill = document.createElement("span");
+    swatchFill.className = "swatch-fill";
+    swatchFill.style.background = COLOR_STYLES[cat.color] || "#ccc";
+    swatch.append(swatchFill);
 
     const name = document.createElement("span");
     name.className = "name";
@@ -139,7 +143,12 @@ function render() {
       showConnections(i, isDouble ? "about" : "by");
     });
     card.addEventListener("touchstart", () => {
-      pressTimer = setTimeout(() => { longPressed = true; showConnections(i); }, 500);
+      pressTimer = setTimeout(() => {
+        longPressed = true;
+        window.getSelection()?.removeAllRanges();   // in case the browser started selecting anyway
+        navigator.vibrate?.(20);                    // a tiny buzz so you feel it worked (Android)
+        showConnections(i);
+      }, 500);
     }, { passive: true });
     card.addEventListener("touchend", () => clearTimeout(pressTimer));
     card.addEventListener("touchmove", () => clearTimeout(pressTimer));
