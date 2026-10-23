@@ -21,11 +21,21 @@ const COLOR_STYLES = {
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
 const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
+// your own marks on a cat (with the pen button), shown as small chips on the card
+const TAGS = [
+  { id: "q", label: "?", title: "Not sure yet" },
+  { id: "bang", label: "!", title: "Come back to this" },
+  { id: "blue", label: "", title: "Blue group" },
+  { id: "purple", label: "", title: "Purple group" },
+];
+
 // a fresh start for a puzzle: every cat unknown, except the one an easy puzzle gives you
 function freshState(p) {
   return {
     marks: p.cats.map((_, i) => i === p.given ? (p.liars[i] ? "liar" : "honest") : "unknown"),
     used: p.cats.map(() => false),
+    notes: p.cats.map(() => ""),   // your own note for every cat
+    tags: p.cats.map(() => []),    // ids from TAGS
     checks: 0, wrongChecks: 0, hints: 0, seconds: 0, solved: false, revealed: false,
   };
 }
@@ -41,6 +51,7 @@ let highlightMode = "by";    // "by": cats that talk about it, "about": cats it 
 let lastRightClick = { index: null, time: 0 };   // to notice a double right click
 let highlightTimer = null;   // clears the highlight after a few seconds
 let hintCards = new Set();   // cards outlined by the last hint
+let editing = null;          // the cat whose notes and tags are open, or null
 let pressTimer = null;       // for long-press on phones
 let longPressed = false;     // true right after a long-press, so the tap after it doesn't change the mark
 const HIGHLIGHT_SECONDS = 6;
@@ -67,6 +78,7 @@ function levelOf(p) { return p.level || "unrated"; }
 function showMenu() {
   clearConnections();
   clearHint();
+  editing = null;
   game.hidden = true;
   menu.hidden = false;
   renderMenu();
@@ -187,7 +199,35 @@ function render() {
       render();
     });
 
-    card.append(top, text, usedToggle);
+    // pen: open your notes and tags for this cat
+    const pen = document.createElement("button");
+    pen.className = "pen-toggle";
+    if (s.notes[i] || s.tags[i].length) pen.classList.add("has-notes");
+    pen.innerHTML = "&#9998;";
+    pen.title = "Notes and tags";
+    pen.addEventListener("click", event => {
+      event.stopPropagation();   // don't also change the mark
+      editing = editing === i ? null : i;
+      render();
+    });
+
+    card.append(top, text, usedToggle, pen);
+
+    // your tags in a little row, and your note under the clue
+    if (s.tags[i].length) {
+      const chips = document.createElement("div");
+      chips.className = "chips";
+      TAGS.filter(tag => s.tags[i].includes(tag.id)).forEach(tag => chips.append(chip(tag)));
+      card.append(chips);
+    }
+    if (editing === i) {
+      card.append(noteEditor(i));
+    } else if (s.notes[i]) {
+      const note = document.createElement("p");
+      note.className = "note";
+      note.textContent = s.notes[i];
+      card.append(note);
+    }
 
     // hidden cats only meow, after Reveal we show what they really said
     if (cat.hidden && s.revealed) {
@@ -224,6 +264,57 @@ function render() {
   });
 
   timer.textContent = formatTime(s.seconds);
+}
+
+
+// one small tag chip: "?" or "!" as text, the colors as a dot
+function chip(tag) {
+  const span = document.createElement("span");
+  span.className = "chip chip-" + tag.id;
+  span.textContent = tag.label;
+  span.title = tag.title;
+  return span;
+}
+
+
+// the box the pen opens: tag buttons and a note field
+function noteEditor(i) {
+  const s = state();
+  const box = document.createElement("div");
+  box.className = "note-editor";
+  // taps and presses in here belong to the editor: no mark changes, no connections, normal paste menu
+  for (const type of ["click", "contextmenu", "touchstart"]) {
+    box.addEventListener(type, event => event.stopPropagation());
+  }
+
+  const tagRow = document.createElement("div");
+  tagRow.className = "tag-row";
+  TAGS.forEach(tag => {
+    const button = document.createElement("button");
+    button.className = "tag-toggle";
+    if (s.tags[i].includes(tag.id)) button.classList.add("on");
+    button.title = tag.title;
+    button.append(chip(tag));
+    button.addEventListener("click", () => {
+      s.tags[i] = s.tags[i].includes(tag.id) ? s.tags[i].filter(id => id !== tag.id) : [...s.tags[i], tag.id];
+      render();
+    });
+    tagRow.append(button);
+  });
+
+  const field = document.createElement("textarea");
+  field.rows = 2;
+  field.placeholder = "Note, e.g. honest if Hazel is";
+  field.value = s.notes[i];
+  field.addEventListener("input", () => { s.notes[i] = field.value; });   // no render here, it would lose the cursor
+
+  const done = document.createElement("button");
+  done.className = "note-done";
+  done.textContent = "Done";
+  done.addEventListener("click", () => { editing = null; render(); });
+
+  box.append(tagRow, field, done);
+  return box;
 }
 
 
@@ -293,6 +384,7 @@ function check() {
 
 function reset() {
   states[list[current]] = freshState(puzzle());
+  editing = null;
   message.textContent = "";
   clearHint();
   render();
@@ -309,6 +401,7 @@ function reveal() {
 
 function go(step) {
   highlight = null;
+  editing = null;
   hintCards.clear();
   legend.innerHTML = "";
   current = (current + step + list.length) % list.length;
@@ -425,6 +518,12 @@ document.getElementById("hint").addEventListener("click", hint);
 document.getElementById("menu-button").addEventListener("click", showMenu);
 document.addEventListener("keydown", event => {
   if (game.hidden) return;
+  // while typing a note, the arrow keys move the cursor, and Escape closes the note
+  if (event.target.tagName === "TEXTAREA") {
+    if (event.key === "Escape") { editing = null; render(); }
+    return;
+  }
+  if (event.key === "Escape" && editing !== null) { editing = null; render(); return; }
   if (event.key === "ArrowLeft") go(-1);
   if (event.key === "ArrowRight") go(1);
   if (event.key === "Escape") {

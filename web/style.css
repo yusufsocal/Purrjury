@@ -80,7 +80,7 @@ button:hover { border-color: var(--muted); }
 .card.answer-honest { box-shadow: 0 0 0 4px var(--honest); }
 .card.answer-liar { box-shadow: 0 0 0 4px var(--liar); }
 
-.top { display: flex; align-items: center; gap: 6px; padding-right: 28px; }
+.top { display: flex; align-items: center; gap: 6px; padding-right: 64px; }
 .name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; }
 .swatch {
   width: 22px; height: 22px;
@@ -107,6 +107,42 @@ button:hover { border-color: var(--muted); }
   font-size: 0.85rem;
   line-height: 1.4;
 }
+
+/* pen: your own notes and tags on a cat */
+.pen-toggle {
+  position: absolute;
+  top: 6px; right: 40px;
+  padding: 0 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.pen-toggle.has-notes { border-color: var(--muted); }
+.chips { display: flex; gap: 4px; margin-top: 6px; }
+.chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 9px;
+  font-size: 0.75rem; font-weight: 700;
+  background: #efe6d2; color: var(--ink);
+}
+.chip-blue, .chip-purple { min-width: 14px; height: 14px; padding: 0; }
+.chip-blue { background: var(--about); }
+.chip-purple { background: #7a4fc4; }
+.note { margin: 6px 0 0; font-size: 0.85rem; font-style: italic; color: var(--muted); overflow-wrap: break-word; }
+.note-editor { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; cursor: default; }
+.tag-row { display: flex; gap: 6px; }
+.tag-toggle { padding: 4px 8px; display: inline-flex; align-items: center; }
+.tag-toggle.on { border-color: var(--ink); background: #efe6d2; }
+.note-editor textarea {
+  font: inherit; font-size: 0.85rem;
+  padding: 6px;
+  border: 1px solid var(--line); border-radius: 8px;
+  resize: vertical;
+  /* the card blocks text selection for long-press, but the note field needs it */
+  -webkit-user-select: text; user-select: text;
+  -webkit-touch-callout: default;
+}
+.note-done { align-self: flex-end; padding: 4px 12px; }
 
 /* connections (right click or long-press a cat) */
 :root { --by: #e08a1e; --about: #2f6fdb; }
@@ -162,4 +198,5 @@ button:hover { border-color: var(--muted); }
   .top { padding-right: 0; gap: 4px; }
   .card { padding-bottom: 28px; }
   .used-toggle { top: auto; bottom: 4px; font-size: 0.75rem; }
+  .pen-toggle { top: auto; bottom: 4px; font-size: 0.75rem; }
 }
