@@ -131,6 +131,16 @@ def rate(steps, rows, cols):
     return levels_for(rows, cols)[base]
 
 
+def solved_before_two_clues(steps, n_cats):
+    """How much of the grid (0 to 1) is solved when the first 2-clue step comes, or None if there isn't one."""
+    known = 0
+    for level, _speakers, found, _options in steps:
+        if level == 2:
+            return known / n_cats
+        known += len(found)
+    return None
+
+
 def revealed_cat(steps):
     """The cat an easy puzzle starts with: one the first opener finds, a liar if it finds one.
 

@@ -2,7 +2,7 @@
 import base64
 import json
 
-from export import TRICK_MIN_LEVEL, clue_table, export, has_trick_clue
+from export import SOLVED_BEFORE_TWO_CLUES, TRICK_MIN_LEVEL, clue_table, export, has_trick_clue
 from purrjury.engine.generator import generate_puzzle
 from purrjury.engine.solver import LEVELS
 from purrjury.board.world import make_world
@@ -85,3 +85,18 @@ def test_only_easy_puzzles_reveal_a_cat(tmp_path):
         grid, _world = generate_puzzle(3, 3, 3)
         first_step = solve(grid)[0]
         assert p["given"] in first_step[2]   # a cat the only opener finds
+
+
+def test_hard_puzzles_have_their_two_clue_steps_late(tmp_path):
+    """On a 3x3, no 2-clue step comes before half of the grid is solved."""
+    import random
+    from purrjury.engine.solver import solve, solved_before_two_clues
+    puzzles = export([(3, 3)], count=2, path=str(tmp_path / "p.js"), first_seed=5)
+    for p in puzzles:
+        random.seed(p["seed"])
+        grid, _world = generate_puzzle(3, 3, 3)
+        share = solved_before_two_clues(solve(grid), 9)
+        if p["level"] == "hard":
+            assert share >= SOLVED_BEFORE_TWO_CLUES
+        else:
+            assert share is None

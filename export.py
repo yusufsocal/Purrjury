@@ -9,13 +9,30 @@ import json
 import random
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import LEVELS, involved, levels_for, rate, revealed_cat, solve
+from purrjury.engine.solver import (BIG_GRID, LEVELS, involved, levels_for, rate, revealed_cat, solve,
+                                    solved_before_two_clues)
 
 # Give up on a size after this many puzzles, in case some level is too rare to fill
 MAX_TRIES = 1000
 
 # Trick clues ("Felix and I are the same type") only appear in puzzles of this level and up
 TRICK_MIN_LEVEL = "hard"
+
+# 2-clue steps only come once this much of the grid is solved: stuck on the first piece isn't fun,
+# stuck after a few cats makes you try harder (or press Hint).
+SOLVED_BEFORE_TWO_CLUES = 0.5
+# Random big grids almost never have late 2-clue steps, so for now they only need an opener first
+# (0 still means the 2-clue step can't be the very first one). A path-based generator should fix this.
+SOLVED_BEFORE_TWO_CLUES_BIG = 0.0
+
+
+def two_clue_steps_come_late(steps, rows, cols):
+    """True if the puzzle has no 2-clue steps, or its first one comes late enough (see above)."""
+    share = solved_before_two_clues(steps, rows * cols)
+    if share is None:
+        return True
+    needed = SOLVED_BEFORE_TWO_CLUES_BIG if rows * cols >= BIG_GRID else SOLVED_BEFORE_TWO_CLUES
+    return share > 0 and share >= needed
 
 
 def has_trick_clue(grid):
@@ -98,6 +115,8 @@ def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_T
                 level = rate(steps, rows, cols)
                 if level is not None and LEVELS.index(level) < LEVELS.index(TRICK_MIN_LEVEL) and has_trick_clue(grid):
                     level = None   # a trick clue in an easy or medium puzzle: skip this one
+                if level is not None and not two_clue_steps_come_late(steps, rows, cols):
+                    level = None   # a 2-clue step too early: skip this one
                 if wanted.get(level, 0) > 0:   # None (stuck or skipped) is never wanted
                     # the easiest level of each size starts with the cat its only opener finds
                     given = revealed_cat(steps) if level == levels[0] else None

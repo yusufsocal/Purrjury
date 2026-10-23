@@ -2193,940 +2193,269 @@ const PUZZLES = [
  {
   "rows": 3,
   "cols": 3,
-  "seed": 103,
+  "seed": 128,
   "level": "hard",
   "given": null,
   "cats": [
    {
-    "name": "Apricot",
-    "color": "siamese",
+    "name": "Bagel",
+    "color": "white",
     "row": 0,
     "column": 0,
-    "text": "*incomprehensible meowing*",
-    "hidden": true,
-    "secret": "Hiss. One of Luna and Nimbus is a liar, maybe both.",
-    "mentions": [],
-    "clue": null
-   },
-   {
-    "name": "Bean",
-    "color": "tuxedo",
-    "row": 0,
-    "column": 1,
-    "text": "Purr. Among the cats in my row, I'm the only one who's honest.",
+    "text": "Mark my whiskers: either Lentil is honest, or all of the corner cats are liars. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     2
+     2,
+     6,
+     7,
+     8
     ],
     "clue": {
      "cats": [
       0,
-      1,
-      2
+      2,
+      6,
+      7,
+      8
      ],
-     "table": "7A=="
+     "table": "VapVKg=="
     }
    },
    {
     "name": "Clover",
-    "color": "siamese",
-    "row": 0,
-    "column": 2,
-    "text": "Either Dusty is a liar, or all of the corner cats are honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3,
-     6,
-     8
-    ],
-    "clue": {
-     "cats": [
-      0,
-      2,
-      3,
-      6,
-      8
-     ],
-     "table": "PTw8PA=="
-    }
-   },
-   {
-    "name": "Dusty",
-    "color": "ginger",
-    "row": 1,
-    "column": 0,
-    "text": "All of the cats to my right are honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5
-    ],
-    "clue": {
-     "cats": [
-      3,
-      4,
-      5
-     ],
-     "table": "qQ=="
-    }
-   },
-   {
-    "name": "Fig",
-    "color": "ginger",
-    "row": 1,
-    "column": 1,
-    "text": "*points a paw at Inky* The only liar among Bean, Inky and me.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     6
-    ],
-    "clue": {
-     "cats": [
-      1,
-      4,
-      6
-     ],
-     "table": "3A=="
-    }
-   },
-   {
-    "name": "Goose",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 2,
-    "text": "I speak Apricot. Translated, they said: \"Hiss. One of Luna and Nimbus is a liar, maybe both.\"",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     7,
-     8
-    ],
-    "clue": {
-     "cats": [
-      0,
-      5,
-      7,
-      8
-     ],
-     "table": "3t0="
-    }
-   },
-   {
-    "name": "Inky",
-    "color": "siamese",
-    "row": 2,
-    "column": 0,
-    "text": "*nods at Clover* The only honest cat among Clover, Nimbus and me.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     8
-    ],
-    "clue": {
-     "cats": [
-      2,
-      6,
-      8
-     ],
-     "table": "jA=="
-    }
-   },
-   {
-    "name": "Luna",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 1,
-    "text": "*thinks hard* Either Dusty is honest, or all of the corner cats are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     3,
-     6,
-     8
-    ],
-    "clue": {
-     "cats": [
-      0,
-      2,
-      3,
-      6,
-      7,
-      8
-     ],
-     "table": "Hw/g8A8P8PA="
-    }
-   },
-   {
-    "name": "Nimbus",
-    "color": "ginger",
-    "row": 2,
-    "column": 2,
-    "text": "Dusty is honest, but Clover is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     3
-    ],
-    "clue": {
-     "cats": [
-      2,
-      3,
-      8
-     ],
-     "table": "0g=="
-    }
-   }
-  ],
-  "liars": [
-   true,
-   false,
-   true,
-   false,
-   false,
-   false,
-   true,
-   false,
-   false
-  ]
- },
- {
-  "rows": 3,
-  "cols": 3,
-  "seed": 105,
-  "level": "hard",
-  "given": null,
-  "cats": [
-   {
-    "name": "Angus",
-    "color": "grey",
-    "row": 0,
-    "column": 0,
-    "text": "Mrrp. Either Dumpling is a liar, or all of the cats in my column are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      3,
-      6
-     ],
-     "table": "Zg=="
-    }
-   },
-   {
-    "name": "Bean",
-    "color": "ginger",
-    "row": 0,
-    "column": 1,
-    "text": "Exactly 2 of Angus, Honey and me are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      6
-     ],
-     "table": "pA=="
-    }
-   },
-   {
-    "name": "Cricket",
-    "color": "grey",
-    "row": 0,
-    "column": 2,
-    "text": "Among the cats to my left, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      2
-     ],
-     "table": "lg=="
-    }
-   },
-   {
-    "name": "Dumpling",
-    "color": "ginger",
-    "row": 1,
-    "column": 0,
-    "text": "*nods at Espresso* The only honest cat among my neighbors.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      3,
-      4,
-      6
-     ],
-     "table": "zMY="
-    }
-   },
-   {
-    "name": "Espresso",
-    "color": "grey",
-    "row": 1,
-    "column": 1,
-    "text": "*purrs* All of Bean, Dumpling and me are from the same litter: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     3
-    ],
-    "clue": {
-     "cats": [
-      1,
-      3,
-      4
-     ],
-     "table": "cQ=="
-    }
-   },
-   {
-    "name": "Fig",
-    "color": "tabby",
-    "row": 1,
-    "column": 2,
-    "text": "Among the cats in column 1, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      3,
-      5,
-      6
-     ],
-     "table": "Hoc="
-    }
-   },
-   {
-    "name": "Honey",
-    "color": "tabby",
-    "row": 2,
-    "column": 0,
-    "text": "Hiss. Among the cats in row 2 you'll find both: at least one liar and at least one honest cat.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     4,
-     5
-    ],
-    "clue": {
-     "cats": [
-      3,
-      4,
-      5,
-      6
-     ],
-     "table": "foE="
-    }
-   },
-   {
-    "name": "Inky",
-    "color": "tabby",
-    "row": 2,
-    "column": 1,
-    "text": "Mrrp. Either Fig is honest, or all of Bean, Honey and me are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5,
-     6
-    ],
-    "clue": {
-     "cats": [
-      1,
-      5,
-      6,
-      7
-     ],
-     "table": "M0w="
-    }
-   },
-   {
-    "name": "Juniper",
-    "color": "tabby",
-    "row": 2,
-    "column": 2,
-    "text": "Purr. Among the cats in my column, I'm the only one who's honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     5
-    ],
-    "clue": {
-     "cats": [
-      2,
-      5,
-      8
-     ],
-     "table": "+A=="
-    }
-   }
-  ],
-  "liars": [
-   true,
-   false,
-   false,
-   false,
-   false,
-   false,
-   true,
-   false,
-   true
-  ]
- },
- {
-  "rows": 3,
-  "cols": 3,
-  "seed": 110,
-  "level": "hard",
-  "given": null,
-  "cats": [
-   {
-    "name": "Angus",
-    "color": "white",
-    "row": 0,
-    "column": 0,
-    "text": "Bean and Cricket are opposites: one is honest, the other is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      2
-     ],
-     "table": "lg=="
-    }
-   },
-   {
-    "name": "Bean",
     "color": "black",
     "row": 0,
     "column": 1,
-    "text": "Goose is honest, but Juniper is a liar.",
+    "text": "Bagel is pawsitively honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     6,
-     8
-    ],
-    "clue": {
-     "cats": [
-      1,
-      6,
-      8
-     ],
-     "table": "mg=="
-    }
-   },
-   {
-    "name": "Cricket",
-    "color": "white",
-    "row": 0,
-    "column": 2,
-    "text": "I'm the only liar among the white cats.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3,
-     5
+     0
     ],
     "clue": {
      "cats": [
       0,
-      2,
-      3,
-      5
+      1
      ],
-     "table": "yMw="
+     "table": "CQ=="
     }
    },
    {
-    "name": "Dumpling",
-    "color": "white",
-    "row": 1,
-    "column": 0,
-    "text": "Mark my whiskers: either Honey is a liar, or all of the cats in my row are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5,
-     7
-    ],
-    "clue": {
-     "cats": [
-      3,
-      4,
-      5,
-      7
-     ],
-     "table": "KlU="
-    }
-   },
-   {
-    "name": "Echo",
-    "color": "calico",
-    "row": 1,
-    "column": 1,
-    "text": "Only one bad kitty: exactly one of my neighbors is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     3,
-     5,
-     7
-    ],
-    "clue": {
-     "cats": [
-      1,
-      3,
-      4,
-      5,
-      7
-     ],
-     "table": "luHh8A=="
-    }
-   },
-   {
-    "name": "Fudge",
-    "color": "white",
-    "row": 1,
-    "column": 2,
-    "text": "Juniper is the only liar among the calico cats.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     7,
-     8
-    ],
-    "clue": {
-     "cats": [
-      4,
-      5,
-      7,
-      8
-     ],
-     "table": "zMk="
-    }
-   },
-   {
-    "name": "Goose",
+    "name": "Felix",
     "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "All of the cats in column 2 are the same: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     4,
-     7
-    ],
-    "clue": {
-     "cats": [
-      1,
-      4,
-      6,
-      7
-     ],
-     "table": "4Xg="
-    }
-   },
-   {
-    "name": "Honey",
-    "color": "calico",
-    "row": 2,
-    "column": 1,
-    "text": "*arches back* At least 3 cats are liars, maybe more.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6,
-     8
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-     ],
-     "table": "gOjo/uj+/v/o/v7//v///xcBAQABAAAAAQAAAAAAAADo/v7//v////7/////////AQAAAAAAAAAAAAAAAAAAAA=="
-    }
-   },
-   {
-    "name": "Juniper",
-    "color": "calico",
-    "row": 2,
-    "column": 2,
-    "text": "Hiss. Among the cats in my column, I'm the only liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     5
-    ],
-    "clue": {
-     "cats": [
-      2,
-      5,
-      8
-     ],
-     "table": "4A=="
-    }
-   }
-  ],
-  "liars": [
-   false,
-   false,
-   true,
-   true,
-   false,
-   false,
-   false,
-   false,
-   true
-  ]
- },
- {
-  "rows": 3,
-  "cols": 3,
-  "seed": 113,
-  "level": "hard",
-  "given": null,
-  "cats": [
-   {
-    "name": "Angus",
-    "color": "calico",
-    "row": 0,
-    "column": 0,
-    "text": "Mrrp. One of Fudge and me is honest, maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4
-    ],
-    "clue": {
-     "cats": [
-      0,
-      4
-     ],
-     "table": "DQ=="
-    }
-   },
-   {
-    "name": "Bagel",
-    "color": "calico",
-    "row": 0,
-    "column": 1,
-    "text": "Mrrp. Either Kismet is honest, or all of the corner cats are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     6,
-     8
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      2,
-      6,
-      8
-     ],
-     "table": "MzPMbA=="
-    }
-   },
-   {
-    "name": "Doodle",
-    "color": "ginger",
     "row": 0,
     "column": 2,
-    "text": "All but one of the cats in my row are honest.",
+    "text": "*sighs* I'm the only honest cat among Indigo, Kettle and me. The rest are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     1
-    ],
-    "clue": {
-     "cats": [
-      0,
-      1,
-      2
-     ],
-     "table": "5g=="
-    }
-   },
-   {
-    "name": "Ember",
-    "color": "ginger",
-    "row": 1,
-    "column": 0,
-    "text": "*swishes tail* Among the tuxedo cats, there's at least one liar and at least one honest cat.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     6,
-     7
-    ],
-    "clue": {
-     "cats": [
-      3,
-      6,
-      7
-     ],
-     "table": "lg=="
-    }
-   },
-   {
-    "name": "Fudge",
-    "color": "ginger",
-    "row": 1,
-    "column": 1,
-    "text": "Either Angus is honest, or all of Doodle, Gnocchi and me are liars (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     5
-    ],
-    "clue": {
-     "cats": [
-      0,
-      2,
-      4,
-      5
-     ],
-     "table": "pSU="
-    }
-   },
-   {
-    "name": "Gnocchi",
-    "color": "ginger",
-    "row": 1,
-    "column": 2,
-    "text": "Fudge is the only liar among my neighbors.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
      4,
-     8
+     6
     ],
     "clue": {
      "cats": [
       2,
       4,
-      5,
-      8
+      6
      ],
-     "table": "tPA="
+     "table": "6g=="
     }
    },
    {
     "name": "Hazel",
-    "color": "tuxedo",
-    "row": 2,
+    "color": "black",
+    "row": 1,
     "column": 0,
-    "text": "Either Iggy is a liar, or all of the cats above me are honest (or both).",
+    "text": "Meow. Among Clover, Lentil and me, only Lentil is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     3,
+     1,
      7
     ],
     "clue": {
      "cats": [
-      0,
+      1,
       3,
-      6,
       7
      ],
-     "table": "4Q8="
+     "table": "xA=="
     }
    },
    {
-    "name": "Iggy",
-    "color": "tuxedo",
-    "row": 2,
+    "name": "Indigo",
+    "color": "grey",
+    "row": 1,
     "column": 1,
-    "text": "I'm not kitten you, Fudge is a liar.",
+    "text": "Felix and Hazel are both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4
+     2,
+     3
     ],
     "clue": {
      "cats": [
-      4,
-      7
+      2,
+      3,
+      4
+     ],
+     "table": "eA=="
+    }
+   },
+   {
+    "name": "Jasper",
+    "color": "white",
+    "row": 1,
+    "column": 2,
+    "text": "I'm not kitten you, Mango is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     8
+    ],
+    "clue": {
+     "cats": [
+      5,
+      8
      ],
      "table": "Bg=="
     }
    },
    {
-    "name": "Kismet",
-    "color": "calico",
+    "name": "Kettle",
+    "color": "white",
     "row": 2,
-    "column": 2,
-    "text": "Either Ember is honest, or all of the ginger cats are honest (or both).",
+    "column": 0,
+    "text": "*thinks hard* Either Jasper is honest, or all of the cats above me are liars, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
+     0,
      3,
-     4,
      5
     ],
     "clue": {
      "cats": [
+      0,
+      3,
+      5,
+      6
+     ],
+     "table": "j3A="
+    }
+   },
+   {
+    "name": "Lentil",
+    "color": "grey",
+    "row": 2,
+    "column": 1,
+    "text": "*thinks hard* Either Bagel is honest, or all of the black cats are liars, or both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
       2,
       3,
-      4,
-      5,
+      7
+     ],
+     "table": "VdWqKg=="
+    }
+   },
+   {
+    "name": "Mango",
+    "color": "white",
+    "row": 2,
+    "column": 2,
+    "text": "Hazel is as honest as they come. Purr.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3
+    ],
+    "clue": {
+     "cats": [
+      3,
       8
      ],
-     "table": "MzPMzA=="
+     "table": "CQ=="
     }
    }
   ],
   "liars": [
+   false,
+   false,
+   true,
    true,
    false,
    false,
    false,
-   true,
    false,
-   true,
-   false,
-   false
+   true
   ]
  },
  {
   "rows": 3,
   "cols": 3,
-  "seed": 114,
+  "seed": 298,
   "level": "hard",
   "given": null,
   "cats": [
    {
     "name": "Angus",
-    "color": "tabby",
+    "color": "siamese",
     "row": 0,
     "column": 0,
-    "text": "*thinks hard* Either Inky is honest, or all of the cats in row 3 are honest, or both.",
+    "text": "I'm the only honest cat among the cats in my row.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     6,
-     7,
-     8
+     1,
+     2
     ],
     "clue": {
      "cats": [
       0,
-      6,
-      7,
-      8
+      1,
+      2
      ],
-     "table": "paU="
+     "table": "6g=="
     }
    },
    {
     "name": "Bagel",
-    "color": "grey",
+    "color": "calico",
     "row": 0,
     "column": 1,
-    "text": "Purr. All of Echo, Honey and me can be trusted, except exactly one.",
+    "text": "Angus and I are both honest, or both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     3,
-     6
+     0
     ],
     "clue": {
      "cats": [
-      1,
-      3,
-      6
+      0,
+      1
      ],
-     "table": "vA=="
+     "table": "BQ=="
     }
    },
    {
-    "name": "Dusty",
-    "color": "grey",
+    "name": "Doodle",
+    "color": "siamese",
     "row": 0,
     "column": 2,
-    "text": "Everyone among the cats to my left is honest, except Angus, who is a liar.",
+    "text": "*purrs* All of the cats in my row are from the same litter: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3139,57 +2468,45 @@ const PUZZLES = [
       1,
       2
      ],
-     "table": "0g=="
+     "table": "cQ=="
     }
    },
    {
-    "name": "Echo",
-    "color": "grey",
+    "name": "Ember",
+    "color": "calico",
     "row": 1,
     "column": 0,
-    "text": "*thinks hard* Either Gnocchi is honest, or all the cats are liars, or both.",
+    "text": "Angus and Jellybean are opposites: one is honest, the other is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     1,
-     2,
-     4,
-     5,
-     6,
-     7,
-     8
+     7
     ],
     "clue": {
      "cats": [
       0,
-      1,
-      2,
       3,
-      4,
-      5,
-      6,
-      7,
-      8
+      7
      ],
-     "table": "/wD/AAD/AP//AP8AAP8A//8A/wAA/wD//wD/AAD/AP//AP8AAP8A//8A/wAA/wD//wD/AAD/AP//AP8AAP8Afw=="
+     "table": "lg=="
     }
    },
    {
-    "name": "Fudge",
-    "color": "tabby",
+    "name": "Felix",
+    "color": "ginger",
     "row": 1,
     "column": 1,
-    "text": "Mrrp. Whatever one of Bagel, Gnocchi and me is, the rest are too.",
+    "text": "Same story for all of the cats in my row: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
+     3,
      5
     ],
     "clue": {
      "cats": [
-      1,
+      3,
       4,
       5
      ],
@@ -3197,72 +2514,34 @@ const PUZZLES = [
     }
    },
    {
-    "name": "Gnocchi",
-    "color": "tabby",
+    "name": "Gizmo",
+    "color": "siamese",
     "row": 1,
     "column": 2,
-    "text": "Same story for all of the cats in my row: all honest, or all liars.",
+    "text": "Hiss. Among the ginger cats you'll find both: at least one liar and at least one honest cat.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     3,
-     4
+     4,
+     7,
+     8
     ],
     "clue": {
      "cats": [
-      3,
       4,
-      5
+      5,
+      7,
+      8
      ],
-     "table": "cQ=="
+     "table": "NpM="
     }
    },
    {
     "name": "Honey",
-    "color": "tuxedo",
+    "color": "siamese",
     "row": 2,
     "column": 0,
-    "text": "I'm not kitten you, Fudge is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4
-    ],
-    "clue": {
-     "cats": [
-      4,
-      6
-     ],
-     "table": "Bg=="
-    }
-   },
-   {
-    "name": "Inky",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 1,
-    "text": "All of the cats above me are liars. Every whisker in the bunch is crooked.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     4
-    ],
-    "clue": {
-     "cats": [
-      1,
-      4,
-      7
-     ],
-     "table": "eA=="
-    }
-   },
-   {
-    "name": "Jasper",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 2,
-    "text": "Purr. All of the cats in row 1 can be trusted, except exactly one.",
+    "text": "Purr... at least one of the cats in row 1 is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3275,20 +2554,721 @@ const PUZZLES = [
       0,
       1,
       2,
+      6
+     ],
+     "table": "/gE="
+    }
+   },
+   {
+    "name": "Jellybean",
+    "color": "ginger",
+    "row": 2,
+    "column": 1,
+    "text": "*swishes tail* One of Ember and Felix is honest, the other is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     4
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      7
+     ],
+     "table": "lg=="
+    }
+   },
+   {
+    "name": "Kismet",
+    "color": "ginger",
+    "row": 2,
+    "column": 2,
+    "text": "Either Doodle is a liar, or all of the cats to my left are liars (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     7
+    ],
+    "clue": {
+     "cats": [
+      2,
+      6,
+      7,
       8
      ],
-     "table": "Fuk="
+     "table": "6hU="
     }
    }
   ],
   "liars": [
+   false,
+   true,
    true,
    false,
    false,
    false,
    false,
+   true,
+   false
+  ]
+ },
+ {
+  "rows": 3,
+  "cols": 3,
+  "seed": 315,
+  "level": "hard",
+  "given": null,
+  "cats": [
+   {
+    "name": "Bagel",
+    "color": "tuxedo",
+    "row": 0,
+    "column": 0,
+    "text": "*slow blinks* Hazel and Kiwi are both honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     6,
+     8
+    ],
+    "clue": {
+     "cats": [
+      0,
+      6,
+      8
+     ],
+     "table": "qQ=="
+    }
+   },
+   {
+    "name": "Cricket",
+    "color": "black",
+    "row": 0,
+    "column": 1,
+    "text": "Dusty is the only liar among my neighbors.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     4
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "table": "nMw="
+    }
+   },
+   {
+    "name": "Dusty",
+    "color": "tabby",
+    "row": 0,
+    "column": 2,
+    "text": "Mrrp. Whatever one of the cats on the edges is, the rest are too.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     3,
+     5,
+     6,
+     7,
+     8
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "8fDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8HA="
+    }
+   },
+   {
+    "name": "Echo",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 0,
+    "text": "Meow. Among the cats in my column, only Bagel is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     6
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "jA=="
+    }
+   },
+   {
+    "name": "Fig",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 1,
+    "text": "I smell a rat. At least one of Bagel, Dusty and me is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      4
+     ],
+     "table": "Dg=="
+    }
+   },
+   {
+    "name": "Gnocchi",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 2,
+    "text": "Every one of Bagel, Kiwi and me is a liar. Hiss!",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     8
+    ],
+    "clue": {
+     "cats": [
+      0,
+      5,
+      8
+     ],
+     "table": "TA=="
+    }
+   },
+   {
+    "name": "Hazel",
+    "color": "tabby",
+    "row": 2,
+    "column": 0,
+    "text": "Mrrp. At least one of Gnocchi and Kiwi is a liar. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     5,
+     8
+    ],
+    "clue": {
+     "cats": [
+      5,
+      6,
+      8
+     ],
+     "table": "Ng=="
+    }
+   },
+   {
+    "name": "Inky",
+    "color": "black",
+    "row": 2,
+    "column": 1,
+    "text": "*swishes tail* Among the cats in row 1, there's at least one liar and at least one honest cat.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      7
+     ],
+     "table": "foE="
+    }
+   },
+   {
+    "name": "Kiwi",
+    "color": "tabby",
+    "row": 2,
+    "column": 2,
+    "text": "All of the black cats are honest. Purrfectly so.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     7
+    ],
+    "clue": {
+     "cats": [
+      1,
+      7,
+      8
+     ],
+     "table": "4Q=="
+    }
+   }
+  ],
+  "liars": [
+   false,
    false,
    true,
+   true,
+   false,
+   true,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "rows": 3,
+  "cols": 3,
+  "seed": 342,
+  "level": "hard",
+  "given": null,
+  "cats": [
+   {
+    "name": "Ash",
+    "color": "calico",
+    "row": 0,
+    "column": 0,
+    "text": "*nods at Ember* The only honest cat among the cats below me.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
+     6
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "mg=="
+    }
+   },
+   {
+    "name": "Biscuit",
+    "color": "calico",
+    "row": 0,
+    "column": 1,
+    "text": "Ember is the only honest cat of them all.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "table": "zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxMzA=="
+    }
+   },
+   {
+    "name": "Doodle",
+    "color": "ginger",
+    "row": 0,
+    "column": 2,
+    "text": "Mrrp. Among my neighbors, only Biscuit is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     5
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      5
+     ],
+     "table": "xg=="
+    }
+   },
+   {
+    "name": "Ember",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 0,
+    "text": "Mrrp. Either Kettle is honest, or all of the cats in my row are honest. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     7
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      5,
+      7
+     ],
+     "table": "Vas="
+    }
+   },
+   {
+    "name": "Fig",
+    "color": "calico",
+    "row": 1,
+    "column": 1,
+    "text": "Among the cats in my column, there are both honest cats and liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     7
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "sg=="
+    }
+   },
+   {
+    "name": "Honey",
+    "color": "ginger",
+    "row": 1,
+    "column": 2,
+    "text": "*narrows eyes* At least one of the ginger cats is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     6
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      6
+     ],
+     "table": "Mg=="
+    }
+   },
+   {
+    "name": "Indigo",
+    "color": "ginger",
+    "row": 2,
+    "column": 0,
+    "text": "Mrrp. Either Fig is a liar, or all of the cats above me are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     3,
+     4
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      4,
+      6
+     ],
+     "table": "+Ac="
+    }
+   },
+   {
+    "name": "Kettle",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 1,
+    "text": "*thinks hard* Either Ash is a liar, or all of the calico cats are honest, or both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     4
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      4,
+      7
+     ],
+     "table": "q1Q="
+    }
+   },
+   {
+    "name": "Lentil",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 2,
+    "text": "Mrrp. Either Doodle is honest, or all of Fig, Honey and me are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     4,
+     5
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      5,
+      8
+     ],
+     "table": "VSo="
+    }
+   }
+  ],
+  "liars": [
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   true,
+   true,
+   false
+  ]
+ },
+ {
+  "rows": 3,
+  "cols": 3,
+  "seed": 363,
+  "level": "hard",
+  "given": null,
+  "cats": [
+   {
+    "name": "Bagel",
+    "color": "white",
+    "row": 0,
+    "column": 0,
+    "text": "*leans in* Juniper whispered to me: \"Everyone among my neighbors is honest, except Inky, who is a liar.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     4,
+     5,
+     8
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      4,
+      5,
+      8
+     ],
+     "table": "uu+q/w=="
+    }
+   },
+   {
+    "name": "Cricket",
+    "color": "black",
+    "row": 0,
+    "column": 1,
+    "text": "*sighs* I'm the only honest cat among the cats in my column. The rest are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     7
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7
+     ],
+     "table": "6g=="
+    }
+   },
+   {
+    "name": "Fudge",
+    "color": "white",
+    "row": 0,
+    "column": 2,
+    "text": "Hiss. Among the white cats you'll find both: at least one liar and at least one honest cat.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     3
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3
+     ],
+     "table": "sg=="
+    }
+   },
+   {
+    "name": "Goose",
+    "color": "white",
+    "row": 1,
+    "column": 0,
+    "text": "Each and every one of the cats in my column is a liar. Meow.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     6
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      6
+     ],
+     "table": "TA=="
+    }
+   },
+   {
+    "name": "Inky",
+    "color": "tabby",
+    "row": 1,
+    "column": 1,
+    "text": "Meow. Cricket and I are liars, both of us.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4
+     ],
+     "table": "BA=="
+    }
+   },
+   {
+    "name": "Juniper",
+    "color": "tabby",
+    "row": 1,
+    "column": 2,
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "Everyone among my neighbors is honest, except Inky, who is a liar.",
+    "mentions": [],
+    "clue": null
+   },
+   {
+    "name": "Kismet",
+    "color": "black",
+    "row": 2,
+    "column": 0,
+    "text": "Everyone among the white cats is honest, except Goose, who is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     3
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3,
+      6
+     ],
+     "table": "EO8="
+    }
+   },
+   {
+    "name": "Luna",
+    "color": "black",
+    "row": 2,
+    "column": 1,
+    "text": "Meow. Among the white cats, only Goose is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     2,
+     3
+    ],
+    "clue": {
+     "cats": [
+      0,
+      2,
+      3,
+      7
+     ],
+     "table": "CPc="
+    }
+   },
+   {
+    "name": "Mochi",
+    "color": "tabby",
+    "row": 2,
+    "column": 2,
+    "text": "Inky and Luna? Liars, the pair of them.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     7
+    ],
+    "clue": {
+     "cats": [
+      4,
+      7,
+      8
+     ],
+     "table": "eA=="
+    }
+   }
+  ],
+  "liars": [
+   false,
+   false,
+   false,
+   true,
+   true,
+   false,
+   false,
    true,
    false
   ]
@@ -7966,66 +7946,60 @@ const PUZZLES = [
  {
   "rows": 4,
   "cols": 4,
-  "seed": 1010,
+  "seed": 1022,
   "level": "tricky",
   "given": null,
   "cats": [
    {
     "name": "Apricot",
-    "color": "tabby",
+    "color": "black",
     "row": 0,
     "column": 0,
-    "text": "Mrrp. Either Clover is a liar, or Ember is honest. Maybe both.",
+    "text": "Meow. Oreo and I are the same: both honest, or both liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     2,
-     4
+     11
     ],
     "clue": {
      "cats": [
       0,
-      2,
-      4
+      11
      ],
-     "table": "ZQ=="
+     "table": "Aw=="
     }
    },
    {
     "name": "Biscuit",
-    "color": "grey",
+    "color": "tabby",
     "row": 0,
     "column": 1,
-    "text": "I speak Clover. Translated, they said: \"Apricot is the only liar among the corner cats.\"",
+    "text": "*leans in* Coco whispered to me: \"*nods at Dumpling* The only honest cat among my neighbors.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
      2,
      3,
-     12,
-     15
+     6
     ],
     "clue": {
      "cats": [
-      0,
       1,
       2,
       3,
-      12,
-      15
+      6
      ],
-     "table": "3vz8/Pz8/Pw="
+     "table": "7u4="
     }
    },
    {
-    "name": "Clover",
-    "color": "grey",
+    "name": "Coco",
+    "color": "tuxedo",
     "row": 0,
     "column": 2,
-    "text": "*chirps at a bird outside*",
+    "text": "Mrrrow mrrp mew.",
     "hidden": true,
-    "secret": "Apricot is the only liar among the corner cats.",
+    "secret": "Exactly one of Espresso and Loki is a liar.",
     "mentions": [],
     "clue": null
    },
@@ -8034,10 +8008,187 @@ const PUZZLES = [
     "color": "calico",
     "row": 0,
     "column": 3,
-    "text": "All of the cats below me are honest.",
+    "text": "*thinks hard* Either Apricot is honest, or all of the cats on the edges are honest, or both.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     0,
+     1,
+     2,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "VapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVao="
+    }
+   },
+   {
+    "name": "Espresso",
+    "color": "white",
+    "row": 1,
+    "column": 0,
+    "text": "All of the tuxedo cats are the same: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     6,
+     12,
+     14
+    ],
+    "clue": {
+     "cats": [
+      2,
+      4,
+      6,
+      12,
+      14
+     ],
+     "table": "yczMbA=="
+    }
+   },
+   {
+    "name": "Felix",
+    "color": "black",
+    "row": 1,
+    "column": 1,
+    "text": "Among the cats on the edges, there are both honest cats and liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "/v///wEAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD///9/AAAAgA=="
+    }
+   },
+   {
+    "name": "Goose",
+    "color": "tuxedo",
+    "row": 1,
+    "column": 2,
+    "text": "All of the cats to my left are the same: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     5
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6
+     ],
+     "table": "aQ=="
+    }
+   },
+   {
+    "name": "Jasper",
+    "color": "calico",
+    "row": 1,
+    "column": 3,
+    "text": "Either Umber is honest, or all of the cats in my row are liars (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     5,
+     6,
+     15
+    ],
+    "clue": {
+     "cats": [
+      4,
+      5,
+      6,
+      7,
+      15
+     ],
+     "table": "/wAAfw=="
+    }
+   },
+   {
+    "name": "Loki",
+    "color": "black",
+    "row": 2,
+    "column": 0,
+    "text": "Either Sprout is a liar, or all of the cats in row 4 are honest (or both).",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "clue": {
+     "cats": [
+      8,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "qVWqVQ=="
+    }
+   },
+   {
+    "name": "Mango",
+    "color": "tabby",
+    "row": 2,
+    "column": 1,
+    "text": "Same story for all of the cats in column 4: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
      7,
      11,
      15
@@ -8046,136 +8197,24 @@ const PUZZLES = [
      "cats": [
       3,
       7,
+      9,
       11,
       15
      ],
-     "table": "qao="
+     "table": "4fDweA=="
     }
    },
    {
-    "name": "Ember",
-    "color": "calico",
-    "row": 1,
-    "column": 0,
-    "text": "*twitches whiskers* Either Dumpling is a liar, or Apricot is honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     3
-    ],
-    "clue": {
-     "cats": [
-      0,
-      3,
-      4
-     ],
-     "table": "LQ=="
-    }
-   },
-   {
-    "name": "Felix",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 1,
-    "text": "*swishes tail* Among Apricot, Gizmo and me, there's at least one liar and at least one honest cat.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      5,
-      6
-     ],
-     "table": "sg=="
-    }
-   },
-   {
-    "name": "Gizmo",
-    "color": "calico",
-    "row": 1,
+    "name": "Noodle",
+    "color": "white",
+    "row": 2,
     "column": 2,
-    "text": "*thinks hard* Either Hobbes is honest, or all of the grey cats are liars, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2,
-     7,
-     14,
-     15
-    ],
-    "clue": {
-     "cats": [
-      1,
-      2,
-      6,
-      7,
-      14,
-      15
-     ],
-     "table": "D/AP8A/wD3g="
-    }
-   },
-   {
-    "name": "Hobbes",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 3,
-    "text": "*thinks hard* Either Ember is honest, or all of Biscuit, Clover and me are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     2,
-     4
-    ],
-    "clue": {
-     "cats": [
-      1,
-      2,
-      4,
-      7
-     ],
-     "table": "H/A="
-    }
-   },
-   {
-    "name": "Iggy",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 0,
-    "text": "Trust Ember over Apricot: Ember is honest and Apricot is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4
-    ],
-    "clue": {
-     "cats": [
-      0,
-      4,
-      8
-     ],
-     "table": "0g=="
-    }
-   },
-   {
-    "name": "Jellybean",
-    "color": "tabby",
-    "row": 2,
-    "column": 1,
-    "text": "Mrrp. Whatever one of the cats in my row is, the rest are too.",
+    "text": "Exactly 1 of the cats in my row can be trusted.",
     "hidden": false,
     "secret": null,
     "mentions": [
      8,
-     10,
+     9,
      11
     ],
     "clue": {
@@ -8185,156 +8224,135 @@ const PUZZLES = [
       10,
       11
      ],
-     "table": "zUw="
+     "table": "cJg="
     }
    },
    {
-    "name": "Nugget",
-    "color": "tabby",
-    "row": 2,
-    "column": 2,
-    "text": "*flicks ears* Exactly 3 of the cats in column 1 are liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     8,
-     12
-    ],
-    "clue": {
-     "cats": [
-      0,
-      4,
-      8,
-      10,
-      12
-     ],
-     "table": "gH9olw=="
-    }
-   },
-   {
-    "name": "Olive",
-    "color": "white",
+    "name": "Oreo",
+    "color": "calico",
     "row": 2,
     "column": 3,
-    "text": "Meow. Among the cats to my left, only Nugget is honest.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     8,
-     9,
-     10
-    ],
-    "clue": {
-     "cats": [
-      8,
-      9,
-      10,
-      11
-     ],
-     "table": "CPc="
-    }
-   },
-   {
-    "name": "Pickles",
-    "color": "white",
-    "row": 3,
-    "column": 0,
-    "text": "There's a mix among Gizmo, Rolo and me: some honest, some liars.",
+    "text": "*points a paw at Goose* The only liar among Goose, Loki and me.",
     "hidden": false,
     "secret": null,
     "mentions": [
      6,
-     14
+     8
     ],
     "clue": {
      "cats": [
       6,
-      12,
-      14
+      8,
+      11
      ],
-     "table": "sg=="
+     "table": "8g=="
     }
    },
    {
-    "name": "Quill",
-    "color": "calico",
+    "name": "Pickles",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 0,
+    "text": "*swishes tail* Among the white cats, there's at least one liar and at least one honest cat.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     10,
+     13,
+     15
+    ],
+    "clue": {
+     "cats": [
+      4,
+      10,
+      12,
+      13,
+      15
+     ],
+     "table": "Hg8Phw=="
+    }
+   },
+   {
+    "name": "Quincy",
+    "color": "white",
     "row": 3,
     "column": 1,
-    "text": "Rolo is the only liar among the cats to my right.",
+    "text": "*points a paw at Biscuit* The only liar among the cats in row 1.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     14,
-     15
+     0,
+     1,
+     2,
+     3
     ],
     "clue": {
      "cats": [
-      13,
-      14,
-      15
-     ],
-     "table": "pg=="
-    }
-   },
-   {
-    "name": "Rolo",
-    "color": "grey",
-    "row": 3,
-    "column": 2,
-    "text": "Mrrp. Either Sprout is a liar, or all of Dumpling, Pickles and me are liars. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     3,
-     12,
-     15
-    ],
-    "clue": {
-     "cats": [
+      0,
+      1,
+      2,
       3,
-      12,
-      14,
-      15
+      13
      ],
-     "table": "cA8="
+     "table": "BAD7/w=="
     }
    },
    {
     "name": "Sprout",
-    "color": "grey",
+    "color": "tuxedo",
     "row": 3,
-    "column": 3,
-    "text": "*sighs* I'm the only honest cat among Jellybean, Rolo and me. The rest are liars.",
+    "column": 2,
+    "text": "Quincy is lying through their whiskers.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     9,
+     13
+    ],
+    "clue": {
+     "cats": [
+      13,
+      14
+     ],
+     "table": "Bg=="
+    }
+   },
+   {
+    "name": "Umber",
+    "color": "white",
+    "row": 3,
+    "column": 3,
+    "text": "Mrrp. Either Pickles is honest, or all of the cats in my row are liars. Maybe both.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     12,
+     13,
      14
     ],
     "clue": {
      "cats": [
-      9,
+      12,
+      13,
       14,
       15
      ],
-     "table": "+A=="
+     "table": "VSo="
     }
    }
   ],
   "liars": [
+   false,
+   true,
+   false,
+   false,
+   true,
+   false,
    true,
    false,
    false,
    false,
    true,
-   false,
-   false,
-   false,
-   true,
-   true,
-   false,
    false,
    false,
    false,
@@ -8345,37 +8363,37 @@ const PUZZLES = [
  {
   "rows": 4,
   "cols": 4,
-  "seed": 50001,
+  "seed": 2005,
   "level": "tricky",
   "given": null,
   "cats": [
    {
-    "name": "Bean",
+    "name": "Angus",
     "color": "calico",
     "row": 0,
     "column": 0,
-    "text": "Meow. Among my neighbors, only Cricket is honest.",
+    "text": "Hiss. One of Otis and Quill is a liar, maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     4
+     11,
+     13
     ],
     "clue": {
      "cats": [
       0,
-      1,
-      4
+      11,
+      13
      ],
-     "table": "mg=="
+     "table": "Vg=="
     }
    },
    {
-    "name": "Cricket",
+    "name": "Bagel",
     "color": "grey",
     "row": 0,
     "column": 1,
-    "text": "All of the cats to my right are honest. Purrfectly so.",
+    "text": "Hiss. There's a liar among the cats to my right, maybe more.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8388,139 +8406,97 @@ const PUZZLES = [
       2,
       3
      ],
-     "table": "qQ=="
+     "table": "Vg=="
     }
    },
    {
-    "name": "Dumpling",
+    "name": "Cricket",
     "color": "calico",
     "row": 0,
     "column": 2,
-    "text": "Mark my whiskers: either Ursa is a liar, or all of the cats in my row are honest. Maybe both.",
+    "text": "Exactly 2 of the cats in my row can be trusted.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
      1,
-     3,
-     15
+     3
     ],
     "clue": {
      "cats": [
       0,
       1,
       2,
-      3,
-      15
+      3
      ],
-     "table": "8fAPDw=="
+     "table": "mOY="
+    }
+   },
+   {
+    "name": "Dusty",
+    "color": "calico",
+    "row": 0,
+    "column": 3,
+    "text": "Same story for all of the ginger cats: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     4,
+     8,
+     9,
+     10
+    ],
+    "clue": {
+     "cats": [
+      3,
+      4,
+      8,
+      9,
+      10
+     ],
+     "table": "qaqqag=="
     }
    },
    {
     "name": "Felix",
-    "color": "calico",
-    "row": 0,
-    "column": 3,
-    "text": "Everyone among Goose, Quincy and me is honest, except Goose, who is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     12
-    ],
-    "clue": {
-     "cats": [
-      3,
-      4,
-      12
-     ],
-     "table": "rg=="
-    }
-   },
-   {
-    "name": "Goose",
-    "color": "black",
+    "color": "ginger",
     "row": 1,
     "column": 0,
-    "text": "Hiss. Among the cats on the edges, I'm the only liar.",
+    "text": "*kneads paws* At least one of Dusty and Luna is honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     1,
-     2,
      3,
-     7,
-     8,
-     11,
-     12,
-     13,
-     14,
-     15
+     8
     ],
     "clue": {
      "cats": [
-      0,
-      1,
-      2,
       3,
       4,
-      7,
-      8,
-      11,
-      12,
-      13,
-      14,
-      15
+      8
      ],
-     "table": "AAD+/wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8="
+     "table": "kw=="
     }
    },
    {
-    "name": "Hobbes",
-    "color": "grey",
+    "name": "Gnocchi",
+    "color": "tabby",
     "row": 1,
     "column": 1,
-    "text": "I'm the only liar of all the cats.",
+    "text": "All of Rusty, Sprout and me are the same: all honest, or all liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     6,
-     7,
-     8,
-     9,
-     10,
-     11,
-     12,
-     13,
      14,
      15
     ],
     "clue": {
      "cats": [
-      0,
-      1,
-      2,
-      3,
-      4,
       5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
       14,
       15
      ],
-     "table": "AAAAAP7///8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8="
+     "table": "Kw=="
     }
    },
    {
@@ -8528,97 +8504,7 @@ const PUZZLES = [
     "color": "siamese",
     "row": 1,
     "column": 2,
-    "text": "Among the calico cats, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     2,
-     3,
-     15
-    ],
-    "clue": {
-     "cats": [
-      0,
-      2,
-      3,
-      6,
-      15
-     ],
-     "table": "/gF/gA=="
-    }
-   },
-   {
-    "name": "Kettle",
-    "color": "black",
-    "row": 1,
-    "column": 3,
-    "text": "Hiss! Hobbes and Juniper are liars, both of them.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     6
-    ],
-    "clue": {
-     "cats": [
-      5,
-      6,
-      7
-     ],
-     "table": "eA=="
-    }
-   },
-   {
-    "name": "Luna",
-    "color": "black",
-    "row": 2,
-    "column": 0,
-    "text": "*arches back* Goose and Hobbes are both liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     4,
-     5
-    ],
-    "clue": {
-     "cats": [
-      4,
-      5,
-      8
-     ],
-     "table": "eA=="
-    }
-   },
-   {
-    "name": "Mango",
-    "color": "siamese",
-    "row": 2,
-    "column": 1,
-    "text": "Exactly 1 of the grey cats can be trusted.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5,
-     14
-    ],
-    "clue": {
-     "cats": [
-      1,
-      5,
-      9,
-      14
-     ],
-     "table": "eJY="
-    }
-   },
-   {
-    "name": "Noodle",
-    "color": "siamese",
-    "row": 2,
-    "column": 2,
-    "text": "Mrrp. Whatever one of the cats in row 4 is, the rest are too.",
+    "text": "Either Sprout is honest, or all of the cats in row 4 are honest (or both).",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8629,145 +8515,217 @@ const PUZZLES = [
     ],
     "clue": {
      "cats": [
-      10,
+      6,
       12,
       13,
       14,
       15
      ],
-     "table": "qaqqag=="
+     "table": "VVWqqg=="
     }
    },
    {
-    "name": "Paprika",
-    "color": "white",
-    "row": 2,
+    "name": "Kiwi",
+    "color": "tabby",
+    "row": 1,
     "column": 3,
-    "text": "Mark my whiskers: either Cricket is honest, or all of Felix, Luna and me are honest. Maybe both.",
+    "text": "Mrrp. What Paprika meant was: \"Luna is the only honest cat among the cats above me.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     3,
-     8
+     0,
+     4,
+     8,
+     12
     ],
     "clue": {
      "cats": [
-      1,
-      3,
+      0,
+      4,
+      7,
       8,
-      11
+      12
      ],
-     "table": "V6o="
+     "table": "+PD3/w=="
     }
    },
    {
-    "name": "Quincy",
-    "color": "white",
-    "row": 3,
+    "name": "Luna",
+    "color": "ginger",
+    "row": 2,
     "column": 0,
-    "text": "*nods at Cricket* The only honest cat among the grey cats.",
+    "text": "I smell a rat. At least one of the cats in my column is a liar.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
-     5,
+     0,
+     4,
+     12
+    ],
+    "clue": {
+     "cats": [
+      0,
+      4,
+      8,
+      12
+     ],
+     "table": "Dg8="
+    }
+   },
+   {
+    "name": "Mochi",
+    "color": "ginger",
+    "row": 2,
+    "column": 1,
+    "text": "Hiss. Among Dusty, Rusty and me you'll find both: at least one liar and at least one honest cat.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     3,
      14
     ],
     "clue": {
      "cats": [
-      1,
-      5,
-      12,
+      3,
+      9,
       14
      ],
-     "table": "8LQ="
+     "table": "sg=="
     }
    },
    {
-    "name": "Ravioli",
-    "color": "black",
-    "row": 3,
-    "column": 1,
-    "text": "*narrows eyes* At least one of Goose and Noodle is a liar.",
+    "name": "Nugget",
+    "color": "ginger",
+    "row": 2,
+    "column": 2,
+    "text": "*flicks ears* Exactly 2 of my neighbors are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4,
-     10
+     6,
+     9,
+     11,
+     14
     ],
     "clue": {
      "cats": [
-      4,
+      6,
+      9,
       10,
-      13
+      11,
+      14
      ],
-     "table": "Hg=="
+     "table": "eJaW4Q=="
     }
    },
    {
-    "name": "Tater",
+    "name": "Otis",
+    "color": "tabby",
+    "row": 2,
+    "column": 3,
+    "text": "Hiss! Every single one of Bagel, Mochi and me is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     9
+    ],
+    "clue": {
+     "cats": [
+      1,
+      9,
+      11
+     ],
+     "table": "cA=="
+    }
+   },
+   {
+    "name": "Paprika",
+    "color": "siamese",
+    "row": 3,
+    "column": 0,
+    "text": "Nyaa... mrrp. Mew.",
+    "hidden": true,
+    "secret": "Luna is the only honest cat among the cats above me.",
+    "mentions": [],
+    "clue": null
+   },
+   {
+    "name": "Quill",
+    "color": "siamese",
+    "row": 3,
+    "column": 1,
+    "text": "Exactly one of Kiwi and Otis is a liar.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     7,
+     11
+    ],
+    "clue": {
+     "cats": [
+      7,
+      11,
+      13
+     ],
+     "table": "lg=="
+    }
+   },
+   {
+    "name": "Rusty",
     "color": "grey",
     "row": 3,
     "column": 2,
-    "text": "Mark my whiskers: either Noodle is honest, or all of Hobbes, Ursa and me are liars. Maybe both.",
+    "text": "Purr. You can trust Gnocchi and Paprika, both of them.",
     "hidden": false,
     "secret": null,
     "mentions": [
      5,
-     10,
-     15
+     12
     ],
     "clue": {
      "cats": [
       5,
-      10,
-      14,
-      15
+      12,
+      14
      ],
-     "table": "w0M="
+     "table": "4Q=="
     }
    },
    {
-    "name": "Ursa",
+    "name": "Sprout",
     "color": "calico",
     "row": 3,
     "column": 3,
-    "text": "*twitches tail* Exactly one of the black cats is a liar.",
+    "text": "Meow. Either I'm a liar, or Kiwi is honest. Maybe both.",
     "hidden": false,
     "secret": null,
     "mentions": [
-     4,
-     7,
-     8,
-     13
+     7
     ],
     "clue": {
      "cats": [
-      4,
       7,
-      8,
-      13,
       15
      ],
-     "table": "FgHp/g=="
+     "table": "AQ=="
     }
    }
   ],
   "liars": [
    false,
    false,
-   false,
-   false,
    true,
-   true,
-   true,
-   false,
    false,
    false,
    true,
    false,
    false,
+   false,
+   false,
+   false,
+   true,
+   true,
    false,
    true,
    false
@@ -8776,21 +8734,163 @@ const PUZZLES = [
  {
   "rows": 4,
   "cols": 4,
-  "seed": 70000,
+  "seed": 3011,
   "level": "tricky",
   "given": null,
   "cats": [
    {
-    "name": "Ash",
-    "color": "black",
+    "name": "Apricot",
+    "color": "tuxedo",
     "row": 0,
     "column": 0,
-    "text": "*thinks hard* Either Honey is a liar, or all of the cats in my column are honest, or both.",
+    "text": "*points a paw at Tofu* The only liar among the corner cats.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     3,
+     12,
+     15
+    ],
+    "clue": {
+     "cats": [
+      0,
+      3,
+      12,
+      15
+     ],
+     "table": "qqs="
+    }
+   },
+   {
+    "name": "Bean",
+    "color": "grey",
+    "row": 0,
+    "column": 1,
+    "text": "*incomprehensible meowing*",
+    "hidden": true,
+    "secret": "Exactly one of Rolo and Tofu is a liar.",
+    "mentions": [],
+    "clue": null
+   },
+   {
+    "name": "Cricket",
+    "color": "ginger",
+    "row": 0,
+    "column": 2,
+    "text": "Meow. Among my neighbors, only Jellybean is honest.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     3,
+     6
+    ],
+    "clue": {
+     "cats": [
+      1,
+      2,
+      3,
+      6
+     ],
+     "table": "bMw="
+    }
+   },
+   {
+    "name": "Ember",
+    "color": "white",
+    "row": 0,
+    "column": 3,
+    "text": "Exactly 3 of the cats on the edges are liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     1,
+     2,
      4,
      7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "clue": {
+     "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "table": "gJdo6WjpFv5o6Rb+Fv4B/2jpFv4W/gH/Fv4B/wH/AP9o6Rb+Fv4B/xb+Af8B/wD/Fv4B/wH/AP8B/wD/AP8A/2jpFv4W/gH/Fv4B/wH/AP8W/gH/Af8A/wH/AP8A/wD/Fv4B/wH/AP8B/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP9o6Rb+Fv4B/xb+Af8B/wD/Fv4B/wH/AP8B/wD/AP8A/xb+Af8B/wD/Af8A/wD/AP8B/wD/AP8A/wD/AP8A/wD/Fv4B/wH/AP8B/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP8B/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/2jpFv4W/gH/Fv4B/wH/AP8W/gH/Af8A/wH/AP8A/wD/Fv4B/wH/AP8B/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP8W/gH/Af8A/wH/AP8A/wD/Af8A/wD/AP8A/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/Fv4B/wH/AP8B/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP8B/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wH/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8="
+    }
+   },
+   {
+    "name": "Goose",
+    "color": "siamese",
+    "row": 1,
+    "column": 0,
+    "text": "Kismet is the only liar among the grey cats.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     7,
+     11,
+     13
+    ],
+    "clue": {
+     "cats": [
+      1,
+      4,
+      7,
+      11,
+      13
+     ],
+     "table": "nMzMzA=="
+    }
+   },
+   {
+    "name": "Honey",
+    "color": "ginger",
+    "row": 1,
+    "column": 1,
+    "text": "I'm the only honest cat among the ginger cats.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
+     10
+    ],
+    "clue": {
+     "cats": [
+      2,
+      5,
+      10
+     ],
+     "table": "7A=="
+    }
+   },
+   {
+    "name": "Jellybean",
+    "color": "white",
+    "row": 1,
+    "column": 2,
+    "text": "Mrrp. Whatever one of the cats in column 1 is, the rest are too.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     0,
+     4,
      8,
      12
     ],
@@ -8798,107 +8898,136 @@ const PUZZLES = [
      "cats": [
       0,
       4,
-      7,
+      6,
       8,
       12
      ],
-     "table": "W1paWg=="
+     "table": "4fDweA=="
     }
    },
    {
-    "name": "Biscuit",
+    "name": "Kismet",
     "color": "grey",
-    "row": 0,
-    "column": 1,
-    "text": "I'm the only honest cat among Jellybean, Lentil and me.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     9,
-     11
-    ],
-    "clue": {
-     "cats": [
-      1,
-      9,
-      11
-     ],
-     "table": "6g=="
-    }
-   },
-   {
-    "name": "Cricket",
-    "color": "calico",
-    "row": 0,
-    "column": 2,
-    "text": "Mrrp. Whatever one of Espresso, Noodle and me is, the rest are too.",
+    "row": 1,
+    "column": 3,
+    "text": "Meow. 3 or more of the cats in my row are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
      4,
-     13
+     5,
+     6
     ],
     "clue": {
      "cats": [
-      2,
       4,
-      13
+      5,
+      6,
+      7
      ],
-     "table": "Kw=="
+     "table": "gBc="
     }
    },
    {
-    "name": "Dumpling",
+    "name": "Luna",
     "color": "siamese",
-    "row": 0,
-    "column": 3,
-    "text": "Mrrp. At least one of Biscuit and Lentil is a liar. Maybe both.",
+    "row": 2,
+    "column": 0,
+    "text": "I heard Rolo say: \"Mrrp. Either Luna is a liar, or all of Oreo, Paprika and me are honest. Maybe both.\"",
     "hidden": false,
     "secret": null,
     "mentions": [
-     1,
+     11,
+     12,
+     14
+    ],
+    "clue": {
+     "cats": [
+      8,
+      11,
+      12,
+      14
+     ],
+     "table": "q/8="
+    }
+   },
+   {
+    "name": "Mango",
+    "color": "tuxedo",
+    "row": 2,
+    "column": 1,
+    "text": "Same story for all of Cricket, Oreo and me: all honest, or all liars.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2,
      11
     ],
     "clue": {
      "cats": [
-      1,
-      3,
+      2,
+      9,
       11
      ],
-     "table": "Ng=="
+     "table": "TQ=="
     }
    },
    {
-    "name": "Espresso",
-    "color": "white",
-    "row": 1,
-    "column": 0,
-    "text": "Same story for all of the cats in row 1: all honest, or all liars.",
+    "name": "Nugget",
+    "color": "ginger",
+    "row": 2,
+    "column": 2,
+    "text": "I heard Bean say: \"All of the cats below me are honest.\"",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     1,
+     5,
+     9,
+     13
+    ],
+    "clue": {
+     "cats": [
+      1,
+      5,
+      9,
+      10,
+      13
+     ],
+     "table": "qf+q/w=="
+    }
+   },
+   {
+    "name": "Oreo",
+    "color": "grey",
+    "row": 2,
+    "column": 3,
+    "text": "Purr. All of the corner cats can be trusted, except exactly one.",
     "hidden": false,
     "secret": null,
     "mentions": [
      0,
-     1,
-     2,
-     3
+     3,
+     12,
+     15
     ],
     "clue": {
      "cats": [
       0,
-      1,
-      2,
       3,
-      4
+      11,
+      12,
+      15
      ],
-     "table": "AYD+fw=="
+     "table": "luHh8A=="
     }
    },
    {
-    "name": "Fudge",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 1,
-    "text": "Purr. All of the cats in column 4 can be trusted, except exactly one.",
+    "name": "Paprika",
+    "color": "white",
+    "row": 3,
+    "column": 0,
+    "text": "Exactly 2 of the cats in column 4 are liars.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8910,260 +9039,109 @@ const PUZZLES = [
     "clue": {
      "cats": [
       3,
-      5,
       7,
       11,
-      15
-     ],
-     "table": "lsnJzA=="
-    }
-   },
-   {
-    "name": "Gizmo",
-    "color": "tuxedo",
-    "row": 1,
-    "column": 2,
-    "text": "Mrrp. Among the cats in column 2, only Jellybean is a liar.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     5,
-     9,
-     13
-    ],
-    "clue": {
-     "cats": [
-      1,
-      5,
-      6,
-      9,
-      13
-     ],
-     "table": "8OHw8A=="
-    }
-   },
-   {
-    "name": "Honey",
-    "color": "white",
-    "row": 1,
-    "column": 3,
-    "text": "Either Kiwi is a liar, or Noodle is honest. Could be both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10,
-     13
-    ],
-    "clue": {
-     "cats": [
-      7,
-      10,
-      13
-     ],
-     "table": "ZQ=="
-    }
-   },
-   {
-    "name": "Iggy",
-    "color": "siamese",
-    "row": 2,
-    "column": 0,
-    "text": "*thinks hard* Either Ash is a liar, or all of the cats in row 2 are honest, or both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     4,
-     5,
-     6,
-     7
-    ],
-    "clue": {
-     "cats": [
-      0,
-      4,
-      5,
-      6,
-      7,
-      8
-     ],
-     "table": "q6qqqlRVVVU="
-    }
-   },
-   {
-    "name": "Jellybean",
-    "color": "tuxedo",
-    "row": 2,
-    "column": 1,
-    "text": "Same story for all of Ash, Gizmo and me: all honest, or all liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     0,
-     6
-    ],
-    "clue": {
-     "cats": [
-      0,
-      6,
-      9
-     ],
-     "table": "cQ=="
-    }
-   },
-   {
-    "name": "Kiwi",
-    "color": "calico",
-    "row": 2,
-    "column": 2,
-    "text": "Lentil is the only liar among Lentil, Noodle and me.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     11,
-     13
-    ],
-    "clue": {
-     "cats": [
-      10,
-      11,
-      13
-     ],
-     "table": "rg=="
-    }
-   },
-   {
-    "name": "Lentil",
-    "color": "black",
-    "row": 2,
-    "column": 3,
-    "text": "Either Biscuit is a liar, or all of Honey, Marble and me are honest (or both).",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     1,
-     7,
-     12
-    ],
-    "clue": {
-     "cats": [
-      1,
-      7,
-      11,
-      12
-     ],
-     "table": "W1o="
-    }
-   },
-   {
-    "name": "Marble",
-    "color": "siamese",
-    "row": 3,
-    "column": 0,
-    "text": "Whatever Fudge is, Quill is too.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     5,
-     15
-    ],
-    "clue": {
-     "cats": [
-      5,
       12,
       15
      ],
-     "table": "aQ=="
-    }
-   },
-   {
-    "name": "Noodle",
-    "color": "grey",
-    "row": 3,
-    "column": 1,
-    "text": "Among the cats in column 3, there are both honest cats and liars.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     2,
-     6,
-     10,
-     14
-    ],
-    "clue": {
-     "cats": [
-      2,
-      6,
-      10,
-      13,
-      14
-     ],
-     "table": "/gF/gA=="
-    }
-   },
-   {
-    "name": "Oreo",
-    "color": "siamese",
-    "row": 3,
-    "column": 2,
-    "text": "Mark my whiskers: either Quill is a liar, or all of my neighbors are honest. Maybe both.",
-    "hidden": false,
-    "secret": null,
-    "mentions": [
-     10,
-     13,
-     15
-    ],
-    "clue": {
-     "cats": [
-      10,
-      13,
-      14,
-      15
-     ],
-     "table": "4Q8="
+     "table": "aJcW6Q=="
     }
    },
    {
     "name": "Quill",
-    "color": "calico",
+    "color": "grey",
     "row": 3,
-    "column": 3,
-    "text": "All but one of my neighbors are honest.",
+    "column": 1,
+    "text": "There are exactly 5 liars in total.",
     "hidden": false,
     "secret": null,
     "mentions": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
      11,
-     14
+     12,
+     14,
+     15
     ],
     "clue": {
      "cats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
       11,
+      12,
+      13,
       14,
       15
      ],
-     "table": "lg=="
+     "table": "AAAAgACAgGgAgIBogGhoFgCAgGiAaGgWgGhoFmgWFgEAgIBogGhoFoBoaBZoFhYBgGhoFmgWFgFoFhYBFgEBAACAgGiAaGgWgGhoFmgWFgGAaGgWaBYWAWgWFgEWAQEAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAAAAgIBogGhoFoBoaBZoFhYBgGhoFmgWFgFoFhYBFgEBAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAACAgGiAaGgWgGhoFmgWFgGAaGgWaBYWAWgWFgEWAQEAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAACAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgIBogGhoFoBoaBZoFhYBgGhoFmgWFgFoFhYBFgEBAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP9/f5d/l5fpf5eX6Zfp6f5/l5fpl+np/pfp6f7p/v7/f5eX6Zfp6f6X6en+6f7+/5fp6f7p/v7/6f7+//7///9/l5fpl+np/pfp6f7p/v7/l+np/un+/v/p/v7//v///5fp6f7p/v7/6f7+//7////p/v7//v////7/////////f5eX6Zfp6f6X6en+6f7+/5fp6f7p/v7/6f7+//7///+X6en+6f7+/+n+/v/+////6f7+//7////+/////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7///////////////////9/l5fpl+np/pfp6f7p/v7/l+np/un+/v/p/v7//v///5fp6f7p/v7/6f7+//7////p/v7//v////7/////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////f5eX6Zfp6f6X6en+6f7+/5fp6f7p/v7/6f7+//7///+X6en+6f7+/+n+/v/+////6f7+//7////+/////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7///////////////////+X6en+6f7+/+n+/v/+////6f7+//7////+/////////+n+/v/+/////v/////////+////////////////////6f7+//7////+//////////7////////////////////+/////////////////////////////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7///////////////////////////////////////////////////////////////////////////////////8AgIBogGhoFoBoaBZoFhYBgGhoFmgWFgFoFhYBFgEBAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBoaBZoFhYBaBYWARYBAQBoFhYBFgEBABYBAQABAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf5eX6Zfp6f6X6en+6f7+/5fp6f7p/v7/6f7+//7///+X6en+6f7+/+n+/v/+////6f7+//7////+/////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7///////////////////+X6en+6f7+/+n+/v/+////6f7+//7////+/////////+n+/v/+/////v/////////+////////////////////6f7+//7////+//////////7////////////////////+/////////////////////////////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7///////////////////////////////////////////////////////////////////////////////////+X6en+6f7+/+n+/v/+////6f7+//7////+/////////+n+/v/+/////v/////////+////////////////////6f7+//7////+//////////7////////////////////+/////////////////////////////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////+////////////////////////////////////////////////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wCAgGiAaGgWgGhoFmgWFgGAaGgWaBYWAWgWFgEWAQEAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAACAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAACAaGgWaBYWAWgWFgEWAQEAaBYWARYBAQAWAQEAAQAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAaBYWARYBAQAWAQEAAQAAABYBAQABAAAAAQAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/l5fpl+np/pfp6f7p/v7/l+np/un+/v/p/v7//v///5fp6f7p/v7/6f7+//7////p/v7//v////7/////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////l+np/un+/v/p/v7//v///+n+/v/+/////v/////////p/v7//v////7//////////v///////////////////+n+/v/+/////v/////////+/////////////////////v/////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v///////////////////////////////////////////////////////////////////////////////////5fp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gGhoFmgWFgFoFhYBFgEBAGgWFgEWAQEAFgEBAAEAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGgWFgEWAQEAFgEBAAEAAAAWAQEAAQAAAAEAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAWAQEAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoFhYBFgEBABYBAQABAAAAFgEBAAEAAAABAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYBAQABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEBAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJfp6f7p/v7/6f7+//7////p/v7//v////7/////////6f7+//7////+//////////7////////////////////p/v7//v////7//////////v////////////////////7/////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////p/v7//v////7//////////v////////////////////7//////////////////////////////////////////v////////////////////////////////////////////////////////////////////////////////////7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////6f7+//7////+//////////7////////////////////+//////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8="
+    }
+   },
+   {
+    "name": "Rolo",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 2,
+    "text": "*chirps at a bird outside*",
+    "hidden": true,
+    "secret": "Mrrp. Either Luna is a liar, or all of Oreo, Paprika and me are honest. Maybe both.",
+    "mentions": [],
+    "clue": null
+   },
+   {
+    "name": "Tofu",
+    "color": "tuxedo",
+    "row": 3,
+    "column": 3,
+    "text": "Mrrp. Whatever I am, Cricket is the opposite.",
+    "hidden": false,
+    "secret": null,
+    "mentions": [
+     2
+    ],
+    "clue": {
+     "cats": [
+      2,
+      15
+     ],
+     "table": "Cg=="
     }
    }
   ],
   "liars": [
-   true,
-   false,
-   true,
-   false,
-   true,
-   false,
-   false,
    false,
    false,
    true,
    false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   true,
    true,
    false,
    false,
    false,
-   false
+   false,
+   true
   ]
  }
 ];
