@@ -4,7 +4,7 @@ import random
 import pytest
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import levels_for, rate, solve
+from purrjury.engine.solver import levels_for, rate, revealed_cat, solve
 
 
 def step(level, options):
@@ -13,13 +13,13 @@ def step(level, options):
 
 
 @pytest.mark.parametrize("steps, rows, cols, expected", [
-    ([step(1, 3), step(1, 1)], 3, 3, "easy"),
-    ([step(1, 2), step(1, 1)], 3, 3, "easy"),
-    ([step(1, 1), step(1, 4)], 3, 3, "medium"),
+    ([step(1, 1), step(1, 4)], 3, 3, "easy"),     # one opener: easy, its cat gets revealed
+    ([step(1, 3), step(1, 1)], 3, 3, "medium"),   # several openers to find
+    ([step(1, 2), step(1, 1)], 3, 3, "medium"),
     ([step(1, 3), step(2, 1)], 3, 3, "hard"),
     ([step(1, 1), step(2, 1)], 3, 3, "hard"),
-    ([step(1, 3), step(1, 1)], 4, 4, "medium"),
-    ([step(1, 1), step(1, 2)], 4, 4, "hard"),
+    ([step(1, 1), step(1, 3)], 4, 4, "medium"),
+    ([step(1, 3), step(1, 2)], 4, 4, "hard"),
     ([step(1, 3), step(2, 2)], 4, 4, "tricky"),
 ])
 def test_rate(steps, rows, cols, expected):
@@ -52,3 +52,8 @@ def test_solver_finds_the_real_answer(size):
 def test_levels_for_shifts_up_on_big_grids():
     assert levels_for(3, 3) == ["easy", "medium", "hard"]
     assert levels_for(4, 4) == ["medium", "hard", "tricky"]
+
+
+def test_revealed_cat_prefers_a_liar():
+    assert revealed_cat([(1, [4], {2: False, 5: True}, 1)]) == 5
+    assert revealed_cat([(1, [4], {6: False, 2: False}, 1)]) == 2   # no liar found: the first honest one

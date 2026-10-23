@@ -112,8 +112,9 @@ def rate(steps, rows, cols):
     steps: what solve() returned. Returns None for a stuck puzzle (steps is None).
 
     On a small grid:
-        easy:   only 1-clue steps, and 2 or more openers to start with
-        medium: only 1-clue steps, but just 1 opener, so the way in is harder to find
+        easy:   only 1-clue steps, and just 1 opener. That one is hard to find, so the web page
+                shows the cat it finds right away (see revealed_cat)
+        medium: only 1-clue steps, and 2 or more openers to find yourself
         hard:   at least one step needs 2 clues together
     A big grid (BIG_GRID cats or more) is one level up, so it goes medium, hard, tricky.
     """
@@ -123,11 +124,21 @@ def rate(steps, rows, cols):
     if any(level == 2 for level, _speakers, _found, _options in steps):
         base = 2   # hard
     elif steps[0][3] == 1:
-        base = 1   # medium: one opener
+        base = 0   # easy: one opener, its cat gets revealed
     else:
-        base = 0   # easy: several openers
+        base = 1   # medium: several openers to find
 
     return levels_for(rows, cols)[base]
+
+
+def revealed_cat(steps):
+    """The cat an easy puzzle starts with: one the first opener finds, a liar if it finds one.
+
+    A liar, so the start isn't too easy: an honest cat's clue can be read straight away.
+    """
+    found = steps[0][2]
+    liars = [cat for cat, is_liar in found.items() if is_liar]
+    return (liars or sorted(found))[0]
 
 
 def levels_for(rows, cols):

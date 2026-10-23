@@ -21,17 +21,17 @@ const COLOR_STYLES = {
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
 const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
+// a fresh start for a puzzle: every cat unknown, except the one an easy puzzle gives you
+function freshState(p) {
+  return {
+    marks: p.cats.map((_, i) => i === p.given ? (p.liars[i] ? "liar" : "honest") : "unknown"),
+    used: p.cats.map(() => false),
+    checks: 0, wrongChecks: 0, hints: 0, seconds: 0, solved: false, revealed: false,
+  };
+}
+
 // progress for every puzzle, so you can switch back and forth without losing it
-const states = PUZZLES.map(p => ({
-  marks: p.cats.map(() => "unknown"),
-  used: p.cats.map(() => false),
-  checks: 0,
-  wrongChecks: 0,
-  hints: 0,
-  seconds: 0,
-  solved: false,
-  revealed: false,
-}));
+const states = PUZZLES.map(freshState);
 
 let list = [];               // indexes into PUZZLES of the size and level picked in the menu
 let current = 0;             // position in list
@@ -134,6 +134,7 @@ function render() {
   p.cats.forEach((cat, i) => {
     const card = document.createElement("div");
     card.className = "card " + s.marks[i];
+    if (i === p.given) card.classList.add("given");
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
 
@@ -167,6 +168,7 @@ function render() {
     const badge = document.createElement("span");
     badge.className = "badge";
     badge.textContent = s.marks[i] === "unknown" ? "" : s.marks[i];
+    if (i === p.given) badge.textContent += " · given";
 
     top.append(swatch, name, color, badge);
 
@@ -227,7 +229,7 @@ function render() {
 
 function cycleMark(i) {
   const s = state();
-  if (s.solved || s.revealed) return;
+  if (s.solved || s.revealed || i === puzzle().given) return;   // the given cat can't be changed
   const next = (MARKS.indexOf(s.marks[i]) + 1) % MARKS.length;
   s.marks[i] = MARKS[next];
   message.textContent = "";
@@ -290,12 +292,7 @@ function check() {
 
 
 function reset() {
-  const s = state();
-  states[list[current]] = {
-    marks: s.marks.map(() => "unknown"),
-    used: s.used.map(() => false),
-    checks: 0, wrongChecks: 0, hints: 0, seconds: 0, solved: false, revealed: false,
-  };
+  states[list[current]] = freshState(puzzle());
   message.textContent = "";
   clearHint();
   render();

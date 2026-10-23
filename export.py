@@ -9,7 +9,7 @@ import json
 import random
 
 from purrjury.engine.generator import generate_puzzle
-from purrjury.engine.solver import LEVELS, involved, levels_for, rate, solve
+from purrjury.engine.solver import LEVELS, involved, levels_for, rate, revealed_cat, solve
 
 # Give up on a size after this many puzzles, in case some level is too rare to fill
 MAX_TRIES = 1000
@@ -42,7 +42,7 @@ def clue_table(statement, grid):
     return {"cats": cats, "table": base64.b64encode(bytes(bits)).decode()}
 
 
-def puzzle_to_dict(grid, world, seed, level):
+def puzzle_to_dict(grid, world, seed, level, given=None):
     """Turn a generated puzzle into plain data the web page can use."""
     cats = []
     for row in grid:
@@ -65,6 +65,7 @@ def puzzle_to_dict(grid, world, seed, level):
         "cols": len(grid[0]),
         "seed": seed,
         "level": level,   # "easy", "medium", "hard" or "tricky", from the solver
+        "given": given,   # index of a cat the page shows as solved from the start, or None
         "cats": cats,
         "liars": world,   # world[i] is True if cat i is a liar
     }
@@ -93,11 +94,14 @@ def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_T
             result = generate_puzzle(rows, cols, liars)
             if result is not None:
                 grid, world = result
-                level = rate(solve(grid), rows, cols)
+                steps = solve(grid)
+                level = rate(steps, rows, cols)
                 if level is not None and LEVELS.index(level) < LEVELS.index(TRICK_MIN_LEVEL) and has_trick_clue(grid):
                     level = None   # a trick clue in an easy or medium puzzle: skip this one
                 if wanted.get(level, 0) > 0:   # None (stuck or skipped) is never wanted
-                    found[level].append(puzzle_to_dict(grid, world, seed, level))
+                    # the easiest level of each size starts with the cat its only opener finds
+                    given = revealed_cat(steps) if level == levels[0] else None
+                    found[level].append(puzzle_to_dict(grid, world, seed, level, given))
                     wanted[level] -= 1
             seed += 1
 

@@ -70,3 +70,18 @@ def test_easy_puzzles_have_no_trick_clues(tmp_path):
             random.seed(p["seed"])   # make the same puzzle again to look at its statements
             grid, _world = generate_puzzle(3, 3, 3)
             assert not has_trick_clue(grid)
+
+
+def test_only_easy_puzzles_reveal_a_cat(tmp_path):
+    """Easy puzzles start with a cat their first opener finds, the other levels start with nothing."""
+    import random
+    from purrjury.engine.solver import solve
+    puzzles = export([(3, 3)], count=2, path=str(tmp_path / "p.js"), first_seed=11)
+    for p in puzzles:
+        if p["level"] != "easy":
+            assert p["given"] is None
+            continue
+        random.seed(p["seed"])
+        grid, _world = generate_puzzle(3, 3, 3)
+        first_step = solve(grid)[0]
+        assert p["given"] in first_step[2]   # a cat the only opener finds

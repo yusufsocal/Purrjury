@@ -72,6 +72,7 @@ button:hover { border-color: var(--muted); }
 .card.honest { border-color: var(--honest); background: var(--honest-bg); }
 .card.liar { border-color: var(--liar); background: var(--liar-bg); }
 .card.used .text { opacity: 0.35; }
+.card.given { cursor: default; }   /* easy puzzles: this cat is solved from the start */
 .gibberish { font-style: italic; color: var(--muted); }
 .secret { margin: 6px 0 0; font-size: 0.85rem; color: var(--muted); }
 
