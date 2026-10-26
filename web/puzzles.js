@@ -142,7 +142,7 @@ const PUZZLES = [
     "mood": "neutral"
    },
    {
-    "name": "Jellybean",
+    "name": "Juniper",
     "color": "tabby",
     "row": 2,
     "column": 0,
@@ -3580,7 +3580,7 @@ const PUZZLES = [
     "mood": "neutral"
    },
    {
-    "name": "Jellybean",
+    "name": "Juniper",
     "color": "white",
     "row": 1,
     "column": 3,
@@ -7660,7 +7660,7 @@ const PUZZLES = [
     "mood": "neutral"
    },
    {
-    "name": "Jellybean",
+    "name": "Juniper",
     "color": "white",
     "row": 1,
     "column": 3,
@@ -7780,7 +7780,7 @@ const PUZZLES = [
     "color": "white",
     "row": 3,
     "column": 0,
-    "text": "Jellybean and Sushi are both honest.",
+    "text": "Juniper and Sushi are both honest.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -9330,7 +9330,7 @@ const PUZZLES = [
     "mood": "neutral"
    },
    {
-    "name": "Jellybean",
+    "name": "Juniper",
     "color": "grey",
     "row": 2,
     "column": 1,

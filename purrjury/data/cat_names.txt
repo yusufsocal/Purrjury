@@ -7,7 +7,7 @@ F: Fig, Fudge, Felix
 G: Goose, Gizmo, Gnocchi
 H: Hazel, Honey, Hobbes
 I: Iggy, Inky, Indigo
-J: Juniper, Jasper, Jellybean
+J: Juniper, Jasper
 K: Kiwi, Kismet, Kettle
 L: Luna, Lentil, Loki
 M: Mochi, Mango, Marble
