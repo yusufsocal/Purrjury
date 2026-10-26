@@ -24,7 +24,8 @@ const PUZZLES = [
       7
      ],
      "table": "Bg=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Biscuit",
@@ -47,7 +48,8 @@ const PUZZLES = [
       8
      ],
      "table": "qao="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Coco",
@@ -80,7 +82,8 @@ const PUZZLES = [
       8
      ],
      "table": "/v/x8P//8PD///Dw///w8P//8PD///Dw///w8P//8PD///Dw///w8P//8PD///Dw///w8P//8PD///Dw///w8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Doodle",
@@ -99,7 +102,8 @@ const PUZZLES = [
       8
      ],
      "table": "Ag=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Gizmo",
@@ -110,7 +114,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Among the cats on the edges, at least one is honest and at least one is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Indigo",
@@ -133,7 +138,8 @@ const PUZZLES = [
       5
      ],
      "table": "V6g="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jellybean",
@@ -154,7 +160,8 @@ const PUZZLES = [
       7
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -175,7 +182,8 @@ const PUZZLES = [
       7
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -198,7 +206,8 @@ const PUZZLES = [
       8
      ],
      "table": "Av0="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -237,7 +246,8 @@ const PUZZLES = [
       5
      ],
      "table": "Ag=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Bean",
@@ -258,7 +268,8 @@ const PUZZLES = [
       6
      ],
      "table": "ZQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -283,7 +294,8 @@ const PUZZLES = [
       8
      ],
      "table": "ZWZmZg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -304,7 +316,8 @@ const PUZZLES = [
       8
      ],
      "table": "pg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -329,7 +342,8 @@ const PUZZLES = [
       8
      ],
      "table": "mZmZOQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -352,7 +366,8 @@ const PUZZLES = [
       5
      ],
      "table": "gX4="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -373,7 +388,8 @@ const PUZZLES = [
       6
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Inky",
@@ -396,7 +412,8 @@ const PUZZLES = [
       7
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -419,7 +436,8 @@ const PUZZLES = [
       8
      ],
      "table": "N8w="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -458,7 +476,8 @@ const PUZZLES = [
       1
      ],
      "table": "DQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -481,7 +500,8 @@ const PUZZLES = [
       8
      ],
      "table": "alY="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -502,7 +522,8 @@ const PUZZLES = [
       8
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -533,7 +554,8 @@ const PUZZLES = [
       8
      ],
      "table": "D/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD3A="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -554,7 +576,8 @@ const PUZZLES = [
       5
      ],
      "table": "sg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -575,7 +598,8 @@ const PUZZLES = [
       7
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Indigo",
@@ -598,7 +622,8 @@ const PUZZLES = [
       7
      ],
      "table": "cA8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -619,7 +644,8 @@ const PUZZLES = [
       8
      ],
      "table": "Mg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -642,7 +668,8 @@ const PUZZLES = [
       8
      ],
      "table": "AX8="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -683,7 +710,8 @@ const PUZZLES = [
       5
      ],
      "table": "qQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Biscuit",
@@ -706,7 +734,8 @@ const PUZZLES = [
       4
      ],
      "table": "zMk="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -727,7 +756,8 @@ const PUZZLES = [
       8
      ],
      "table": "qw=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Doodle",
@@ -746,7 +776,8 @@ const PUZZLES = [
       4
      ],
      "table": "DA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -771,7 +802,8 @@ const PUZZLES = [
       8
      ],
      "table": "PDw8PA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -796,7 +828,8 @@ const PUZZLES = [
       8
      ],
      "table": "8OHw8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Indigo",
@@ -817,7 +850,8 @@ const PUZZLES = [
       8
      ],
      "table": "6g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Loki",
@@ -838,7 +872,8 @@ const PUZZLES = [
       7
      ],
      "table": "9A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mochi",
@@ -857,7 +892,8 @@ const PUZZLES = [
       8
      ],
      "table": "DQ=="
-    }
+    },
+    "mood": "happy"
    }
   ],
   "liars": [
@@ -896,7 +932,8 @@ const PUZZLES = [
       3
      ],
      "table": "CQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Cricket",
@@ -917,7 +954,8 @@ const PUZZLES = [
       4
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -938,7 +976,8 @@ const PUZZLES = [
       2
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -959,7 +998,8 @@ const PUZZLES = [
       5
      ],
      "table": "6g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fig",
@@ -980,7 +1020,8 @@ const PUZZLES = [
       7
      ],
      "table": "Kw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -999,7 +1040,8 @@ const PUZZLES = [
       5
      ],
      "table": "BA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Inky",
@@ -1022,7 +1064,8 @@ const PUZZLES = [
       8
      ],
      "table": "ZjY="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -1043,7 +1086,8 @@ const PUZZLES = [
       7
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -1066,7 +1110,8 @@ const PUZZLES = [
       8
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -1107,7 +1152,8 @@ const PUZZLES = [
       7
      ],
      "table": "6g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -1128,7 +1174,8 @@ const PUZZLES = [
       7
      ],
      "table": "1A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -1151,7 +1198,8 @@ const PUZZLES = [
       8
      ],
      "table": "zcw="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Gnocchi",
@@ -1172,7 +1220,8 @@ const PUZZLES = [
       6
      ],
      "table": "zQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Indigo",
@@ -1191,7 +1240,8 @@ const PUZZLES = [
       4
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -1212,7 +1262,8 @@ const PUZZLES = [
       5
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kismet",
@@ -1235,7 +1286,8 @@ const PUZZLES = [
       8
      ],
      "table": "8XA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -1256,7 +1308,8 @@ const PUZZLES = [
       8
      ],
      "table": "xA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nimbus",
@@ -1277,7 +1330,8 @@ const PUZZLES = [
       8
      ],
      "table": "Hg=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -1318,7 +1372,8 @@ const PUZZLES = [
       4
      ],
      "table": "ag=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Bean",
@@ -1339,7 +1394,8 @@ const PUZZLES = [
       7
      ],
      "table": "qA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -1362,7 +1418,8 @@ const PUZZLES = [
       6
      ],
      "table": "M0w="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Echo",
@@ -1385,7 +1442,8 @@ const PUZZLES = [
       6
      ],
      "table": "nMw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -1406,7 +1464,8 @@ const PUZZLES = [
       5
      ],
      "table": "xg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -1425,7 +1484,8 @@ const PUZZLES = [
       5
      ],
      "table": "BQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -1446,7 +1506,8 @@ const PUZZLES = [
       6
      ],
      "table": "tA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Indigo",
@@ -1467,7 +1528,8 @@ const PUZZLES = [
       7
      ],
      "table": "tA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -1490,7 +1552,8 @@ const PUZZLES = [
       8
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -1531,7 +1594,8 @@ const PUZZLES = [
       2
      ],
      "table": "1A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -1552,7 +1616,8 @@ const PUZZLES = [
       6
      ],
      "table": "VA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -1575,7 +1640,8 @@ const PUZZLES = [
       8
      ],
      "table": "eA8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -1596,7 +1662,8 @@ const PUZZLES = [
       3
      ],
      "table": "0g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -1623,7 +1690,8 @@ const PUZZLES = [
       8
      ],
      "table": "zDPMM8wz7BM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Inky",
@@ -1656,7 +1724,8 @@ const PUZZLES = [
       8
      ],
      "table": "8PDw8A8PDw/w8PDwDw8PD/Dw8PAPDw8P8PDw8A8PDw/w8PDwDw8PD/Dw8PAPDw8P8PDw8A8PDw/w8PDwDw8PDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -1677,7 +1746,8 @@ const PUZZLES = [
       6
      ],
      "table": "+A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -1698,7 +1768,8 @@ const PUZZLES = [
       7
      ],
      "table": "Dg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -1719,7 +1790,8 @@ const PUZZLES = [
       8
      ],
      "table": "8Q=="
-    }
+    },
+    "mood": "happy"
    }
   ],
   "liars": [
@@ -1760,7 +1832,8 @@ const PUZZLES = [
       7
      ],
      "table": "Qg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -1793,7 +1866,8 @@ const PUZZLES = [
       8
      ],
      "table": "w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDww=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -1814,7 +1888,8 @@ const PUZZLES = [
       6
      ],
      "table": "pg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -1845,7 +1920,8 @@ const PUZZLES = [
       8
      ],
      "table": "Af8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AH8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -1866,7 +1942,8 @@ const PUZZLES = [
       5
      ],
      "table": "TA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Fig",
@@ -1889,7 +1966,8 @@ const PUZZLES = [
       6
      ],
      "table": "ePA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -1920,7 +1998,8 @@ const PUZZLES = [
       8
      ],
      "table": "/v///wAAAAD/////AAAAAP////8AAAAA/////wAAAAA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -1943,7 +2022,8 @@ const PUZZLES = [
       7
      ],
      "table": "q1Q="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -1964,7 +2044,8 @@ const PUZZLES = [
       8
      ],
      "table": "Sw=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -2005,7 +2086,8 @@ const PUZZLES = [
       2
      ],
      "table": "ig=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bean",
@@ -2024,7 +2106,8 @@ const PUZZLES = [
       4
      ],
      "table": "Dg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -2045,7 +2128,8 @@ const PUZZLES = [
       8
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -2064,7 +2148,8 @@ const PUZZLES = [
       7
      ],
      "table": "Aw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -2091,7 +2176,8 @@ const PUZZLES = [
       8
      ],
      "table": "zDPMM8wz7BM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -2114,7 +2200,8 @@ const PUZZLES = [
       7
      ],
      "table": "pS0="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -2135,7 +2222,8 @@ const PUZZLES = [
       6
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -2156,7 +2244,8 @@ const PUZZLES = [
       7
      ],
      "table": "tA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kismet",
@@ -2177,7 +2266,8 @@ const PUZZLES = [
       8
      ],
      "table": "Sw=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -2230,7 +2320,8 @@ const PUZZLES = [
       8
      ],
      "table": "q6qqqqqqqqqqqqqqqqqqqv////////////////////+qqqqqqqqqqqqqqqqqqqqq/////////////////////w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -2249,7 +2340,8 @@ const PUZZLES = [
       2
      ],
      "table": "Aw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -2270,7 +2362,8 @@ const PUZZLES = [
       7
      ],
      "table": "mg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -2293,7 +2386,8 @@ const PUZZLES = [
       6
      ],
      "table": "NpM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -2318,7 +2412,8 @@ const PUZZLES = [
       7
      ],
      "table": "eJaW4Q=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Inky",
@@ -2341,7 +2436,8 @@ const PUZZLES = [
       6
      ],
      "table": "cA8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -2362,7 +2458,8 @@ const PUZZLES = [
       7
      ],
      "table": "Ng=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -2373,7 +2470,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Exactly one of the calico cats is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -2394,7 +2492,8 @@ const PUZZLES = [
       8
      ],
      "table": "jg=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -2437,7 +2536,8 @@ const PUZZLES = [
       8
      ],
      "table": "VSo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -2456,7 +2556,8 @@ const PUZZLES = [
       1
      ],
      "table": "CQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Espresso",
@@ -2477,7 +2578,8 @@ const PUZZLES = [
       2
      ],
      "table": "Qw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -2502,7 +2604,8 @@ const PUZZLES = [
       8
      ],
      "table": "8OHw8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gizmo",
@@ -2535,7 +2638,8 @@ const PUZZLES = [
       8
      ],
      "table": "gGh/l2gWl+loFpfpFgHp/mgWl+kWAen+FgHp/gEA/v9oFpfpFgHp/hYB6f4BAP7/FgHp/gEA/v8BAP7/AAD//w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Inky",
@@ -2556,7 +2660,8 @@ const PUZZLES = [
       5
      ],
      "table": "0g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -2579,7 +2684,8 @@ const PUZZLES = [
       8
      ],
      "table": "Z2Y="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -2604,7 +2710,8 @@ const PUZZLES = [
       7
      ],
      "table": "zcwyMw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -2625,7 +2732,8 @@ const PUZZLES = [
       8
      ],
      "table": "Dg=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -2668,7 +2776,8 @@ const PUZZLES = [
       6
      ],
      "table": "apY="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -2689,7 +2798,8 @@ const PUZZLES = [
       5
      ],
      "table": "Kw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Echo",
@@ -2708,7 +2818,8 @@ const PUZZLES = [
       7
      ],
      "table": "DQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -2729,7 +2840,8 @@ const PUZZLES = [
       7
      ],
      "table": "zg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -2754,7 +2866,8 @@ const PUZZLES = [
       8
      ],
      "table": "luHh8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Indigo",
@@ -2779,7 +2892,8 @@ const PUZZLES = [
       8
      ],
      "table": "/wAAfw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -2800,7 +2914,8 @@ const PUZZLES = [
       6
      ],
      "table": "cA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Loki",
@@ -2819,7 +2934,8 @@ const PUZZLES = [
       8
      ],
      "table": "Aw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Marble",
@@ -2838,7 +2954,8 @@ const PUZZLES = [
       8
      ],
      "table": "BQ=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -2877,7 +2994,8 @@ const PUZZLES = [
       1
      ],
      "table": "Ag=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Coco",
@@ -2898,7 +3016,8 @@ const PUZZLES = [
       7
      ],
      "table": "3g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -2919,7 +3038,8 @@ const PUZZLES = [
       5
      ],
      "table": "xg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -2942,7 +3062,8 @@ const PUZZLES = [
       3
      ],
      "table": "IN8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fig",
@@ -2963,7 +3084,8 @@ const PUZZLES = [
       4
      ],
      "table": "0g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -2984,7 +3106,8 @@ const PUZZLES = [
       5
      ],
      "table": "Sw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -3005,7 +3128,8 @@ const PUZZLES = [
       8
      ],
      "table": "bA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Indigo",
@@ -3016,7 +3140,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Bean and Coco are opposites: one is honest, the other is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -3037,7 +3162,8 @@ const PUZZLES = [
       8
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -3078,7 +3204,8 @@ const PUZZLES = [
       2
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bean",
@@ -3097,7 +3224,8 @@ const PUZZLES = [
       3
      ],
      "table": "DQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -3122,7 +3250,8 @@ const PUZZLES = [
       6
      ],
      "table": "eJaW4Q=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -3143,7 +3272,8 @@ const PUZZLES = [
       8
      ],
      "table": "TA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Gizmo",
@@ -3168,7 +3298,8 @@ const PUZZLES = [
       7
      ],
      "table": "Hg8PDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -3189,7 +3320,8 @@ const PUZZLES = [
       5
      ],
      "table": "4A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -3210,7 +3342,8 @@ const PUZZLES = [
       6
      ],
      "table": "Dg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -3233,7 +3366,8 @@ const PUZZLES = [
       7
      ],
      "table": "8Q8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -3254,7 +3388,8 @@ const PUZZLES = [
       8
      ],
      "table": "JQ=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -3297,7 +3432,8 @@ const PUZZLES = [
       15
      ],
      "table": "/qo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -3320,7 +3456,8 @@ const PUZZLES = [
       5
      ],
      "table": "nMw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -3343,7 +3480,8 @@ const PUZZLES = [
       15
      ],
      "table": "qWo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Echo",
@@ -3368,7 +3506,8 @@ const PUZZLES = [
       7
      ],
      "table": "qqqqpg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gizmo",
@@ -3389,7 +3528,8 @@ const PUZZLES = [
       15
      ],
      "table": "Kw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -3412,7 +3552,8 @@ const PUZZLES = [
       14
      ],
      "table": "ycw="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Iggy",
@@ -3435,7 +3576,8 @@ const PUZZLES = [
       14
      ],
      "table": "zUw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jellybean",
@@ -3454,7 +3596,8 @@ const PUZZLES = [
       7
      ],
      "table": "BA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Luna",
@@ -3475,7 +3618,8 @@ const PUZZLES = [
       13
      ],
      "table": "TQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Marble",
@@ -3496,7 +3640,8 @@ const PUZZLES = [
       13
      ],
      "table": "yQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Noodle",
@@ -3515,7 +3660,8 @@ const PUZZLES = [
       14
      ],
      "table": "CQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Olive",
@@ -3536,7 +3682,8 @@ const PUZZLES = [
       12
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Quill",
@@ -3557,7 +3704,8 @@ const PUZZLES = [
       13
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Rusty",
@@ -3582,7 +3730,8 @@ const PUZZLES = [
       14
      ],
      "table": "Af/+/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Sushi",
@@ -3593,7 +3742,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "All of the cats in column 2 are the same: all honest, or all liars.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Truffle",
@@ -3604,7 +3754,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Among the corner cats, at least one is honest and at least one is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -3654,7 +3805,8 @@ const PUZZLES = [
       12
      ],
      "table": "rqo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -3677,7 +3829,8 @@ const PUZZLES = [
       13
      ],
      "table": "Z2Y="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -3700,7 +3853,8 @@ const PUZZLES = [
       3
      ],
      "table": "4PA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -3721,7 +3875,8 @@ const PUZZLES = [
       15
      ],
      "table": "TQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -3746,7 +3901,8 @@ const PUZZLES = [
       11
      ],
      "table": "qmpqlg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -3769,7 +3925,8 @@ const PUZZLES = [
       13
      ],
      "table": "3Mw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -3816,7 +3973,8 @@ const PUZZLES = [
       15
      ],
      "table": "AQAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA/////////38="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -3841,7 +3999,8 @@ const PUZZLES = [
       15
      ],
      "table": "qaqqag=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -3864,7 +4023,8 @@ const PUZZLES = [
       11
      ],
      "table": "qao="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Lentil",
@@ -3885,7 +4045,8 @@ const PUZZLES = [
       9
      ],
      "table": "mA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -3906,7 +4067,8 @@ const PUZZLES = [
       12
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nugget",
@@ -3931,7 +4093,8 @@ const PUZZLES = [
       15
      ],
      "table": "tPDw8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Oreo",
@@ -3956,7 +4119,8 @@ const PUZZLES = [
       14
      ],
      "table": "BP/7/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -3979,7 +4143,8 @@ const PUZZLES = [
       15
      ],
      "table": "D/E="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Queenie",
@@ -3990,7 +4155,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Iggy is the only liar among the tuxedo cats.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Rolo",
@@ -4013,7 +4179,8 @@ const PUZZLES = [
       15
      ],
      "table": "Av8="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -4063,7 +4230,8 @@ const PUZZLES = [
       3
      ],
      "table": "qao="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Cricket",
@@ -4084,7 +4252,8 @@ const PUZZLES = [
       7
      ],
      "table": "yQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Dumpling",
@@ -4105,7 +4274,8 @@ const PUZZLES = [
       11
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -4130,7 +4300,8 @@ const PUZZLES = [
       13
      ],
      "table": "zMzJzA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -4153,7 +4324,8 @@ const PUZZLES = [
       12
      ],
      "table": "3Mw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -4176,7 +4348,8 @@ const PUZZLES = [
       10
      ],
      "table": "q6o="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Inky",
@@ -4197,7 +4370,8 @@ const PUZZLES = [
       14
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -4218,7 +4392,8 @@ const PUZZLES = [
       7
      ],
      "table": "9A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Loki",
@@ -4239,7 +4414,8 @@ const PUZZLES = [
       11
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -4266,7 +4442,8 @@ const PUZZLES = [
       15
      ],
      "table": "8A/wD/APeA8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Oreo",
@@ -4289,7 +4466,8 @@ const PUZZLES = [
       13
      ],
      "table": "8fc="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pepper",
@@ -4310,7 +4488,8 @@ const PUZZLES = [
       12
      ],
      "table": "jA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Quill",
@@ -4331,7 +4510,8 @@ const PUZZLES = [
       13
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Rolo",
@@ -4342,7 +4522,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "All of Bean, Honey and me are the same: all honest, or all liars.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Saffron",
@@ -4363,7 +4544,8 @@ const PUZZLES = [
       14
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Truffle",
@@ -4384,7 +4566,8 @@ const PUZZLES = [
       15
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    }
   ],
   "liars": [
@@ -4432,7 +4615,8 @@ const PUZZLES = [
       11
      ],
      "table": "ZQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bean",
@@ -4453,7 +4637,8 @@ const PUZZLES = [
       13
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -4480,7 +4665,8 @@ const PUZZLES = [
       15
      ],
      "table": "qqpVVapqVVU="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -4501,7 +4687,8 @@ const PUZZLES = [
       7
      ],
      "table": "xg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -4524,7 +4711,8 @@ const PUZZLES = [
       7
      ],
      "table": "vKs="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gizmo",
@@ -4543,7 +4731,8 @@ const PUZZLES = [
       11
      ],
      "table": "BA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -4564,7 +4753,8 @@ const PUZZLES = [
       6
      ],
      "table": "0g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Inky",
@@ -4587,7 +4777,8 @@ const PUZZLES = [
       15
      ],
      "table": "ZlY="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kismet",
@@ -4608,7 +4799,8 @@ const PUZZLES = [
       8
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Loki",
@@ -4633,7 +4825,8 @@ const PUZZLES = [
       15
      ],
      "table": "qaqqqg=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Mochi",
@@ -4658,7 +4851,8 @@ const PUZZLES = [
       11
      ],
      "table": "EO8A/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Noodle",
@@ -4683,7 +4877,8 @@ const PUZZLES = [
       15
      ],
      "table": "zDPsEw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Olive",
@@ -4706,7 +4901,8 @@ const PUZZLES = [
       12
      ],
      "table": "BPs="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Sushi",
@@ -4727,7 +4923,8 @@ const PUZZLES = [
       15
      ],
      "table": "zQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Vanilla",
@@ -4748,7 +4945,8 @@ const PUZZLES = [
       14
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Waffles",
@@ -4773,7 +4971,8 @@ const PUZZLES = [
       15
      ],
      "table": "Hw/w8A=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -4825,7 +5024,8 @@ const PUZZLES = [
       11
      ],
      "table": "lqmpqg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -4848,7 +5048,8 @@ const PUZZLES = [
       6
      ],
      "table": "7r4="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -4859,7 +5060,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "At least one of these is true: Quincy is a liar, or all of Felix, Juniper and me are liars.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -4880,7 +5082,8 @@ const PUZZLES = [
       11
      ],
      "table": "Vg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Echo",
@@ -4905,7 +5108,8 @@ const PUZZLES = [
       15
      ],
      "table": "qaqqqg=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Felix",
@@ -4930,7 +5134,8 @@ const PUZZLES = [
       12
      ],
      "table": "luHh8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -4955,7 +5160,8 @@ const PUZZLES = [
       10
      ],
      "table": "4fAPDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -4982,7 +5188,8 @@ const PUZZLES = [
       14
      ],
      "table": "D+EP8A/wD/A="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -5003,7 +5210,8 @@ const PUZZLES = [
       8
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Juniper",
@@ -5024,7 +5232,8 @@ const PUZZLES = [
       9
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Kismet",
@@ -5045,7 +5254,8 @@ const PUZZLES = [
       13
      ],
      "table": "zg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -5068,7 +5278,8 @@ const PUZZLES = [
       15
      ],
      "table": "xsw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Marble",
@@ -5091,7 +5302,8 @@ const PUZZLES = [
       12
      ],
      "table": "EO8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pepper",
@@ -5112,7 +5324,8 @@ const PUZZLES = [
       13
      ],
      "table": "4Q=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Quincy",
@@ -5131,7 +5344,8 @@ const PUZZLES = [
       14
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Sprout",
@@ -5154,7 +5368,8 @@ const PUZZLES = [
       15
      ],
      "table": "s0w="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -5202,7 +5417,8 @@ const PUZZLES = [
       14
      ],
      "table": "ig=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -5223,7 +5439,8 @@ const PUZZLES = [
       14
      ],
      "table": "pg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Cricket",
@@ -5262,7 +5479,8 @@ const PUZZLES = [
       15
      ],
      "table": "Dg8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PD48="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -5287,7 +5505,8 @@ const PUZZLES = [
       15
      ],
      "table": "vru7uw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -5310,7 +5529,8 @@ const PUZZLES = [
       5
      ],
      "table": "h6U="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -5321,7 +5541,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Among the cats in column 4, at least one is honest and at least one is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -5342,7 +5563,8 @@ const PUZZLES = [
       14
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -5353,7 +5575,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "At least one of these is true: Oreo is honest, or all of the corner cats are honest.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -5374,7 +5597,8 @@ const PUZZLES = [
       8
      ],
      "table": "Dg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Loki",
@@ -5399,7 +5623,8 @@ const PUZZLES = [
       14
      ],
      "table": "/fzz8w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -5420,7 +5645,8 @@ const PUZZLES = [
       15
      ],
      "table": "Kw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Oreo",
@@ -5445,7 +5671,8 @@ const PUZZLES = [
       13
      ],
      "table": "gH8A/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pepper",
@@ -5466,7 +5693,8 @@ const PUZZLES = [
       15
      ],
      "table": "yQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Quill",
@@ -5487,7 +5715,8 @@ const PUZZLES = [
       13
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Rusty",
@@ -5506,7 +5735,8 @@ const PUZZLES = [
       14
      ],
      "table": "DQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Ursa",
@@ -5531,7 +5761,8 @@ const PUZZLES = [
       15
      ],
      "table": "ACD/3w=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -5581,7 +5812,8 @@ const PUZZLES = [
       15
      ],
      "table": "uqo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -5602,7 +5834,8 @@ const PUZZLES = [
       15
      ],
      "table": "mg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -5623,7 +5856,8 @@ const PUZZLES = [
       13
      ],
      "table": "lQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -5648,7 +5882,8 @@ const PUZZLES = [
       12
      ],
      "table": "zMzJzA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -5673,7 +5908,8 @@ const PUZZLES = [
       10
      ],
      "table": "apaWqQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -5696,7 +5932,8 @@ const PUZZLES = [
       14
      ],
      "table": "yMw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -5719,7 +5956,8 @@ const PUZZLES = [
       12
      ],
      "table": "NpM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Luna",
@@ -5742,7 +5980,8 @@ const PUZZLES = [
       7
      ],
      "table": "VSo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -5763,7 +6002,8 @@ const PUZZLES = [
       14
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Noodle",
@@ -5784,7 +6024,8 @@ const PUZZLES = [
       10
      ],
      "table": "7A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Otis",
@@ -5805,7 +6046,8 @@ const PUZZLES = [
       11
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -5824,7 +6066,8 @@ const PUZZLES = [
       11
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Quill",
@@ -5847,7 +6090,8 @@ const PUZZLES = [
       12
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Rusty",
@@ -5870,7 +6114,8 @@ const PUZZLES = [
       13
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Saffron",
@@ -5895,7 +6140,8 @@ const PUZZLES = [
       14
      ],
      "table": "q6pUVQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Tater",
@@ -5918,7 +6164,8 @@ const PUZZLES = [
       15
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -5992,7 +6239,8 @@ const PUZZLES = [
       15
      ],
      "table": "qKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bagel",
@@ -6013,7 +6261,8 @@ const PUZZLES = [
       14
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -6034,7 +6283,8 @@ const PUZZLES = [
       2
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Dumpling",
@@ -6057,7 +6307,8 @@ const PUZZLES = [
       15
      ],
      "table": "MjM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -6078,7 +6329,8 @@ const PUZZLES = [
       10
      ],
      "table": "sg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fig",
@@ -6103,7 +6355,8 @@ const PUZZLES = [
       12
      ],
      "table": "eJaW4Q=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -6126,7 +6379,8 @@ const PUZZLES = [
       14
      ],
      "table": "pWU="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -6147,7 +6401,8 @@ const PUZZLES = [
       10
      ],
      "table": "sg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -6170,7 +6425,8 @@ const PUZZLES = [
       12
      ],
      "table": "8vA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -6195,7 +6451,8 @@ const PUZZLES = [
       13
      ],
      "table": "Hg8Phw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -6242,7 +6499,8 @@ const PUZZLES = [
       15
      ],
      "table": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Loki",
@@ -6263,7 +6521,8 @@ const PUZZLES = [
       11
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mochi",
@@ -6290,7 +6549,8 @@ const PUZZLES = [
       14
      ],
      "table": "qlWqVapV6hU="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Olive",
@@ -6311,7 +6571,8 @@ const PUZZLES = [
       13
      ],
      "table": "Sw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pickles",
@@ -6330,7 +6591,8 @@ const PUZZLES = [
       14
      ],
      "table": "BA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Quincy",
@@ -6377,7 +6639,8 @@ const PUZZLES = [
       15
      ],
      "table": "/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -6429,7 +6692,8 @@ const PUZZLES = [
       12
      ],
      "table": "taWlpQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -6452,7 +6716,8 @@ const PUZZLES = [
       3
      ],
      "table": "MjM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -6471,7 +6736,8 @@ const PUZZLES = [
       12
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Doodle",
@@ -6482,7 +6748,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Jasper is the only liar among my neighbors.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Goose",
@@ -6501,7 +6768,8 @@ const PUZZLES = [
       12
      ],
      "table": "CQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Hobbes",
@@ -6524,7 +6792,8 @@ const PUZZLES = [
       13
      ],
      "table": "zIw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -6571,7 +6840,8 @@ const PUZZLES = [
       15
      ],
      "table": "/v////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAIA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -6596,7 +6866,8 @@ const PUZZLES = [
       15
      ],
      "table": "4fDweA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kismet",
@@ -6619,7 +6890,8 @@ const PUZZLES = [
       12
      ],
      "table": "NpM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -6640,7 +6912,8 @@ const PUZZLES = [
       14
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -6665,7 +6938,8 @@ const PUZZLES = [
       15
      ],
      "table": "Hg8Phw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nimbus",
@@ -6690,7 +6964,8 @@ const PUZZLES = [
       11
      ],
      "table": "AgD9/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -6713,7 +6988,8 @@ const PUZZLES = [
       12
      ],
      "table": "nP8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Queenie",
@@ -6734,7 +7010,8 @@ const PUZZLES = [
       13
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Sprout",
@@ -6759,7 +7036,8 @@ const PUZZLES = [
       14
      ],
      "table": "/n8BgA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Tater",
@@ -6780,7 +7058,8 @@ const PUZZLES = [
       15
      ],
      "table": "hw=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -6828,7 +7107,8 @@ const PUZZLES = [
       10
      ],
      "table": "ag=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Dusty",
@@ -6849,7 +7129,8 @@ const PUZZLES = [
       9
      ],
      "table": "Vg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fudge",
@@ -6872,7 +7153,8 @@ const PUZZLES = [
       13
      ],
      "table": "TKQ="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -6899,7 +7181,8 @@ const PUZZLES = [
       11
      ],
      "table": "k5mZmZmZmZk="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -6910,7 +7193,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "At least one of the grey cats is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -6935,7 +7219,8 @@ const PUZZLES = [
       12
      ],
      "table": "4fDw8A=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Lentil",
@@ -6960,7 +7245,8 @@ const PUZZLES = [
       12
      ],
      "table": "LTw8PA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Noodle",
@@ -6985,7 +7271,8 @@ const PUZZLES = [
       15
      ],
      "table": "Hg8PDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -7004,7 +7291,8 @@ const PUZZLES = [
       15
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Quill",
@@ -7025,7 +7313,8 @@ const PUZZLES = [
       13
      ],
      "table": "xA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ravioli",
@@ -7046,7 +7335,8 @@ const PUZZLES = [
       10
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Saffron",
@@ -7067,7 +7357,8 @@ const PUZZLES = [
       11
      ],
      "table": "/A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Tofu",
@@ -7090,7 +7381,8 @@ const PUZZLES = [
       12
      ],
      "table": "VSo="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ursa",
@@ -7113,7 +7405,8 @@ const PUZZLES = [
       13
      ],
      "table": "/gA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Yoshi",
@@ -7136,7 +7429,8 @@ const PUZZLES = [
       14
      ],
      "table": "q1Q="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Zucchini",
@@ -7157,7 +7451,8 @@ const PUZZLES = [
       15
      ],
      "table": "0g=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -7195,7 +7490,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "All of my neighbors are honest.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Doodle",
@@ -7220,7 +7516,8 @@ const PUZZLES = [
       13
      ],
      "table": "mZmZGQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Echo",
@@ -7241,7 +7538,8 @@ const PUZZLES = [
       2
      ],
      "table": "Hg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fig",
@@ -7288,7 +7586,8 @@ const PUZZLES = [
       15
      ],
      "table": "q1WqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlWqVapVqlU="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gnocchi",
@@ -7311,7 +7610,8 @@ const PUZZLES = [
       12
      ],
      "table": "zEw="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Honey",
@@ -7332,7 +7632,8 @@ const PUZZLES = [
       12
      ],
      "table": "qQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Inky",
@@ -7355,7 +7656,8 @@ const PUZZLES = [
       14
      ],
      "table": "TKQ="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jellybean",
@@ -7376,7 +7678,8 @@ const PUZZLES = [
       14
      ],
      "table": "qQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Kettle",
@@ -7401,7 +7704,8 @@ const PUZZLES = [
       10
      ],
      "table": "8PDweA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Loki",
@@ -7422,7 +7726,8 @@ const PUZZLES = [
       13
      ],
      "table": "nA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Marble",
@@ -7445,7 +7750,8 @@ const PUZZLES = [
       10
      ],
      "table": "qf8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Noodle",
@@ -7466,7 +7772,8 @@ const PUZZLES = [
       11
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pickles",
@@ -7487,7 +7794,8 @@ const PUZZLES = [
       14
      ],
      "table": "yQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Ravioli",
@@ -7508,7 +7816,8 @@ const PUZZLES = [
       13
      ],
      "table": "mA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Sushi",
@@ -7531,7 +7840,8 @@ const PUZZLES = [
       14
      ],
      "table": "Fuk="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Tofu",
@@ -7556,7 +7866,8 @@ const PUZZLES = [
       15
      ],
      "table": "/n8BgA=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -7606,7 +7917,8 @@ const PUZZLES = [
       11
      ],
      "table": "r+s="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Biscuit",
@@ -7627,7 +7939,8 @@ const PUZZLES = [
       5
      ],
      "table": "lg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -7652,7 +7965,8 @@ const PUZZLES = [
       15
      ],
      "table": "8fAPDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -7673,7 +7987,8 @@ const PUZZLES = [
       9
      ],
      "table": "6g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ember",
@@ -7720,7 +8035,8 @@ const PUZZLES = [
       15
      ],
      "table": "/v8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AIA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Fig",
@@ -7741,7 +8057,8 @@ const PUZZLES = [
       14
      ],
      "table": "qQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Gnocchi",
@@ -7766,7 +8083,8 @@ const PUZZLES = [
       6
      ],
      "table": "6P4XAQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Honey",
@@ -7791,7 +8109,8 @@ const PUZZLES = [
       14
      ],
      "table": "4fAPDw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -7802,7 +8121,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Exactly 2 of the corner cats are liars.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Juniper",
@@ -7813,7 +8133,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "At least one of Fig and Lentil is honest.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -7836,7 +8157,8 @@ const PUZZLES = [
       15
      ],
      "table": "cPA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -7861,7 +8183,8 @@ const PUZZLES = [
       14
      ],
      "table": "/gF/gA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mochi",
@@ -7884,7 +8207,8 @@ const PUZZLES = [
       12
      ],
      "table": "foE="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nimbus",
@@ -7907,7 +8231,8 @@ const PUZZLES = [
       13
      ],
      "table": "QL8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Olive",
@@ -7934,7 +8259,8 @@ const PUZZLES = [
       14
      ],
      "table": "Hw8PD+Dw8PA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -7959,7 +8285,8 @@ const PUZZLES = [
       15
      ],
      "table": "eJb//w=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -8007,7 +8334,8 @@ const PUZZLES = [
       10
      ],
      "table": "6g=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Bean",
@@ -8034,7 +8362,8 @@ const PUZZLES = [
       14
      ],
      "table": "q///qqr//6o="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -8055,7 +8384,8 @@ const PUZZLES = [
       7
      ],
      "table": "Ng=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -8074,7 +8404,8 @@ const PUZZLES = [
       10
      ],
      "table": "Bg=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Fig",
@@ -8113,7 +8444,8 @@ const PUZZLES = [
       15
      ],
      "table": "aBbp/hYB/v8WAf7/AQD//xYB/v8BAP//AQD//wAA//8WAf7/AQD//wEA//8AAP//AQD//wAA//8AAP//AAD//xYB/v8BAP//AQD//wAA//8BAP//AAD//wAA//8AAP//AQD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8WAf7/AQD//wEA//8AAP//AQD//wAA//8AAP//AAD//wEA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AQD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//xYB/v8BAP//AQD//wAA//8BAP//AAD//wAA//8AAP//AQD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8BAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AQD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hobbes",
@@ -8134,7 +8466,8 @@ const PUZZLES = [
       14
      ],
      "table": "pg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -8155,7 +8488,8 @@ const PUZZLES = [
       14
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kiwi",
@@ -8176,7 +8510,8 @@ const PUZZLES = [
       14
      ],
      "table": "lQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -8195,7 +8530,8 @@ const PUZZLES = [
       8
      ],
      "table": "BA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Marble",
@@ -8220,7 +8556,8 @@ const PUZZLES = [
       15
      ],
      "table": "qqqpqg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nimbus",
@@ -8231,7 +8568,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "At least one of these is true: Kiwi is a liar, or all of the cats in my column are honest.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Oreo",
@@ -8242,7 +8580,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Exactly one of Bean, Nimbus and me is a liar.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Paprika",
@@ -8261,7 +8600,8 @@ const PUZZLES = [
       12
      ],
      "table": "AQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Rusty",
@@ -8284,7 +8624,8 @@ const PUZZLES = [
       13
      ],
      "table": "5v8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Saffron",
@@ -8311,7 +8652,8 @@ const PUZZLES = [
       14
      ],
      "table": "VVVV1aqqqio="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Ursa",
@@ -8332,7 +8674,8 @@ const PUZZLES = [
       15
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -8380,7 +8723,8 @@ const PUZZLES = [
       4
      ],
      "table": "Vg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Coco",
@@ -8403,7 +8747,8 @@ const PUZZLES = [
       5
      ],
      "table": "zJw="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dusty",
@@ -8426,7 +8771,8 @@ const PUZZLES = [
       6
      ],
      "table": "NpM="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -8451,7 +8797,8 @@ const PUZZLES = [
       12
      ],
      "table": "zMzJzA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -8472,7 +8819,8 @@ const PUZZLES = [
       9
      ],
      "table": "7A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Gizmo",
@@ -8499,7 +8847,8 @@ const PUZZLES = [
       15
      ],
      "table": "ZmZmZmZmZlY="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -8520,7 +8869,8 @@ const PUZZLES = [
       6
      ],
      "table": "tA=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -8541,7 +8891,8 @@ const PUZZLES = [
       7
      ],
      "table": "+A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jasper",
@@ -8562,7 +8913,8 @@ const PUZZLES = [
       9
      ],
      "table": "sg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kismet",
@@ -8583,7 +8935,8 @@ const PUZZLES = [
       15
      ],
      "table": "Vg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -8604,7 +8957,8 @@ const PUZZLES = [
       10
      ],
      "table": "eA=="
-    }
+    },
+    "mood": "angry"
    },
    {
     "name": "Marble",
@@ -8629,7 +8983,8 @@ const PUZZLES = [
       14
      ],
      "table": "luHh8A=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nugget",
@@ -8650,7 +9005,8 @@ const PUZZLES = [
       12
      ],
      "table": "cQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Olive",
@@ -8673,7 +9029,8 @@ const PUZZLES = [
       14
      ],
      "table": "0vA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Saffron",
@@ -8698,7 +9055,8 @@ const PUZZLES = [
       14
      ],
      "table": "EADv/w=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Udon",
@@ -8717,7 +9075,8 @@ const PUZZLES = [
       15
      ],
      "table": "BQ=="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [
@@ -8763,7 +9122,8 @@ const PUZZLES = [
       15
      ],
      "table": "CQ=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Bagel",
@@ -8788,7 +9148,8 @@ const PUZZLES = [
       10
      ],
      "table": "qaqqag=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Clover",
@@ -8811,7 +9172,8 @@ const PUZZLES = [
       14
      ],
      "table": "VFU="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Dumpling",
@@ -8858,7 +9220,8 @@ const PUZZLES = [
       15
      ],
      "table": "/gD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/4A="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Espresso",
@@ -8869,7 +9232,8 @@ const PUZZLES = [
     "hidden": true,
     "secret": "Pickles is the only honest cat among the tabby cats.",
     "mentions": [],
-    "clue": null
+    "clue": null,
+    "mood": "neutral"
    },
    {
     "name": "Felix",
@@ -8894,7 +9258,8 @@ const PUZZLES = [
       15
      ],
      "table": "yczMzA=="
-    }
+    },
+    "mood": "happy"
    },
    {
     "name": "Goose",
@@ -8915,7 +9280,8 @@ const PUZZLES = [
       14
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Hazel",
@@ -8938,7 +9304,8 @@ const PUZZLES = [
       11
      ],
      "table": "tPA="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Iggy",
@@ -8959,7 +9326,8 @@ const PUZZLES = [
       13
      ],
      "table": "ug=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Jellybean",
@@ -8980,7 +9348,8 @@ const PUZZLES = [
       9
      ],
      "table": "Hg=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Kettle",
@@ -9003,7 +9372,8 @@ const PUZZLES = [
       14
      ],
      "table": "Do8="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Lentil",
@@ -9026,7 +9396,8 @@ const PUZZLES = [
       11
      ],
      "table": "/gE="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Mango",
@@ -9047,7 +9418,8 @@ const PUZZLES = [
       12
      ],
      "table": "Sw=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Nimbus",
@@ -9068,7 +9440,8 @@ const PUZZLES = [
       13
      ],
      "table": "aQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Olive",
@@ -9093,7 +9466,8 @@ const PUZZLES = [
       14
      ],
      "table": "6P4XAQ=="
-    }
+    },
+    "mood": "neutral"
    },
    {
     "name": "Pickles",
@@ -9116,7 +9490,8 @@ const PUZZLES = [
       15
      ],
      "table": "av8="
-    }
+    },
+    "mood": "neutral"
    }
   ],
   "liars": [

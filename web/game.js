@@ -1,23 +1,5 @@
 // Purrjury web prototype. PUZZLES comes from puzzles.js (made by export.py).
 
-// how each cat color is painted onto the cat picture (see --cat-shape in style.css)
-const COLOR_STYLES = {
-  ginger: "#e3893d",
-  black: "#262626",
-  white: "#f7f5f0",
-  grey: "#9b9b9b",
-  tabby: "repeating-linear-gradient(45deg, #9c7148 0 3px, #5e4129 3px 6px)",
-  calico: "linear-gradient(90deg, #f7f5f0 33%, #e3893d 33% 66%, #262626 66%)",
-  tuxedo: "linear-gradient(90deg, #262626 50%, #f7f5f0 50%)",
-  siamese: "radial-gradient(circle, #eadcc3 45%, #6b4a33 46%)",
-  tortoiseshell: "linear-gradient(135deg, #3b2418 40%, #c4672b 40% 60%, #3b2418 60%)",
-  cream: "#f1dfb8",
-  brown: "#7a5230",
-  spotted: "radial-gradient(circle at 30% 30%, #262626 20%, transparent 21%), radial-gradient(circle at 70% 65%, #262626 18%, transparent 19%), #f7f5f0",
-  smoky: "#5f5f6b",
-  golden: "#d4a52a",
-};
-
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
 const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
@@ -161,13 +143,11 @@ function render() {
     const top = document.createElement("div");
     top.className = "top";
 
-    // the cat picture: the same cat shape for everyone, only the color changes
-    const swatch = document.createElement("span");
-    swatch.className = "swatch";
-    const swatchFill = document.createElement("span");
-    swatchFill.className = "swatch-fill";
-    swatchFill.style.background = COLOR_STYLES[cat.color] || "#ccc";
-    swatch.append(swatchFill);
+    // the cat picture: its coat, with a face that matches what its clue says (angry for "X is a liar")
+    const sprite = document.createElement("img");
+    sprite.className = "sprite";
+    sprite.src = `sprites/cat_${cat.color}_${cat.mood || "neutral"}.png`;
+    sprite.alt = "";
 
     const name = document.createElement("span");
     name.className = "name";
@@ -177,7 +157,7 @@ function render() {
     color.className = "color";
     color.textContent = cat.color;
 
-    top.append(swatch, name, color);
+    top.append(sprite, name, color);
 
     // honest / liar in the bottom corner (the card color shows it too), and a lock on the given cat
     const badge = document.createElement("span");

@@ -74,6 +74,8 @@ def puzzle_to_dict(grid, world, seed, level, given=None):
                 "secret": cat.statement.to_text() if cat.hidden else None,   # shown after Reveal
                 # the other cats this cat talks about. Hidden cats show none, that would give away their statement
                 "mentions": [] if cat.hidden else cat.statement.mentions(),
+                # which face the cat's sprite shows. Hidden cats only meow, so they look neutral
+                "mood": "neutral" if cat.hidden else cat.statement.mood(),
                 # for the hint button. Hidden cats' clues can't be used, so they have none
                 "clue": None if cat.hidden else clue_table(cat.statement, grid),
             })

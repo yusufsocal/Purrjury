@@ -25,6 +25,7 @@ def test_export_writes_playable_puzzles(tmp_path):
             assert cat["hidden"] in (True, False)
             assert (cat["secret"] is not None) == cat["hidden"]
             assert all(0 <= i < n for i in cat["mentions"])
+            assert cat["mood"] in ("happy", "angry", "neutral")
             if cat["hidden"]:
                 assert cat["mentions"] == []
                 assert cat["clue"] is None
