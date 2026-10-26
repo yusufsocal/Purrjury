@@ -78,12 +78,19 @@ button:hover { border-color: var(--muted); }
 .card.answer-honest { box-shadow: 0 0 0 4px var(--honest); }
 .card.answer-liar { box-shadow: 0 0 0 4px var(--liar); }
 
-.top { display: flex; align-items: center; gap: 6px; }
-/* when the top row is crowded, the color word gives way first, the name only after it */
-.name { font-weight: 700; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1; }
-/* the pixel cat: drawn at 32x32, scaled up without blurring */
-.sprite { width: 32px; height: 32px; flex-shrink: 0; image-rendering: pixelated; }
-.color { color: var(--muted); font-size: 0.8rem; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 100; }
+/* header: cat in the middle, name and color under it, a dashed line before the clue */
+.top {
+  display: flex; flex-direction: column; align-items: center;
+  margin: -10px -12px 0;
+  padding: 8px 8px 4px;
+  border-bottom: 1px dashed var(--line);
+}
+/* the pixel cat: drawn at 32x32, shown at exactly 2x so the pixels stay crisp */
+.sprite { width: 64px; height: 64px; image-rendering: pixelated; }
+/* the color goes on its own line if there's no room next to the name */
+.name-line { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 6px; max-width: 100%; }
+.name { font-weight: 700; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.color { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
 .badge {
   position: absolute;
   bottom: 10px; left: 12px;
@@ -188,9 +195,9 @@ button:hover { border-color: var(--muted); }
   body { padding: 10px; }
   #grid { gap: 6px; }
   .card { padding: 8px; font-size: 0.85rem; min-height: 90px; }
-  .color { display: none; }
   /* small screens: tighter cards, buttons a bit lower */
-  .top { gap: 4px; }
+  .top { margin: -8px -8px 0; padding: 6px 4px 3px; }
+  .name-line { flex-direction: column; align-items: center; }   /* color always under the name, so every header is as tall */
   .card { padding-bottom: 28px; }
   .used-toggle { bottom: 4px; font-size: 0.75rem; }
   .pen-toggle { bottom: 4px; font-size: 0.75rem; }
@@ -198,6 +205,6 @@ button:hover { border-color: var(--muted); }
   .mark-word { display: none; }
   .badge { bottom: auto; top: 2px; left: auto; right: 4px; }   /* just the lock now, in the top corner */
   /* narrow cards (4x4 on a phone): a smaller cat and name, so names fit */
-  .sprite { width: 16px; height: 16px; }   /* exactly half of 32, so the pixels stay crisp */
+  .sprite { width: 32px; height: 32px; }   /* the sprite's own size, so the pixels stay crisp */
   .name { font-size: 0.85rem; letter-spacing: -0.2px; }
 }

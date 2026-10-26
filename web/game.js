@@ -140,6 +140,7 @@ function render() {
     }
     if (hintCards.has(i)) card.classList.add("hint");
 
+    // header: the cat in the middle, its name and coat color under it, then a divider before the clue
     const top = document.createElement("div");
     top.className = "top";
 
@@ -157,7 +158,11 @@ function render() {
     color.className = "color";
     color.textContent = cat.color;
 
-    top.append(sprite, name, color);
+    const nameLine = document.createElement("div");
+    nameLine.className = "name-line";
+    nameLine.append(name, color);
+
+    top.append(sprite, nameLine);
 
     // honest / liar in the bottom corner (the card color shows it too), and a lock on the given cat
     const badge = document.createElement("span");
