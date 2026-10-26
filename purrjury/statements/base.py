@@ -49,6 +49,14 @@ class Statement(ABC):
         """
         return False
 
+    def mood(self):
+        """"happy", "angry" or "neutral": which kind of cat sound fits the words of this clue.
+
+        It only looks at what the clue says ("X is a liar" is angry), never at whether the speaker
+        is honest, so a sound never gives anything away. Most clues are neutral.
+        """
+        return "neutral"
+
     def to_text(self):
         """Return the sentence stored by set_text. Same for every statement type, so it lives here."""
         if self.text is None:

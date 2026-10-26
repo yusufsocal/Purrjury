@@ -71,6 +71,10 @@ class PairStatement(Statement):
         """'Felix and I are the same type / opposites': reveals Felix, but only if you know the trick."""
         return self.a == self.speaker and self.relation in TRICK_RELATIONS
 
+    def mood(self):
+        """Happy for "both honest", angry for "both liars", neutral for the rest."""
+        return {"both_honest": "happy", "both_liars": "angry"}.get(self.relation, "neutral")
+
     def mentions(self):
         """The other cats this statement talks about."""
         return sorted(set([self.a, self.b]) - {self.speaker})

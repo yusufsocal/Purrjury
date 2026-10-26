@@ -25,3 +25,30 @@ def test_no_two_cats_say_the_same_thing(rows, cols):
         assign_statements(grid, world)
         keys = [cat.statement.key() for cat in all_cats(grid)]
         assert len(keys) == len(set(keys))
+
+
+def test_cat_sounds_match_the_mood_and_keep_the_clue(monkeypatch):
+    """Every clue gets a sound (chance 1), from the list for its mood, and the clue itself stays the same."""
+    from purrjury import texts
+    from purrjury.engine import generator
+    monkeypatch.setattr(generator, "SOUND_CHANCE", 1.0)
+    for _ in range(20):
+        grid = random_grid(3, 3)
+        world = make_world(9, 3)
+        assign_statements(grid, world)
+        before = {cat.index: cat.statement.to_text() for cat in all_cats(grid)}
+        generator.add_cat_sounds(grid)
+        for cat in all_cats(grid):
+            text = cat.statement.to_text()
+            sounds = texts.CAT_SOUNDS[cat.statement.mood()]
+            assert any(text == f"{s} {before[cat.index]}" or text == f"{before[cat.index]} {s}" for s in sounds), text
+
+
+def test_moods():
+    from purrjury.statements import CountLiars, PairStatement
+    assert CountLiars(0, [1], "", "exactly", 1).mood() == "angry"     # "Felix is a liar"
+    assert CountLiars(0, [1], "", "exactly", 0).mood() == "happy"     # "Felix is honest"
+    assert CountLiars(0, [1, 2, 3], "", "exactly", 1).mood() == "neutral"
+    assert PairStatement(0, 1, 2, "both_liars").mood() == "angry"
+    assert PairStatement(0, 1, 2, "both_honest").mood() == "happy"
+    assert PairStatement(0, 1, 2, "same").mood() == "neutral"

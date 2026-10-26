@@ -55,6 +55,14 @@ class CountLiars(Statement):
         """The other cats this statement talks about."""
         return sorted(set(self.area) - {self.speaker})
 
+    def mood(self):
+        """Happy when it says everyone in the area is honest, angry when it says they're all liars."""
+        if self.mode == "exactly" and self.n == 0:
+            return "happy"
+        if self.n == len(self.area):
+            return "angry"
+        return "neutral"
+
     def key(self):
         """Same cats (in any order), same mode and same n means the same claim."""
         return ("count", frozenset(self.area), self.mode, self.n)

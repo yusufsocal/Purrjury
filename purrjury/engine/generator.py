@@ -10,6 +10,9 @@ from purrjury.board.world import make_world
 # Chance for each possible hidden cat to actually be hidden (see max_hidden)
 HIDDEN_CHANCE = 0.75
 
+# Chance that a clue gets a cat sound, before or after it ("Hiss! Bean is a liar.")
+SOUND_CHANCE = 0.25
+
 
 def new_statement(statement_type, speaker, grid, world, used, tries=10):
     """Ask statement_type for a fitting statement that no other cat has said yet.
@@ -84,6 +87,20 @@ def add_hidden_cats(grid, world):
         cats[about].gibberish = random.choice(texts.GIBBERISH_TEXTS)
 
 
+def add_cat_sounds(grid):
+    """Now and then put a cat sound before or after a clue, matching its mood: "Hiss! Bean is a liar."
+
+    Only the text changes, the logic stays the same. Hidden cats already only meow.
+    """
+    for row in grid:
+        for cat in row:
+            if cat.hidden or random.random() >= SOUND_CHANCE:
+                continue
+            statement = cat.statement
+            sound = random.choice(texts.CAT_SOUNDS[statement.mood()])
+            statement.text = f"{sound} {statement.text}" if random.random() < 0.5 else f"{statement.text} {sound}"
+
+
 def print_puzzle(grid, world=None, width=24):
     """Print the grid as boxes: cat name on top, its statement wrapped underneath."""
     cols = len(grid[0])
@@ -125,6 +142,7 @@ def generate_puzzle(row, col, n_liars, max_attempts=1000):
         add_hidden_cats(grid, world)
 
         if len(find_solutions(grid)) == 1:
+            add_cat_sounds(grid)
             return grid, world
 
     return None
