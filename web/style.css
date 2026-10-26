@@ -59,7 +59,7 @@ button:hover { border-color: var(--muted); }
   background: var(--card);
   border: 2px solid var(--line);
   border-radius: 12px;
-  padding: 10px 12px 12px;
+  padding: 10px 12px 36px;   /* room at the bottom for the pen and check buttons */
   cursor: pointer;
   min-height: 110px;
   /* long-press on phones shows connections, so it must not select text or open the iOS menu */
@@ -80,8 +80,9 @@ button:hover { border-color: var(--muted); }
 .card.answer-honest { box-shadow: 0 0 0 4px var(--honest); }
 .card.answer-liar { box-shadow: 0 0 0 4px var(--liar); }
 
-.top { display: flex; align-items: center; gap: 6px; padding-right: 64px; }
-.name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; }
+.top { display: flex; align-items: center; gap: 6px; }
+/* when the top row is crowded, the color word gives way first, the name only after it */
+.name { font-weight: 700; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1; }
 .swatch {
   width: 22px; height: 22px;
   flex-shrink: 0;
@@ -94,15 +95,21 @@ button:hover { border-color: var(--muted); }
   -webkit-mask: var(--cat-shape) center / contain no-repeat;
   mask: var(--cat-shape) center / contain no-repeat;
 }
-.color { color: var(--muted); font-size: 0.8rem; }
-.badge { margin-left: auto; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.color { color: var(--muted); font-size: 0.8rem; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 100; }
+.badge {
+  position: absolute;
+  bottom: 10px; left: 12px;
+  display: flex; gap: 4px; align-items: center;
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; white-space: nowrap;
+}
+.given-lock { font-size: 0.8rem; }
 .honest .badge { color: var(--honest); }
 .liar .badge { color: var(--liar); }
 .text { margin: 8px 0 0; line-height: 1.35; overflow-wrap: break-word; }
 
 .used-toggle {
   position: absolute;
-  top: 6px; right: 6px;
+  bottom: 6px; right: 6px;
   padding: 0 6px;
   font-size: 0.85rem;
   line-height: 1.4;
@@ -111,7 +118,7 @@ button:hover { border-color: var(--muted); }
 /* pen: your own notes and tags on a cat */
 .pen-toggle {
   position: absolute;
-  top: 6px; right: 40px;
+  bottom: 6px; right: 40px;
   padding: 0 6px;
   font-size: 0.85rem;
   line-height: 1.4;
@@ -194,9 +201,15 @@ button:hover { border-color: var(--muted); }
   #grid { gap: 6px; }
   .card { padding: 8px; font-size: 0.85rem; min-height: 90px; }
   .color { display: none; }
-  /* small screens: move the check button to the bottom so the name has room */
-  .top { padding-right: 0; gap: 4px; }
+  /* small screens: tighter cards, buttons a bit lower */
+  .top { gap: 4px; }
   .card { padding-bottom: 28px; }
-  .used-toggle { top: auto; bottom: 4px; font-size: 0.75rem; }
-  .pen-toggle { top: auto; bottom: 4px; font-size: 0.75rem; }
+  .used-toggle { bottom: 4px; font-size: 0.75rem; }
+  .pen-toggle { bottom: 4px; font-size: 0.75rem; }
+  /* no room for the word next to the buttons, the card color already says honest or liar */
+  .mark-word { display: none; }
+  .badge { bottom: auto; top: 2px; left: auto; right: 4px; }   /* just the lock now, in the top corner */
+  /* narrow cards (4x4 on a phone): a smaller cat and name, so names fit */
+  .swatch { width: 16px; height: 16px; }
+  .name { font-size: 0.85rem; letter-spacing: -0.2px; }
 }

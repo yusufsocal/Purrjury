@@ -177,12 +177,22 @@ function render() {
     color.className = "color";
     color.textContent = cat.color;
 
+    top.append(swatch, name, color);
+
+    // honest / liar in the bottom corner (the card color shows it too), and a lock on the given cat
     const badge = document.createElement("span");
     badge.className = "badge";
-    badge.textContent = s.marks[i] === "unknown" ? "" : s.marks[i];
-    if (i === p.given) badge.textContent += " · given";
-
-    top.append(swatch, name, color, badge);
+    const markWord = document.createElement("span");
+    markWord.className = "mark-word";
+    markWord.textContent = s.marks[i] === "unknown" ? "" : s.marks[i];
+    badge.append(markWord);
+    if (i === p.given) {
+      const lock = document.createElement("span");
+      lock.className = "given-lock";
+      lock.textContent = "🔒";
+      lock.title = "Given: this cat is solved for you";
+      badge.append(lock);
+    }
 
     const text = document.createElement("p");
     text.className = cat.hidden ? "text gibberish" : "text";
@@ -211,7 +221,7 @@ function render() {
       render();
     });
 
-    card.append(top, text, usedToggle, pen);
+    card.append(top, text, badge, usedToggle, pen);
 
     // your tags in a little row, and your note under the clue
     if (s.tags[i].length) {
