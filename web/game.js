@@ -122,12 +122,15 @@ function render() {
   info.textContent = `${level[0].toUpperCase() + level.slice(1)} ${sizeOf(p)} · ${current + 1} / ${list.length}`;
   info.title = `seed ${p.seed}`;   // handy when someone reports a puzzle
   grid.style.gridTemplateColumns = `repeat(${p.cols}, minmax(0, 1fr))`;
+  grid.dataset.cols = p.cols;   // lets the CSS shrink the clue text on narrow 4x4 cards
+  grid.style.setProperty("--rows", p.rows);   // on a computer the rows share the screen height
   grid.innerHTML = "";
 
   // one card per cat
   p.cats.forEach((cat, i) => {
     const card = document.createElement("div");
     card.className = "card " + s.marks[i];
+    if (editing === i) card.classList.add("editing");
     if (i === p.given) card.classList.add("given");
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
@@ -181,7 +184,10 @@ function render() {
 
     const text = document.createElement("p");
     text.className = cat.hidden ? "text gibberish" : "text";
-    text.textContent = cat.text;
+    // the words go in a span, so fitText can measure them against the space the card has
+    const words = document.createElement("span");
+    words.textContent = cat.text;
+    text.append(words);
 
     // small button to grey out a clue you're done with
     const usedToggle = document.createElement("button");
@@ -258,8 +264,29 @@ function render() {
     grid.append(card);
   });
 
+  fitText();
   timer.textContent = formatTime(s.seconds);
 }
+
+
+// On a computer the grid is fitted to the screen, so a long clue may not fit its card.
+// Shrink its font a little at a time until it does (never below MIN_TEXT_PX).
+// On phones the cards just grow, so nothing overflows and nothing shrinks.
+const MIN_TEXT_PX = 10;
+
+function fitText() {
+  for (const text of grid.querySelectorAll(".text")) {
+    const words = text.firstChild;
+    text.style.fontSize = "";
+    let size = parseFloat(getComputedStyle(text).fontSize);
+    while (words.getBoundingClientRect().height > text.clientHeight + 1 && size > MIN_TEXT_PX) {
+      size -= 0.5;
+      text.style.fontSize = size + "px";
+    }
+  }
+}
+
+window.addEventListener("resize", () => { if (!game.hidden) fitText(); });
 
 
 // one small tag chip: "?" or "!" as text, the colors as a dot

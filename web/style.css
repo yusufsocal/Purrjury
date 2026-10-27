@@ -14,7 +14,7 @@
 
 body {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1100px;
   padding: 16px;
   background: var(--bg);
   color: var(--ink);
@@ -25,6 +25,7 @@ header { text-align: center; }
 h1 { margin: 8px 0 4px; font-size: 2rem; }
 .rules, .help { text-align: center; color: var(--muted); margin: 4px 0; }
 .help { font-size: 0.9rem; margin-bottom: 16px; }
+footer { margin-top: 24px; }
 .honest-text { color: var(--honest); }
 .liar-text { color: var(--liar); }
 
@@ -54,6 +55,7 @@ button:hover { border-color: var(--muted); }
 
 .card {
   position: relative;
+  display: flex; flex-direction: column;   /* header on top, the clue fills the rest */
   background: var(--card);
   border: 2px solid var(--line);
   border-radius: 12px;
@@ -100,7 +102,16 @@ button:hover { border-color: var(--muted); }
 .given-lock { font-size: 0.8rem; }
 .honest .badge { color: var(--honest); }
 .liar .badge { color: var(--liar); }
-.text { margin: 8px 0 0; line-height: 1.35; overflow-wrap: break-word; }
+/* the clue sits in the middle of the space under the header, both ways */
+.text {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  margin: 8px 0 0;
+  text-align: center;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 
 .used-toggle {
   position: absolute;
@@ -191,6 +202,42 @@ button:hover { border-color: var(--muted); }
 #timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }
 
+/* On a computer the whole grid fits the screen: the rows share the height that's left,
+   and the cat and the clue text shrink to fit their card (see fitText in game.js). */
+@media (min-width: 601px) {
+  body { padding-top: 0; padding-bottom: 0; }
+  #screen { height: 100dvh; display: flex; flex-direction: column; padding: 6px 0; }
+  h1 { font-size: 1.5rem; margin: 2px 0; }
+  #game:not([hidden]) { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  #game nav, #game .controls { margin: 6px 0; }
+  #legend { margin: 0 0 6px; min-height: 1.3em; }
+  #message { margin: 2px 0 0; min-height: 1.3em; }
+  #grid { flex: 1; min-height: 0; grid-template-rows: repeat(var(--rows), minmax(0, 1fr)); }
+  /* buttons and the honest/liar badge go up in the corners, so the clue gets the bottom of the card */
+  .card { min-height: 0; overflow: hidden; container-type: size; padding: 6px 10px 8px; }
+  .used-toggle, .pen-toggle { top: 6px; bottom: auto; }
+  .badge { top: 9px; bottom: auto; left: 10px; }
+  .top { margin: -6px -10px 0; padding: 6px 70px 4px; }
+  .sprite { width: 64px; height: 64px; }
+  .text { min-height: 0; overflow: hidden; margin-top: 6px; }
+  /* short cards (small screens, 4x4): cat and name side by side in a slim header */
+  @container (max-height: 190px) {
+    .top { flex-direction: row; justify-content: center; gap: 6px; padding: 4px 66px 4px 50px; }
+    .sprite { width: 32px; height: 32px; }
+    .name-line { flex-wrap: nowrap; min-width: 0; }
+    .name { flex-shrink: 0; }   /* the name keeps its room, the color word gives way */
+    .color { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  }
+  /* the notes box opens below the card, on top of the next one */
+  .card.editing { overflow: visible; z-index: 5; }
+  .note-editor {
+    position: absolute; left: -2px; right: -2px; top: calc(100% - 6px);
+    margin: 0; padding: 8px 10px 10px;
+    background: var(--card); border: 2px solid var(--line); border-top: none;
+    border-radius: 0 0 12px 12px; box-shadow: 0 6px 14px #0002;
+  }
+}
+
 @media (max-width: 600px) {
   body { padding: 10px; }
   #grid { gap: 6px; }
@@ -207,4 +254,6 @@ button:hover { border-color: var(--muted); }
   /* narrow cards (4x4 on a phone): a smaller cat and name, so names fit */
   .sprite { width: 32px; height: 32px; }   /* the sprite's own size, so the pixels stay crisp */
   .name { font-size: 0.85rem; letter-spacing: -0.2px; }
+  /* 4x4 on a phone: cards are very narrow, so long clues get a smaller font */
+  #grid[data-cols="4"] .text { font-size: 0.78rem; line-height: 1.3; }
 }
