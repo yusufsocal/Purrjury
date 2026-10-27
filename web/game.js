@@ -3,6 +3,10 @@
 // colors whose sprite has another name (same as SPRITE_COAT in purrjury/board/colors.py)
 const SPRITE_COAT = { orange: "ginger", yellow: "golden" };
 
+// the color of the name band on phones, one per cat color (light ones get dark text)
+const COAT_BAND = { black: "#262626", white: "#e9e5dc", grey: "#9b9b9b", orange: "#e3893d", brown: "#7a5230", yellow: "#d4a52a" };
+const LIGHT_COATS = new Set(["white", "yellow"]);
+
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
 const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
@@ -66,6 +70,7 @@ function showMenu() {
   editing = null;
   game.hidden = true;
   menu.hidden = false;
+  document.body.classList.remove("playing");
   renderMenu();
 }
 
@@ -109,6 +114,7 @@ function start(indexes) {
   current = firstUnsolved === -1 ? 0 : firstUnsolved;
   menu.hidden = true;
   game.hidden = false;
+  document.body.classList.add("playing");   // phones hide the title while playing, so the grid gets the screen
   message.textContent = "";
   render();
 }
@@ -135,6 +141,8 @@ function render() {
   p.cats.forEach((cat, i) => {
     const card = document.createElement("div");
     card.className = "card " + s.marks[i];
+    card.style.setProperty("--coat", COAT_BAND[cat.color] || "#bbb");
+    if (LIGHT_COATS.has(cat.color)) card.classList.add("light-coat");
     if (editing === i) card.classList.add("editing");
     if (i === p.given) card.classList.add("given");
     if (s.used[i]) card.classList.add("used");
