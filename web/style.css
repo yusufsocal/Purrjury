@@ -51,6 +51,7 @@ button:hover { border-color: var(--muted); }
 #grid {
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
 }
 
 .card {
@@ -212,21 +213,45 @@ button:hover { border-color: var(--muted); }
   #game nav, #game .controls { margin: 6px 0; }
   #legend { margin: 0 0 6px; min-height: 1.3em; }
   #message { margin: 2px 0 0; min-height: 1.3em; }
-  #grid { flex: 1; min-height: 0; grid-template-rows: repeat(var(--rows), minmax(0, 1fr)); }
-  /* buttons and the honest/liar badge go up in the corners, so the clue gets the bottom of the card */
-  .card { min-height: 0; overflow: hidden; container-type: size; padding: 6px 10px 8px; }
+  /* the grid area is split into --slots rows and columns (3 for a 3x3, 4 for a 4x4) */
+  #grid {
+    flex: 1; min-height: 0;
+    grid-template-columns: repeat(var(--cols), calc((100% - (var(--slots) - 1) * 10px) / var(--slots)));
+    grid-template-rows: repeat(var(--rows), calc((100% - (var(--slots) - 1) * 10px) / var(--slots)));
+    justify-content: center; align-content: center;
+  }
+  /* cat on the left, name and clue on the right (the header box is dissolved into the card's grid).
+     The name sits at the top in every card, the clue right under it. The clue row can shrink,
+     and fitText then makes its font smaller. */
+  .card {
+    min-height: 0; overflow: hidden; container-type: size;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, max-content) auto auto minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 8px 12px;
+  }
+  .top { display: contents; }
+  .sprite { grid-column: 1; grid-row: 1 / -1; align-self: center; width: 64px; height: 64px; }
+  .name-line { grid-column: 2; grid-row: 1; justify-content: flex-start; flex-wrap: nowrap; min-width: 0; padding-right: 62px; }
+  .name { flex-shrink: 0; }   /* the name keeps its room, the color word gives way */
+  .color { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .text { grid-column: 2; grid-row: 2; display: block; margin: 2px 0 0; text-align: left; overflow: hidden; }
+  .chips { grid-column: 2; grid-row: 3; }
+  .note, .secret { grid-column: 2; grid-row: 4; align-self: start; }
   .used-toggle, .pen-toggle { top: 6px; bottom: auto; }
-  .badge { top: 9px; bottom: auto; left: 10px; }
-  .top { margin: -6px -10px 0; padding: 6px 70px 4px; }
-  .sprite { width: 64px; height: 64px; }
-  .text { min-height: 0; overflow: hidden; margin-top: 6px; }
-  /* short cards (small screens, 4x4): cat and name side by side in a slim header */
-  @container (max-height: 190px) {
-    .top { flex-direction: row; justify-content: center; gap: 6px; padding: 4px 66px 4px 50px; }
+  .badge { top: auto; bottom: 6px; left: auto; right: 10px; }
+  /* 3x3 cards are big, so their clue and name get a bigger font (fitText still shrinks it if needed) */
+  #grid[data-cols="3"] .text { font-size: 1.2rem; }
+  #grid[data-cols="3"] .name { font-size: 1.1rem; }
+  /* and a bigger cat: 3x the sprite, 4x on tall cards (whole multiples keep the pixels crisp) */
+  #grid[data-cols="3"] .sprite { width: 96px; height: 96px; }
+  @container (min-height: 200px) {
+    #grid[data-cols="3"] .sprite { width: 128px; height: 128px; }
+  }
+  /* very short cards: a smaller cat */
+  @container (max-height: 84px) {
     .sprite { width: 32px; height: 32px; }
-    .name-line { flex-wrap: nowrap; min-width: 0; }
-    .name { flex-shrink: 0; }   /* the name keeps its room, the color word gives way */
-    .color { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
   }
   /* the notes box opens below the card, on top of the next one */
   .card.editing { overflow: visible; z-index: 5; }

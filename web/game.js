@@ -121,9 +121,11 @@ function render() {
   const level = levelOf(p);
   info.textContent = `${level[0].toUpperCase() + level.slice(1)} ${sizeOf(p)} · ${current + 1} / ${list.length}`;
   info.title = `seed ${p.seed}`;   // handy when someone reports a puzzle
-  grid.style.gridTemplateColumns = `repeat(${p.cols}, minmax(0, 1fr))`;
   grid.dataset.cols = p.cols;   // lets the CSS shrink the clue text on narrow 4x4 cards
-  grid.style.setProperty("--rows", p.rows);   // on a computer the rows share the screen height
+  grid.style.setProperty("--cols", p.cols);
+  grid.style.setProperty("--rows", p.rows);
+  // on a computer the cards share the whole grid area (the CSS divides it into this many slots)
+  grid.style.setProperty("--slots", Math.max(p.rows, p.cols));
   grid.innerHTML = "";
 
   // one card per cat
