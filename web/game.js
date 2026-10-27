@@ -1,5 +1,8 @@
 // Purrjury web prototype. PUZZLES comes from puzzles.js (made by export.py).
 
+// colors whose sprite has another name (same as SPRITE_COAT in purrjury/board/colors.py)
+const SPRITE_COAT = { orange: "ginger", yellow: "golden" };
+
 const MARKS = ["unknown", "honest", "liar"];   // tapping a cat goes through these in order
 const LEVELS = ["easy", "medium", "hard", "tricky", "unrated"];   // menu order. "unrated": puzzles from before levels existed
 
@@ -152,7 +155,7 @@ function render() {
     // the cat picture: its coat, with a face that matches what its clue says (angry for "X is a liar")
     const sprite = document.createElement("img");
     sprite.className = "sprite";
-    sprite.src = `sprites/cat_${cat.color}_${cat.mood || "neutral"}.png`;
+    sprite.src = `sprites/cat_${SPRITE_COAT[cat.color] || cat.color}_${cat.mood || "neutral"}.png`;
     sprite.alt = "";
 
     const name = document.createElement("span");

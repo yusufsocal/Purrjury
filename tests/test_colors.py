@@ -18,7 +18,7 @@ if not hasattr(grid_module, "decide_colors"):
     pytest.skip("decide_colors not written yet", allow_module_level=True)
 
 from purrjury.board.colors import COLORS
-from purrjury.board.grid import decide_colors
+from purrjury.board.grid import decide_colors, max_group_size
 
 
 @pytest.mark.parametrize("n_cats", range(2, 26))
@@ -28,7 +28,7 @@ def test_make_colors_sizes(n_cats):
         assert len(colors) == n_cats
         for color, count in Counter(colors).items():
             assert color in COLORS
-            assert 2 <= count <= 4, f"{color} appears {count} times"
+            assert 2 <= count <= max_group_size(n_cats), f"{color} appears {count} times"
 
 
 def test_make_colors_is_shuffled():
@@ -44,9 +44,11 @@ def test_make_colors_uses_varied_colors():
     assert len(used) > 4
 
 
-def test_colors_list_is_big_enough_for_5x5():
-    """With groups of at least 2, a 25-cat grid can need up to 12 different colors."""
-    assert len(set(COLORS)) >= 12
+def test_groups_stay_at_4_up_to_a_4x4_or_more():
+    """4 cats per color at most, until a grid has more cats than 4 per color allows."""
+    assert max_group_size(16) == 4
+    assert max_group_size(24) == 4
+    assert max_group_size(25) == 5
 
 
 @pytest.mark.parametrize("rows, cols", [(2, 2), (2, 3), (3, 3), (4, 5), (5, 5)])
@@ -56,7 +58,7 @@ def test_make_grid_gives_every_cat_a_valid_color(rows, cols):
         for cat in cats:
             assert cat.color in COLORS
         for color, count in Counter(cat.color for cat in cats).items():
-            assert 2 <= count <= 4, f"{color} appears {count} times"
+            assert 2 <= count <= max_group_size(rows * cols), f"{color} appears {count} times"
 
 
 @pytest.mark.parametrize("n_cats", range(4, 26))

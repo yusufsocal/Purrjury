@@ -36,7 +36,7 @@ def test_get_cat_round_trip():
 
 
 def test_no_cat_name_is_a_color():
-    """A cat called Ginger next to "the ginger cats" would be confusing."""
+    """A cat called Brown next to "the brown cats" would be confusing."""
     names = [name.lower() for options in load_names().values() for name in options]
     clashes = set(names) & set(COLORS)
     assert not clashes, f"names that are also colors: {clashes}"

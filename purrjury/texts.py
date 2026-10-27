@@ -1,6 +1,6 @@
 """Sentences for statements. Placeholders:
     {name}  a single cat's name
-    {area}  the area text, e.g. "my neighbors", "the tabby cats", "the cats in the grid"
+    {area}  the area text, e.g. "my neighbors", "the orange cats", "the cats in the grid"
     {n}     the number of liars
     {h}     the number of honest cats (size of the area minus n)
     {a} {b}            the two cats in a pair statement

@@ -19,24 +19,31 @@ def load_names(path=NAMES_PATH):
     return names_by_letter
 
 
+def max_group_size(n_cats):
+    """The most cats one color can have: 4, or more on grids too big for 4 per color (25 cats need 5)."""
+    return max(4, -(-n_cats // len(COLORS)))   # -(-a // b) rounds a / b up
+
+
 def decide_colors(n_cats):
-    """Return a shuffled list of n_cats colors, every color used 2 to 4 times."""
+    """Return a shuffled list of n_cats colors, every color used 2 to max_group_size(n_cats) times."""
+    biggest = max_group_size(n_cats)
     cats_left = n_cats
     sizes = []
 
-    # split the cats into color groups of 2 to 4 until every cat is in a group
+    # split the cats into color groups until every cat is in a group, one color per group
     while cats_left > 0:
-        # A group can't leave exactly 1 cat over, and can't be the whole grid
-        # (grids under 4 cats are too small for two groups, so they get one color)
-        allowed = [s for s in (2,3,4) if s <= cats_left and cats_left -s != 1
-                   and (s < n_cats or n_cats < 4)]
+        groups_left = len(COLORS) - len(sizes) - 1   # colors still free after this group
+        # A group can't leave exactly 1 cat over, can't be the whole grid
+        # (grids under 4 cats are too small for two groups, so they get one color),
+        # and must leave few enough cats for the colors that are still free
+        allowed = [s for s in range(2, biggest + 1) if s <= cats_left and cats_left - s != 1
+                   and (s < n_cats or n_cats < 4)
+                   and cats_left - s <= biggest * groups_left]
         size = random.choice(allowed)
         sizes.append(size)
         cats_left -= size
 
-    # one color per group, from the first 8 colors (more if there are lots of groups)
-    common = COLORS[:max(8, len(sizes))]
-    chosen = random.sample(common, len(sizes))
+    chosen = random.sample(COLORS, len(sizes))
 
     colors = []
     # turn the groups into one list, e.g. ["black", "black", "white", "white", "white"]

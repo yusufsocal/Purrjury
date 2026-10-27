@@ -40,7 +40,7 @@ class CountLiars(Statement):
     def __init__(self, speaker, area, area_text, mode, n):
         super().__init__(speaker)
         self.area = area            # list of cat indexes, computed once
-        self.area_text = area_text  # e.g. "my neighbors", "the cats in row 2", "the tabby cats"
+        self.area_text = area_text  # e.g. "my neighbors", "the cats in row 2", "the orange cats"
         self.mode = mode            # "exactly" or "at_least"
         self.n = n
 
