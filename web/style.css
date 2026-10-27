@@ -220,25 +220,23 @@ button:hover { border-color: var(--muted); }
     grid-template-rows: repeat(var(--rows), calc((100% - (var(--slots) - 1) * 10px) / var(--slots)));
     justify-content: center; align-content: center;
   }
-  /* cat on the left, name and clue on the right (the header box is dissolved into the card's grid).
-     The name sits at the top in every card, the clue right under it. The clue row can shrink,
-     and fitText then makes its font smaller. */
+  /* left: the cat with its name and color under it. right: the clue, in the middle of the space next to them.
+     The clue's row can shrink, and fitText then makes its font smaller. */
   .card {
     min-height: 0; overflow: hidden; container-type: size;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, max-content) auto auto minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto auto;
     column-gap: 12px;
     padding: 8px 12px;
   }
-  .top { display: contents; }
-  .sprite { grid-column: 1; grid-row: 1 / -1; align-self: center; width: 64px; height: 64px; }
-  .name-line { grid-column: 2; grid-row: 1; justify-content: flex-start; flex-wrap: nowrap; min-width: 0; padding-right: 62px; }
-  .name { flex-shrink: 0; }   /* the name keeps its room, the color word gives way */
-  .color { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-  .text { grid-column: 2; grid-row: 2; display: block; margin: 2px 0 0; text-align: left; overflow: hidden; }
-  .chips { grid-column: 2; grid-row: 3; }
-  .note, .secret { grid-column: 2; grid-row: 4; align-self: start; }
+  .top { grid-column: 1; grid-row: 1 / -1; align-self: center; margin: 0; padding: 0; border: none; max-width: 130px; }
+  .sprite { width: 64px; height: 64px; }
+  .name-line { flex-direction: column; align-items: center; }   /* name, then the color under it */
+  /* room above for the pen and check buttons, below for the honest/liar badge */
+  .text { grid-column: 2; grid-row: 1; margin: 16px 0 6px; min-height: 0; overflow: hidden; }
+  .chips { grid-column: 2; grid-row: 2; justify-content: center; margin: 0 0 12px; }
+  .note, .secret { grid-column: 2; grid-row: 3; text-align: center; margin: 0 0 12px; }
   .used-toggle, .pen-toggle { top: 6px; bottom: auto; }
   .badge { top: auto; bottom: 6px; left: auto; right: 10px; }
   /* 3x3 cards are big, so their clue and name get a bigger font (fitText still shrinks it if needed) */
