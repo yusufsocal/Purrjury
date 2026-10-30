@@ -477,7 +477,7 @@ function forcedCats(clues, known) {
 }
 
 
-// outline the clues that can find a new cat right now: single clues first, pairs if none work alone
+// outline one clue that can find a new cat right now, or one pair of clues if no clue works alone
 function hint() {
   const p = puzzle();
   const s = state();
@@ -493,19 +493,26 @@ function hint() {
     else wrong++;
   });
 
+  // just one hint: the first clue (in grid order) that finds a cat on its own,
+  // or if none does, the first pair of clues that finds one together
   const clues = p.cats.map((cat, i) => ({ i, clue: cat.clue })).filter(c => c.clue);
-  let useful = clues.filter(c => forcedCats([c.clue], known).length > 0).map(c => c.i);
-  let label = "these clues can find a cat right now";
-
-  if (useful.length === 0) {
-    const pairs = new Set();
+  const single = clues.find(c => forcedCats([c.clue], known).length > 0);
+  let useful = [];
+  let label = "";
+  if (single) {
+    useful = [single.i];
+    label = "this clue can find a cat right now";
+  } else {
+    pairSearch:
     for (let a = 0; a < clues.length; a++) {
       for (let b = a + 1; b < clues.length; b++) {
-        if (forcedCats([clues[a].clue, clues[b].clue], known).length > 0) pairs.add(clues[a].i).add(clues[b].i);
+        if (forcedCats([clues[a].clue, clues[b].clue], known).length > 0) {
+          useful = [clues[a].i, clues[b].i];
+          break pairSearch;
+        }
       }
     }
-    useful = [...pairs];
-    label = "combine two of these clues to find a cat";
+    label = "combine these two clues to find a cat";
   }
   if (wrong > 0) label += ` (${wrong} of your marks ${wrong === 1 ? "is" : "are"} wrong)`;
 
