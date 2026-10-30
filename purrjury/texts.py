@@ -209,25 +209,26 @@ ODD_TEXTS = [
 ]
 
 
-# --- Liars (or honest cats) next to each other (NextToEachOther) ---
-# Always 2 or more, so a row with 0 or 1 liars never counts as "all next to each other".
-# {line} is "Row 2", "My row", "Column 3" or "My column".
+# --- Liars (or honest cats) connected (NextToEachOther) ---
+# Connected: one group where you can walk from any of them to any other, only stepping on that type.
+# Only true with 2 or more of them, so a row with 0 or 1 liars never counts as connected.
+# {line} is "in row 2", "in my row", "in column 3" or "in my column".
 
 NEXT_TO_LIARS_TEXTS = [
-    "{line} has 2 or more liars, all next to each other.",
+    "All the liars {line} are connected.",
 ]
 
 NEXT_TO_HONEST_TEXTS = [
-    "{line} has 2 or more honest cats, all next to each other.",
+    "All the honest cats {line} are connected.",
 ]
 
-# the whole grid: one group where you can walk from any liar to any other, only stepping on liars
+# the whole grid
 EVERYONE_NEXT_TO_LIARS_TEXTS = [
-    "All the liars are in one connected group of 2 or more.",
+    "All the liars are connected.",
 ]
 
 EVERYONE_NEXT_TO_HONEST_TEXTS = [
-    "All the honest cats are in one connected group of 2 or more.",
+    "All the honest cats are connected.",
 ]
 
 

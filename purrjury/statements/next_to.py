@@ -25,29 +25,29 @@ def one_group(cats, grid):
 def next_to_areas(grid, speaker):
     """Every row and column, plus the whole grid. Returns [(indexes, line text), ...].
 
-    The line text starts the sentence ("Row 2 has ..."), the whole grid has None and gets its own texts.
+    The line text goes after the type ("All the liars in row 2 ..."), the whole grid has None and gets its own texts.
     """
     me = get_cat(grid, speaker)
     result = []
     for r in range(len(grid)):
-        result.append((areas.row(grid, r), "My row" if r == me.row else f"Row {r + 1}"))
+        result.append((areas.row(grid, r), "in my row" if r == me.row else f"in row {r + 1}"))
     for c in range(len(grid[0])):
-        result.append((areas.column(grid, c), "My column" if c == me.column else f"Column {c + 1}"))
+        result.append((areas.column(grid, c), "in my column" if c == me.column else f"in column {c + 1}"))
     result.append((areas.everyone(grid), None))
     return result
 
 
 class NextToEachOther(Statement):
-    """The liars (or honest cats) of an area are 2 or more and all next to each other.
+    """The liars (or honest cats) of an area are connected, e.g. 'All the liars in row 2 are connected.'
 
-    e.g. 'Row 2 has 2 or more liars, all next to each other.' In a row or column that means
-    side by side; on the whole grid it means one connected group.
+    In a row or column that means side by side; on the whole grid it means one group.
+    Only true with 2 or more of them: 0 or 1 liars never counts as connected.
     """
 
     def __init__(self, speaker, area, line_text, liars):
         super().__init__(speaker)
         self.area = area            # list of cat indexes: a row, a column or every cat
-        self.line_text = line_text  # "Row 2", "My column", ... or None for the whole grid
+        self.line_text = line_text  # "in row 2", "in my column", ... or None for the whole grid
         self.liars = liars          # True: about the liars, False: about the honest cats
 
     def evaluate(self, world, grid):
@@ -67,7 +67,7 @@ class NextToEachOther(Statement):
         return "next_to"
 
     def set_text(self, grid):
-        """The line version ("Row 2 has ...") or the whole-grid version."""
+        """The line version ("All the liars in row 2 ...") or the whole-grid version."""
         if self.line_text is None:
             options = texts.EVERYONE_NEXT_TO_LIARS_TEXTS if self.liars else texts.EVERYONE_NEXT_TO_HONEST_TEXTS
         else:

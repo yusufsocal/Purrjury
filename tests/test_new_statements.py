@@ -87,21 +87,21 @@ def test_one_group_on_the_grid_walks_around_corners_but_not_diagonals():
 def test_next_to_needs_two_or_more():
     grid = fixed_grid(1, 4)
     row = [0, 1, 2, 3]
-    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, False, False, False], grid) is False   # 0 liars
-    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, True, False, False], grid) is False    # 1 liar
-    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, True, True, False], grid) is True
-    assert NextToEachOther(0, row, "Row 1", True).evaluate([True, False, True, False], grid) is False    # split
-    assert NextToEachOther(0, row, "Row 1", False).evaluate([True, False, False, True], grid) is True    # honest pair
+    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, False, False, False], grid) is False   # 0
+    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, True, False, False], grid) is False    # 1 liar
+    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, True, True, False], grid) is True
+    assert NextToEachOther(0, row, "in row 1", True).evaluate([True, False, True, False], grid) is False    # split
+    assert NextToEachOther(0, row, "in row 1", False).evaluate([True, False, False, True], grid) is True    # honest
 
 
 def test_next_to_texts():
     grid = fixed_grid(3, 3)
-    s = NextToEachOther(0, [0, 1, 2], "My row", True)
+    s = NextToEachOther(0, [0, 1, 2], "in my row", True)
     s.set_text(grid)
-    assert s.to_text() == "My row has 2 or more liars, all next to each other."
+    assert s.to_text() == "All the liars in my row are connected."
     s = NextToEachOther(0, areas.everyone(grid), None, False)
     s.set_text(grid)
-    assert "honest cats" in s.to_text() and "connected group" in s.to_text()
+    assert s.to_text() == "All the honest cats are connected."
 
 
 # --- "Bean's neighbors" areas ---
