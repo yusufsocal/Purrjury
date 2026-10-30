@@ -185,18 +185,57 @@ IF_THEN_TEXTS = [
 ]
 
 
+# --- Two areas compared (Compare) ---
+# {a} and {b} are area texts with their own small word in front: "in row 1", "among my neighbors".
+
+COMPARE_MORE_LIARS_TEXTS = [
+    "There are more liars {a} than {b}.",
+]
+
+COMPARE_MORE_HONEST_TEXTS = [
+    "There are more honest cats {a} than {b}.",
+]
+
+COMPARE_SAME_TEXTS = [
+    "There are as many liars {a} as {b}.",
+]
+
+
+# --- An odd number of liars in an area (OddLiars) ---
+# Only "odd": an "even" clue would make players wonder whether 0 counts.
+
+ODD_TEXTS = [
+    "An odd number of {area} are liars.",
+]
+
+
+# --- Liars (or honest cats) next to each other (NextToEachOther) ---
+# Always 2 or more, so a row with 0 or 1 liars never counts as "all next to each other".
+# {line} is "Row 2", "My row", "Column 3" or "My column".
+
+NEXT_TO_LIARS_TEXTS = [
+    "{line} has 2 or more liars, all next to each other.",
+]
+
+NEXT_TO_HONEST_TEXTS = [
+    "{line} has 2 or more honest cats, all next to each other.",
+]
+
+# the whole grid: one group where you can walk from any liar to any other, only stepping on liars
+EVERYONE_NEXT_TO_LIARS_TEXTS = [
+    "All the liars are in one connected group of 2 or more.",
+]
+
+EVERYONE_NEXT_TO_HONEST_TEXTS = [
+    "All the honest cats are in one connected group of 2 or more.",
+]
+
+
 # --- Areas that cover every cat ---
+# Only counts use the whole grid. Every puzzle has at least one liar and at least one honest cat,
+# so "every cat is honest", "at least one liar in total" or "all the cats are the same" are always
+# settled and would only give the speaker away.
 # The normal texts would say "exactly 5 of the cats in the grid", so these get their own wording.
-# Same placeholders as the normal lists they replace.
-
-# CountLiars
-EVERYONE_NONE_TEXTS = [
-    "Every cat is honest.",
-]
-
-EVERYONE_ALL_TEXTS = [
-    "Every cat is a liar.",
-]
 
 EVERYONE_EXACTLY_ONE_TEXTS = [
     "There's exactly one liar in total.",
@@ -206,44 +245,9 @@ EVERYONE_EXACTLY_N_TEXTS = [
     "There are exactly {n} liars in total.",
 ]
 
-EVERYONE_AT_LEAST_ONE_TEXTS = [
-    "There's at least one liar in total.",
-    "I smell a rat. There's at least one liar in total.",
-]
-
+# at least n, with n of 2 or more
 EVERYONE_AT_LEAST_N_TEXTS = [
     "There are at least {n} liars in total.",
-]
-
-# Only
-EVERYONE_ONLY_ME_LIAR_TEXTS = [
-    "I'm the only liar of all the cats.",
-]
-
-EVERYONE_ONLY_ME_HONEST_TEXTS = [
-    "I'm the only honest cat of all the cats.",
-]
-
-EVERYONE_ONLY_LIAR_TEXTS = [
-    "{name} is the only liar of all the cats.",
-]
-
-EVERYONE_ONLY_HONEST_TEXTS = [
-    "{name} is the only honest cat of all the cats.",
-]
-
-# AllSame
-EVERYONE_ALL_SAME_TEXTS = [
-    "All the cats are the same: all honest, or all liars.",
-]
-
-EVERYONE_MIXED_TEXTS = [
-    "At least one cat is honest, and at least one cat is a liar.",
-]
-
-# IfThen
-EVERYONE_IF_THEN_TEXTS = [
-    "At least one of these is true: {name} is {opposite}, or all the cats are {then}.",
 ]
 
 

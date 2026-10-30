@@ -49,6 +49,13 @@ class Statement(ABC):
         """
         return False
 
+    def kind(self):
+        """What kind of clue this looks like to a player, e.g. "count" or "either_or".
+
+        Used to keep the clue mix of a puzzle varied. Every statement type sets its own.
+        """
+        return type(self).__name__.lower()
+
     def mood(self):
         """"happy", "angry" or "neutral": which kind of cat sound fits the words of this clue.
 

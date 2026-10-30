@@ -85,6 +85,10 @@ class PairStatement(Statement):
             return ("pair", self.relation, self.a, self.b)
         return ("pair", self.relation, frozenset((self.a, self.b)))   # order doesn't matter
 
+    def kind(self):
+        """The "if" relation reads as an either/or ("At least one of these is true: ..."), the rest as pairs."""
+        return "either_or" if self.relation == "if_a_honest_then_b" else "pair"
+
     def set_text(self, grid):
         """Pick a sentence for the relation, the "me" version when the speaker is a."""
         options = TEXTS[self.relation][self.a == self.speaker] # second bracket is 0 if false, 1 if true

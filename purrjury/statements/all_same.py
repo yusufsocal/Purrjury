@@ -3,7 +3,6 @@ import random
 from purrjury.statements.base import Statement
 from purrjury.statements.count_liars import AREA_WEIGHTS
 from purrjury.statements.only import big_areas
-from purrjury.board import areas
 from purrjury import texts
 
 
@@ -29,12 +28,12 @@ class AllSame(Statement):
         """Same cats (in any order) and same claim means the same statement."""
         return ("all_same", frozenset(self.area), self.same)
 
+    def kind(self):
+        return "all_same"
+
     def set_text(self, grid):
         """Pick a sentence for "same" or "mixed"."""
-        if areas.is_everyone(grid, self.area):   # its own wording: "all the cats are the same"
-            options = texts.EVERYONE_ALL_SAME_TEXTS if self.same else texts.EVERYONE_MIXED_TEXTS
-        else:
-            options = texts.ALL_SAME_TEXTS if self.same else texts.MIXED_TEXTS
+        options = texts.ALL_SAME_TEXTS if self.same else texts.MIXED_TEXTS
         self.text = random.choice(options).format(area=self.area_text)
 
     @classmethod

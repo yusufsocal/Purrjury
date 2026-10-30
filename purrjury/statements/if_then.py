@@ -3,7 +3,6 @@ import random
 from purrjury.statements.base import Statement
 from purrjury.statements.count_liars import AREA_WEIGHTS
 from purrjury.statements.only import big_areas
-from purrjury.board import areas
 from purrjury.board.grid import get_cat
 from purrjury.utils import weighted_order
 from purrjury import texts
@@ -41,14 +40,16 @@ class IfThen(Statement):
         """Same cat, same types and same area (in any order) means the same claim."""
         return ("if_then", self.cat, self.cat_liar, frozenset(self.area), self.area_liar)
 
+    def kind(self):
+        """Players see it as "At least one of these is true: ...", so it counts as an either/or."""
+        return "either_or"
+
     def set_text(self, grid):
         """Pick a sentence and fill in the cat, the area and the types.
 
         The texts say the opposite of the "if" part: "if Felix is honest" becomes "either Felix is a liar".
         """
-        # an area with every cat gets its own wording: "or all the cats are honest"
-        options = texts.EVERYONE_IF_THEN_TEXTS if areas.is_everyone(grid, self.area) else texts.IF_THEN_TEXTS
-        self.text = random.choice(options).format(
+        self.text = random.choice(texts.IF_THEN_TEXTS).format(
             name=get_cat(grid, self.cat).name,
             opposite="honest" if self.cat_liar else "a liar",
             area=self.area_text,

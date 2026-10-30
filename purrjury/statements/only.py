@@ -2,7 +2,6 @@ import random
 
 from purrjury.statements.base import Statement
 from purrjury.statements.count_liars import AREA_WEIGHTS, CountLiars
-from purrjury.board import areas
 from purrjury.board.grid import get_cat
 from purrjury.utils import weighted_order
 from purrjury import texts
@@ -19,17 +18,16 @@ TEXTS = {
     False: {True: texts.ONLY_LIAR_TEXTS, False: texts.ONLY_HONEST_TEXTS},
 }
 
-# The same for areas with every cat in them ("Felix is the only liar of all the cats")
-EVERYONE_TEXTS = {
-    True:  {True: texts.EVERYONE_ONLY_ME_LIAR_TEXTS, False: texts.EVERYONE_ONLY_ME_HONEST_TEXTS},
-    False: {True: texts.EVERYONE_ONLY_LIAR_TEXTS, False: texts.EVERYONE_ONLY_HONEST_TEXTS},
-}
-
 
 def big_areas(grid, speaker):
-    """The CountLiars areas with 2 or more cats, grouped by category. Empty categories are left out."""
+    """The CountLiars areas with 2 or more cats, grouped by category. Empty categories are left out.
+
+    The whole grid ("total") is left out: it's only for counts ("exactly 4 liars in total").
+    """
     result = {}
     for category, options in CountLiars.candidate_areas(grid, speaker).items():
+        if category == "total":
+            continue
         big = [(area, text) for area, text in options if len(area) >= 2]
         if big:
             result[category] = big
@@ -64,8 +62,7 @@ class Only(Statement):
 
     def set_text(self, grid):
         """Pick a sentence, the "me" version when the speaker is the target."""
-        all_texts = EVERYONE_TEXTS if areas.is_everyone(grid, self.area) else TEXTS
-        options = all_texts[self.target == self.speaker][self.is_liar]
+        options = TEXTS[self.target == self.speaker][self.is_liar]
         self.text = random.choice(options).format(name=get_cat(grid, self.target).name, area=self.area_text)
 
     @classmethod

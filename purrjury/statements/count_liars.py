@@ -4,12 +4,11 @@ from purrjury.statements.base import Statement
 from purrjury.board.grid import get_cat
 from purrjury.texts import (LIAR_TEXTS, HONEST_TEXTS, NONE_TEXTS, ALL_TEXTS, EXACTLY_ONE_TEXTS,
                    EXACTLY_N_TEXTS, AT_LEAST_ONE_TEXTS, AT_LEAST_N_TEXTS,
-                   EVERYONE_NONE_TEXTS, EVERYONE_ALL_TEXTS, EVERYONE_EXACTLY_ONE_TEXTS,
-                   EVERYONE_EXACTLY_N_TEXTS, EVERYONE_AT_LEAST_ONE_TEXTS, EVERYONE_AT_LEAST_N_TEXTS)
+                   EVERYONE_EXACTLY_ONE_TEXTS, EVERYONE_EXACTLY_N_TEXTS, EVERYONE_AT_LEAST_N_TEXTS)
 from purrjury.board import areas
 
 # How often each kind of area is picked, relative to each other
-AREA_WEIGHTS = {"mine": 4, "grid": 2, "line": 2, "color": 2, "trio": 2, "single": 1}
+AREA_WEIGHTS = {"mine": 4, "theirs": 2, "grid": 2, "line": 2, "color": 2, "trio": 2, "single": 1, "total": 1}
 
 # How many random "Felix, Bagel and me" areas each speaker gets to pick from
 TRIOS_PER_SPEAKER = 3
@@ -24,10 +23,10 @@ COUNT_TEXTS = {
     "exactly_one": EXACTLY_ONE_TEXTS, "exactly_n": EXACTLY_N_TEXTS,
     "at_least_one": AT_LEAST_ONE_TEXTS, "at_least_n": AT_LEAST_N_TEXTS,
 }
+# (no "none", "all" or "at least one" in total: every puzzle has both types, so those are always settled)
 EVERYONE_COUNT_TEXTS = {
-    "none": EVERYONE_NONE_TEXTS, "all": EVERYONE_ALL_TEXTS,
     "exactly_one": EVERYONE_EXACTLY_ONE_TEXTS, "exactly_n": EVERYONE_EXACTLY_N_TEXTS,
-    "at_least_one": EVERYONE_AT_LEAST_ONE_TEXTS, "at_least_n": EVERYONE_AT_LEAST_N_TEXTS,
+    "at_least_n": EVERYONE_AT_LEAST_N_TEXTS,
 }
 
 # Chance that an area bigger than one cat uses "at least" instead of "exactly"
@@ -66,6 +65,14 @@ class CountLiars(Statement):
     def key(self):
         """Same cats (in any order), same mode and same n means the same claim."""
         return ("count", frozenset(self.area), self.mode, self.n)
+
+    def kind(self):
+        """"is" for one cat ("Felix is a liar"), "total" for the whole grid, "count" for the rest."""
+        if len(self.area) == 1:
+            return "is"
+        if self.area_text == EVERYONE_TEXT:
+            return "total"
+        return "count"
 
     def set_text(self, grid):
         """Pick a sentence that fits the size of the area and the number."""
@@ -114,13 +121,17 @@ class CountLiars(Statement):
                 (areas.above(grid, me), "the cats above me"),
                 (areas.below(grid, me), "the cats below me"),
             ],
+            # Another cat's neighbors, e.g. "Bean's neighbors"
+            "theirs": [(areas.neighbors(grid, cat), f"{cat.name}'s neighbors")
+                       for cat in cats if cat.index != speaker],
             # Fixed parts of the grid
             "grid": [
                 (areas.corners(grid), "the corner cats"),
                 (areas.edges(grid), "the cats on the edges"),
                 (areas.middle(grid), "the cats in the middle"),
-                (areas.everyone(grid), EVERYONE_TEXT),
             ],
+            # Every cat, only for counts: "there are exactly 4 liars in total"
+            "total": [(areas.everyone(grid), EVERYONE_TEXT)],
             # Other rows and columns (shown to players as 1, 2, 3 instead of 0, 1, 2)
             "line": [],
             # Every color that appears in this grid
@@ -182,20 +193,27 @@ class CountLiars(Statement):
         count = sum(world[i] for i in area)   # the real number of liars in the area
         size = len(area)
 
+        # The whole grid always has at least 1 liar and 1 honest cat, so "exactly 0", "exactly all"
+        # and "at least 1" in total are always settled: those numbers are left out
+        if areas.is_everyone(grid, area):
+            lowest, highest = 1, size - 1
+        else:
+            lowest, highest = 0, size
+
         # Single cats always use "exactly"; bigger areas sometimes use "at least"
         mode = "at_least" if size > 1 and random.random() < AT_LEAST_CHANCE else "exactly"
 
         if mode == "at_least":
-            # True:  "at least n" for any n from 1 up to the real count
+            # True:  "at least n" for any n from 1 (2 in total) up to the real count
             # False: "at least n" for any n above the real count
-            options = range(1, count + 1) if should_be_true else range(count + 1, size + 1)
+            options = range(max(1, lowest + 1), count + 1) if should_be_true else range(count + 1, highest + 1)
             if not options:
                 mode = "exactly"   # nothing fits, fall back to "exactly" (always possible)
 
         if mode == "exactly":
             # True:  the real count
-            # False: any other number from 0 to the size of the area
-            options = [count] if should_be_true else [n for n in range(size + 1) if n != count]
+            # False: any other number in range
+            options = [count] if should_be_true else [n for n in range(lowest, highest + 1) if n != count]
 
         statement = cls(speaker, area, text, mode, random.choice(options))
         statement.set_text(grid)
