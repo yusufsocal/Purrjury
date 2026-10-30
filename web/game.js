@@ -574,4 +574,10 @@ document.addEventListener("keydown", event => {
   }
 });
 
+// when the puzzles were made (set in puzzles.js), so an old cached copy is easy to spot
+const versionLine = document.getElementById("version");   // missing in an old cached index.html
+if (versionLine && typeof PUZZLES_MADE !== "undefined") {
+  versionLine.textContent = "Puzzles made " + PUZZLES_MADE;
+}
+
 showMenu();

@@ -7,6 +7,7 @@ import argparse
 import base64
 import json
 import random
+from datetime import datetime
 
 from purrjury.engine.generator import generate_puzzle
 from purrjury.engine.solver import (BIG_GRID, LEVELS, involved, levels_for, rate, revealed_cat, solve,
@@ -133,6 +134,8 @@ def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_T
 
     with open(path, "w", encoding="utf-8") as f:
         f.write("// Made by export.py, don't edit by hand\n")
+        # shown at the bottom of the page, so you can tell an old cached puzzles.js from the latest one
+        f.write(f'const PUZZLES_MADE = "{datetime.now():%d %b %Y, %H:%M}";\n')
         f.write("const PUZZLES = " + json.dumps(puzzles, indent=1) + ";\n")
     return puzzles
 
