@@ -33,8 +33,9 @@ from purrjury.statements import ALL_STATEMENTS
 # The clue mix: no kind of clue (see Statement.kind) may fill more than this share of the cats,
 # so a puzzle doesn't read like the same sentence over and over. At least 1 of each is always allowed.
 KIND_SHARE = 0.2
-# Either/or clues are long and all read the same, so they get much less room
-KIND_SHARE_OVERRIDES = {"either_or": 0.08}
+# Kinds that get less room: either/or clues are long and all read the same, and "connected" clues
+# stand out, so more than 1 on a 3x3 (2 on a 4x4) feels like too many
+KIND_SHARE_OVERRIDES = {"either_or": 0.08, "next_to": 0.1}
 
 
 @dataclass

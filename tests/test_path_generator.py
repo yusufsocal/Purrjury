@@ -72,10 +72,14 @@ def test_clue_mix_keeps_every_kind_within_its_share(rows, cols, seed):
         assert used <= max(1, round(n_cats * KIND_SHARE_OVERRIDES.get(kind, KIND_SHARE))), kind
 
 
-def test_either_or_is_rare_on_a_3x3():
-    for seed in range(5):
-        grid, _world, _steps, _given = make(3, 3, PathSettings(openers=2), seed)
-        assert sum(clue.kind() == "either_or" for clue in all_clues(grid)) <= 1
+@pytest.mark.parametrize("rows, cols, most", [(3, 3, 1), (4, 4, 2)])
+def test_either_or_and_connected_clues_are_rare(rows, cols, most):
+    """At most 1 either/or per puzzle, and at most 1 connected clue on a 3x3 (2 on a 4x4)."""
+    for seed in range(5 if rows == 3 else 2):
+        grid, _world, _steps, _given = make(rows, cols, PathSettings(openers=2), seed)
+        kinds = [clue.kind() for clue in all_clues(grid)]
+        assert kinds.count("either_or") <= 1
+        assert kinds.count("next_to") <= most
 
 
 # --- check_puzzle on a hand-made puzzle ---
