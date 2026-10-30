@@ -32,7 +32,7 @@ class Hearsay(Statement):
         something else that we never see, so there's nothing to check.
         """
         speaker_is_liar = world[self.speaker]
-        return speaker_is_liar or self.quote.evaluate(world, grid) == (not world[self.about])
+        return speaker_is_liar or self.quote.fits(world, grid)   # the quote's speaker is the hidden cat
 
     def mentions(self):
         """The other cats this statement talks about."""

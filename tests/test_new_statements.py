@@ -94,6 +94,18 @@ def test_next_to_needs_two_or_more():
     assert NextToEachOther(0, row, "in row 1", False).evaluate([True, False, False, True], grid) is True    # honest
 
 
+def test_next_to_takes_two_or_more_for_granted_whoever_says_it():
+    """A liar saying "the liars in my row are connected" means they're split, never that there are 0 or 1."""
+    grid = fixed_grid(1, 4)
+    row = [0, 1, 2, 3]
+    clue = NextToEachOther(0, row, "in my row", True)
+    assert clue.fits([True, True, False, False], grid) is False    # 0 and 1 connected: a liar can't say it
+    assert clue.fits([True, False, True, False], grid) is True     # split: a liar can say it
+    assert clue.fits([True, False, False, False], grid) is False   # only 1 liar: nobody can say it
+    assert clue.fits([False, True, True, False], grid) is True     # honest speaker, 1 and 2 connected
+    assert clue.fits([False, False, False, False], grid) is False  # no liars: nobody can say it
+
+
 def test_next_to_texts():
     grid = fixed_grid(3, 3)
     s = NextToEachOther(0, [0, 1, 2], "in my row", True)

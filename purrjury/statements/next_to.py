@@ -41,7 +41,8 @@ class NextToEachOther(Statement):
     """The liars (or honest cats) of an area are connected, e.g. 'All the liars in row 2 are connected.'
 
     In a row or column that means side by side; on the whole grid it means one group.
-    Only true with 2 or more of them: 0 or 1 liars never counts as connected.
+    The sentence takes for granted that there are 2 or more of them, whoever says it (see fits):
+    an honest cat means they're connected, a liar means they're split up.
     """
 
     def __init__(self, speaker, area, line_text, liars):
@@ -54,6 +55,17 @@ class NextToEachOther(Statement):
         """True if the area has 2 or more of the type, all in one group."""
         members = [i for i in self.area if world[i] == self.liars]
         return len(members) >= 2 and one_group(members, grid)
+
+    def fits(self, world, grid):
+        """Like any clue, but with 0 or 1 of the type it never fits, not even for a liar.
+
+        "All the liars in my row are connected" reads as if the row has several liars. A liar saying it
+        means they're split up, not that the row has no liars, so the code follows the reading.
+        """
+        members = [i for i in self.area if world[i] == self.liars]
+        if len(members) < 2:
+            return False
+        return one_group(members, grid) == (not world[self.speaker])
 
     def mentions(self):
         """The other cats this statement talks about."""
@@ -76,10 +88,9 @@ class NextToEachOther(Statement):
 
     @classmethod
     def random(cls, speaker, grid, world):
-        """Pick a line (or the whole grid) and a type that fit the speaker. None if nothing fits."""
-        should_be_true = not world[speaker]
+        """Pick a line (or the whole grid) with 2 or more of a type that fits the speaker. None if nothing fits."""
         options = [(area, text, liars) for area, text in next_to_areas(grid, speaker) for liars in (True, False)]
-        valid = [o for o in options if cls(speaker, *o).evaluate(world, grid) == should_be_true]
+        valid = [o for o in options if cls(speaker, *o).fits(world, grid)]
         if not valid:
             return None
         statement = cls(speaker, *random.choice(valid))
