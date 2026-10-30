@@ -211,24 +211,24 @@ ODD_TEXTS = [
 
 # --- Liars (or honest cats) connected (NextToEachOther) ---
 # Connected: one group where you can walk from any of them to any other, only stepping on that type.
-# Only true with 2 or more of them, so a row with 0 or 1 liars never counts as connected.
-# {line} is "in row 2", "in my row", "in column 3" or "in my column".
+# The "2 or more" is part of the claim and the text says so: a liar saying it can mean there are only 0 or 1.
+# {line} is "Row 2", "My row", "Column 3" or "My column".
 
 NEXT_TO_LIARS_TEXTS = [
-    "All the liars {line} are connected.",
+    "{line} has 2 or more liars, all connected.",
 ]
 
 NEXT_TO_HONEST_TEXTS = [
-    "All the honest cats {line} are connected.",
+    "{line} has 2 or more honest cats, all connected.",
 ]
 
 # the whole grid
 EVERYONE_NEXT_TO_LIARS_TEXTS = [
-    "All the liars are connected.",
+    "There are 2 or more liars, all connected.",
 ]
 
 EVERYONE_NEXT_TO_HONEST_TEXTS = [
-    "All the honest cats are connected.",
+    "There are 2 or more honest cats, all connected.",
 ]
 
 

@@ -87,33 +87,33 @@ def test_one_group_on_the_grid_walks_around_corners_but_not_diagonals():
 def test_next_to_needs_two_or_more():
     grid = fixed_grid(1, 4)
     row = [0, 1, 2, 3]
-    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, False, False, False], grid) is False   # 0
-    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, True, False, False], grid) is False    # 1 liar
-    assert NextToEachOther(0, row, "in row 1", True).evaluate([False, True, True, False], grid) is True
-    assert NextToEachOther(0, row, "in row 1", True).evaluate([True, False, True, False], grid) is False    # split
-    assert NextToEachOther(0, row, "in row 1", False).evaluate([True, False, False, True], grid) is True    # honest
+    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, False, False, False], grid) is False   # 0
+    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, True, False, False], grid) is False    # 1 liar
+    assert NextToEachOther(0, row, "Row 1", True).evaluate([False, True, True, False], grid) is True
+    assert NextToEachOther(0, row, "Row 1", True).evaluate([True, False, True, False], grid) is False    # split
+    assert NextToEachOther(0, row, "Row 1", False).evaluate([True, False, False, True], grid) is True    # honest
 
 
-def test_next_to_takes_two_or_more_for_granted_whoever_says_it():
-    """A liar saying "the liars in my row are connected" means they're split, never that there are 0 or 1."""
+def test_next_to_lie_means_fewer_than_two_or_split():
+    """The text says "2 or more", so a liar saying it can mean 0 or 1 of them, or split up."""
     grid = fixed_grid(1, 4)
     row = [0, 1, 2, 3]
-    clue = NextToEachOther(0, row, "in my row", True)
+    clue = NextToEachOther(0, row, "My row", True)
     assert clue.fits([True, True, False, False], grid) is False    # 0 and 1 connected: a liar can't say it
     assert clue.fits([True, False, True, False], grid) is True     # split: a liar can say it
-    assert clue.fits([True, False, False, False], grid) is False   # only 1 liar: nobody can say it
+    assert clue.fits([True, False, False, False], grid) is True    # only 1 liar (the speaker): a liar can say it
     assert clue.fits([False, True, True, False], grid) is True     # honest speaker, 1 and 2 connected
-    assert clue.fits([False, False, False, False], grid) is False  # no liars: nobody can say it
+    assert clue.fits([False, False, False, False], grid) is False  # no liars: an honest cat can't say it
 
 
 def test_next_to_texts():
     grid = fixed_grid(3, 3)
-    s = NextToEachOther(0, [0, 1, 2], "in my row", True)
+    s = NextToEachOther(0, [0, 1, 2], "My row", True)
     s.set_text(grid)
-    assert s.to_text() == "All the liars in my row are connected."
+    assert s.to_text() == "My row has 2 or more liars, all connected."
     s = NextToEachOther(0, areas.everyone(grid), None, False)
     s.set_text(grid)
-    assert s.to_text() == "All the honest cats are connected."
+    assert s.to_text() == "There are 2 or more honest cats, all connected."
 
 
 # --- "Bean's neighbors" areas ---

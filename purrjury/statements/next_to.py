@@ -25,47 +25,35 @@ def one_group(cats, grid):
 def next_to_areas(grid, speaker):
     """Every row and column, plus the whole grid. Returns [(indexes, line text), ...].
 
-    The line text goes after the type ("All the liars in row 2 ..."), the whole grid has None and gets its own texts.
+    The line text starts the sentence ("Row 2 has ..."), the whole grid has None and gets its own texts.
     """
     me = get_cat(grid, speaker)
     result = []
     for r in range(len(grid)):
-        result.append((areas.row(grid, r), "in my row" if r == me.row else f"in row {r + 1}"))
+        result.append((areas.row(grid, r), "My row" if r == me.row else f"Row {r + 1}"))
     for c in range(len(grid[0])):
-        result.append((areas.column(grid, c), "in my column" if c == me.column else f"in column {c + 1}"))
+        result.append((areas.column(grid, c), "My column" if c == me.column else f"Column {c + 1}"))
     result.append((areas.everyone(grid), None))
     return result
 
 
 class NextToEachOther(Statement):
-    """The liars (or honest cats) of an area are connected, e.g. 'All the liars in row 2 are connected.'
+    """An area has 2 or more liars (or honest cats), all connected, e.g. 'Row 2 has 2 or more liars, all connected.'
 
-    In a row or column that means side by side; on the whole grid it means one group.
-    The sentence takes for granted that there are 2 or more of them, whoever says it (see fits):
-    an honest cat means they're connected, a liar means they're split up.
+    In a row or column connected means side by side; on the whole grid it means one group.
+    The "2 or more" is part of the claim, so a liar saying it means: 0 or 1 of them, or split up.
     """
 
     def __init__(self, speaker, area, line_text, liars):
         super().__init__(speaker)
         self.area = area            # list of cat indexes: a row, a column or every cat
-        self.line_text = line_text  # "in row 2", "in my column", ... or None for the whole grid
+        self.line_text = line_text  # "Row 2", "My column", ... or None for the whole grid
         self.liars = liars          # True: about the liars, False: about the honest cats
 
     def evaluate(self, world, grid):
         """True if the area has 2 or more of the type, all in one group."""
         members = [i for i in self.area if world[i] == self.liars]
         return len(members) >= 2 and one_group(members, grid)
-
-    def fits(self, world, grid):
-        """Like any clue, but with 0 or 1 of the type it never fits, not even for a liar.
-
-        "All the liars in my row are connected" reads as if the row has several liars. A liar saying it
-        means they're split up, not that the row has no liars, so the code follows the reading.
-        """
-        members = [i for i in self.area if world[i] == self.liars]
-        if len(members) < 2:
-            return False
-        return one_group(members, grid) == (not world[self.speaker])
 
     def mentions(self):
         """The other cats this statement talks about."""
@@ -79,7 +67,7 @@ class NextToEachOther(Statement):
         return "next_to"
 
     def set_text(self, grid):
-        """The line version ("All the liars in row 2 ...") or the whole-grid version."""
+        """The line version ("Row 2 has ...") or the whole-grid version."""
         if self.line_text is None:
             options = texts.EVERYONE_NEXT_TO_LIARS_TEXTS if self.liars else texts.EVERYONE_NEXT_TO_HONEST_TEXTS
         else:
@@ -88,9 +76,10 @@ class NextToEachOther(Statement):
 
     @classmethod
     def random(cls, speaker, grid, world):
-        """Pick a line (or the whole grid) with 2 or more of a type that fits the speaker. None if nothing fits."""
+        """Pick a line (or the whole grid) and a type that fit the speaker. None if nothing fits."""
+        should_be_true = not world[speaker]
         options = [(area, text, liars) for area, text in next_to_areas(grid, speaker) for liars in (True, False)]
-        valid = [o for o in options if cls(speaker, *o).fits(world, grid)]
+        valid = [o for o in options if cls(speaker, *o).evaluate(world, grid) == should_be_true]
         if not valid:
             return None
         statement = cls(speaker, *random.choice(valid))
