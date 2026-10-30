@@ -82,6 +82,6 @@ web/                  the website
 tests/                the tests
 ```
 
-## Code
+## Credits
 
-Designed and mostly written by me. Claude wrote the tests, main.py, texts.py and helped write some chore functions.
+The game is my design: the rules, the clue types, how difficulty works, and how the website looks and plays. I'd say about 70% of the code was written by Claude from that design, while I playtested it, reviewed it and decided what to change.
