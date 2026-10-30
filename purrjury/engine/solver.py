@@ -58,8 +58,10 @@ def forced_cats(statements, known, grid):
     return {cat: next(iter(values)) for cat, values in seen.items() if len(values) == 1}
 
 
-def solve(grid):
+def solve(grid, known=None):
     """Solve the puzzle step by step like a player.
+
+    known: optional dict {cat index: True if liar} of cats the player is given from the start.
 
     Returns a list of steps, each one like (level, speakers, found, options):
         level:    1 or 2, how many clues the step needed
@@ -70,7 +72,7 @@ def solve(grid):
     Returns None if it gets stuck before every cat is found.
     """
     n_cats = len(grid) * len(grid[0])
-    known = {}
+    known = dict(known or {})   # a copy, so the caller's dict isn't changed
     steps = []
 
     # hidden cats only meow, so their own statements can't be used (same as in the checker)
