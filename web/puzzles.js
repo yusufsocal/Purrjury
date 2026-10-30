@@ -60,7 +60,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 0,
     "column": 2,
-    "text": "All the honest cats are in one connected group of 2 or more. Meow.",
+    "text": "All the honest cats are connected. Meow.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -252,7 +252,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 0,
     "column": 0,
-    "text": "Column 2 has 2 or more liars, all next to each other.",
+    "text": "All the liars in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -430,7 +430,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 2,
     "column": 2,
-    "text": "Meow. Column 2 has 2 or more honest cats, all next to each other.",
+    "text": "Meow. All the honest cats in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -628,7 +628,7 @@ const PUZZLES = [
     "color": "black",
     "row": 2,
     "column": 0,
-    "text": "Column 2 has 2 or more liars, all next to each other.",
+    "text": "All the liars in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -736,7 +736,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 0,
     "column": 1,
-    "text": "Row 3 has 2 or more honest cats, all next to each other. Mew.",
+    "text": "All the honest cats in row 3 are connected. Mew.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -760,7 +760,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 0,
     "column": 2,
-    "text": "Row 2 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1186,7 +1186,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 0,
     "column": 0,
-    "text": "My row has 2 or more liars, all next to each other.",
+    "text": "All the liars in my row are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1446,7 +1446,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 0,
     "column": 1,
-    "text": "Row 2 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1594,7 +1594,7 @@ const PUZZLES = [
     "color": "black",
     "row": 2,
     "column": 1,
-    "text": "Row 1 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 1 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1682,7 +1682,7 @@ const PUZZLES = [
     "color": "white",
     "row": 0,
     "column": 1,
-    "text": "Mrow. All the liars are in one connected group of 2 or more.",
+    "text": "Mrow. All the liars are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -1842,7 +1842,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 1,
-    "text": "Column 1 has 2 or more honest cats, all next to each other. Mew.",
+    "text": "All the honest cats in column 1 are connected. Mew.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2268,7 +2268,7 @@ const PUZZLES = [
     "color": "black",
     "row": 1,
     "column": 2,
-    "text": "Column 2 has 2 or more liars, all next to each other.",
+    "text": "All the liars in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2338,7 +2338,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 2,
     "column": 2,
-    "text": "All the liars are in one connected group of 2 or more.",
+    "text": "All the liars are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -2550,7 +2550,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 1,
-    "text": "All the honest cats are in one connected group of 2 or more.",
+    "text": "All the honest cats are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3262,7 +3262,7 @@ const PUZZLES = [
     "color": "white",
     "row": 2,
     "column": 1,
-    "text": "Column 1 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in column 1 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3372,7 +3372,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 0,
     "column": 2,
-    "text": "Mrow. Row 3 has 2 or more honest cats, all next to each other.",
+    "text": "Mrow. All the honest cats in row 3 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3452,7 +3452,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 1,
     "column": 2,
-    "text": "Column 2 has 2 or more liars, all next to each other.",
+    "text": "All the liars in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -3750,7 +3750,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 2,
     "column": 0,
-    "text": "Row 2 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -4311,7 +4311,7 @@ const PUZZLES = [
     "color": "orange",
     "row": 3,
     "column": 2,
-    "text": "Row 3 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 3 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -4337,7 +4337,7 @@ const PUZZLES = [
     "color": "white",
     "row": 3,
     "column": 3,
-    "text": "Row 1 has 2 or more liars, all next to each other. Mew.",
+    "text": "All the liars in row 1 are connected. Mew.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -5129,7 +5129,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 3,
     "column": 0,
-    "text": "Mrow. Column 2 has 2 or more honest cats, all next to each other.",
+    "text": "Mrow. All the honest cats in column 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -5562,7 +5562,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 3,
     "column": 1,
-    "text": "Row 3 has 2 or more liars, all next to each other.",
+    "text": "All the liars in row 3 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -5973,7 +5973,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 3,
     "column": 0,
-    "text": "Mrow. My column has 2 or more liars, all next to each other.",
+    "text": "Mrow. All the liars in my column are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -5997,7 +5997,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 3,
     "column": 1,
-    "text": "Row 1 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 1 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -6262,7 +6262,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 1,
     "column": 3,
-    "text": "My column has 2 or more honest cats, all next to each other. Meow.",
+    "text": "All the honest cats in my column are connected. Meow.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -6573,7 +6573,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 0,
     "column": 3,
-    "text": "Row 2 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -6713,7 +6713,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 2,
     "column": 0,
-    "text": "Mew. Column 3 has 2 or more honest cats, all next to each other.",
+    "text": "Mew. All the honest cats in column 3 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -7665,7 +7665,7 @@ const PUZZLES = [
     "color": "white",
     "row": 3,
     "column": 1,
-    "text": "My column has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in my column are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -7711,7 +7711,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 3,
     "column": 3,
-    "text": "My row has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in my row are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -7762,7 +7762,7 @@ const PUZZLES = [
     "color": "white",
     "row": 0,
     "column": 0,
-    "text": "Row 2 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 2 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -7788,7 +7788,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 0,
     "column": 1,
-    "text": "Row 4 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 4 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8138,7 +8138,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 3,
     "column": 3,
-    "text": "All the liars are in one connected group of 2 or more.",
+    "text": "All the liars are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8501,7 +8501,7 @@ const PUZZLES = [
     "color": "yellow",
     "row": 2,
     "column": 2,
-    "text": "Column 4 has 2 or more honest cats, all next to each other. Mew.",
+    "text": "All the honest cats in column 4 are connected. Mew.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8581,7 +8581,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 3,
     "column": 1,
-    "text": "Row 1 has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in row 1 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8631,7 +8631,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 3,
     "column": 3,
-    "text": "My row has 2 or more honest cats, all next to each other. Meow.",
+    "text": "All the honest cats in my row are connected. Meow.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8792,7 +8792,7 @@ const PUZZLES = [
     "color": "black",
     "row": 0,
     "column": 3,
-    "text": "My row has 2 or more honest cats, all next to each other.",
+    "text": "All the honest cats in my row are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -8840,7 +8840,7 @@ const PUZZLES = [
     "color": "black",
     "row": 1,
     "column": 1,
-    "text": "My row has 2 or more liars, all next to each other.",
+    "text": "All the liars in my row are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -9279,7 +9279,7 @@ const PUZZLES = [
     "color": "black",
     "row": 1,
     "column": 1,
-    "text": "Mrow. Column 1 has 2 or more honest cats, all next to each other.",
+    "text": "Mrow. All the honest cats in column 1 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -9443,7 +9443,7 @@ const PUZZLES = [
     "color": "brown",
     "row": 2,
     "column": 3,
-    "text": "Row 4 has 2 or more liars, all next to each other.",
+    "text": "All the liars in row 4 are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
@@ -9810,7 +9810,7 @@ const PUZZLES = [
     "color": "grey",
     "row": 2,
     "column": 0,
-    "text": "All the honest cats are in one connected group of 2 or more.",
+    "text": "All the honest cats are connected.",
     "hidden": false,
     "secret": null,
     "mentions": [
