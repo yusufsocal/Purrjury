@@ -249,6 +249,7 @@ button:hover { border-color: var(--muted); }
 /* How to play stands out on the feedback menu, with a small "Start here" above it */
 #start-here { margin: 14px 0 4px; font-size: 0.8rem; font-weight: 600; color: var(--hint); }
 body.feedback #how-to-play { border: 2px solid var(--hint); }
+#general-feedback { margin-top: 24px; }
 #stop { font-weight: 600; border-color: var(--ink); }
 #stop:disabled { font-weight: 400; border-color: var(--line); color: var(--muted); cursor: default; }
 /* the card floats over the bottom of the grid, so nothing moves and nothing needs scrolling */

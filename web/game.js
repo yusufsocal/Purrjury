@@ -95,6 +95,7 @@ function showMenu() {
   editing = null;
   game.hidden = true;
   menu.hidden = false;
+  ratingBox.hidden = !general.open;   // a puzzle's rating card belongs to the game, not the menu
   document.body.classList.remove("playing");
   renderMenu();
 }
@@ -143,6 +144,7 @@ function start(indexes, at) {
   else current = firstUnsolved === -1 ? 0 : firstUnsolved;
   menu.hidden = true;
   game.hidden = false;
+  general.open = false;   // the menu's feedback card closes when you start playing
   document.body.classList.add("playing");   // phones hide the title while playing, so the grid gets the screen
   message.textContent = "";
   render();
@@ -672,18 +674,80 @@ async function sendRating() {
     fun: s.fun,
     comment: s.comment.trim(),
   };
-  s.sending = true;
-  s.error = "";
-  renderRating();
+  await post(msg, s, () => { if (state() === s && !game.hidden) renderRating(); });   // only if you're still on this puzzle
+}
+
+
+// send one message to the sheet. `holder` keeps sending / sent / error for its card, `redraw` shows them.
+async function post(msg, holder, redraw) {
+  holder.sending = true;
+  holder.error = "";
+  redraw();
   try {
     const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify(msg) });
     if ((await response.text()) !== "ok") throw new Error("the script didn't say ok");
-    s.sent = true;
+    holder.sent = true;
   } catch {
-    s.error = "Couldn't send it. Check your connection and try again.";
+    holder.error = "Couldn't send it. Check your connection and try again.";
   }
-  s.sending = false;
-  if (state() === s) renderRating();   // only if you're still on this puzzle
+  holder.sending = false;
+  redraw();
+}
+
+
+// the menu's "Feedback on the whole game": just a comment, and it can be sent as often as you like
+const general = { open: false, sending: false, sent: false, comment: "", error: "" };
+
+function renderGeneral() {
+  ratingBox.hidden = !general.open;
+  if (!general.open) return;
+  ratingBox.innerHTML = "";
+  const title = document.createElement("h3");
+  const buttons = document.createElement("div");
+  buttons.className = "rating-buttons";
+  const close = ratingButton("Close", () => { general.open = false; general.error = ""; renderGeneral(); });
+
+  if (general.sent) {
+    title.textContent = "Thanks, it's sent! 🐾";
+    buttons.append(ratingButton("Write more", () => { general.sent = false; general.comment = ""; renderGeneral(); }), close);
+    ratingBox.append(title, buttons);
+    return;
+  }
+
+  title.textContent = "Feedback on the whole game";
+  const help = document.createElement("p");
+  help.className = "rating-help";
+  help.textContent = "Anything you like: the rules, the puzzles, the look, the cats, ideas...";
+  const comment = document.createElement("textarea");
+  comment.rows = 4;
+  comment.value = general.comment;
+  comment.addEventListener("input", () => { general.comment = comment.value; general.error = ""; });
+  ratingBox.append(title, help, comment);
+  if (general.error) {
+    const error = document.createElement("p");
+    error.className = "rating-error";
+    error.textContent = general.error;
+    ratingBox.append(error);
+  }
+  const send = ratingButton(general.sending ? "Sending…" : "Send", sendGeneral, true);
+  send.disabled = general.sending;
+  buttons.append(send, close);
+  ratingBox.append(buttons);
+}
+
+
+async function sendGeneral() {
+  if (general.sending) return;
+  if (!general.comment.trim()) {
+    general.error = "Write something first.";
+    return renderGeneral();
+  }
+  // only player and comment: the other columns stay empty on these rows
+  const msg = {
+    player: playerId(), puzzle: "general", seed: "", seconds: "", hints: "", checks: "", mistakes: "",
+    result: "general", hard: "", fun: "", comment: general.comment.trim(),
+  };
+  await post(msg, general, () => { if (!menu.hidden) renderGeneral(); });   // only while the menu is still up
 }
 
 
@@ -1055,6 +1119,9 @@ if (FEEDBACK) {
   for (const id of ["check", "reset", "reveal"]) document.getElementById(id).hidden = true;
   document.getElementById("feedback-note").hidden = false;
   document.getElementById("start-here").hidden = false;
+  const generalButton = document.getElementById("general-feedback");
+  generalButton.hidden = false;
+  generalButton.addEventListener("click", () => { general.open = true; renderGeneral(); });
   document.body.classList.add("feedback");   // the CSS makes How to play stand out
 }
 document.addEventListener("keydown", event => {
