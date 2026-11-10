@@ -51,6 +51,37 @@ const SEEN_KEY = "purrjury-tutorial-seen";   // in localStorage once the tutoria
 // progress for every puzzle, so you can switch back and forth without losing it
 const states = ALL_PUZZLES.map(freshState);
 
+// Feedback set: progress is kept in localStorage, so a reload (or a phone dropping the tab
+// after you switch apps) doesn't lose your marks, your time or which puzzles you've rated.
+// Each puzzle is saved under its own id, so a changed puzzle list can't mix them up.
+const SAVE_KEY = FEEDBACK ? "purrjury-progress-feedback" : null;
+const SAVED_FIELDS = ["marks", "used", "notes", "tags", "checks", "wrongChecks", "hints", "seconds", "solved",
+  "revealed", "tour", "moves", "markedAt", "cardOpen", "sent", "hard", "fun", "comment"];
+
+function puzzleId(i) {
+  return i >= FIRST_LESSON ? `lesson-${i - FIRST_LESSON}` : `${sizeOf(ALL_PUZZLES[i])}-${ALL_PUZZLES[i].seed}`;
+}
+
+function saveProgress() {
+  if (!SAVE_KEY) return;
+  const saved = {};
+  states.forEach((s, i) => { saved[puzzleId(i)] = Object.fromEntries(SAVED_FIELDS.map(f => [f, s[f]])); });
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(saved)); } catch {}   // storage can be blocked: then nothing is kept
+}
+
+function loadProgress() {
+  if (!SAVE_KEY) return;
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SAVE_KEY)) || {}; } catch {}
+  states.forEach((s, i) => {
+    const old = saved[puzzleId(i)];
+    if (!old || old.marks?.length !== s.marks.length) return;   // nothing saved, or it doesn't fit this puzzle
+    for (const f of SAVED_FIELDS) if (f in old) s[f] = old[f];
+  });
+}
+
+loadProgress();
+
 let list = [];               // indexes into PUZZLES of the size and level picked in the menu
 let current = 0;             // position in list
 let chosenSize = null;       // e.g. "3x3"
@@ -527,6 +558,7 @@ const stopButton = document.getElementById("stop");
 // the Stop and rate button, and the card (open after Stop and rate, or once the puzzle is solved).
 // The tutorial has no Stop and rate, just one card at the end of the last lesson.
 function renderRating() {
+  saveProgress();   // render() ends here, and so do paw taps and sending: a good moment to save
   if (!FEEDBACK || (lesson() && !lastLesson())) {
     ratingBox.hidden = true;
     stopButton.hidden = true;
@@ -1096,6 +1128,7 @@ function formatTime(seconds) {
 // the timer only runs while a puzzle is open and not finished
 // (feedback set: it also stops while the rating card is open, and for good once the rating is sent)
 setInterval(() => {
+  saveProgress();   // also keeps typed notes and comments, which don't render
   if (game.hidden) return;
   const s = state();
   if (!s.solved && !s.revealed && !s.cardOpen && !s.sent) {
@@ -1113,6 +1146,8 @@ document.getElementById("hint").addEventListener("click", hint);
 document.getElementById("menu-button").addEventListener("click", showMenu);
 document.getElementById("how-to-play").addEventListener("click", startTutorial);
 stopButton.addEventListener("click", stopAndRate);
+// switching apps on a phone: save right away, the tab may be closed in the background
+document.addEventListener("visibilitychange", () => { if (document.hidden) saveProgress(); });
 
 // the feedback set: only Hint and Stop and rate, and a note on the menu that you can stop any time
 if (FEEDBACK) {
