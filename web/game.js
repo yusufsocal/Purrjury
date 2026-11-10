@@ -32,6 +32,7 @@ function freshState(p) {
     markedAt: p.cats.map(() => 0),    // the number of the move that set each cat's mark
     // feedback set: the rating card
     cardOpen: false, sent: false, sending: false, hard: 0, fun: 0, comment: "", error: "",
+    firstMarkAt: null,   // the puzzle's time when you made your first mark: how long finding a way in took
   };
 }
 
@@ -56,7 +57,7 @@ const states = ALL_PUZZLES.map(freshState);
 // Each puzzle is saved under its own id, so a changed puzzle list can't mix them up.
 const SAVE_KEY = FEEDBACK ? "purrjury-progress-feedback" : null;
 const SAVED_FIELDS = ["marks", "used", "notes", "tags", "checks", "wrongChecks", "hints", "seconds", "solved",
-  "revealed", "tour", "moves", "markedAt", "cardOpen", "sent", "hard", "fun", "comment"];
+  "revealed", "tour", "moves", "markedAt", "cardOpen", "sent", "hard", "fun", "comment", "firstMarkAt"];
 
 function puzzleId(i) {
   return i >= FIRST_LESSON ? `lesson-${i - FIRST_LESSON}` : `${sizeOf(ALL_PUZZLES[i])}-${ALL_PUZZLES[i].seed}`;
@@ -633,6 +634,7 @@ function renderRating() {
   // (the puzzle column says "tutorial" on those rows)
   help.textContent = tutorial ? "More paws = clearer, or more fun." : "More paws = harder, or more fun.";
   ratingBox.append(help, pawRow(tutorial ? "Clear" : "Hard", "hard"), pawRow("Fun", "fun"));
+  if (!experience()) ratingBox.append(experienceRow());   // asked once, on your first rating
 
   const comment = document.createElement("textarea");
   comment.rows = 2;
@@ -681,6 +683,35 @@ function pawRow(label, field) {
 }
 
 
+// How often do you play logic puzzles? Asked once and kept in localStorage: a "5 paws hard"
+// from someone who never plays puzzles means something else than from a puzzle fan.
+const EXPERIENCE_KEY = "purrjury-experience";
+const EXPERIENCES = ["never", "sometimes", "a lot"];
+let experienceAnswer = null;
+try { experienceAnswer = localStorage.getItem(EXPERIENCE_KEY); } catch {}
+
+function experience() { return experienceAnswer; }
+
+function experienceRow() {
+  const box = document.createElement("div");
+  box.className = "experience";
+  const question = document.createElement("p");
+  question.textContent = "How often do you play logic puzzles?";
+  const choices = document.createElement("div");
+  choices.className = "rating-buttons";
+  EXPERIENCES.forEach(answer => {
+    choices.append(ratingButton(answer[0].toUpperCase() + answer.slice(1), () => {
+      experienceAnswer = answer;
+      try { localStorage.setItem(EXPERIENCE_KEY, answer); } catch {}
+      state().error = "";
+      renderRating();
+    }));
+  });
+  box.append(question, choices);
+  return box;
+}
+
+
 function ratingButton(text, onClick, main = false) {
   const button = document.createElement("button");
   button.textContent = text;
@@ -706,7 +737,6 @@ function stopAndRate() {
 // would first ask the server for permission (a CORS preflight), and Apps Script doesn't answer that.
 // Sent as plain text, doPost still gets the JSON string in e.postData.contents.
 async function sendRating() {
-  const p = puzzle();
   const s = state();
   if (s.sending) return;
   const tutorial = lesson() !== null;
@@ -714,23 +744,47 @@ async function sendRating() {
     s.error = `Pick some paws for ${tutorial ? "clear" : "hard"} and for fun first.`;
     return renderRating();
   }
-  // the tutorial counts as one row: its time and hints added up over all lessons
-  const lessonStates = LESSON_LIST.map((_, k) => states[FIRST_LESSON + k]);
-  const total = field => lessonStates.reduce((sum, ls) => sum + ls[field], 0);
+  if (!experience()) {
+    s.error = "Tap how often you play logic puzzles too.";
+    return renderRating();
+  }
+  const result = tutorial ? "finished" : s.solved ? "solved" : s.revealed ? "revealed" : "skipped";
   const msg = {
-    player: playerId(),
-    puzzle: tutorial ? "tutorial" : `${sizeOf(p)} ${levelOf(p)}`,
-    seed: tutorial ? "" : p.seed,
-    seconds: tutorial ? total("seconds") : s.seconds,
-    hints: tutorial ? total("hints") : s.hints,
-    checks: s.checks,
-    mistakes: s.wrongChecks,
-    result: tutorial ? "finished" : s.solved ? "solved" : s.revealed ? "revealed" : "skipped",
+    ...sheetRow(list[current], result),
     hard: s.hard,   // in the tutorial: how clear it was
     fun: s.fun,
     comment: s.comment.trim(),
   };
   await post(msg, s, () => { if (state() === s && !game.hidden) renderRating(); });   // only if you're still on this puzzle
+}
+
+
+// One sheet row for puzzle i (an index into ALL_PUZZLES), without the rating. A lesson stands for
+// the whole tutorial: one row with its time and hints added up over all lessons.
+// The last column, extra, holds small details as JSON text, so new ones never need a new column.
+function sheetRow(i, result) {
+  const p = ALL_PUZZLES[i];
+  const s = states[i];
+  const base = { player: playerId(), result, hard: "", fun: "", comment: "" };
+  if (i >= FIRST_LESSON) {
+    const lessonStates = LESSON_LIST.map((_, k) => states[FIRST_LESSON + k]);
+    const total = field => lessonStates.reduce((sum, ls) => sum + ls[field], 0);
+    return { ...base, puzzle: "tutorial", seed: "", seconds: total("seconds"), hints: total("hints"), checks: 0, mistakes: 0,
+             extra: extraInfo({ lessonsDone: lessonStates.filter(ls => ls.solved).length }) };
+  }
+  const marked = s.marks.filter((mark, j) => mark !== "unknown" && j !== p.given).length;
+  const toMark = p.cats.length - (p.given == null ? 0 : 1);
+  return { ...base, puzzle: `${sizeOf(p)} ${levelOf(p)}`, seed: p.seed, seconds: s.seconds, hints: s.hints,
+           checks: s.checks, mistakes: s.wrongChecks,
+           extra: extraInfo({ firstMark: s.firstMarkAt, marked: `${marked}/${toMark}` }) };
+}
+
+
+// the extra column: phone or computer, how often they play logic puzzles, and what the row adds
+function extraInfo(fields = {}) {
+  // a narrow screen is a phone; a wider one played with a finger (not a mouse) is a tablet
+  const device = matchMedia("(max-width: 600px)").matches ? "phone" : matchMedia("(pointer: coarse)").matches ? "tablet" : "computer";
+  return JSON.stringify({ device, experience: experience() || null, ...fields });
 }
 
 
@@ -801,7 +855,7 @@ async function sendGeneral() {
   // only player and comment: the other columns stay empty on these rows
   const msg = {
     player: playerId(), puzzle: "general", seed: "", seconds: "", hints: "", checks: "", mistakes: "",
-    result: "general", hard: "", fun: "", comment: general.comment.trim(),
+    result: "general", hard: "", fun: "", comment: general.comment.trim(), extra: extraInfo(),
   };
   await post(msg, general, () => { if (!menu.hidden) renderGeneral(); });   // only while the menu is still up
 }
@@ -903,6 +957,7 @@ function cycleMark(i) {
   const next = (MARKS.indexOf(s.marks[i]) + 1) % MARKS.length;
   s.marks[i] = MARKS[next];
   s.markedAt[i] = ++s.moves;
+  if (s.firstMarkAt === null) s.firstMarkAt = s.seconds;
   message.textContent = "";
   clearHint();   // the hint was for the old marks
   checkLesson();

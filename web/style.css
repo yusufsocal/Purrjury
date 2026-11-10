@@ -271,6 +271,9 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
   font: inherit; font-size: 1rem;   /* 16px or more, or phones zoom in when you tap it */
   padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; resize: none;
 }
+/* the one-time "how often do you play logic puzzles?" question */
+.experience p { margin: 8px 0 4px; font-size: 0.9rem; font-weight: 600; }
+.experience button { padding: 4px 12px; }
 .rating-error { margin: 0 0 8px; font-size: 0.85rem; color: var(--liar); }
 .rating-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
 .rating-buttons .main { border-color: var(--ink); font-weight: 600; }
