@@ -28,8 +28,18 @@ function freshState(p) {
     tags: p.cats.map(() => []),    // ids from TAGS
     checks: 0, wrongChecks: 0, hints: 0, seconds: 0, solved: false, revealed: false,
     tour: {},    // lesson 4: the tour steps you've done, e.g. { note: true }
+    moves: 0,                         // how many marks you've made, to number them
+    markedAt: p.cats.map(() => 0),    // the number of the move that set each cat's mark
+    // feedback set: the rating card
+    cardOpen: false, sent: false, sending: false, hard: 0, fun: 0, comment: "", error: "",
   };
 }
+
+// index.html?set=feedback: the playtest set. No Check, Reset or Reveal, a puzzle counts as solved
+// once every mark is right, and players rate each puzzle (sent to the Google Sheet's Apps Script).
+const FEEDBACK = new URLSearchParams(location.search).get("set") === "feedback";
+const FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbwG6leJIr5jJQl2he_iRZNn7rx9QDIgZJw_-lOy4A5Az_7xRO9C0F716GoIk4ce9djf/exec";
+const PLAYER_KEY = "purrjury-player";   // in localStorage: a random id, so one player's ratings can be grouped
 
 // The lessons are played like puzzles: they go after the real puzzles in one list.
 // LESSONS is missing if an old cached page loads without tutorial.js, then there's just no tutorial.
@@ -115,18 +125,22 @@ function renderMenu() {
     button.className = "level level-" + level;
     button.innerHTML = `<span class="level-name"></span><span class="level-count"></span>`;
     button.querySelector(".level-name").textContent = level;
-    button.querySelector(".level-count").textContent = `${solved} / ${indexes.length} solved`;
-    button.addEventListener("click", () => start(indexes));
+    button.querySelector(".level-count").textContent = FEEDBACK
+      ? (indexes.every(i => states[i].sent) ? "Rated, thanks!" : "Not rated yet")
+      : `${solved} / ${indexes.length} solved`;
+    // the feedback set has one puzzle per level: play them all as one list, starting at this one
+    button.addEventListener("click", () => FEEDBACK ? start(PUZZLES.map((_, i) => i), indexes[0]) : start(indexes));
     levelButtons.append(button);
   });
 }
 
 
-// start playing a list of puzzles, at the first one you haven't solved yet
-function start(indexes) {
+// start playing a list of puzzles, at puzzle `at` if given, else at the first one you haven't solved yet
+function start(indexes, at) {
   list = indexes;
   const firstUnsolved = list.findIndex(i => !states[i].solved);
-  current = firstUnsolved === -1 ? 0 : firstUnsolved;
+  if (at !== undefined) current = list.indexOf(at);
+  else current = firstUnsolved === -1 ? 0 : firstUnsolved;
   menu.hidden = true;
   game.hidden = false;
   document.body.classList.add("playing");   // phones hide the title while playing, so the grid gets the screen
@@ -490,6 +504,172 @@ function render() {
 
   fitText();
   timer.textContent = formatTime(s.seconds);
+  renderRating();
+}
+
+
+// --- Feedback set: the rating card ---
+
+const ratingBox = document.getElementById("rating");
+const stopButton = document.getElementById("stop");
+
+// the Stop and rate button, and the card (open after Stop and rate, or once the puzzle is solved)
+function renderRating() {
+  if (!FEEDBACK || lesson()) {
+    ratingBox.hidden = true;
+    stopButton.hidden = true;
+    return;
+  }
+  const s = state();
+  stopButton.hidden = false;
+  stopButton.disabled = s.sent || s.cardOpen;
+  stopButton.textContent = s.sent ? "Rated ✓" : s.solved ? "Rate it" : "Stop and rate";
+
+  ratingBox.hidden = !s.cardOpen;
+  if (!s.cardOpen) return;
+  ratingBox.innerHTML = "";
+
+  const title = document.createElement("h3");
+  ratingBox.append(title);
+
+  // after Send: thanks, and where to go from here (nothing after this is recorded)
+  if (s.sent) {
+    title.textContent = "Thanks, it's sent! 🐾";
+    const buttons = document.createElement("div");
+    buttons.className = "rating-buttons";
+    buttons.append(ratingButton("Keep playing", () => { s.cardOpen = false; render(); }));
+    if (!s.solved && !s.revealed) {
+      buttons.append(ratingButton("Show answer", () => { s.cardOpen = false; reveal(); }));
+    }
+    const last = current === list.length - 1;
+    buttons.append(ratingButton(last ? "Back to the menu" : "Next puzzle →", () => {
+      s.cardOpen = false;
+      last ? showMenu() : go(1);
+    }, true));
+    ratingBox.append(buttons);
+    return;
+  }
+
+  title.textContent = s.solved ? `Solved in ${formatTime(s.seconds)}! How was it?` : "How was this puzzle?";
+  const help = document.createElement("p");
+  help.className = "rating-help";
+  help.textContent = "More paws = harder, or more fun.";
+  ratingBox.append(help, pawRow("Hard", "hard"), pawRow("Fun", "fun"));
+
+  const comment = document.createElement("textarea");
+  comment.rows = 2;
+  comment.placeholder = "Anything else? Where it was fun, where you got stuck, the design, the cats...";
+  comment.value = s.comment;
+  comment.addEventListener("input", () => { s.comment = comment.value; });   // no render, it would lose the cursor
+  ratingBox.append(comment);
+
+  if (s.error) {
+    const error = document.createElement("p");
+    error.className = "rating-error";
+    error.textContent = s.error;
+    ratingBox.append(error);
+  }
+
+  const buttons = document.createElement("div");
+  buttons.className = "rating-buttons";
+  const send = ratingButton(s.sending ? "Sending…" : "Send", sendRating, true);
+  send.disabled = s.sending;
+  buttons.append(send, ratingButton("Back to puzzle", () => { s.cardOpen = false; s.error = ""; render(); }));
+  ratingBox.append(buttons);
+}
+
+
+// one row of five paws for "hard" or "fun": tap a paw to give that many
+function pawRow(label, field) {
+  const s = state();
+  const row = document.createElement("div");
+  row.className = "paw-row";
+  const name = document.createElement("span");
+  name.className = "paw-label";
+  name.textContent = label;
+  row.append(name);
+  for (let n = 1; n <= 5; n++) {
+    const paw = document.createElement("button");
+    paw.className = n <= s[field] ? "paw on" : "paw";
+    paw.textContent = "🐾";
+    paw.title = `${label}: ${n} of 5`;
+    paw.setAttribute("aria-label", paw.title);
+    paw.addEventListener("click", () => { s[field] = n; s.error = ""; renderRating(); });
+    row.append(paw);
+  }
+  return row;
+}
+
+
+function ratingButton(text, onClick, main = false) {
+  const button = document.createElement("button");
+  button.textContent = text;
+  if (main) button.className = "main";
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+
+// Stop and rate: the timer stops and the card opens. "Back to puzzle" closes it and the timer goes on.
+function stopAndRate() {
+  const s = state();
+  if (s.sent) return;
+  clearHint();
+  clearConnections();
+  editing = null;
+  s.cardOpen = true;
+  render();
+}
+
+
+// send the rating to the Google Sheet. No Content-Type header: with "application/json" the browser
+// would first ask the server for permission (a CORS preflight), and Apps Script doesn't answer that.
+// Sent as plain text, doPost still gets the JSON string in e.postData.contents.
+async function sendRating() {
+  const p = puzzle();
+  const s = state();
+  if (s.sending) return;
+  if (!s.hard || !s.fun) {
+    s.error = "Pick some paws for hard and for fun first.";
+    return renderRating();
+  }
+  const msg = {
+    player: playerId(),
+    puzzle: `${sizeOf(p)} ${levelOf(p)}`,
+    seed: p.seed,
+    seconds: s.seconds,
+    hints: s.hints,
+    checks: s.checks,
+    mistakes: s.wrongChecks,
+    result: s.solved ? "solved" : s.revealed ? "revealed" : "skipped",
+    hard: s.hard,
+    fun: s.fun,
+    comment: s.comment.trim(),
+  };
+  s.sending = true;
+  s.error = "";
+  renderRating();
+  try {
+    const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify(msg) });
+    if ((await response.text()) !== "ok") throw new Error("the script didn't say ok");
+    s.sent = true;
+  } catch {
+    s.error = "Couldn't send it. Check your connection and try again.";
+  }
+  s.sending = false;
+  if (state() === s) renderRating();   // only if you're still on this puzzle
+}
+
+
+// this player's random id, made on the first rating and kept in localStorage
+function playerId() {
+  let id = null;
+  try { id = localStorage.getItem(PLAYER_KEY); } catch {}
+  if (!id) {
+    id = Math.random().toString(36).slice(2, 10);
+    try { localStorage.setItem(PLAYER_KEY, id); } catch {}   // storage can be blocked, then each rating gets a new id
+  }
+  return id;
 }
 
 
@@ -573,12 +753,37 @@ function noteEditor(i) {
 function cycleMark(i) {
   const s = state();
   if (s.solved || s.revealed || i === puzzle().given) return;   // the given cat can't be changed
+  if (s.cardOpen) return;   // the rating card is open: the puzzle is stopped
   const next = (MARKS.indexOf(s.marks[i]) + 1) % MARKS.length;
   s.marks[i] = MARKS[next];
+  s.markedAt[i] = ++s.moves;
   message.textContent = "";
   clearHint();   // the hint was for the old marks
   checkLesson();
+  if (FEEDBACK) checkFull();
   render();
+}
+
+
+// feedback set (no Check button): once every cat is marked, it's solved if all marks are right.
+// If not, it counts as a wrong check and points at the cat you marked wrong first,
+// since the marks you made after it may have come from it.
+function checkFull() {
+  const p = puzzle();
+  const s = state();
+  if (lesson() || s.marks.includes("unknown")) return;
+  const wrong = p.cats.map((_, i) => i).filter(i => (s.marks[i] === "liar") !== p.liars[i]);
+  if (wrong.length === 0) {
+    s.solved = true;
+    s.cardOpen = !s.sent;   // time to rate it (unless it's rated already)
+    message.textContent = `Solved in ${formatTime(s.seconds)}! 🐾`;
+    return;
+  }
+  s.checks++;
+  s.wrongChecks++;
+  const first = wrong.reduce((a, b) => s.markedAt[a] <= s.markedAt[b] ? a : b);
+  hintCards = new Set([first]);
+  showHintLabel(`${p.cats[first].name} is wrong. The cats you marked after it may be too.`);
 }
 
 
@@ -702,7 +907,7 @@ function forcedCats(clues, known) {
 function hint() {
   const p = puzzle();
   const s = state();
-  if (s.solved || s.revealed) return;
+  if (s.solved || s.revealed || s.cardOpen) return;
   clearConnections();
   if (lesson()?.steps) return nextStep();
 
@@ -799,10 +1004,11 @@ function formatTime(seconds) {
 
 
 // the timer only runs while a puzzle is open and not finished
+// (feedback set: it also stops while the rating card is open, and for good once the rating is sent)
 setInterval(() => {
   if (game.hidden) return;
   const s = state();
-  if (!s.solved && !s.revealed) {
+  if (!s.solved && !s.revealed && !s.cardOpen && !s.sent) {
     s.seconds++;
     timer.textContent = formatTime(s.seconds);
   }
@@ -816,6 +1022,13 @@ document.getElementById("reveal").addEventListener("click", reveal);
 document.getElementById("hint").addEventListener("click", hint);
 document.getElementById("menu-button").addEventListener("click", showMenu);
 document.getElementById("how-to-play").addEventListener("click", startTutorial);
+stopButton.addEventListener("click", stopAndRate);
+
+// the feedback set: only Hint and Stop and rate, and a note on the menu that you can stop any time
+if (FEEDBACK) {
+  for (const id of ["check", "reset", "reveal"]) document.getElementById(id).hidden = true;
+  document.getElementById("feedback-note").hidden = false;
+}
 document.addEventListener("keydown", event => {
   if (game.hidden) return;
   // while typing a note, the arrow keys move the cursor, and Escape closes the note

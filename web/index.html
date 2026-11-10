@@ -20,6 +20,8 @@
   <!-- first screen: pick a grid size and a difficulty -->
   <section id="menu">
     <button id="how-to-play">How to play</button>
+    <!-- only in the feedback set (index.html?set=feedback), so playtesters know early that they can stop -->
+    <p id="feedback-note" hidden>Thanks for playtesting! Stuck or bored? You can stop any puzzle at any time and rate it, solved or not.</p>
     <h2>Grid size</h2>
     <div class="choice" id="sizes"></div>
     <h2>Difficulty</h2>
@@ -47,8 +49,11 @@
     <button id="reset">Reset</button>
     <button id="hint">Hint</button>
     <button id="reveal">Reveal</button>
+    <button id="stop" hidden>Stop and rate</button>
   </div>
   <p id="message"></p>
+  <!-- feedback set: rate the puzzle, filled in by renderRating in game.js -->
+  <div id="rating" hidden></div>
   </section>
   </div>
 
