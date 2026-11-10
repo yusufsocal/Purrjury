@@ -42,6 +42,15 @@ const FEEDBACK = new URLSearchParams(location.search).get("set") === "feedback";
 const FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbwG6leJIr5jJQl2he_iRZNn7rx9QDIgZJw_-lOy4A5Az_7xRO9C0F716GoIk4ce9djf/exec";
 const PLAYER_KEY = "purrjury-player";   // in localStorage: a random id, so one player's ratings can be grouped
 
+// ?from=poster: where the player found the game (the /play link on the posters adds it).
+// Kept in localStorage, so it stays with the player on a later visit without it. Goes into the extra column.
+const FROM_KEY = "purrjury-from";
+let cameFrom = new URLSearchParams(location.search).get("from")?.slice(0, 30) || null;
+try {
+  if (cameFrom) localStorage.setItem(FROM_KEY, cameFrom);
+  else cameFrom = localStorage.getItem(FROM_KEY);
+} catch {}
+
 // The lessons are played like puzzles: they go after the real puzzles in one list.
 // LESSONS is missing if an old cached page loads without tutorial.js, then there's just no tutorial.
 const LESSON_LIST = typeof LESSONS !== "undefined" ? LESSONS : [];
@@ -780,11 +789,11 @@ function sheetRow(i, result) {
 }
 
 
-// the extra column: phone or computer, how often they play logic puzzles, and what the row adds
+// the extra column: phone or computer, how often they play logic puzzles, where they came from, and what the row adds
 function extraInfo(fields = {}) {
   // a narrow screen is a phone; a wider one played with a finger (not a mouse) is a tablet
   const device = matchMedia("(max-width: 600px)").matches ? "phone" : matchMedia("(pointer: coarse)").matches ? "tablet" : "computer";
-  return JSON.stringify({ device, experience: experience() || null, ...fields });
+  return JSON.stringify({ device, experience: experience() || null, from: cameFrom, ...fields });
 }
 
 

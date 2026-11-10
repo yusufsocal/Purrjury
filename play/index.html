@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- The short link on the posters: yusufsocal.github.io/Purrjury/play
+     It sends players to the playtest set and says where they came from (?from=, "poster" if none),
+     so the sheet can tell poster players apart. Change the target here, the printed QR codes keep working. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Purrjury</title>
+  <script>
+    const from = new URLSearchParams(location.search).get("from") || "poster";
+    location.replace("../web/?set=feedback&from=" + encodeURIComponent(from));
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=../web/?set=feedback&amp;from=poster"></noscript>
+</head>
+<body>
+  <p><a href="../web/?set=feedback&amp;from=poster">Play Purrjury</a></p>
+</body>
+</html>
