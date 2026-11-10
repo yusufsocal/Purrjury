@@ -893,6 +893,8 @@ function fitText() {
 // a lesson's bubble is measured for the window's width, so a resize measures it again (render also fits the text)
 window.addEventListener("resize", () => {
   if (game.hidden) return;
+  // a phone's keyboard opening is a resize too. Redrawing would replace the comment box and close the keyboard
+  if (ratingBox.contains(document.activeElement)) return;
   if (lesson()) render();
   else fitText();
 });
