@@ -328,7 +328,16 @@ function checkLesson() {
   const p = puzzle();
   const s = state();
   if (!lesson() || s.solved || s.revealed) return;
-  if (s.marks.every((mark, i) => (mark === "liar") === p.liars[i] && mark !== "unknown")) s.solved = true;
+  if (s.marks.every((mark, i) => (mark === "liar") === p.liars[i] && mark !== "unknown")) {
+    s.solved = true;
+    if (FEEDBACK && lastLesson()) s.cardOpen = !s.sent;   // feedback set: rate the tutorial
+  }
+}
+
+
+// true in the tutorial's last lesson (the feedback set asks about the tutorial there)
+function lastLesson() {
+  return lesson() !== null && list[current] === FIRST_LESSON + LESSON_LIST.length - 1;
 }
 
 
@@ -513,15 +522,17 @@ function render() {
 const ratingBox = document.getElementById("rating");
 const stopButton = document.getElementById("stop");
 
-// the Stop and rate button, and the card (open after Stop and rate, or once the puzzle is solved)
+// the Stop and rate button, and the card (open after Stop and rate, or once the puzzle is solved).
+// The tutorial has no Stop and rate, just one card at the end of the last lesson.
 function renderRating() {
-  if (!FEEDBACK || lesson()) {
+  if (!FEEDBACK || (lesson() && !lastLesson())) {
     ratingBox.hidden = true;
     stopButton.hidden = true;
     return;
   }
   const s = state();
-  stopButton.hidden = false;
+  const tutorial = lesson() !== null;
+  stopButton.hidden = tutorial;
   stopButton.disabled = s.sent || s.cardOpen;
   stopButton.textContent = s.sent ? "Rated ✓" : s.solved ? "Rate it" : "Stop and rate";
 
@@ -537,6 +548,12 @@ function renderRating() {
     title.textContent = "Thanks, it's sent! 🐾";
     const buttons = document.createElement("div");
     buttons.className = "rating-buttons";
+    if (tutorial) {
+      buttons.append(ratingButton("Close", () => { s.cardOpen = false; render(); }),
+                     ratingButton("On to the puzzles →", () => { s.cardOpen = false; showMenu(); }, true));
+      ratingBox.append(buttons);
+      return;
+    }
     buttons.append(ratingButton("Keep playing", () => { s.cardOpen = false; render(); }));
     if (!s.solved && !s.revealed) {
       buttons.append(ratingButton("Show answer", () => { s.cardOpen = false; reveal(); }));
@@ -550,11 +567,14 @@ function renderRating() {
     return;
   }
 
-  title.textContent = s.solved ? `Solved in ${formatTime(s.seconds)}! How was it?` : "How was this puzzle?";
+  title.textContent = tutorial ? "That's the tutorial! How was it?"
+    : s.solved ? `Solved in ${formatTime(s.seconds)}! How was it?` : "How was this puzzle?";
   const help = document.createElement("p");
   help.className = "rating-help";
-  help.textContent = "More paws = harder, or more fun.";
-  ratingBox.append(help, pawRow("Hard", "hard"), pawRow("Fun", "fun"));
+  // the tutorial asks how clear it was instead of how hard. It's kept in "hard", the sheet's hard column
+  // (the puzzle column says "tutorial" on those rows)
+  help.textContent = tutorial ? "More paws = clearer, or more fun." : "More paws = harder, or more fun.";
+  ratingBox.append(help, pawRow(tutorial ? "Clear" : "Hard", "hard"), pawRow("Fun", "fun"));
 
   const comment = document.createElement("textarea");
   comment.rows = 2;
@@ -574,7 +594,9 @@ function renderRating() {
   buttons.className = "rating-buttons";
   const send = ratingButton(s.sending ? "Sending…" : "Send", sendRating, true);
   send.disabled = s.sending;
-  buttons.append(send, ratingButton("Back to puzzle", () => { s.cardOpen = false; s.error = ""; render(); }));
+  buttons.append(send);
+  // no way back in the tutorial: it's finished, and with no Stop and rate button the card couldn't come back
+  if (!tutorial) buttons.append(ratingButton("Back to puzzle", () => { s.cardOpen = false; s.error = ""; render(); }));
   ratingBox.append(buttons);
 }
 
@@ -629,20 +651,24 @@ async function sendRating() {
   const p = puzzle();
   const s = state();
   if (s.sending) return;
+  const tutorial = lesson() !== null;
   if (!s.hard || !s.fun) {
-    s.error = "Pick some paws for hard and for fun first.";
+    s.error = `Pick some paws for ${tutorial ? "clear" : "hard"} and for fun first.`;
     return renderRating();
   }
+  // the tutorial counts as one row: its time and hints added up over all lessons
+  const lessonStates = LESSON_LIST.map((_, k) => states[FIRST_LESSON + k]);
+  const total = field => lessonStates.reduce((sum, ls) => sum + ls[field], 0);
   const msg = {
     player: playerId(),
-    puzzle: `${sizeOf(p)} ${levelOf(p)}`,
-    seed: p.seed,
-    seconds: s.seconds,
-    hints: s.hints,
+    puzzle: tutorial ? "tutorial" : `${sizeOf(p)} ${levelOf(p)}`,
+    seed: tutorial ? "" : p.seed,
+    seconds: tutorial ? total("seconds") : s.seconds,
+    hints: tutorial ? total("hints") : s.hints,
     checks: s.checks,
     mistakes: s.wrongChecks,
-    result: s.solved ? "solved" : s.revealed ? "revealed" : "skipped",
-    hard: s.hard,
+    result: tutorial ? "finished" : s.solved ? "solved" : s.revealed ? "revealed" : "skipped",
+    hard: s.hard,   // in the tutorial: how clear it was
     fun: s.fun,
     comment: s.comment.trim(),
   };
@@ -1028,6 +1054,8 @@ stopButton.addEventListener("click", stopAndRate);
 if (FEEDBACK) {
   for (const id of ["check", "reset", "reveal"]) document.getElementById(id).hidden = true;
   document.getElementById("feedback-note").hidden = false;
+  document.getElementById("start-here").hidden = false;
+  document.body.classList.add("feedback");   // the CSS makes How to play stand out
 }
 document.addEventListener("keydown", event => {
   if (game.hidden) return;

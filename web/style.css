@@ -243,8 +243,12 @@ button:hover { border-color: var(--muted); }
 /* feedback set (index.html?set=feedback): the note on the menu, the Stop and rate button and the rating card */
 #feedback-note {
   max-width: 420px; margin: 14px auto 0; padding: 8px 12px;
-  background: #fff4d6; border: 1px solid #ecd9a0; border-radius: 10px; font-size: 0.9rem;
+  background: #fff4d6; border: 1px solid #ecd9a0; border-radius: 10px; font-size: 0.9rem; text-align: left;
 }
+#feedback-note ol { margin: 4px 0 6px; padding-left: 22px; }
+/* How to play stands out on the feedback menu, with a small "Start here" above it */
+#start-here { margin: 14px 0 4px; font-size: 0.8rem; font-weight: 600; color: var(--hint); }
+body.feedback #how-to-play { border: 2px solid var(--hint); }
 #stop { font-weight: 600; border-color: var(--ink); }
 #stop:disabled { font-weight: 400; border-color: var(--line); color: var(--muted); cursor: default; }
 /* the card floats over the bottom of the grid, so nothing moves and nothing needs scrolling */

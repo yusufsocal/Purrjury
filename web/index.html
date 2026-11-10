@@ -19,9 +19,17 @@
 
   <!-- first screen: pick a grid size and a difficulty -->
   <section id="menu">
+    <!-- only in the feedback set (index.html?set=feedback): tutorial first, and they can stop any puzzle -->
+    <div id="feedback-note" hidden>
+      Thanks for playtesting!
+      <ol>
+        <li>Start with <b>How to play</b> (5 short lessons).</li>
+        <li>Then play the puzzles below.</li>
+      </ol>
+      Stuck or bored? You can stop any puzzle at any time and rate it, solved or not.
+    </div>
+    <p id="start-here" hidden>Start here</p>
     <button id="how-to-play">How to play</button>
-    <!-- only in the feedback set (index.html?set=feedback), so playtesters know early that they can stop -->
-    <p id="feedback-note" hidden>Thanks for playtesting! Stuck or bored? You can stop any puzzle at any time and rate it, solved or not.</p>
     <h2>Grid size</h2>
     <div class="choice" id="sizes"></div>
     <h2>Difficulty</h2>
