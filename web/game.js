@@ -546,7 +546,31 @@ function render() {
 
   fitText();
   timer.textContent = formatTime(s.seconds);
+  updateNudge();
   renderRating();
+}
+
+
+// Feedback set, puzzles with no cat shown from the start: reading every clue to find a way in
+// is a lot, so a line points at Hint until your first mark, and after NUDGE_SECONDS Hint pulses too.
+// Gone once you've marked a cat or used Hint.
+const NUDGE_SECONDS = 30;
+
+function updateNudge() {
+  if (!FEEDBACK) return;
+  const p = puzzle();
+  const s = state();
+  const nudge = !lesson() && p.given == null && s.moves === 0 && s.hints === 0
+    && !s.solved && !s.revealed && !s.cardOpen && !s.sent;
+  const line = legend.querySelector(".tag-nudge");
+  if (nudge && legend.children.length === 0) {   // only when no hint or connections label is showing
+    showHintLabel("Not sure where to start? Try Hint");
+    legend.firstChild.classList.add("tag-nudge");
+  } else if (!nudge && line) {
+    legend.innerHTML = "";
+  }
+  // the lessons have their own guide, which points at Hint itself in lesson 4
+  if (!lesson()) hintButton.classList.toggle("point", nudge && s.seconds >= NUDGE_SECONDS);
 }
 
 
@@ -1134,6 +1158,7 @@ setInterval(() => {
   if (!s.solved && !s.revealed && !s.cardOpen && !s.sent) {
     s.seconds++;
     timer.textContent = formatTime(s.seconds);
+    updateNudge();   // Hint starts pulsing at NUDGE_SECONDS
   }
 }, 1000);
 
