@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- A4 poster for the university billboards. Open it in a browser and print (Ctrl+P):
+     A4, margins "None", background graphics on. The QR code points at the /play short link (play/index.html). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Purrjury poster</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #ddd; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #222; }
+    /* one A4 page, everything centered in a column */
+    .page {
+      width: 210mm; height: 297mm; margin: 0 auto; padding: 22mm 18mm;
+      background: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;
+    }
+    h1 { font-size: 64pt; margin: 0; letter-spacing: 1pt; }
+    .tagline { font-size: 26pt; font-weight: 700; margin: 2mm 0 0; }
+    /* the little puzzle: two cat cards like on the game's computer screen (the cat with its name and color
+       on the left, the clue on the right), same colors as web/style.css */
+    .cards { display: flex; gap: 6mm; width: 100%; }
+    .card {
+      flex: 1; display: flex; align-items: center; gap: 4mm;
+      padding: 4mm 5mm; border: 0.6mm solid #e3dccf; border-radius: 4mm; background: #fff;
+    }
+    .cat { display: flex; flex-direction: column; align-items: center; flex: none; }
+    .cat img { width: 26mm; height: 26mm; image-rendering: pixelated; }
+    .name { font-size: 15pt; font-weight: 700; }
+    .color { font-size: 10pt; color: #8a8378; }
+    .clue { flex: 1; font-size: 17pt; line-height: 1.35; }
+    .ask { font-size: 20pt; font-weight: 700; margin: 5mm 0 0; }
+    #qr { display: flex; justify-content: center; }
+    #qr img, #qr canvas { width: 75mm; height: 75mm; image-rendering: pixelated; }
+    .scan { font-size: 22pt; font-weight: 700; margin: 4mm 0 1mm; }
+    .url { font-size: 15pt; margin: 0; }
+    .small { font-size: 14pt; margin: 4mm 0 0; }
+    @media print { body { background: #fff; } .page { margin: 0; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div>
+      <h1>Purrjury</h1>
+      <p class="tagline">Trust no cat.</p>
+    </div>
+
+    <!-- lesson 2 of the tutorial: Ash is the liar, Bean is honest -->
+    <div>
+      <div class="cards">
+        <div class="card">
+          <div class="cat">
+            <img src="../web/sprites/cat_white_angry.png" alt="">
+            <span class="name">Ash</span>
+            <span class="color">white</span>
+          </div>
+          <p class="clue">Bean and I are both liars.</p>
+        </div>
+        <div class="card">
+          <div class="cat">
+            <img src="../web/sprites/cat_grey_angry.png" alt="">
+            <span class="name">Bean</span>
+            <span class="color">grey</span>
+          </div>
+          <p class="clue">Ash is a liar.</p>
+        </div>
+      </div>
+      <p class="ask">Who's lying?</p>
+    </div>
+
+    <div>
+      <div id="qr"></div>
+      <p class="scan">Scan to play</p>
+      <p class="url">yusufsocal.github.io/Purrjury/play</p>
+      <p class="small">I made this logic game. PLEASE give some feedback on the website 🙏</p>
+    </div>
+  </div>
+
+  <script>
+    // drawn big and shrunk by the CSS, so it prints sharp
+    new QRCode(document.getElementById("qr"), {
+      text: "https://yusufsocal.github.io/Purrjury/play",
+      width: 600, height: 600,
+      correctLevel: QRCode.CorrectLevel.M,
+    });
+  </script>
+</body>
+</html>
