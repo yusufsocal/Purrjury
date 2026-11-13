@@ -29,6 +29,9 @@ h1 { margin: 8px 0 4px; font-size: 2rem; }
 #info-sections p, #info-sections ul { margin: 0 4px 10px; line-height: 1.55; }
 #info-sections ul { padding-left: 22px; }
 #info-sections li { margin-bottom: 4px; }
+/* the faded line at the very bottom, then the rights line */
+.divider { max-width: 520px; margin: 24px auto 10px; border: none; border-top: 1px solid var(--line); }
+.rights { text-align: center; color: var(--muted); font-size: 0.85rem; margin: 0 0 6px; }
 #report-status { color: var(--muted); font-size: 0.9rem; }
 footer { margin-top: 24px; }
 .version { text-align: center; color: var(--muted); font-size: 0.75rem; margin: 0 0 12px; }
