@@ -20,18 +20,19 @@ MAX_TRIES = 200
 TRICK_MIN_LEVEL = "hard"
 
 # What each level asks of the path generator (see PathSettings). Harder levels: clues reveal fewer cats
-# at once, fewer clues work at the same time (more searching) and there are fewer ways in.
-# Easy shows one cat from the start. Playtesting decides these, they're just a first guess.
+# at once and fewer clues work at the same time (more searching).
+# Every level shows one cat from the start, and that cat's clue is the way in: playtesters had to guess
+# to get into puzzles without one (Nov 2026). Playtesting decides these, they're just a first guess.
 LEVEL_SETTINGS = {
     "easy":   PathSettings(max_cats_per_step=2, max_choices=3, openers=1, given=True),
-    "medium": PathSettings(max_cats_per_step=2, max_choices=3, openers=2),
-    "hard":   PathSettings(max_cats_per_step=1, max_choices=2, openers=1),
+    "medium": PathSettings(max_cats_per_step=2, max_choices=3, openers=2, given=True),
+    "hard":   PathSettings(max_cats_per_step=1, max_choices=2, openers=1, given=True),
 }
 # A big grid (BIG_GRID cats or more) is one level up, so it gets its own steps between medium and tricky
 BIG_LEVEL_SETTINGS = {
-    "medium": PathSettings(max_cats_per_step=2, max_choices=3, openers=2),
-    "hard":   PathSettings(max_cats_per_step=1, max_choices=3, openers=2),
-    "tricky": PathSettings(max_cats_per_step=1, max_choices=2, openers=1),
+    "medium": PathSettings(max_cats_per_step=2, max_choices=3, openers=2, given=True),
+    "hard":   PathSettings(max_cats_per_step=1, max_choices=3, openers=2, given=True),
+    "tricky": PathSettings(max_cats_per_step=1, max_choices=2, openers=1, given=True),
 }
 
 

@@ -84,14 +84,11 @@ def test_easy_puzzles_have_no_trick_clues(tmp_path):
             assert not has_trick_clue(grid)
 
 
-def test_only_easy_puzzles_show_a_cat(tmp_path):
-    """Easy puzzles start with one cat solved for you, shown with its real type. The rest start empty."""
+def test_every_puzzle_shows_a_cat(tmp_path):
+    """Every level starts with one cat solved for you, shown with its real type: that's the way in."""
     puzzles = export([(3, 3)], count=2, path=str(tmp_path / "p.js"), first_seed=11)
     for p in puzzles:
-        if p["level"] == "easy":
-            assert p["given"] is not None
-        else:
-            assert p["given"] is None
+        assert p["given"] is not None
 
 
 def test_exported_puzzles_have_one_answer(tmp_path):
