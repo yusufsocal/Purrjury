@@ -197,6 +197,36 @@ button:hover { border-color: var(--muted); }
 
 /* menu: pick a grid size, then a difficulty */
 #menu { text-align: center; margin: 24px 0; }
+
+/* the daily's home: the date and streak, a tile per puzzle, the countdown */
+/* everything stacked and full width: there's little on it, so it gets big */
+#home, #past { text-align: center; margin: 24px auto; width: 100%; max-width: 520px; }
+#home-date { font-size: 1.15rem; font-weight: 600; margin: 0 0 20px; }
+#tiles, .past-tiles, .home-buttons { display: flex; flex-direction: column; gap: 14px; }
+.tile {
+  display: grid; grid-template-columns: 1fr auto; align-content: center; gap: 6px 12px; text-align: left;
+  min-height: 110px; padding: 20px 24px; border-radius: 16px; background: var(--card);
+}
+.tile b { font-size: 1.5rem; }
+.tile-time { align-self: center; text-align: right; font-size: 1.2rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tile.done .tile-time { color: var(--honest); font-weight: 600; }
+.tile-status { grid-column: 1 / -1; font-size: 1rem; color: var(--muted); }
+#countdown { color: var(--muted); font-size: 1.05rem; margin: 22px 0; font-variant-numeric: tabular-nums; }
+.home-buttons button { padding: 16px; font-size: 1.1rem; border-radius: 12px; }
+.past-tiles .tile { min-height: 80px; }
+
+/* past days: a month of days, Monday first. Green: both solved, yellow: played */
+.past-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+#calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 14px; }
+.weekday { font-size: 0.75rem; color: var(--muted); }
+.day { padding: 8px 0; border-radius: 8px; font-variant-numeric: tabular-nums; }
+.day:disabled { opacity: 0.3; cursor: default; }
+.day.both { background: var(--honest-bg); border-color: var(--honest); color: var(--honest); font-weight: 600; }
+.day.some { background: #fbf1d9; border-color: #c98a12; }
+.day.today { text-decoration: underline; font-weight: 700; }
+.day.picked { outline: 2px solid var(--ink); }
+#past-day { margin-bottom: 14px; }
+#past-day b { display: block; margin-bottom: 8px; }
 #menu h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 20px 0 8px; }
 .choice { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
 .choice button.selected { background: var(--ink); border-color: var(--ink); color: var(--bg); }

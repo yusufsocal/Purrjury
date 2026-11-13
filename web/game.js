@@ -33,12 +33,18 @@ function freshState(p) {
     // feedback set: the rating card
     cardOpen: false, sent: false, sending: false, hard: 0, fun: 0, comment: "", error: "",
     firstMarkAt: null,   // the puzzle's time when you made your first mark: how long finding a way in took
+    playedOn: null,      // daily: the date you first marked a cat or used Hint (only days played on the day count for the streak)
   };
 }
 
-// index.html?set=feedback: the playtest set. No Check, Reset or Reveal, a puzzle counts as solved
-// once every mark is right, and players rate each puzzle (sent to the Google Sheet's Apps Script).
-const FEEDBACK = new URLSearchParams(location.search).get("set") === "feedback";
+// Which page this is (index.html sets window.PAGE):
+// "daily": the main page, one 3x3 and one 4x4 a day (see the Daily section below).
+// "practice": every level from puzzles.js, with Check, Reset and Reveal (practice/).
+// "feedback": the playtest set (feedback/). No Check, Reset or Reveal, a puzzle counts as solved
+//   once every mark is right, and players rate each puzzle (sent to the Google Sheet's Apps Script).
+const MODE = window.PAGE || "practice";
+const DAILY_MODE = MODE === "daily";
+const FEEDBACK = MODE === "feedback";
 const FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbwG6leJIr5jJQl2he_iRZNn7rx9QDIgZJw_-lOy4A5Az_7xRO9C0F716GoIk4ce9djf/exec";
 const PLAYER_KEY = "purrjury-player";   // in localStorage: a random id, so one player's ratings can be grouped
 
@@ -53,41 +59,54 @@ try {
 
 // The lessons are played like puzzles: they go after the real puzzles in one list.
 // LESSONS is missing if an old cached page loads without tutorial.js, then there's just no tutorial.
+// The daily page has no puzzles.js: its puzzles are added after the lessons as their month loads (addDailyPuzzle).
+const SET = typeof PUZZLES !== "undefined" ? PUZZLES : [];
 const LESSON_LIST = typeof LESSONS !== "undefined" ? LESSONS : [];
-const ALL_PUZZLES = PUZZLES.concat(LESSON_LIST.map(lesson => lesson.puzzle));
-const FIRST_LESSON = PUZZLES.length;   // ALL_PUZZLES[FIRST_LESSON + k] is lesson k
+const ALL_PUZZLES = SET.concat(LESSON_LIST.map(lesson => lesson.puzzle));
+const FIRST_LESSON = SET.length;   // ALL_PUZZLES[FIRST_LESSON + k] is lesson k
 const SEEN_KEY = "purrjury-tutorial-seen";   // in localStorage once the tutorial has been opened
 
 // progress for every puzzle, so you can switch back and forth without losing it
 const states = ALL_PUZZLES.map(freshState);
+const ids = [];   // ids[i]: the id a daily puzzle is saved under ("daily-2026-11-13-3x3"), see puzzleId
 
-// Feedback set: progress is kept in localStorage, so a reload (or a phone dropping the tab
+// Feedback set and daily: progress is kept in localStorage, so a reload (or a phone dropping the tab
 // after you switch apps) doesn't lose your marks, your time or which puzzles you've rated.
 // Each puzzle is saved under its own id, so a changed puzzle list can't mix them up.
-const SAVE_KEY = FEEDBACK ? "purrjury-progress-feedback" : null;
+// The daily's saved puzzles are also its history: the streak, past days and your times all come from them.
+const SAVE_KEY = FEEDBACK ? "purrjury-progress-feedback" : DAILY_MODE ? "purrjury-progress-daily" : null;
 const SAVED_FIELDS = ["marks", "used", "notes", "tags", "checks", "wrongChecks", "hints", "seconds", "solved",
-  "revealed", "tour", "moves", "markedAt", "cardOpen", "sent", "hard", "fun", "comment", "firstMarkAt"];
+  "revealed", "tour", "moves", "markedAt", "cardOpen", "sent", "hard", "fun", "comment", "firstMarkAt", "playedOn"];
 
 function puzzleId(i) {
+  if (ids[i]) return ids[i];
   return i >= FIRST_LESSON ? `lesson-${i - FIRST_LESSON}` : `${sizeOf(ALL_PUZZLES[i])}-${ALL_PUZZLES[i].seed}`;
+}
+
+// everything saved so far. On the daily page that's more than what's loaded (other months), so saving adds to it
+function savedProgress() {
+  if (!SAVE_KEY) return {};
+  try { return JSON.parse(localStorage.getItem(SAVE_KEY)) || {}; } catch { return {}; }
 }
 
 function saveProgress() {
   if (!SAVE_KEY) return;
-  const saved = {};
+  const saved = savedProgress();
   states.forEach((s, i) => { saved[puzzleId(i)] = Object.fromEntries(SAVED_FIELDS.map(f => [f, s[f]])); });
   try { localStorage.setItem(SAVE_KEY, JSON.stringify(saved)); } catch {}   // storage can be blocked: then nothing is kept
 }
 
+// put puzzle i's saved progress back into its state
+function loadState(i, saved) {
+  const s = states[i];
+  const old = saved[puzzleId(i)];
+  if (!old || old.marks?.length !== s.marks.length) return;   // nothing saved, or it doesn't fit this puzzle
+  for (const f of SAVED_FIELDS) if (f in old) s[f] = old[f];
+}
+
 function loadProgress() {
-  if (!SAVE_KEY) return;
-  let saved = {};
-  try { saved = JSON.parse(localStorage.getItem(SAVE_KEY)) || {}; } catch {}
-  states.forEach((s, i) => {
-    const old = saved[puzzleId(i)];
-    if (!old || old.marks?.length !== s.marks.length) return;   // nothing saved, or it doesn't fit this puzzle
-    for (const f of SAVED_FIELDS) if (f in old) s[f] = old[f];
-  });
+  const saved = savedProgress();
+  states.forEach((_, i) => loadState(i, saved));
 }
 
 loadProgress();
@@ -118,12 +137,17 @@ const sizeButtons = document.getElementById("sizes");
 const levelButtons = document.getElementById("levels");
 const lessonBox = document.getElementById("lesson");
 const hintButton = document.getElementById("hint");
+const home = document.getElementById("home");
+const past = document.getElementById("past");
 
 
 function puzzle() { return ALL_PUZZLES[list[current]]; }
 function state() { return states[list[current]]; }
-// the lesson being played, or null in a normal puzzle
-function lesson() { return list[current] >= FIRST_LESSON ? LESSON_LIST[list[current] - FIRST_LESSON] : null; }
+// the lesson being played, or null in a normal puzzle (daily puzzles come after the lessons)
+function lesson() {
+  const k = list[current] - FIRST_LESSON;
+  return k >= 0 && k < LESSON_LIST.length ? LESSON_LIST[k] : null;
+}
 function sizeOf(p) { return `${p.rows}x${p.cols}`; }
 function levelOf(p) { return p.level || "unrated"; }
 
@@ -135,6 +159,7 @@ function showMenu() {
   clearHint();
   editing = null;
   game.hidden = true;
+  if (DAILY_MODE) return goHome();
   menu.hidden = false;
   ratingBox.hidden = !general.open;   // a puzzle's rating card belongs to the game, not the menu
   document.body.classList.remove("playing");
@@ -144,7 +169,7 @@ function showMenu() {
 
 function renderMenu() {
   // every size that has puzzles, in the order they appear
-  const sizes = [...new Set(PUZZLES.map(sizeOf))];
+  const sizes = [...new Set(SET.map(sizeOf))];
   if (!sizes.includes(chosenSize)) chosenSize = sizes[0];
 
   sizeButtons.innerHTML = "";
@@ -159,7 +184,7 @@ function renderMenu() {
   // one button per level this size has, with how many of its puzzles you've solved
   levelButtons.innerHTML = "";
   LEVELS.forEach(level => {
-    const indexes = PUZZLES.map((p, i) => i).filter(i => sizeOf(PUZZLES[i]) === chosenSize && levelOf(PUZZLES[i]) === level);
+    const indexes = SET.map((p, i) => i).filter(i => sizeOf(SET[i]) === chosenSize && levelOf(SET[i]) === level);
     if (indexes.length === 0) return;
     const solved = indexes.filter(i => states[i].solved).length;
 
@@ -171,7 +196,7 @@ function renderMenu() {
       ? (indexes.every(i => states[i].sent) ? "Rated, thanks!" : "Not rated yet")
       : `${solved} / ${indexes.length} solved`;
     // the feedback set has one puzzle per level: play them all as one list, starting at this one
-    button.addEventListener("click", () => FEEDBACK ? start(PUZZLES.map((_, i) => i), indexes[0]) : start(indexes));
+    button.addEventListener("click", () => FEEDBACK ? start(SET.map((_, i) => i), indexes[0]) : start(indexes));
     levelButtons.append(button);
   });
 }
@@ -184,6 +209,8 @@ function start(indexes, at) {
   if (at !== undefined) current = list.indexOf(at);
   else current = firstUnsolved === -1 ? 0 : firstUnsolved;
   menu.hidden = true;
+  home.hidden = true;
+  past.hidden = true;
   game.hidden = false;
   general.open = false;   // the menu's feedback card closes when you start playing
   document.body.classList.add("playing");   // phones hide the title while playing, so the grid gets the screen
@@ -192,8 +219,14 @@ function start(indexes, at) {
 }
 
 
-// the "How to play" lessons, from the first one you haven't finished
+// the "How to play" lessons (the daily page goes there by its address, #how-to-play)
 function startTutorial() {
+  if (DAILY_MODE) return goTo("how-to-play");
+  openTutorial();
+}
+
+// play the lessons, from the first one you haven't finished
+function openTutorial() {
   try { localStorage.setItem(SEEN_KEY, "1"); } catch {}   // storage can be blocked, the tutorial still works
   start(LESSON_LIST.map((_, k) => FIRST_LESSON + k));
 }
@@ -360,7 +393,7 @@ function keepTallest(bubble, intro, feedback, l) {
 // the button after a solved lesson: on to the next one, or back to the menu after the last
 function nextButton(last) {
   const button = document.createElement("button");
-  button.textContent = last ? "Back to the menu" : "Next lesson →";
+  button.textContent = !last ? "Next lesson →" : DAILY_MODE ? "On to today's puzzles →" : "Back to the menu";
   button.addEventListener("click", () => last ? showMenu() : go(1));
   return button;
 }
@@ -394,6 +427,7 @@ function render() {
   const level = levelOf(p);
   info.textContent = lesson()
     ? `How to play · ${current + 1} / ${list.length}`
+    : DAILY_MODE ? `${dayLabel(dayOf[list[current]])} · ${sizeOf(p)}`   // the daily never shows a level
     : `${level[0].toUpperCase() + level.slice(1)} ${sizeOf(p)} · ${current + 1} / ${list.length}`;
   renderLesson();
   info.title = `seed ${p.seed}`;   // handy when someone reports a puzzle
@@ -555,6 +589,11 @@ function render() {
   });
 
   fitText();
+  // daily: the address follows the puzzle (switching to the 4x4 replaces it, so Back still goes home)
+  if (dayOf[list[current]] && !game.hidden) {
+    const address = `#${dayOf[list[current]]}/${sizeOf(p)}`;
+    if (location.hash !== address) history.replaceState(history.state, "", address);
+  }
   timer.textContent = formatTime(s.seconds);
   updateNudge();
   renderRating();
@@ -567,7 +606,7 @@ function render() {
 const NUDGE_SECONDS = 30;
 
 function updateNudge() {
-  if (!FEEDBACK) return;
+  if (MODE === "practice") return;
   const p = puzzle();
   const s = state();
   const nudge = !lesson() && p.given == null && s.moves === 0 && s.hints === 0
@@ -584,6 +623,326 @@ function updateNudge() {
 }
 
 
+// --- Daily ---
+// export.py --daily makes one 3x3 and one 4x4 per date, a file per month (daily/2026-11.js sets DAILY["2026-11"]).
+// days.js says which days exist (DAILY_FIRST to DAILY_LAST). The day flips at the player's own midnight.
+
+const DAILY_SIZES = ["3x3", "4x4"];
+const dayOf = {};          // dayOf[i]: the date of daily puzzle i ("2026-11-13")
+const dayIndexes = {};     // dayIndexes["2026-11-13"]: [3x3 index, 4x4 index] into ALL_PUZZLES
+let homeDay = null;        // the day the home screen shows, to notice midnight
+let pastMonth = null;      // the month past days shows ("2026-11")
+let pastPicked = null;     // the day tapped in past days
+let copied = false;        // the Share button says "Copied!" for a moment
+
+function dateKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+function todayKey() { return dateKey(new Date()); }
+// "2026-11-13" -> a Date at local noon (noon, so a clock change can't push it into the day before)
+function parseDay(day) { const [y, m, d] = day.split("-").map(Number); return new Date(y, m - 1, d, 12); }
+function addDays(day, n) { const date = parseDay(day); date.setDate(date.getDate() + n); return dateKey(date); }
+function dayLabel(day) { return parseDay(day).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" }); }
+function dailyExists(day) {
+  return typeof DAILY_FIRST !== "undefined" && day >= DAILY_FIRST && day <= DAILY_LAST && day <= todayKey();
+}
+
+// load a month's file (if it isn't loaded yet), then call back. A missing file just leaves the month empty.
+function loadMonth(month, callback) {
+  if (typeof DAILY === "undefined" || DAILY[month]) return callback();
+  const script = document.createElement("script");
+  script.src = `daily/${month}.js?v=${typeof VERSION !== "undefined" ? VERSION : Date.now()}`;
+  script.onload = script.onerror = () => callback();
+  document.head.append(script);
+}
+
+// a day's two puzzles as indexes into ALL_PUZZLES, added on first use (with their saved progress), or null
+function dayPuzzles(day) {
+  if (dayIndexes[day]) return dayIndexes[day];
+  const puzzles = typeof DAILY !== "undefined" && DAILY[day.slice(0, 7)]?.[day];
+  if (!puzzles) return null;
+  const saved = savedProgress();
+  dayIndexes[day] = puzzles.map(p => {
+    const i = ALL_PUZZLES.push(p) - 1;
+    states.push(freshState(p));
+    ids[i] = `daily-${day}-${sizeOf(p)}`;
+    dayOf[i] = day;
+    loadState(i, saved);
+    return i;
+  });
+  return dayIndexes[day];
+}
+
+// what you did on a day's puzzle of a size, from the loaded state or else from what's saved (other months)
+function dailyRecord(day, size, saved) {
+  const i = dayIndexes[day]?.[DAILY_SIZES.indexOf(size)];
+  return i !== undefined ? states[i] : saved[`daily-${day}-${size}`] ?? null;
+}
+
+// days in a row you played on the day itself, up to today (or up to yesterday, while today isn't played yet).
+// Anything counts: a mark or a hint is enough.
+function streak() {
+  const saved = savedProgress();
+  const playedOnDay = day => DAILY_SIZES.some(size => dailyRecord(day, size, saved)?.playedOn === day);
+  let day = playedOnDay(todayKey()) ? todayKey() : addDays(todayKey(), -1);
+  let count = 0;
+  while (playedOnDay(day)) { count++; day = addDays(day, -1); }
+  return count;
+}
+
+// play a day: its 3x3 first, or `size` if given
+function playDay(day, size) {
+  loadMonth(day.slice(0, 7), () => {
+    const indexes = dayPuzzles(day);
+    if (!indexes) return;
+    start(indexes, size ? indexes[DAILY_SIZES.indexOf(size)] : undefined);
+  });
+}
+
+
+// Every daily screen has its own address after the #, so the browser's Back button goes back a screen
+// instead of leaving the site: none for home, #how-to-play, #past/2026-11 and #2026-11-13/3x3.
+// (A # address because GitHub Pages only serves files that exist: reloading /2026-11-13/3x3 would be a 404.)
+// history.state.depth counts the screens since home, so Home steps back to it instead of piling up history.
+
+function goTo(address, replace = false) {
+  const depth = address ? (history.state?.depth ?? 0) + (replace ? 0 : 1) : 0;
+  const url = address ? "#" + address : location.pathname + location.search;
+  if (replace) history.replaceState({ depth }, "", url);
+  else history.pushState({ depth }, "", url);
+  route();
+}
+
+function goHome() {
+  const depth = history.state?.depth ?? 0;
+  if (depth > 0) history.go(-depth);   // back to home's own entry; popstate then calls route
+  else goTo("", true);
+}
+
+// show the screen the address asks for
+function route() {
+  leaveScreen();
+  const address = decodeURIComponent(location.hash.slice(1));
+  const puzzleAddress = address.match(/^(\d{4}-\d{2}-\d{2})\/(\d+x\d+)$/);
+  if (address === "how-to-play") return openTutorial();
+  if (address.startsWith("past")) {
+    const month = /^past\/\d{4}-\d{2}$/.test(address) ? address.slice(5) : todayKey().slice(0, 7);
+    return loadMonth(month, () => showPast(month));
+  }
+  if (puzzleAddress && dailyExists(puzzleAddress[1])) return playDay(puzzleAddress[1], puzzleAddress[2]);
+  showHome();
+}
+
+// tidy up the screen you're leaving: a solved puzzle's card sends its time, hints and notes close
+function leaveScreen() {
+  if (!game.hidden && dayOf[list[current]] && state().cardOpen) {
+    sendDaily(list[current]);
+    state().cardOpen = false;
+  }
+  highlight = null;
+  clearTimeout(highlightTimer);
+  clearHint();
+  legend.innerHTML = "";
+  editing = null;
+  message.textContent = "";
+}
+
+
+// the home screen: the date and your streak, a tile per puzzle, and the countdown to the next ones
+function showHome() {
+  game.hidden = true;
+  menu.hidden = true;
+  past.hidden = true;
+  home.hidden = false;
+  ratingBox.hidden = true;
+  document.body.classList.remove("playing");
+  renderHome();
+}
+
+function renderHome() {
+  const today = todayKey();
+  homeDay = today;
+  const days = streak();
+  document.getElementById("home-date").textContent = dayLabel(today) + (days ? ` · 🔥 ${days} day${days === 1 ? "" : "s"} in a row` : "");
+  const tiles = document.getElementById("tiles");
+  tiles.innerHTML = "";
+  const indexes = dailyExists(today) ? dayPuzzles(today) : null;
+  if (!indexes) {
+    tiles.textContent = "No puzzles today. Come back soon!";
+  } else {
+    DAILY_SIZES.forEach((size, k) => tiles.append(puzzleTile(`Today's ${size}`, states[indexes[k]], () => goTo(`${today}/${size}`))));
+  }
+  updateCountdown();
+}
+
+// one tile: its name, and solved (with the time), going (time so far) or not started
+function puzzleTile(title, s, onClick) {
+  const tile = document.createElement("button");
+  tile.className = "tile" + (s.solved ? " done" : "");
+  const name = document.createElement("b");
+  name.textContent = title;
+  const time = document.createElement("span");
+  time.className = "tile-time";
+  time.textContent = s.solved ? `✓ ${formatTime(s.seconds)}` : s.seconds ? `${formatTime(s.seconds)} so far` : "";
+  const status = document.createElement("span");
+  status.className = "tile-status";
+  status.textContent = s.solved ? (s.hints ? `Solved · ${s.hints} hint${s.hints === 1 ? "" : "s"}` : "Solved") : s.moves || s.hints ? "Continue" : "Play";
+  tile.append(name, time, status);
+  tile.addEventListener("click", onClick);
+  return tile;
+}
+
+// "New puzzles in 10h 48m". Runs every second while home is up (see the timer at the bottom).
+// When midnight comes the home screen shows the new day.
+function updateCountdown() {
+  if (todayKey() !== homeDay) return renderHome();
+  const midnight = parseDay(addDays(todayKey(), 1));
+  midnight.setHours(0, 0, 0, 0);
+  const minutes = Math.ceil((midnight - new Date()) / 60000);
+  const text = minutes >= 60 ? `${Math.floor(minutes / 60)}h ${minutes % 60}m` : `${minutes}m`;
+  document.getElementById("countdown").textContent = `New puzzles in ${text}`;
+}
+
+
+// the card once a daily puzzle is solved: time, streak, two rows of paws, Share and on to the next one.
+// It goes to the sheet once both paws are picked, or with no paws when you leave the card (leaveCard).
+function renderDailyCard() {
+  stopButton.hidden = true;
+  const s = state();
+  ratingBox.hidden = !s.cardOpen;
+  if (!s.cardOpen) return;
+  ratingBox.innerHTML = "";
+  const i = list[current];
+  const day = dayOf[i];
+
+  const title = document.createElement("h3");
+  title.textContent = `Solved in ${formatTime(s.seconds)}! 🐾`;
+  const line = document.createElement("p");
+  line.className = "rating-help";
+  const days = streak();
+  line.textContent = `${s.hints} hint${s.hints === 1 ? "" : "s"}` + (days ? ` · 🔥 ${days} day${days === 1 ? "" : "s"} in a row` : "");
+  ratingBox.append(title, line);
+
+  if (!s.sent) {
+    const help = document.createElement("p");
+    help.className = "rating-help";
+    help.textContent = "How was it? More paws = harder, or more fun.";
+    ratingBox.append(help, pawRow("Hard", "hard"), pawRow("Fun", "fun"));
+  }
+  const status = document.createElement("p");
+  status.className = s.error ? "rating-error" : "rating-help";
+  status.textContent = s.error || (s.sending ? "Sending…" : s.sent && s.hard ? "Thanks for rating! 🐾" : "");
+  if (status.textContent) ratingBox.append(status);
+
+  const buttons = document.createElement("div");
+  buttons.className = "rating-buttons";
+  buttons.append(ratingButton(copied ? "Copied!" : "Share", () => share(day)));
+  buttons.append(ratingButton("See the board", () => leaveCard(render)));
+  // on to the other puzzle of the day if it isn't solved yet, else back home
+  const other = dayIndexes[day].find(j => j !== i && !states[j].solved);
+  if (other !== undefined) {
+    buttons.append(ratingButton(`Play the ${sizeOf(ALL_PUZZLES[other])} →`, () => leaveCard(() => { current = list.indexOf(other); render(); }), true));
+  } else {
+    buttons.append(ratingButton("Home", () => leaveCard(goHome), true));
+  }
+  ratingBox.append(buttons);
+
+  if (s.hard && s.fun && !s.sent && !s.sending) sendDaily(i);   // both paws picked: send right away
+}
+
+// close the card (sending the time if the paws weren't picked), then go on
+function leaveCard(then) {
+  const i = list[current];
+  if (!states[i].sent && !states[i].sending) sendDaily(i);
+  states[i].cardOpen = false;
+  message.textContent = "";
+  then();
+}
+
+// one sheet row for a solved daily puzzle: the time, hints and checks, and the paws if picked
+function sendDaily(i) {
+  const s = states[i];
+  if (s.sent || s.sending || !s.solved) return;
+  const msg = { ...sheetRow(i, "solved"), hard: s.hard || "", fun: s.fun || "" };
+  post(msg, s, () => { if (!game.hidden && list[current] === i) renderRating(); else saveProgress(); });
+}
+
+// copy the day's result, to paste in a group chat
+function share(day) {
+  const saved = savedProgress();
+  const parts = DAILY_SIZES.map(size => {
+    const r = dailyRecord(day, size, saved);
+    return `${size} ${r?.solved ? formatTime(r.seconds) : "–"}`;
+  });
+  const hints = DAILY_SIZES.reduce((sum, size) => sum + (dailyRecord(day, size, saved)?.hints ?? 0), 0);
+  const days = day === todayKey() ? streak() : 0;
+  const text = [`Purrjury ${dayLabel(day)} 🐾`, parts.join(" · "),
+    `${hints} hint${hints === 1 ? "" : "s"}` + (days ? ` · 🔥 ${days}` : ""), location.href.split(/[?#]/)[0]].join("\n");
+  const done = () => { copied = true; renderRating(); setTimeout(() => { copied = false; if (!game.hidden) renderRating(); }, 1500); };
+  // phones get their share menu, computers copy it
+  if (navigator.share && matchMedia("(pointer: coarse)").matches) navigator.share({ text }).catch(() => {});
+  else navigator.clipboard?.writeText(text).then(done, () => {});
+}
+
+
+// past days: a month calendar from the first day to today. Green: both solved, yellow: played.
+function showPast(month) {
+  home.hidden = true;
+  game.hidden = true;
+  past.hidden = false;
+  pastMonth = month ?? pastMonth ?? todayKey().slice(0, 7);
+  renderPast();
+}
+
+function renderPast() {
+  const saved = savedProgress();
+  const first = parseDay(pastMonth + "-01");
+  document.getElementById("past-month").textContent = first.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+  const firstMonth = typeof DAILY_FIRST !== "undefined" ? DAILY_FIRST.slice(0, 7) : pastMonth;
+  document.getElementById("past-prev").disabled = pastMonth <= firstMonth;
+  document.getElementById("past-next").disabled = pastMonth >= todayKey().slice(0, 7);
+
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "";
+  for (const name of ["M", "T", "W", "T", "F", "S", "S"]) {
+    const head = document.createElement("span");
+    head.className = "weekday";
+    head.textContent = name;
+    calendar.append(head);
+  }
+  // empty slots before the 1st (Monday first)
+  for (let k = 0; k < (first.getDay() + 6) % 7; k++) calendar.append(document.createElement("span"));
+  for (const date = new Date(first); date.getMonth() === first.getMonth(); date.setDate(date.getDate() + 1)) {
+    const day = dateKey(date);
+    const cell = document.createElement("button");
+    cell.className = "day";
+    cell.textContent = date.getDate();
+    const records = DAILY_SIZES.map(size => dailyRecord(day, size, saved));
+    if (records.every(r => r?.solved)) cell.classList.add("both");
+    else if (records.some(r => r?.solved || r?.moves || r?.hints)) cell.classList.add("some");
+    if (day === todayKey()) cell.classList.add("today");
+    if (day === pastPicked) cell.classList.add("picked");
+    if (dailyExists(day)) cell.addEventListener("click", () => { pastPicked = day; renderPast(); });
+    else cell.disabled = true;
+    calendar.append(cell);
+  }
+
+  // the tapped day: your times, and its two puzzles to play
+  const box = document.getElementById("past-day");
+  box.innerHTML = "";
+  if (!pastPicked || pastPicked.slice(0, 7) !== pastMonth) return;
+  const title = document.createElement("b");
+  title.textContent = dayLabel(pastPicked);
+  const tiles = document.createElement("div");
+  tiles.className = "past-tiles";
+  DAILY_SIZES.forEach(size => {
+    const r = dailyRecord(pastPicked, size, saved) ?? { solved: false, seconds: 0, hints: 0, moves: 0 };
+    tiles.append(puzzleTile(size, r, () => goTo(`${pastPicked}/${size}`)));
+  });
+  box.append(title, tiles);
+}
+
+
 // --- Feedback set: the rating card ---
 
 const ratingBox = document.getElementById("rating");
@@ -593,6 +952,7 @@ const stopButton = document.getElementById("stop");
 // The tutorial has no Stop and rate, just one card at the end of the last lesson.
 function renderRating() {
   saveProgress();   // render() ends here, and so do paw taps and sending: a good moment to save
+  if (DAILY_MODE && !lesson()) return renderDailyCard();
   if (!FEEDBACK || (lesson() && !lastLesson())) {
     ratingBox.hidden = true;
     stopButton.hidden = true;
@@ -775,7 +1135,7 @@ function sheetRow(i, result) {
   const p = ALL_PUZZLES[i];
   const s = states[i];
   const base = { player: playerId(), result, hard: "", fun: "", comment: "" };
-  if (i >= FIRST_LESSON) {
+  if (i >= FIRST_LESSON && i < FIRST_LESSON + LESSON_LIST.length) {
     const lessonStates = LESSON_LIST.map((_, k) => states[FIRST_LESSON + k]);
     const total = field => lessonStates.reduce((sum, ls) => sum + ls[field], 0);
     return { ...base, puzzle: "tutorial", seed: "", seconds: total("seconds"), hints: total("hints"), checks: 0, mistakes: 0,
@@ -783,7 +1143,9 @@ function sheetRow(i, result) {
   }
   const marked = s.marks.filter((mark, j) => mark !== "unknown" && j !== p.given).length;
   const toMark = p.cats.length - (p.given == null ? 0 : 1);
-  return { ...base, puzzle: `${sizeOf(p)} ${levelOf(p)}`, seed: p.seed, seconds: s.seconds, hints: s.hints,
+  // daily rows say the day too ("daily 2026-11-13 3x3 hard"): the level is hidden from players, not from the sheet
+  const name = dayOf[i] ? `daily ${dayOf[i]} ${sizeOf(p)} ${levelOf(p)}` : `${sizeOf(p)} ${levelOf(p)}`;
+  return { ...base, puzzle: name, seed: p.seed, seconds: s.seconds, hints: s.hints,
            checks: s.checks, mistakes: s.wrongChecks,
            extra: extraInfo({ firstMark: s.firstMarkAt, marked: `${marked}/${toMark}` }) };
 }
@@ -803,7 +1165,8 @@ async function post(msg, holder, redraw) {
   holder.error = "";
   redraw();
   try {
-    const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify(msg) });
+    // keepalive: the message still goes out if the tab is closed right after (the daily sends when you leave)
+    const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify(msg), keepalive: true });
     if ((await response.text()) !== "ok") throw new Error("the script didn't say ok");
     holder.sent = true;
   } catch {
@@ -969,10 +1332,11 @@ function cycleMark(i) {
   s.marks[i] = MARKS[next];
   s.markedAt[i] = ++s.moves;
   if (s.firstMarkAt === null) s.firstMarkAt = s.seconds;
+  if (!s.playedOn) s.playedOn = todayKey();
   message.textContent = "";
   clearHint();   // the hint was for the old marks
   checkLesson();
-  if (FEEDBACK) checkFull();
+  if (FEEDBACK || DAILY_MODE) checkFull();
   render();
 }
 
@@ -1169,6 +1533,7 @@ function hint() {
   }
 
   s.hints++;
+  if (!s.playedOn) s.playedOn = todayKey();
   hintCards = new Set(useful);
   showHintLabel(useful.length ? label + wrongNote : "no hint found");
   render();
@@ -1219,6 +1584,7 @@ function formatTime(seconds) {
 // (feedback set: it also stops while the rating card is open, and for good once the rating is sent)
 setInterval(() => {
   saveProgress();   // also keeps typed notes and comments, which don't render
+  if (DAILY_MODE && !home.hidden) updateCountdown();
   if (game.hidden) return;
   const s = state();
   if (!s.solved && !s.revealed && !s.cardOpen && !s.sent) {
@@ -1250,6 +1616,27 @@ if (FEEDBACK) {
   generalButton.addEventListener("click", () => { general.open = true; renderGeneral(); });
   document.body.classList.add("feedback");   // the CSS makes How to play stand out
 }
+
+// the daily: like the feedback set, a puzzle is solved once every mark is right, so no Check, Reset or Reveal
+if (DAILY_MODE) {
+  for (const id of ["check", "reset", "reveal"]) document.getElementById(id).hidden = true;
+  document.getElementById("menu-button").textContent = "Home";
+  document.getElementById("home-how").addEventListener("click", startTutorial);
+  document.getElementById("past-button").addEventListener("click", () => goTo(`past/${todayKey().slice(0, 7)}`));
+  document.getElementById("past-back").addEventListener("click", goHome);
+  // another month replaces the address, so Back still goes straight home
+  const monthStep = step => {
+    const date = parseDay(pastMonth + "-01");
+    date.setMonth(date.getMonth() + step);
+    goTo(`past/${dateKey(date).slice(0, 7)}`, true);
+  };
+  document.getElementById("past-prev").addEventListener("click", () => monthStep(-1));
+  document.getElementById("past-next").addEventListener("click", () => monthStep(1));
+  // leaving the page with a solved puzzle's card still open: send its time anyway
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden && !game.hidden && dayOf[list[current]] && state().cardOpen) sendDaily(list[current]);
+  });
+}
 document.addEventListener("keydown", event => {
   if (game.hidden) return;
   // while typing a note, the arrow keys move the cursor, and Escape closes the note
@@ -1275,5 +1662,9 @@ if (versionLine && typeof PUZZLES_MADE !== "undefined") {
 // the first visit starts with the tutorial, after that it's behind the "How to play" button
 let seenTutorial = true;
 try { seenTutorial = localStorage.getItem(SEEN_KEY) === "1"; } catch {}
-if (!seenTutorial && LESSON_LIST.length) startTutorial();
+if (DAILY_MODE) {
+  window.addEventListener("popstate", route);   // the back and forward buttons
+  if (!seenTutorial && LESSON_LIST.length && !location.hash) startTutorial();   // home stays one Back away
+  else route();
+} else if (!seenTutorial && LESSON_LIST.length) startTutorial();
 else showMenu();
