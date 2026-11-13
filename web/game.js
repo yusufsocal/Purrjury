@@ -136,6 +136,8 @@ const levelButtons = document.getElementById("levels");
 const lessonBox = document.getElementById("lesson");
 const hintButton = document.getElementById("hint");
 const home = document.getElementById("home");
+const prevArrow = document.getElementById("prev");
+const nextArrow = document.getElementById("next");
 const past = document.getElementById("past");
 
 
@@ -428,6 +430,9 @@ function render() {
     : DAILY_MODE ? `${dayLabel(dayOf[list[current]])} · ${sizeOf(p)}`   // the daily never shows a level
     : `${level[0].toUpperCase() + level.slice(1)} ${sizeOf(p)} · ${current + 1} / ${list.length}`;
   renderLesson();
+  // the arrows: none on a daily puzzle (home has a tile for each), and no way back in the lessons
+  prevArrow.hidden = lesson() !== null || dayOf[list[current]] !== undefined;
+  nextArrow.hidden = lesson() === null && dayOf[list[current]] !== undefined;
   info.title = `seed ${p.seed}`;   // handy when someone reports a puzzle
   grid.dataset.cols = p.cols;   // lets the CSS shrink the clue text on narrow 4x4 cards
   grid.dataset.rows = p.rows;   // and give the lessons' one-row grids taller cards
@@ -1618,8 +1623,8 @@ setInterval(() => {
   }
 }, 1000);
 
-document.getElementById("prev").addEventListener("click", () => go(-1));
-document.getElementById("next").addEventListener("click", () => go(1));
+prevArrow.addEventListener("click", () => go(-1));
+nextArrow.addEventListener("click", () => go(1));
 document.getElementById("check").addEventListener("click", check);
 document.getElementById("reset").addEventListener("click", reset);
 document.getElementById("reveal").addEventListener("click", reveal);
@@ -1669,8 +1674,9 @@ document.addEventListener("keydown", event => {
     return;
   }
   if (event.key === "Escape" && editing !== null) { editing = null; render(); return; }
-  if (event.key === "ArrowLeft") go(-1);
-  if (event.key === "ArrowRight") go(1);
+  // the arrow keys only work where the arrow buttons show
+  if (event.key === "ArrowLeft" && !prevArrow.hidden) go(-1);
+  if (event.key === "ArrowRight" && !nextArrow.hidden) go(1);
   if (event.key === "Escape") {
     if (highlight !== null) clearConnections();
     else showMenu();
