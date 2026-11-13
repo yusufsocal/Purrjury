@@ -394,6 +394,12 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
     background: var(--card); border: 2px solid var(--line); border-top: none;
     border-radius: 0 0 12px 12px; box-shadow: 0 6px 14px #0002;
   }
+  /* the bottom row: it opens above the card instead, on top of the one above */
+  .card.opens-up .note-editor {
+    top: auto; bottom: calc(100% - 6px);
+    border-top: 2px solid var(--line); border-bottom: none;
+    border-radius: 12px 12px 0 0; box-shadow: 0 -6px 14px #0002;
+  }
 }
 
 /* On a phone the whole game fits the screen: a slim top bar, the grid, and the buttons under it.

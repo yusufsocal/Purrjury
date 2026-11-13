@@ -445,6 +445,8 @@ function render() {
     card.style.setProperty("--coat", COAT_BAND[cat.color] || "#bbb");
     if (LIGHT_COATS.has(cat.color)) card.classList.add("light-coat");
     if (editing === i) card.classList.add("editing");
+    // the bottom row's notes box opens upward on a computer, or Done would be below the screen
+    if (editing === i && cat.row === p.rows - 1) card.classList.add("opens-up");
     if (i === p.given) card.classList.add("given");
     if (s.used[i]) card.classList.add("used");
     if (s.revealed) card.classList.add(p.liars[i] ? "answer-liar" : "answer-honest");
