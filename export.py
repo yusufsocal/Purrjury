@@ -6,8 +6,9 @@ so the puzzles are saved as a small JavaScript file that sets PUZZLES.
 import argparse
 import base64
 import json
+import os
 import random
-from datetime import datetime
+from datetime import date, datetime, timedelta
 
 from purrjury.engine.path_generator import PathSettings, generate_path_puzzle
 from purrjury.engine.solver import BIG_GRID, LEVELS, involved, levels_for
@@ -146,6 +147,103 @@ def export(sizes, count, path="web/puzzles.js", first_seed=None, max_tries=MAX_T
     return puzzles
 
 
+# --- The daily puzzles: one 3x3 and one 4x4 a day ---
+
+DAILY_SIZES = [(3, 3), (4, 4)]
+DAILY_DIR = "web/daily"
+# seeds tried per puzzle before giving up on a day (a 4x4 tricky needs the most)
+DAILY_TRIES = 500
+
+
+def daily_level(day, rows, cols):
+    """The hidden level a day's puzzle of this size is built with: random, but always the same for the same day.
+
+    3x3: easy, medium or hard. 4x4: medium, hard or tricky. Players never see it.
+    """
+    return random.Random(f"{day.isoformat()} {rows}x{cols}").choice(levels_for(rows, cols))
+
+
+def make_daily(day):
+    """The day's puzzles, 3x3 first, as dicts for the page.
+
+    Seeds come from the date (2026-11-13 3x3 tries 20261113000, 20261113001, ..., the 4x4 starts at ...500),
+    so a day can always be made again from its date.
+    """
+    puzzles = []
+    for k, (rows, cols) in enumerate(DAILY_SIZES):
+        level = daily_level(day, rows, cols)
+        first = int(day.strftime("%Y%m%d")) * 1000 + k * 500
+        for seed in range(first, first + DAILY_TRIES):
+            result = make_puzzle(rows, cols, level, seed)
+            if result is not None:
+                grid, world, _steps, given = result
+                given_cat = next(iter(given)) if given else None
+                puzzles.append(puzzle_to_dict(grid, world, seed, level, given_cat))
+                break
+        else:
+            raise RuntimeError(f"no {level} {rows}x{cols} puzzle for {day} in {DAILY_TRIES} seeds")
+    return puzzles
+
+
+def read_daily_month(path):
+    """The days already saved in a month file, as {"2026-11-13": [3x3, 4x4], ...}. Empty if there's no file yet."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    return json.loads(content.split(" = ", 1)[1].rstrip().rstrip(";"))
+
+
+def write_daily_month(path, month, days):
+    """Save a month's days. Compact JSON: a year of puzzles is a few MB, so each month gets its own small file."""
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("// Made by export.py --daily, don't edit by hand\n")
+        f.write(f'DAILY["{month}"] = ' + json.dumps(days, separators=(",", ":")) + ";\n")
+
+
+def daily_dates(folder):
+    """All saved dates, sorted, read from the month files."""
+    dates = []
+    for name in sorted(os.listdir(folder)) if os.path.isdir(folder) else []:
+        if name[:4].isdigit() and name.endswith(".js"):
+            dates += read_daily_month(os.path.join(folder, name))
+    return sorted(dates)
+
+
+def export_daily(days, start=None, folder=DAILY_DIR, log=print):
+    """Add `days` new days of daily puzzles after the last saved day (or from `start`, default today).
+
+    Days already saved are never made again or changed: old puzzles stay the same, whatever the code does now.
+    Also writes days.js: the first and last day, which the page needs before it loads a month.
+    Returns the dates it added.
+    """
+    os.makedirs(folder, exist_ok=True)
+    saved = daily_dates(folder)
+    if start is None:
+        start = date.fromisoformat(saved[-1]) + timedelta(days=1) if saved else date.today()
+    added = []
+    for i in range(days):
+        day = start + timedelta(days=i)
+        path = os.path.join(folder, f"{day:%Y-%m}.js")
+        month = read_daily_month(path)
+        if day.isoformat() in month:
+            continue   # already made: leave it alone
+        puzzles = make_daily(day)
+        month[day.isoformat()] = puzzles
+        # saved after every day, so stopping halfway keeps what's done
+        write_daily_month(path, f"{day:%Y-%m}", dict(sorted(month.items())))
+        added.append(day.isoformat())
+        log(f"{day}: " + ", ".join(f"{p['rows']}x{p['cols']} {p['level']}" for p in puzzles))
+
+    dates = daily_dates(folder)
+    with open(os.path.join(folder, "days.js"), "w", encoding="utf-8") as f:
+        f.write("// Made by export.py --daily, don't edit by hand\n")
+        f.write(f'const DAILY_FIRST = "{dates[0]}";\n')
+        f.write(f'const DAILY_LAST = "{dates[-1]}";\n')
+        f.write('const DAILY = {};   // filled by the month files (2026-11.js sets DAILY["2026-11"])\n')
+    return added
+
+
 def parse_size(text):
     """Turn "3x4" into (3, 4)."""
     rows, cols = text.lower().split("x")
@@ -161,8 +259,16 @@ def main():
     parser.add_argument("-s", "--seed", type=int, help="first seed (default: random)")
     parser.add_argument("-p", "--path", default="web/puzzles.js",
                         help="where to save them (default: web/puzzles.js; the feedback set is web/feedback_puzzles.js)")
+    parser.add_argument("-d", "--daily", type=int, metavar="DAYS",
+                        help="add this many days of daily puzzles to web/daily/ instead (after the last saved day)")
+    parser.add_argument("--start", type=date.fromisoformat, metavar="YYYY-MM-DD",
+                        help="with --daily: the first day to make (default: the day after the last saved one, or today)")
     args = parser.parse_args()
 
+    if args.daily:
+        added = export_daily(args.daily, start=args.start)
+        print(f"Added {len(added)} days to {DAILY_DIR}")
+        return
     puzzles = export(args.sizes, args.count, path=args.path, first_seed=args.seed)
     print(f"Saved {len(puzzles)} puzzles to {args.path}")
 

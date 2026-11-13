@@ -2,7 +2,11 @@
 import base64
 import json
 
-from export import TRICK_MIN_LEVEL, clue_table, export, has_trick_clue, liar_count, make_puzzle
+import export as export_module
+from datetime import date
+
+from export import (TRICK_MIN_LEVEL, clue_table, daily_level, export, export_daily, has_trick_clue, liar_count,
+                    make_puzzle, read_daily_month)
 from purrjury.engine.checker import find_solutions
 from purrjury.engine.solver import LEVELS
 from purrjury.board.world import make_world
@@ -106,3 +110,31 @@ def test_liar_count_varies_but_never_all_or_none():
     assert min(counts) >= 1 and max(counts) <= 8
     assert len(set(counts)) >= 5   # not stuck on one number
     assert 3 <= sorted(counts)[250] <= 4   # mostly around a third to a half
+
+
+def test_daily_days_are_added_and_never_changed(tmp_path, monkeypatch):
+    monkeypatch.setattr(export_module, "DAILY_SIZES", [(3, 3)])   # only 3x3s, so the test is quick
+    folder = str(tmp_path)
+    # 2 days across a month's end: each month gets its own file
+    assert export_daily(2, start=date(2026, 11, 30), folder=folder, log=lambda _: None) == ["2026-11-30", "2026-12-01"]
+    november = read_daily_month(str(tmp_path / "2026-11.js"))
+    assert list(november) == ["2026-11-30"]
+    puzzle = november["2026-11-30"][0]
+    assert (puzzle["rows"], puzzle["cols"]) == (3, 3)
+    assert puzzle["level"] == daily_level(date(2026, 11, 30), 3, 3)
+    assert str(puzzle["seed"]).startswith("20261130")
+
+    # running again adds the next day after the last one, and leaves the saved days alone
+    before = (tmp_path / "2026-11.js").read_text(encoding="utf-8")
+    assert export_daily(1, folder=folder, log=lambda _: None) == ["2026-12-02"]
+    assert (tmp_path / "2026-11.js").read_text(encoding="utf-8") == before
+    assert export_daily(1, start=date(2026, 11, 30), folder=folder, log=lambda _: None) == []
+
+    days = (tmp_path / "days.js").read_text(encoding="utf-8")
+    assert 'DAILY_FIRST = "2026-11-30"' in days and 'DAILY_LAST = "2026-12-02"' in days
+
+
+def test_daily_level_is_the_same_for_the_same_day():
+    day = date(2026, 11, 13)
+    assert daily_level(day, 3, 3) == daily_level(day, 3, 3)
+    assert {daily_level(date(2026, 11, d), 4, 4) for d in range(1, 31)} == {"medium", "hard", "tricky"}
