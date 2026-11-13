@@ -99,10 +99,78 @@
 
   <!-- how to play, below the game so the grid gets the screen -->
   <footer>
-    <p class="rules">Honest cats always tell the truth. Liars always lie. Find the liars.</p>
-  <p class="help">Tap a cat to mark it: <b class="honest-text">honest</b>, then <b class="liar-text">liar</b>, then back to unknown.
-    Tap &#10003; to grey out a clue you've used. Tap &#9998; to add a note or tag. Some cats only meow: another cat tells you what they said. One cat is already solved for you: it has a lock.<br>
-    Right click or long-press a cat to see which cats talk about it. Double right click (or long-press again): which cats it talks about.</p>
+    <!-- Brom's texts, all open, one after the other -->
+    <div id="info-sections">
+    <section>
+      <h2>How to play</h2>
+      <p>Every cat says something. Honest cats always tell the truth. Liars always lie.
+        Your goal is to find out who is what.</p>
+      <p>Tap a cat to mark it: honest, then once more for liar, then once more for unknown.
+        The cat with the lock is already solved for you. Start with its clue.
+        Once every cat is marked right, the puzzle is solved.</p>
+      <p>Tap &#10003; to grey out a clue you're done with.
+        Tap &#9998; to write a note or add a tag to a cat.
+        Long-press a cat (right click on a computer) to see which cats talk about it.</p>
+    </section>
+
+    <section>
+      <h2>Tips and tricks</h2>
+      <p>When a cat lies, that doesn't mean the opposite of its clue is true.
+        A liar's clue is false, nothing more. "Bean and I are both liars" being false
+        means at least one of them is honest, not that both are.
+        "Exactly 2 of my neighbors are liars" being false means any number but 2.</p>
+      <p>Clues about the speaker are the best way in, since they usually reveal the cat itself.
+        When a cat talks about a group it's part of, think about it both ways:
+        what if it's honest, what if it's a liar? Often only one works.</p>
+      <p>Stuck? Try a "what if".
+        Pick a cat and pretend it's honest. Follow the clues.
+        If something breaks, it's a liar. If nothing breaks, try the other way.
+        Although this is never necessary: every puzzle can be solved with no guessing.
+        At every step, at least one clue finds a new cat on its own.</p>
+      <p>Hint shows a clue you can use right now. Pressing it again shows which cat it finds.</p>
+    </section>
+
+    <section>
+      <h2>What the words mean</h2>
+      <ul>
+        <li>Neighbors: the cats directly above, below, left and right. Not diagonal. A cat is not its own neighbor.</li>
+        <li>"Me" and "I" count: "2 of Bean, Cleo and me" includes the speaker.</li>
+        <li>Corners: the four corner cats. Edges: every cat on the outside of the grid.</li>
+        <li>Connected: the cats touch each other through neighbors, in one group.</li>
+        <li>"More liars in A than in B": A has more. The same number is not more.</li>
+        <li>"Only": that cat is a liar, and no other cat in the group is.</li>
+        <li>"Odd": 1, 3, 5... Zero is even.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How the puzzles are made</h2>
+      <p>Every puzzle is made by a program that solves it step by step, like a person would.
+        It only keeps a puzzle if:</p>
+      <ul>
+        <li>it has exactly one answer,</li>
+        <li>you never have to guess: every cat can be worked out from the clues,</li>
+        <li>no single clue gives away a bunch of cats at once, to make the puzzles longer and more fun.</li>
+      </ul>
+      <p>Each clue means exactly what it says, nothing more.
+        A new 3x3 and 4x4 come out every day at midnight, your time.</p>
+    </section>
+
+    <section>
+      <h2>Found two answers?</h2>
+      <p>Every puzzle is checked to have only one, so it's probably a small slip
+        somewhere. But if you're sure, tap "Report this puzzle" with your marks
+        still on the board, and it will reach me with your exact board. I'll check it!</p>
+      <!-- sends the puzzle and your marks to the sheet (reportPuzzle in game.js) -->
+      <p><button id="report">Report this puzzle</button> <span id="report-status"></span></p>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>Purrjury is made by myself, inspired by Clues by Sam.</p>
+      <p>Code on GitHub: <a href="https://github.com/yusufsocal/Purrjury">github.com/yusufsocal/Purrjury</a></p>
+    </section>
+    </div>
   <p class="version" id="version"></p>
   </footer>
 

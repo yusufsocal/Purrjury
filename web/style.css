@@ -23,8 +23,13 @@ body {
 
 header { text-align: center; }
 h1 { margin: 8px 0 4px; font-size: 2rem; }
-.rules, .help { text-align: center; color: var(--muted); margin: 4px 0; }
-.help { font-size: 0.9rem; margin-bottom: 16px; }
+/* the sections under the game: all open, one after the other. Big bold headings, plain text */
+#info-sections { max-width: 520px; margin: 8px auto 16px; }
+#info-sections h2 { font-size: 1.35rem; margin: 28px 4px 8px; }
+#info-sections p, #info-sections ul { margin: 0 4px 10px; line-height: 1.55; }
+#info-sections ul { padding-left: 22px; }
+#info-sections li { margin-bottom: 4px; }
+#report-status { color: var(--muted); font-size: 0.9rem; }
 footer { margin-top: 24px; }
 .version { text-align: center; color: var(--muted); font-size: 0.75rem; margin: 0 0 12px; }
 .honest-text { color: var(--honest); }
@@ -162,31 +167,29 @@ button:hover { border-color: var(--muted); }
 :root { --about: #2f6fdb; }   /* the blue tag chip */
 
 /* connections (right click or long-press a cat): every other cat fades out, so the ones involved stand out.
-   The chosen cat gets a dark outline, the connected ones a colored one: blue for "cats that talk about Bean",
-   purple for "cats Bean talks about". Their names grow for a moment (from their middle, so they grow both ways)
-   and stay bold, and the connected cats do one hop. The label above the grid says which way it goes. */
+   The chosen cat gets a dark outline, the cats that talk about it a blue one. Their names grow for a moment
+   (from their middle, so they grow both ways) and stay bold, and the cats that talk about it do one hop. */
 .card { transition: opacity 0.2s, transform 0.4s; }
-#grid.connecting .card:not(.focus):not(.talked-by):not(.talks-about) { opacity: 0.3; }
+#grid.connecting .card:not(.focus):not(.talked-by) { opacity: 0.3; }
 .card.focus { outline: 3px solid var(--ink); outline-offset: 2px; }
 .card.talked-by { outline: 3px solid var(--about); outline-offset: 2px; }
-.card.talks-about { outline: 3px solid #7a4fc4; outline-offset: 2px; }
 /* phones: the card sinks a little while you hold it, so you can feel a long-press coming */
 .card.pressing { transform: scale(0.94); transition: transform 0.5s ease-in; }
 .card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
-.card.focus .name, .card.talked-by .name, .card.talks-about .name {
+.card.focus .name, .card.talked-by .name {
   display: inline-block;
   transform-origin: center;
   font-weight: 800;
   animation: name-grow 0.45s ease-out;
 }
 @keyframes name-grow { 0%, 100% { transform: scale(1); } 35% { transform: scale(1.35); } }
-.card.talked-by .sprite, .card.talks-about .sprite { animation: hop 0.5s ease-out; }   /* hop: see the guide cat */
+.card.talked-by .sprite { animation: hop 0.5s ease-out; }   /* hop: see the guide cat */
 @media (prefers-reduced-motion: reduce) {
-  .card.talked-by .sprite, .card.talks-about .sprite, .card .name { animation: none; }
+  .card.talked-by .sprite, .card .name { animation: none; }
 }
 #legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
 .tag { font-size: 0.8rem; font-weight: 600; }
-.tag-by, .tag-about { color: var(--ink); }
+.tag-by { color: var(--ink); }
 
 /* hint: dashed outline around the clues you can use right now */
 :root { --hint: #c98a12; }
@@ -323,7 +326,8 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
    and the cat and the clue text shrink to fit their card (see fitText in game.js). */
 @media (min-width: 601px) {
   body { padding-top: 0; padding-bottom: 0; }
-  #screen { height: 100dvh; display: flex; flex-direction: column; padding: 6px 0; }
+  /* only while playing: the grid gets the whole screen. Home and the menu stay short, so the sections come right after */
+  body.playing #screen { height: 100dvh; display: flex; flex-direction: column; padding: 6px 0; }
   h1 { font-size: 1.5rem; margin: 2px 0; }
   #game:not([hidden]) { flex: 1; min-height: 0; display: flex; flex-direction: column; }
   #game nav, #game .controls { margin: 6px 0; }

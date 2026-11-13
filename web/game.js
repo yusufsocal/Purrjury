@@ -115,8 +115,6 @@ let list = [];               // indexes into PUZZLES of the size and level picke
 let current = 0;             // position in list
 let chosenSize = null;       // e.g. "3x3"
 let highlight = null;        // index of the cat whose connections are shown, or null
-let highlightMode = "by";    // "by": cats that talk about it, "about": cats it talks about
-let lastRightClick = { index: null, time: 0 };   // to notice a double right click
 let highlightTimer = null;   // clears the highlight after a few seconds
 let hintCards = new Set();   // cards outlined by the last hint
 let hintFinds = [];          // the cats that hint's clue finds, shown when you press Hint again
@@ -454,8 +452,7 @@ function render() {
     // connections: the chosen cat, and either the cats that talk about it or the cats it talks about
     if (highlight !== null) {
       if (i === highlight) card.classList.add("focus");
-      else if (highlightMode === "by" && cat.mentions.includes(highlight)) card.classList.add("talked-by");
-      else if (highlightMode === "about" && p.cats[highlight].mentions.includes(i)) card.classList.add("talks-about");
+      else if (cat.mentions.includes(highlight)) card.classList.add("talked-by");
     }
     if (hintCards.has(i) || guidePoints.has(i)) card.classList.add("hint");
     if (hintFound.has(i)) card.classList.add("hint-found");
@@ -568,23 +565,19 @@ function render() {
       clearConnections();   // a tap closes the highlight and still changes the mark
       cycleMark(i);
     });
-    // right click: cats that talk about it. double right click: cats it talks about
+    // right click: the cats that talk about it
     card.addEventListener("contextmenu", event => {
       event.preventDefault();   // no browser menu
-      const now = Date.now();
-      const isDouble = lastRightClick.index === i && now - lastRightClick.time < 400;
-      lastRightClick = { index: i, time: now };
-      showConnections(i, isDouble ? "about" : "by");
+      showConnections(i);
     });
-    // long-press: the card sinks while you hold it, then cats that talk about it.
-    // Long-press the same cat again: the cats it talks about (a computer's double right click).
+    // long-press: the card sinks while you hold it, then the cats that talk about it
     card.addEventListener("touchstart", () => {
       card.classList.add("pressing");
       pressTimer = setTimeout(() => {
         longPressed = true;
         window.getSelection()?.removeAllRanges();   // in case the browser started selecting anyway
         navigator.vibrate?.(20);                    // a tiny buzz so you feel it worked (Android)
-        showConnections(i, highlight === i && highlightMode === "by" ? "about" : "by");
+        showConnections(i);
       }, 500);
     }, { passive: true });
     const stopPress = () => { clearTimeout(pressTimer); card.classList.remove("pressing"); };
@@ -1239,6 +1232,28 @@ async function sendGeneral() {
 }
 
 
+// "Found two answers?" under the game: sends the open puzzle and your marks to the sheet.
+// The marks go in the comment column, one letter per cat in grid order: H honest, L liar, ? unknown.
+const report = { sending: false, sent: false, error: "" };
+const reportStatus = document.getElementById("report-status");
+
+function reportPuzzle() {
+  if (report.sending) return;
+  if (game.hidden || lesson()) {
+    reportStatus.textContent = "Open the puzzle first, with your marks on it.";
+    return;
+  }
+  const i = list[current];
+  const marks = states[i].marks.map(mark => mark === "honest" ? "H" : mark === "liar" ? "L" : "?").join("");
+  const msg = { ...sheetRow(i, "report"), comment: `marks ${marks}` };
+  post(msg, report, () => {
+    reportStatus.textContent = report.error || (report.sending ? "Sending…" : report.sent ? "Sent, thanks! I'll check it." : "");
+  });
+}
+
+document.getElementById("report").addEventListener("click", reportPuzzle);
+
+
 // this player's random id, made on the first rating and kept in localStorage
 function playerId() {
   let id = null;
@@ -1369,16 +1384,17 @@ function checkFull() {
 }
 
 
-function showConnections(i, mode = "by") {
+// the cats that talk about cat i (right click or long-press it). The other way round isn't shown:
+// a clue's own text already says which cats it talks about.
+function showConnections(i) {
   const cat = puzzle().cats[i];
   clearHint();
   highlight = i;
-  highlightMode = mode;
-  // small colored label so you know what the color means
+  // small label so you know what the outlines mean
   legend.innerHTML = "";
   const tag = document.createElement("span");
-  tag.className = "tag tag-" + mode;
-  tag.textContent = mode === "by" ? `cats that talk about ${cat.name}` : `cats ${cat.name} talks about`;
+  tag.className = "tag tag-by";
+  tag.textContent = `cats that talk about ${cat.name}`;
   legend.append(tag);
   clearTimeout(highlightTimer);
   highlightTimer = setTimeout(clearConnections, HIGHLIGHT_SECONDS * 1000);
