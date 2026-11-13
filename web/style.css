@@ -161,9 +161,17 @@ button:hover { border-color: var(--muted); }
 
 :root { --about: #2f6fdb; }   /* the blue tag chip */
 
-/* connections (right click or long-press a cat): the names involved grow for a moment (from their middle,
-   so they grow both ways) and stay bold while it lasts, and the connected cats do one hop.
-   The chosen cat's name is underlined. The label under the nav says which way it goes ("cats that talk about Bean"). */
+/* connections (right click or long-press a cat): every other cat fades out, so the ones involved stand out.
+   The chosen cat gets a dark outline, the connected ones a colored one: blue for "cats that talk about Bean",
+   purple for "cats Bean talks about". Their names grow for a moment (from their middle, so they grow both ways)
+   and stay bold, and the connected cats do one hop. The label above the grid says which way it goes. */
+.card { transition: opacity 0.2s, transform 0.4s; }
+#grid.connecting .card:not(.focus):not(.talked-by):not(.talks-about) { opacity: 0.3; }
+.card.focus { outline: 3px solid var(--ink); outline-offset: 2px; }
+.card.talked-by { outline: 3px solid var(--about); outline-offset: 2px; }
+.card.talks-about { outline: 3px solid #7a4fc4; outline-offset: 2px; }
+/* phones: the card sinks a little while you hold it, so you can feel a long-press coming */
+.card.pressing { transform: scale(0.94); transition: transform 0.5s ease-in; }
 .card.focus .name { text-decoration: underline; text-underline-offset: 3px; }
 .card.focus .name, .card.talked-by .name, .card.talks-about .name {
   display: inline-block;
@@ -438,6 +446,7 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
   .sprite {
     position: absolute; left: 50%; top: 58%; transform: translate(-50%, -50%);
     width: 80%; max-width: 96px; height: auto; opacity: 0.14; z-index: -1;
+    animation: none !important;   /* no hop: its transform would replace the centering and throw the cat into a corner */
   }
   .text { min-height: 0; overflow: hidden; margin: 4px 0 0; line-height: 1.25; }
   .used-toggle, .pen-toggle { bottom: 3px; font-size: 0.6rem; padding: 0 4px; border-radius: 6px; }

@@ -438,6 +438,7 @@ function render() {
   // on a computer the cards share the whole grid area (the CSS divides it into this many slots)
   grid.style.setProperty("--slots", Math.max(p.rows, p.cols));
   grid.innerHTML = "";
+  grid.classList.toggle("connecting", highlight !== null);   // the CSS fades the cats that aren't involved
 
   // one card per cat
   p.cats.forEach((cat, i) => {
@@ -575,16 +576,21 @@ function render() {
       lastRightClick = { index: i, time: now };
       showConnections(i, isDouble ? "about" : "by");
     });
+    // long-press: the card sinks while you hold it, then cats that talk about it.
+    // Long-press the same cat again: the cats it talks about (a computer's double right click).
     card.addEventListener("touchstart", () => {
+      card.classList.add("pressing");
       pressTimer = setTimeout(() => {
         longPressed = true;
         window.getSelection()?.removeAllRanges();   // in case the browser started selecting anyway
         navigator.vibrate?.(20);                    // a tiny buzz so you feel it worked (Android)
-        showConnections(i);
+        showConnections(i, highlight === i && highlightMode === "by" ? "about" : "by");
       }, 500);
     }, { passive: true });
-    card.addEventListener("touchend", () => clearTimeout(pressTimer));
-    card.addEventListener("touchmove", () => clearTimeout(pressTimer));
+    const stopPress = () => { clearTimeout(pressTimer); card.classList.remove("pressing"); };
+    card.addEventListener("touchend", stopPress);
+    card.addEventListener("touchmove", stopPress);
+    card.addEventListener("touchcancel", stopPress);
     grid.append(card);
   });
 
