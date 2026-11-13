@@ -9,11 +9,11 @@
   <title>Purrjury</title>
   <script>
     const from = new URLSearchParams(location.search).get("from") || "poster";
-    location.replace("../web/?set=feedback&from=" + encodeURIComponent(from));
+    location.replace("../web/feedback/?from=" + encodeURIComponent(from));
   </script>
-  <noscript><meta http-equiv="refresh" content="0; url=../web/?set=feedback&amp;from=poster"></noscript>
+  <noscript><meta http-equiv="refresh" content="0; url=../web/feedback/?from=poster"></noscript>
 </head>
 <body>
-  <p><a href="../web/?set=feedback&amp;from=poster">Play Purrjury</a></p>
+  <p><a href="../web/feedback/?from=poster">Play Purrjury</a></p>
 </body>
 </html>
