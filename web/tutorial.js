@@ -74,9 +74,9 @@ const LESSONS = [
    ]
   },
   "next": {
-   "1": "Right, Ash is a liar! So Ash's clue is false. What does that tell you about Bean?"
+   "1": "Right, Ash is a liar! So Ash's clue is false. But false isn't the opposite: \"Bean and I are both liars\" is false if at least one of them is honest. Ash isn't, so..."
   },
-  "done": "That's the whole trick: a liar's clue is always false.",
+  "done": "That's the whole trick: a liar's clue is false, nothing more. \"Both are liars\" being false doesn't mean both are honest, just that they aren't both liars.",
   "puzzle": {
    "rows": 1,
    "cols": 2,
@@ -133,7 +133,7 @@ const LESSONS = [
  },
  {
   "title": "One cat leads to the next",
-  "intro": "Solve one cat, then use its clue to solve the next. A liar's clue is false, so flip it.",
+  "intro": "Solve one cat, then use its clue to solve the next. A liar's clue is false: if a liar says \"Cleo is honest\", Cleo is a liar.",
   "why": {
    "1": "Ash is honest, so Bean is a liar.",
    "2": "Bean is a liar, so Bean's clue is false: Cleo is a liar too."
@@ -144,7 +144,7 @@ const LESSONS = [
    ]
   },
   "next": {
-   "2": "Right, Bean is a liar! So flip Bean's clue. What does it tell you about Cleo?"
+   "2": "Right, Bean is a liar! So Bean's clue is false. What does it tell you about Cleo?"
   },
   "done": "That's chaining: every cat you solve tells you how to read its clue.",
   "puzzle": {
