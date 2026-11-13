@@ -1166,13 +1166,16 @@ function extraInfo(fields = {}) {
 
 
 // send one message to the sheet. `holder` keeps sending / sent / error for its card, `redraw` shows them.
+// msg.sheet says which tab the row goes in: "reports" for Report this puzzle, "puzzles" for the daily,
+// "feedback" for the feedback set. The Apps Script uses the feedback tab if there's no tab with that name.
 async function post(msg, holder, redraw) {
   holder.sending = true;
   holder.error = "";
   redraw();
+  const sheet = msg.result === "report" ? "reports" : DAILY_MODE ? "puzzles" : "feedback";
   try {
     // keepalive: the message still goes out if the tab is closed right after (the daily sends when you leave)
-    const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify(msg), keepalive: true });
+    const response = await fetch(FEEDBACK_URL, { method: "POST", body: JSON.stringify({ ...msg, sheet }), keepalive: true });
     if ((await response.text()) !== "ok") throw new Error("the script didn't say ok");
     holder.sent = true;
   } catch {
