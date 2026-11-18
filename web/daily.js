@@ -151,6 +151,9 @@ function renderHome() {
   } else {
     DAILY_SIZES.forEach((size, k) => tiles.append(puzzleTile(`Today's ${size}`, states[indexes[k]], () => goTo(`${today}/${size}`))));
   }
+  const shareHome = document.getElementById("home-share");
+  shareHome.hidden = !indexes?.some(i => states[i].solved);
+  shareHome.textContent = copied ? "Copied!" : "Share";
   updateCountdown();
 }
 
@@ -298,7 +301,9 @@ function share(day) {
   });
   const days = day === todayKey() ? streak() : 0;
   const text = [`Purrjury ${dayLabel(day)} 🐾`, ...lines, ...(days ? [`🔥 ${days}`] : []), "purrjury.com"].join("\n");
-  const done = () => { copied = true; renderRating(); setTimeout(() => { copied = false; if (!game.hidden) renderRating(); }, 1500); };
+  // "Copied!" for a moment on the button you pressed: on home, or on the puzzle and its card
+  const refresh = () => { if (!home.hidden) renderHome(); else if (!game.hidden) renderRating(); };
+  const done = () => { copied = true; refresh(); setTimeout(() => { copied = false; refresh(); }, 1500); };
   // phones get their share menu, computers copy it
   if (navigator.share && matchMedia("(pointer: coarse)").matches) navigator.share({ text }).catch(() => {});
   else navigator.clipboard?.writeText(text).then(done, () => {});

@@ -152,6 +152,7 @@ if (DAILY_MODE) {
   document.querySelector(".controls").append(shareButton, resultsButton);
   document.getElementById("menu-button").textContent = "Home";
   document.getElementById("home-how").addEventListener("click", startTutorial);
+  document.getElementById("home-share").addEventListener("click", () => share(todayKey()));
   document.getElementById("past-button").addEventListener("click", () => goTo(`past/${todayKey().slice(0, 7)}`));
   document.getElementById("past-back").addEventListener("click", goHome);
   // another month replaces the address, so Back still goes straight home
