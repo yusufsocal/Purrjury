@@ -81,10 +81,10 @@ def preview():
 
 
 def head(size):
-    """The happy tuxedo's head (ears to chin), square, on a clear background, scaled up to size."""
+    """The happy tuxedo with tail, square, on a clear background, scaled up to size."""
     cat = render(build("tuxedo", "happy"), "tuxedo")
-    crop = cat.crop((5, 2, 27, 24))                      # 22x22 around the head
-    square = Image.new("RGBA", (24, 24), (0, 0, 0, 0))
+    crop = cat.crop((3, 1, 32, 30))                      # 29x29 around the whole cat with tail
+    square = Image.new("RGBA", (32, 32), (0, 0, 0, 0))
     square.alpha_composite(crop, (1, 1))
     return square.resize((size, size), Image.NEAREST)
 
