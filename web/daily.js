@@ -300,7 +300,7 @@ function share(day) {
     return `${size} ${r?.solved ? formatTime(r.seconds) : "–"} · ${hints} hint${hints === 1 ? "" : "s"}`;
   });
   const days = day === todayKey() ? streak() : 0;
-  const text = [`Purrjury ${dayLabel(day)} 🐾`, ...lines, ...(days ? [`🔥 ${days}`] : []), "purrjury.com"].join("\n");
+  const text = [`Purrjury ${dayLabel(day)} 🐾`, ...lines, ...(days ? [`🔥 ${days}`] : []), "https://purrjury.com"].join("\n");   // https:// so WhatsApp shows the preview
   // "Copied!" for a moment on the button you pressed: on home, or on the puzzle and its card
   const refresh = () => { if (!home.hidden) renderHome(); else if (!game.hidden) renderRating(); };
   const done = () => { copied = true; refresh(); setTimeout(() => { copied = false; refresh(); }, 1500); };
