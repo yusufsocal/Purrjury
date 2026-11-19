@@ -191,16 +191,18 @@ async function sendRating() {
 
 // One sheet row for puzzle i (an index into ALL_PUZZLES), without the rating. A lesson stands for
 // the whole tutorial: one row with its time and hints added up over all lessons.
-// The last column, extra, holds small details as JSON text, so new ones never need a new column.
+// Every field is its own column in the sheet (the Apps Script puts them in order).
 function sheetRow(i, result) {
   const p = ALL_PUZZLES[i];
   const s = states[i];
-  const base = { player: playerId(), result, hard: "", fun: "", comment: "" };
+  const base = { player: playerId(), result, hard: "", fun: "", comment: "", ...playerInfo() };
   if (i >= FIRST_LESSON && i < FIRST_LESSON + LESSON_LIST.length) {
     const lessonStates = LESSON_LIST.map((_, k) => states[FIRST_LESSON + k]);
     const total = field => lessonStates.reduce((sum, ls) => sum + ls[field], 0);
+    // the tutorial has no first mark; marked says how many lessons were done ("3/5 lessons")
+    const done = lessonStates.filter(ls => ls.solved).length;
     return { ...base, puzzle: "tutorial", seed: "", seconds: total("seconds"), hints: total("hints"), checks: 0, mistakes: 0,
-             extra: extraInfo({ lessonsDone: lessonStates.filter(ls => ls.solved).length }) };
+             firstMark: "", marked: `${done}/${LESSON_LIST.length} lessons` };
   }
   const marked = s.marks.filter((mark, j) => mark !== "unknown" && j !== p.given).length;
   const toMark = p.cats.length - (p.given == null ? 0 : 1);
@@ -208,15 +210,15 @@ function sheetRow(i, result) {
   const name = dayOf[i] ? `daily ${dayOf[i]} ${sizeOf(p)} ${levelOf(p)}` : `${sizeOf(p)} ${levelOf(p)}`;
   return { ...base, puzzle: name, seed: p.seed, seconds: s.seconds, hints: s.hints,
            checks: s.checks, mistakes: s.wrongChecks,
-           extra: extraInfo({ firstMark: s.firstMarkAt, marked: `${marked}/${toMark}` }) };
+           firstMark: s.firstMarkAt ?? "", marked: `${marked}/${toMark}` };
 }
 
 
-// the extra column: phone or computer, how often they play logic puzzles, where they came from, and what the row adds
-function extraInfo(fields = {}) {
+// who's playing: phone or computer, how often they play logic puzzles, and where they came from
+function playerInfo() {
   // a narrow screen is a phone; a wider one played with a finger (not a mouse) is a tablet
   const device = matchMedia("(max-width: 600px)").matches ? "phone" : matchMedia("(pointer: coarse)").matches ? "tablet" : "computer";
-  return JSON.stringify({ device, experience: experience() || null, from: cameFrom, ...fields });
+  return { device, experience: experience() || "", from: cameFrom || "" };
 }
 
 
@@ -291,7 +293,7 @@ async function sendGeneral() {
   // only player and comment: the other columns stay empty on these rows
   const msg = {
     player: playerId(), puzzle: "general", seed: "", seconds: "", hints: "", checks: "", mistakes: "",
-    result: "general", hard: "", fun: "", comment: general.comment.trim(), extra: extraInfo(),
+    result: "general", hard: "", fun: "", comment: general.comment.trim(), ...playerInfo(), firstMark: "", marked: "",
   };
   await post(msg, general, () => { if (!menu.hidden) renderGeneral(); });   // only while the menu is still up
 }

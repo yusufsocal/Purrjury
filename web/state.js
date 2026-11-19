@@ -52,7 +52,7 @@ const FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbwG6leJIr5jJQl2he_
 const PLAYER_KEY = "purrjury-player";   // in localStorage: a random id, so one player's ratings can be grouped
 
 // ?from=poster: where the player found the game (the /play link on the posters adds it).
-// Kept in localStorage, so it stays with the player on a later visit without it. Goes into the extra column.
+// Kept in localStorage, so it stays with the player on a later visit without it. Goes into the "from" column.
 const FROM_KEY = "purrjury-from";
 let cameFrom = new URLSearchParams(location.search).get("from")?.slice(0, 30) || null;
 try {
