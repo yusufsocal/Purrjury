@@ -24,13 +24,19 @@
     // that set window.PAGE first. Old ?set=feedback links still open the feedback set.
     window.PAGE = window.PAGE || (new URLSearchParams(location.search).get("set") === "feedback" ? "feedback" : "daily");
     document.write(`<link rel="stylesheet" href="style.css?v=${VERSION}">`);
+    // light or navy: what you picked last time (the switch in the header), else what your device is set to.
+    // Set here, before the page shows, so it never flashes the other theme first.
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem("purrjury-theme"); } catch {}
+    document.documentElement.dataset.theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light");
   </script>
 </head>
 <body>
   <!-- everything you play with, sized to fit the screen on a computer -->
   <div id="screen">
   <header>
-    <h1>Purrjury</h1>
+    <h1><img class="logo" src="logo.png" alt="Purrjury"></h1>
+    <button id="theme-toggle"></button>
   </header>
 
   <!-- the daily page's first screen: today's two puzzles, your streak and when the next ones come -->

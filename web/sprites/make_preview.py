@@ -4,6 +4,8 @@
                         what chat apps and social sites show when someone shares the link
   favicon.png           the happy tuxedo's head, 32x32, the browser tab icon
   apple-touch-icon.png  the same head, 180x180, for "Add to Home Screen" on phones
+  logo.png              the same PURRJURY and cats on a clear background, small, for the site's header
+  logo.png              the same PURRJURY and cats on a clear background, small, for the site's header
 
 Run it from anywhere: python web/sprites/make_preview.py. It writes into web/.
 """
@@ -64,8 +66,9 @@ def put(img, xy, colour):
     img.putpixel(xy, hexrgb(colour) + (255,))
 
 
-def preview():
-    img = Image.new("RGBA", (W, H), hexrgb(BG) + (255,))
+def draw(bg):
+    """The logo on a W x H canvas at 1 sprite pixel per pixel. bg None: a clear background."""
+    img = Image.new("RGBA", (W, H), hexrgb(bg) + (255,) if bg else (0, 0, 0, 0))
     # the cats first, so the letters cover their paws: happy over "UR", angry over the second "UR"
     sit = Y0 - 1 + CAT_DROP
     for k, mood in ((1, "happy"), (5, "angry")):
@@ -77,7 +80,18 @@ def preview():
     for x, y in word:
         # shaded bottom edge, light top edge, like the fur
         put(img, (x, y), SHADE if (x, y + 1) not in word else LIGHT if (x, y - 1) not in word else FILL)
-    return img.resize((W * SCALE, H * SCALE), Image.NEAREST).crop((0, 0, 1200, 630))
+    return img
+
+
+def preview():
+    return draw(BG).resize((W * SCALE, H * SCALE), Image.NEAREST).crop((0, 0, 1200, 630))
+
+
+def logo():
+    """The site's header: the logo alone on a clear background, 1 sprite pixel per pixel
+    (the page scales it up with image-rendering: pixelated, so it stays crisp)."""
+    img = draw(None)
+    return img.crop(img.getbbox())
 
 
 def head(size):
@@ -100,4 +114,5 @@ if __name__ == "__main__":
     preview().convert("RGB").save(os.path.join(WEB, "og.png"))
     head(32).save(os.path.join(WEB, "favicon.png"))
     apple_icon().save(os.path.join(WEB, "apple-touch-icon.png"))
-    print("Made web/og.png, web/favicon.png and web/apple-touch-icon.png")
+    logo().save(os.path.join(WEB, "logo.png"))
+    print("Made web/og.png, web/favicon.png, web/apple-touch-icon.png and web/logo.png")

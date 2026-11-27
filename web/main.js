@@ -125,6 +125,22 @@ stopButton.addEventListener("click", stopAndRate);
 // switching apps on a phone: save right away, the tab may be closed in the background
 document.addEventListener("visibilitychange", () => { if (document.hidden) saveProgress(); });
 
+// the light / navy switch in the header (the theme itself is set in index.html's head, before the page shows).
+// The button shows the theme you'd switch to, and the choice is remembered on this device.
+const themeToggle = document.getElementById("theme-toggle");
+function showThemeButton() {
+  const navy = document.documentElement.dataset.theme === "navy";
+  themeToggle.textContent = navy ? "☀" : "☾";
+  themeToggle.title = navy ? "Light theme" : "Navy theme";
+}
+themeToggle.addEventListener("click", () => {
+  const theme = document.documentElement.dataset.theme === "navy" ? "light" : "navy";
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem("purrjury-theme", theme); } catch {}
+  showThemeButton();
+});
+showThemeButton();
+
 // daily and feedback set: Check becomes Submit, and there's no Reset or Reveal
 if (FEEDBACK || DAILY_MODE) {
   checkButton.textContent = "Submit";

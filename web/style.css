@@ -1,14 +1,38 @@
+/* Two themes: light (these) and navy (below). --ink, --muted and --line are for text and lines on the
+   cards, tiles and buttons; --page-ink, --page-muted and --page-line for what sits right on the background.
+   In light they're the same, in navy the page ones are light and the cards stay light with dark text. */
 :root {
   --bg: #faf6ef;
   --card: #ffffff;
   --ink: #2d2a26;
   --muted: #8a8378;
   --line: #e3dccf;
+  --page-ink: var(--ink);
+  --page-muted: var(--muted);
+  --page-line: var(--line);
   --honest: #2f8f5b;
   --honest-bg: #e6f4ec;
   --liar: #c2413b;
   --liar-bg: #fbe8e6;
+  --about: #2f6fdb;   /* the blue tag chip and the "talks about it" outline */
+  --hint: #c98a12;
+  --card-edge: var(--line);   /* the border of cards, tiles and buttons */
 }
+/* navy: the ad's colors. The orange logo pops on it, the cards stay light so the clues read the same */
+:root[data-theme="navy"] {
+  --bg: #1e3446;
+  --card: #f3e9d6;   /* warm cream */
+  --page-ink: #f3ede2;
+  --page-muted: #a9bccb;
+  --page-line: #34506a;
+  --card-edge: #12212d;
+  --honest: #2f9a60;
+  --liar: #cc463f;
+  --about: #4d8df0;
+  --hint: #e0a020;
+  color-scheme: dark;
+}
+:root[data-theme="navy"] a { color: #9cc8f0; }
 
 * { box-sizing: border-box; }
 
@@ -17,12 +41,19 @@ body {
   max-width: 1100px;
   padding: 16px;
   background: var(--bg);
-  color: var(--ink);
+  color: var(--page-ink);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-header { text-align: center; }
-h1 { margin: 8px 0 4px; font-size: 2rem; }
+header { position: relative; text-align: center; }
+h1 { margin: 8px 0 4px; font-size: 2rem; line-height: 0; }
+/* the pixel logo (made by web/sprites/make_preview.py at 1 pixel per sprite pixel): 3x on home, smaller while playing */
+.logo { width: 429px; max-width: 100%; height: auto; image-rendering: pixelated; }
+/* the light / navy switch, top right */
+#theme-toggle {
+  position: absolute; top: 8px; right: 0;
+  padding: 4px 10px; font-size: 1.1rem; line-height: 1.3;
+}
 /* the sections under the game: all open, one after the other. Big bold headings, plain text */
 #info-sections { max-width: 520px; margin: 8px auto 16px; }
 #info-sections h2 { font-size: 1.35rem; margin: 28px 4px 8px; }
@@ -30,11 +61,11 @@ h1 { margin: 8px 0 4px; font-size: 2rem; }
 #info-sections ul { padding-left: 22px; }
 #info-sections li { margin-bottom: 4px; }
 /* the faded line at the very bottom, then the rights line */
-.divider { max-width: 520px; margin: 24px auto 10px; border: none; border-top: 1px solid var(--line); }
-.rights { text-align: center; color: var(--muted); font-size: 0.85rem; margin: 0 0 6px; }
-#report-status { color: var(--muted); font-size: 0.9rem; }
+.divider { max-width: 520px; margin: 24px auto 10px; border: none; border-top: 1px solid var(--page-line); }
+.rights { text-align: center; color: var(--page-muted); font-size: 0.85rem; margin: 0 0 6px; }
+#report-status { color: var(--page-muted); font-size: 0.9rem; }
 footer { margin-top: 24px; }
-.version { text-align: center; color: var(--muted); font-size: 0.75rem; margin: 0 0 12px; }
+.version { text-align: center; color: var(--page-muted); font-size: 0.75rem; margin: 0 0 12px; }
 .honest-text { color: var(--honest); }
 .liar-text { color: var(--liar); }
 
@@ -49,7 +80,7 @@ nav, .controls {
 button {
   font: inherit;
   padding: 8px 16px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--card-edge);
   border-radius: 8px;
   background: var(--card);
   color: var(--ink);
@@ -67,7 +98,8 @@ button:hover { border-color: var(--muted); }
   position: relative;
   display: flex; flex-direction: column;   /* header on top, the clue fills the rest */
   background: var(--card);
-  border: 2px solid var(--line);
+  color: var(--ink);
+  border: 2px solid var(--card-edge);
   border-radius: 12px;
   padding: 10px 12px 36px;   /* room at the bottom for the pen and check buttons */
   cursor: pointer;
@@ -167,14 +199,13 @@ button:hover { border-color: var(--muted); }
 }
 .note-done { align-self: flex-end; padding: 4px 12px; }
 
-:root { --about: #2f6fdb; }   /* the blue tag chip */
 
 /* connections (right click or long-press a cat): every other cat fades out, so the ones involved stand out.
    The chosen cat gets a dark outline, the cats that talk about it a blue one. Their names grow for a moment
    (from their middle, so they grow both ways) and stay bold, and the cats that talk about it do one hop. */
 .card { transition: opacity 0.2s, transform 0.4s; }
 #grid.connecting .card:not(.focus):not(.talked-by) { opacity: 0.3; }
-.card.focus { outline: 3px solid var(--ink); outline-offset: 2px; }
+.card.focus { outline: 3px solid var(--page-ink); outline-offset: 2px; }
 .card.talked-by { outline: 3px solid var(--about); outline-offset: 2px; }
 /* phones: the card sinks a little while you hold it, so you can feel a long-press coming */
 .card.pressing { transform: scale(0.94); transition: transform 0.5s ease-in; }
@@ -199,15 +230,14 @@ button:hover { border-color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .card.wave, .card.wave .sprite, .tag-purr { animation: none; } }
 #legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; min-height: 1.6em; margin: 0 0 10px; }
 .tag { font-size: 0.8rem; font-weight: 600; }
-.tag-by { color: var(--ink); }
+.tag-by { color: var(--page-ink); }
 
 /* hint: dashed outline around the clues you can use right now */
-:root { --hint: #c98a12; }
 /* a card a hint (or the guide) points at: it pulses, a glow that grows and fades */
 .card.hint { outline: 3px solid var(--hint); outline-offset: 2px; animation: pulse 1.4s ease-out infinite; }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 #c98a12aa; }
-  70%, 100% { box-shadow: 0 0 0 14px #c98a1200; }
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--hint) 67%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 14px transparent; }
 }
 /* a button the guide points at (the pen, the ✓, Hint): it pulses the same way */
 .point { outline: 3px solid var(--hint); outline-offset: 2px; animation: pulse 1.4s ease-out infinite; }
@@ -232,30 +262,30 @@ button:hover { border-color: var(--muted); }
 .tile-time { align-self: center; text-align: right; font-size: 1.2rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .tile.done .tile-time { color: var(--honest); font-weight: 600; }
 .tile-status { grid-column: 1 / -1; font-size: 1rem; color: var(--muted); }
-#countdown { color: var(--muted); font-size: 1.05rem; margin: 22px 0; font-variant-numeric: tabular-nums; }
+#countdown { color: var(--page-muted); font-size: 1.05rem; margin: 22px 0; font-variant-numeric: tabular-nums; }
 .home-buttons button { padding: 16px; font-size: 1.1rem; border-radius: 12px; }
 .past-tiles .tile { min-height: 80px; }
 
 /* past days: a month of days, Monday first. Green: both solved, yellow: played */
 .past-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 #calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 14px; }
-.weekday { font-size: 0.75rem; color: var(--muted); }
+.weekday { font-size: 0.75rem; color: var(--page-muted); }
 .day { padding: 8px 0; border-radius: 8px; font-variant-numeric: tabular-nums; }
 .day:disabled { opacity: 0.3; cursor: default; }
 .day.both { background: var(--honest-bg); border-color: var(--honest); color: var(--honest); font-weight: 600; }
-.day.some { background: #fbf1d9; border-color: #c98a12; }
+.day.some { background: #fbf1d9; border-color: var(--hint); }
 .day.today { text-decoration: underline; font-weight: 700; }
-.day.picked { outline: 2px solid var(--ink); }
+.day.picked { outline: 2px solid var(--page-ink); }
 #past-day { margin-bottom: 14px; }
 #past-day b { display: block; margin-bottom: 8px; }
-#menu h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 20px 0 8px; }
+#menu h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--page-muted); margin: 20px 0 8px; }
 .choice { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-.choice button.selected { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.choice button.selected { background: var(--ink); border-color: var(--ink); color: var(--card); }
 .level { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 130px; padding: 14px 18px; }
 .level-name { font-weight: 700; font-size: 1.1rem; text-transform: capitalize; }
 .level-count { font-size: 0.8rem; color: var(--muted); }
 .level-easy .level-name { color: var(--honest); }
-.level-medium .level-name { color: #c98a12; }
+.level-medium .level-name { color: var(--hint); }
 .level-hard .level-name { color: var(--liar); }
 .level-tricky .level-name { color: #7a4fc4; }
 [hidden] { display: none !important; }
@@ -280,7 +310,7 @@ button:hover { border-color: var(--muted); }
 /* warm yellow, so it stands out from the white cards */
 #lesson .bubble {
   position: relative; flex: 1; padding: 12px 18px;
-  background: var(--bubble); border: 3px solid var(--ink); border-radius: 18px;
+  background: var(--bubble); color: var(--ink); border: 3px solid var(--ink); border-radius: 18px;
   font-size: 1.15rem; box-shadow: 0 4px 0 #0002;
 }
 #lesson .bubble::before {   /* the tail: a small square turned 45 degrees, half under the bubble's edge */
@@ -304,7 +334,7 @@ button:hover { border-color: var(--muted); }
 /* feedback set (index.html?set=feedback): the note on the menu, the Stop and rate button and the rating card */
 #feedback-note {
   max-width: 420px; margin: 14px auto 0; padding: 8px 12px;
-  background: #fff4d6; border: 1px solid #ecd9a0; border-radius: 10px; font-size: 0.9rem; text-align: left;
+  background: #fff4d6; color: var(--ink); border: 1px solid #ecd9a0; border-radius: 10px; font-size: 0.9rem; text-align: left;
 }
 #feedback-note ol { margin: 4px 0 6px; padding-left: 22px; }
 /* How to play stands out on the feedback menu, with a small "Start here" above it */
@@ -317,8 +347,8 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
 #rating {
   position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 30;
   width: min(400px, calc(100% - 16px));
-  padding: 12px 16px; background: var(--card);
-  border: 2px solid var(--line); border-radius: 14px; box-shadow: 0 -4px 16px #0003;
+  padding: 12px 16px; background: var(--card); color: var(--ink);
+  border: 2px solid var(--card-edge); border-radius: 14px; box-shadow: 0 -4px 16px #0003;
 }
 #rating h3 { margin: 0 0 2px; font-size: 1.05rem; }
 .rating-help { margin: 0 0 4px; font-size: 0.8rem; color: var(--muted); }
@@ -358,7 +388,7 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
 .rating-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
 .rating-buttons .main { border-color: var(--ink); font-weight: 600; }
 
-#timer { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 3em; }
+#timer { font-variant-numeric: tabular-nums; color: var(--page-muted); min-width: 3em; }
 #message { text-align: center; min-height: 1.5em; font-weight: 600; }
 
 /* On a computer the whole grid fits the screen: the rows share the height that's left,
@@ -368,6 +398,8 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
   /* only while playing: the grid gets the whole screen. Home and the menu stay short, so the sections come right after */
   body.playing #screen { height: 100dvh; display: flex; flex-direction: column; padding: 6px 0; }
   h1 { font-size: 1.5rem; margin: 2px 0; }
+  body.playing .logo { width: 143px; }
+  body.playing #theme-toggle { top: 2px; }
   #game:not([hidden]) { flex: 1; min-height: 0; display: flex; flex-direction: column; }
   #game nav, #game .controls { margin: 6px 0; }
   #legend { margin: 0 0 6px; min-height: 1.3em; }
@@ -478,10 +510,13 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
     background: #fffe; border-radius: 8px; box-shadow: 0 1px 4px #0002;
   }
   #legend:empty { display: none; }
+  #legend { color: var(--ink); }
   .controls { margin: 6px 0 0; flex-wrap: wrap; gap: 8px; }
   .controls button { padding: 6px 12px; }
 
   /* isolate: the faint cat can sit behind the band and the clue but still on top of the card's background */
+  .logo { width: 286px; }   /* 2x */
+  #theme-toggle { top: 0; padding: 2px 8px; font-size: 1rem; }
   .card { min-height: 0; overflow: hidden; padding: 0 5px 18px; font-size: 0.85rem; border-radius: 10px; isolation: isolate; }
   /* the band: the cat's color with its name and color word */
   .top {
@@ -513,5 +548,13 @@ body.feedback #how-to-play { border: 2px solid var(--hint); }
     background: var(--card); border: 2px solid var(--line); border-radius: 12px;
     box-shadow: 0 -4px 16px #0003;
     font-size: 1rem;
+  }
+}
+
+/* navy, computer: the hint and connections label sits on the background, so it gets a light pill for its colors */
+@media (min-width: 601px) {
+  :root[data-theme="navy"] #legend:not(:empty) {
+    width: max-content; max-width: 100%; margin-inline: auto; padding: 2px 10px;
+    background: var(--card); color: var(--ink); border-radius: 8px;
   }
 }
