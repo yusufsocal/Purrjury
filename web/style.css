@@ -26,8 +26,10 @@
   --page-muted: #a9bccb;
   --page-line: #34506a;
   --card-edge: #12212d;
-  --honest: #2f9a60;
-  --liar: #cc463f;
+  --honest: #3d9458;      /* sage green and terracotta: warmer, to go with the cream */
+  --honest-bg: #dfe8cc;
+  --liar: #c4523b;
+  --liar-bg: #f2d6c8;
   --about: #4d8df0;
   --hint: #e0a020;
   color-scheme: dark;
